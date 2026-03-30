@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>食篇第1集《露营食记》- 分镜脚本</title>
+  <link rel="stylesheet" href="noodle-anime-style.css" />
+  <style>
+    body { background: var(--bg-secondary); }
+    .shot-page { padding-top: 96px; }
+    .shot-hero {
+      background: var(--bg-primary);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 0 26px;
+    }
+    .shot-meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .meta-pill{
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      font-weight: 600;
+    }
+    .shot-toolbar{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    .btn{
+      appearance:none;
+      border:none;
+      cursor:pointer;
+      padding:10px 14px;
+      border-radius:12px;
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
+      color:#fff;
+      font-weight:800;
+      box-shadow: 0 10px 22px rgba(245,158,11,.25);
+    }
+    .btn.secondary{
+      background: rgba(255,255,255,.9);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+    .act-card{
+      background: var(--bg-primary);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      padding: 18px;
+      margin-top: 18px;
+    }
+    .act-title{
+      display:flex;
+      align-items:baseline;
+      gap:10px;
+      margin-bottom: 10px;
+    }
+    .act-title h3{
+      font-size: 1.25rem;
+      font-weight: 900;
+      margin: 0;
+    }
+    .act-title .act-note{
+      color: var(--text-secondary);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .shot-table-wrap{
+      overflow:auto;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
+    }
+    table.shot-table{
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1180px;
+    }
+    .shot-table th, .shot-table td{
+      border-bottom: 1px solid var(--border-light);
+      padding: 10px 12px;
+      vertical-align: top;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      background: rgba(255,255,255,.65);
+    }
+    .shot-table th{
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(255,255,255,.95);
+      color: var(--text-primary);
+      font-weight: 900;
+    }
+    .col-id{ width: 84px; text-align:center; color: var(--text-primary); font-weight: 900; }
+    .col-sec{ width: 92px; text-align:center; font-weight: 900; color: var(--text-primary); }
+    .col-lens{ width: 110px; text-align:center; font-weight: 800; color: var(--text-primary); }
+    .shot-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--bg-tertiary);
+      font-weight: 800;
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+    .badge-time{ background: rgba(245,158,11,.15); border-color: rgba(245,158,11,.25); }
+    .badge-night{ background: rgba(139,92,246,.12); border-color: rgba(139,92,246,.22); }
+    .badge-cook{ background: rgba(16,185,129,.12); border-color: rgba(16,185,129,.22); }
+    .badge-funny{ background: rgba(236,72,153,.12); border-color: rgba(236,72,153,.22); }
+    .shot-table td strong{ color: var(--text-primary); }
+    .shot-table .mono{ font-weight: 900; color: var(--text-primary); }
+
+    /* NanoBanana 辅助列 */
+    .prompt{
+      white-space: pre-wrap;
+      color: var(--text-primary);
+      font-weight: 650;
+      background: rgba(15,23,42,0.04);
+      border: 1px solid rgba(15,23,42,0.08);
+      border-radius: 12px;
+      padding: 10px 10px;
+    }
+    .feed{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: 650;
+      color: var(--text-primary);
+    }
+    .feed .feed-item{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      width: fit-content;
+      max-width: 100%;
+    }
+    .feed .feed-item code{
+      color: var(--text-primary);
+      font-weight: 800;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 260px;
+    }
+    .copy-btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.9);
+      cursor:pointer;
+      font-weight: 850;
+      color: var(--text-primary);
+      box-shadow: var(--shadow-sm);
+      margin-top: 8px;
+    }
+    .copy-btn:hover{ box-shadow: var(--shadow-md); transform: translateY(-1px); }
+
+    .tip{
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 10px;
+      text-align:center;
+    }
+    @media (max-width: 768px){
+      table.shot-table{ min-width: 760px; }
+      .shot-hero{ padding-top: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <span class="brand-icon">🍜</span>
+        <span>食篇·分镜脚本</span>
+      </div>
+      <ul class="nav-menu" style="gap:16px;">
+        <li><a class="nav-link" href="noodle-anime-plan.html#food">返回策划页</a></li>
+        <li><a class="nav-link" href="#acts">分段</a></li>
+        <li><a class="nav-link" href="food-ep02-spring-rain-recipe-storyboard.html">下一集</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="shot-page">
+    <header class="shot-hero">
+      <div class="container">
+        <div class="section-header" style="margin-bottom:10px;">
+          <span class="section-badge">食篇 ·《露营食记》</span>
+          <h1 class="section-title" style="margin-bottom:0;">第一集分镜头脚本</h1>
+        </div>
+        <div class="shot-meta" id="shotMeta" style="margin-top:12px;">
+          <span class="meta-pill">总镜头：<span class="mono">41</span></span>
+          <span class="meta-pill">总时长：<span class="mono" id="totalSeconds">--</span></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content" id="acts">
+      <div class="container">
+
+        <!-- Act A -->
+        <section class="act-card">
+          <div class="act-title">
+            <h3>段落 A｜搭营点火 · 情绪铺垫</h3>
+            <span class="act-note">傍晚→夜晚；火光成为“第一次露脸”的触发器</span>
+          </div>
+          <div class="shot-table-wrap">
+            <table class="shot-table">
+              <thead>
+                <tr>
+                  <th class="col-id">镜号</th>
+                  <th class="col-sec">时长</th>
+                  <th class="col-lens">景别/机位</th>
+                  <th>画面</th>
+                  <th>声音/字幕/特效</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-sec="4">
+                  <td class="col-id">01</td>
+                  <td class="col-sec">4s</td>
+                  <td class="col-lens"><span class="shot-badge badge-time">远景·仰拍</span></td>
+                  <td>淡入。傍晚空镜：仰拍松枝剪影，金色夕阳穿过枝叶；枝条轻摇。镜头缓慢下摇，落到薄荷搭帐篷的背影（大全景）。</td>
+                  <td>风声 / 松针轻响（环境音）。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">02</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge">特写</span></td>
+                  <td>地面枯枝。薄荷弯腰伸手拾起几根干柴（不露脸）。</td>
+                  <td>枯枝摩擦声。</td>
+                </tr>
+                <tr data-sec="3">
+                  <td class="col-id">03</td>
+                  <td class="col-sec">3s</td>
+                  <td class="col-lens"><span class="shot-badge badge-night">中景·夜</span></td>
+                  <td>夜晚。干柴置于三角篝火架下，薄荷的手放引火物；火柴划擦两下点燃，引火物被引燃。</td>
+                  <td>火柴“嚓—”/ 细小火苗声。</td>
+                </tr>
+                <tr data-sec="4">
+                  <td class="col-id">04</td>
+                  <td class="col-sec">4s</td>
+                  <td class="col-lens"><span class="shot-badge badge-night">全景·定机</span></td>
+                  <td>篝火在夜色里稳定燃起。薄荷坐在火后露营椅上，肘搭膝、托腮歪头看火，安静出神。帐篷在后，里边一盏小夜灯；帐篷前有小圆桌。</td>
+                  <td>篝火“哔啵”。<br><strong>艺术字标题：</strong>露营食记。</td>
+                </tr>
+                <tr data-sec="5">
+                  <td class="col-id">05</td>
+                  <td class="col-sec">5s</td>
+                  <td class="col-lens"><span class="shot-badge badge-night">中景</span></td>
+                  <td>保持构图切中景。薄荷微蹙眉，情绪低落；垂头重叹。肚子“咕噜噜”。</td>
+                  <td><strong>手写字幕：</strong>这是薄荷，一个白天刚被客户为难过的打工人……<br><strong>拟声字：</strong>“咕噜噜”（贴近腹部）。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">06</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge badge-funny">中景·动作</span></td>
+                  <td>薄荷猛地起身，用力摇头像甩掉烦恼。淡出。</td>
+                  <td><strong>艺术字</strong>随动势“掉落”四字：吃饭要紧。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Act B -->
+        <section class="act-card">
+          <div class="act-title">
+            <h3>段落 B｜备料与汤底 · 治愈手作感</h3>
+            <span class="act-note">串物→洗昆布→下木鱼花→切萝卜</span>
+          </div>
+          <div class="shot-table-wrap">
+            <table class="shot-table">
+              <thead>
+                <tr>
+                  <th class="col-id">镜号</th>
+                  <th class="col-sec">时长</th>
+                  <th class="col-lens">景别/机位</th>
+                  <th>画面</th>
+                  <th>声音/字幕/特效</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-sec="2">
+                  <td class="col-id">07</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge badge-cook">中景</span></td>
+                  <td>淡入。薄荷站在小圆桌前穿鱼丸（不必正脸）。</td>
+                  <td><strong>艺术字字幕：</strong>冬日的绝配 关东煮。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">08</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge">特写</span></td>
+                  <td>手把串好的鱼丸放入盘中；同盘还有鱼豆腐、海带结、竹轮、蘑菇等。</td>
+                  <td>食材轻碰盘面声。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">09</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge">空镜</span></td>
+                  <td>溪水月下流动；一条小鱼跃出水面溅起水花。</td>
+                  <td>水声“哗啦”。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">10</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge">特写</span></td>
+                  <td>溪边，薄荷搓洗大片昆布。</td>
+                  <td><strong>字幕：</strong>简单清洗昆布。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">11</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge">特写</span></td>
+                  <td>小煮锅加水。手将昆布放入，随后撒木鱼花。</td>
+                  <td><strong>字幕：</strong>加入木鱼花。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">12</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge badge-cook">中景</span></td>
+                  <td>薄荷坐露营椅削萝卜皮。</td>
+                  <td>削皮“沙沙”。</td>
+                </tr>
+                <tr data-sec="2">
+                  <td class="col-id">13</td>
+                  <td class="col-sec">2s</td>
+                  <td class="col-lens"><span class="shot-badge">特写</span></td>
+                  <td>案板切萝卜，切成厚厚的大圆片。</td>
+                  <td><strong>字幕：</strong>一定要有白萝卜~</td>
+                </tr>
+                <tr data-sec="3">
+                  <td class="col-id">14</td>
+                  <td class="col-sec">3s</td>
+                  <td class="col-lens"><span class="shot-badge">空镜</span></td>
+                  <td>夜空。乌云缓慢飘来遮住月光。</td>
+                  <td>画外：切萝卜的节奏“咔嚓、咔嚓”。</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Act C -->
+        <section class="act-card">
+          <div class="act-title">
+            <h3>段落 C｜开煮与开吃 · 治愈 + 小反差</h3>
+            <span class="act-note">调汤→下料→等待→烫嘴笑点→幸福包装</span>
+          </div>
+          <div class="shot-table-wrap">
+            <table class="shot-table">
+              <thead>
+                <tr>
+                  <th class="col-id">镜号</th>
+                  <th class="col-sec">时长</th>
+                  <th class="col-lens">景别/机位</th>
+                  <th>画面</th>
+                  <th>声音/字幕/特效</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-sec="2"><td class="col-id">15</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">中景</span></td><td>篝火上煮昆布+木鱼花。</td><td>小锅翻滚声。</td></tr>
+                <tr data-sec="2"><td class="col-id">16</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">特写</span></td><td>锅里咕咕冒泡。夹出煮软的昆布与木鱼花备用。</td><td>夹取声。</td></tr>
+                <tr data-sec="3"><td class="col-id">17</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge badge-cook">特写·同机位</span></td><td>同角度切镜：薄荷往锅里倒水，随后“无手出画”的调味道具依次变成酱油/糖/盐等，完成调味。</td><td><strong>字幕：</strong>薄荷的黄金比例调味料~</td></tr>
+                <tr data-sec="2"><td class="col-id">18</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">空镜</span></td><td>天空乌云更密，氛围更冷。</td><td>风声略起。</td></tr>
+                <tr data-sec="2"><td class="col-id">19</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge badge-cook">中景</span></td><td>汤底微沸。薄荷一手托盘一手下料：丸子串、萝卜等入锅。风吹，火焰轻晃。</td><td><strong>字幕：</strong>接下来，只要咕嘟嘟地煮就可以啦~</td></tr>
+                <tr data-sec="4"><td class="col-id">20</td><td class="col-sec">4s</td><td class="col-lens"><span class="shot-badge badge-night">中景·帐篷内</span></td><td>机位在帐篷内对门口。小夜灯在地；厚毛毯叠好。薄荷探身进来左右看，拿起毛毯又缩出去。</td><td>帐篷布轻响。</td></tr>
+                <tr data-sec="4"><td class="col-id">21</td><td class="col-sec">4s</td><td class="col-lens"><span class="shot-badge badge-night">全景</span></td><td>薄荷披毛毯蹲火边，用小树枝细心拨火，时不时添干柴。</td><td>篝火“哔啵”。</td></tr>
+                <tr data-sec="2"><td class="col-id">22</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">特写</span></td><td>锅里沸腾，食材咕嘟嘟翻滚，热气氤氲。</td><td>治愈 ASMR。</td></tr>
+                <tr data-sec="3"><td class="col-id">23</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge badge-funny">中景</span></td><td>薄荷对锅搓手期待，心急徒手揪出一串鱼丸。</td><td>手忙脚乱的小动作音。</td></tr>
+                <tr data-sec="3"><td class="col-id">24</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge badge-funny">近景</span></td><td>入口即烫：薄荷脸“卡通式爆红”，强忍后还是吐出鱼丸（可爱搞笑）。</td><td><strong>字幕：</strong>心急吃不了热丸子……</td></tr>
+                <tr data-sec="2"><td class="col-id">25</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">近景</span></td><td>鱼丸掉地，骨碌碌滚进阴影。</td><td>滚动声。</td></tr>
+                <tr data-sec="2"><td class="col-id">26</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">中景</span></td><td>锅移下火，放露营椅前地面。薄荷盛汤。</td><td>勺与碗轻碰。</td></tr>
+                <tr data-sec="2"><td class="col-id">27</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">特写</span></td><td>热气腾腾的关东煮在碗里，被薄荷捧起。</td><td>热气呼呼。</td></tr>
+                <tr data-sec="2"><td class="col-id">28</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">中景</span></td><td>薄荷可爱地吹碗降温。</td><td>轻吹声。</td></tr>
+                <tr data-sec="3"><td class="col-id">29</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge">近景</span></td><td>夹起萝卜吹吹，一口咬下。镜头推进到嘴部咀嚼。</td><td><strong>字幕：</strong>嗯~软软烂烂的煮萝卜天下第一！</td></tr>
+                <tr data-sec="5"><td class="col-id">30</td><td class="col-sec">5s</td><td class="col-lens"><span class="shot-badge">近景·风格化</span></td><td>薄荷幸福表情。背景切风格化包装：卡通小星星闪烁。</td><td>轻快治愈音符。</td></tr>
+                <tr data-sec="2"><td class="col-id">31</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">全景</span></td><td>薄荷在火前专心吃关东煮。</td><td>篝火声。</td></tr>
+                <tr data-sec="2"><td class="col-id">32</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">中景·反打</span></td><td>换角度继续吃饭。</td><td>同上。</td></tr>
+                <tr data-sec="4"><td class="col-id">33</td><td class="col-sec">4s</td><td class="col-lens"><span class="shot-badge">近景</span></td><td>薄荷喝热汤再露幸福。镜头下移到肚子，她满足揉肚子。</td><td>满足小叹息。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Act D -->
+        <section class="act-card">
+          <div class="act-title">
+            <h3>段落 D｜雪夜与闯入者 · 余韵彩蛋</h3>
+            <span class="act-note">坏心情被融化 → 雪落进碗 → 土狗“剩饭”登场</span>
+          </div>
+          <div class="shot-table-wrap">
+            <table class="shot-table">
+              <thead>
+                <tr>
+                  <th class="col-id">镜号</th>
+                  <th class="col-sec">时长</th>
+                  <th class="col-lens">景别/机位</th>
+                  <th>画面</th>
+                  <th>声音/字幕/特效</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-sec="3"><td class="col-id">34</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge">大全景</span></td><td>薄荷瘫坐后仰看天，忽露疑惑；端碗起身仔细看天空。</td><td>风声。</td></tr>
+                <tr data-sec="2"><td class="col-id">35</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge">特写</span></td><td>第一片雪花悠悠飘落。</td><td>环境音变“更静”。</td></tr>
+                <tr data-sec="4"><td class="col-id">36</td><td class="col-sec">4s</td><td class="col-lens"><span class="shot-badge">特写·正面</span></td><td>薄荷抬头追随雪花，头逐渐回正再低下，露出“噢？！”的惊喜表情。</td><td>小惊喜音效。</td></tr>
+                <tr data-sec="3"><td class="col-id">37</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge">特写</span></td><td>薄荷双手捧碗；雪花落进碗里，在热汤中化开。</td><td>细小“滋”感（可极轻）。</td></tr>
+                <tr data-sec="3"><td class="col-id">38</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge">全景→拉远</span></td><td>雪越下越密。薄荷转头看四周；镜头拉远到雪夜营地大全景，篝火与雪同框。淡出。</td><td><strong>字幕：</strong>薄荷的人生哲学：用美食融化冬雪、融化坏心情。</td></tr>
+                <tr data-sec="3"><td class="col-id">39</td><td class="col-sec">3s</td><td class="col-lens"><span class="shot-badge">全景</span></td><td>黑场停顿后淡入。雪更大。镜头对帐篷，画外“窸窸窣窣”。薄荷突然从帐篷口探头，左右看，愣住。</td><td>雪声 + 窸窣声。</td></tr>
+                <tr data-sec="2"><td class="col-id">40</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge badge-funny">中景·主观</span></td><td>薄荷视角：帐篷一侧，一只土狗叼着掉地的鱼丸；另一只爪爪伸向“剩饭”的碗，被发现后瞬间定住。</td><td>尴尬停顿。</td></tr>
+                <tr data-sec="2"><td class="col-id">41</td><td class="col-sec">2s</td><td class="col-lens"><span class="shot-badge badge-funny">全景</span></td><td>薄荷与土狗隔空对望，同时歪头。又尴尬又好笑。淡出。</td><td><strong>字幕：</strong>您哪位？</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // 计算总时长
+    const rows = Array.from(document.querySelectorAll('tbody tr[data-sec]'));
+    const total = rows.reduce((sum, tr) => sum + Number(tr.getAttribute('data-sec') || 0), 0);
+    const mm = Math.floor(total / 60);
+    const ss = total % 60;
+    const fmt = mm > 0 ? `${mm}分${String(ss).padStart(2,'0')}秒` : `${ss}秒`;
+    const el = document.getElementById('totalSeconds');
+    if (el) el.textContent = fmt + `（${total}s）`;
+
+    // 快捷滚动
+    const toActs = document.getElementById('btnScrollActs');
+    const toTop = document.getElementById('btnScrollTop');
+    toActs?.addEventListener('click', () => document.getElementById('acts')?.scrollIntoView({ behavior: 'smooth' }));
+    toTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // --- NanoBanana：自动生成提示词 & 喂图清单（基于“画面”文本规则生成，方便你后续继续微调） ---
+    // 基础风格提示（按需填写）。用户要求不在提示词里输出固定“画风长串”，这里保持为空。
+    const BASE_STYLE = '';
+
+    const FEED = {
+      bohe: '薄荷正面 + 薄荷侧面',
+      boheHands: '薄荷手部/手套/袖口（可选）',
+      shengfan: '土狗「剩饭」参考（可选）',
+      campStyle: '露营地场景（帐篷+篝火+小夜灯+圆桌）'
+    };
+
+    const uniq = (arr) => Array.from(new Set(arr.filter(Boolean)));
+
+    function inferTags(text){
+      const tags = [];
+      if (/傍晚|夕阳/.test(text)) tags.push('傍晚金色夕阳');
+      if (/夜晚|夜色|月光|乌云/.test(text)) tags.push('夜晚月光');
+      if (/篝火|火柴|火花|火光/.test(text)) tags.push('篝火火光');
+      if (/帐篷|露营椅|圆桌/.test(text)) tags.push('露营营地');
+      if (/溪水|小鱼/.test(text)) tags.push('溪边水面');
+      if (/昆布|木鱼花|萝卜|关东煮|煮锅|汤底|串/.test(text)) tags.push('关东煮料理');
+      if (/雪|雪花|雪夜/.test(text)) tags.push('下雪氛围');
+      if (/搞笑|尴尬|卡通|吐|烫/.test(text)) tags.push('轻喜反差表演');
+      return tags;
+    }
+
+    function inferLens(lensText){
+      if (!lensText) return '';
+      return `镜头：${lensText.replace(/\s+/g,'')}`;
+    }
+
+    function buildPrompt({lensText, visualText, sfxText}){
+      const tags = inferTags(visualText + ' ' + (sfxText || ''));
+      const lens = inferLens(lensText);
+      const focus = `画面要点：${visualText}`;
+      return [
+        BASE_STYLE,
+        lens,
+        tags.length ? '氛围关键词：' + tags.join('、') : '',
+        focus
+      ].filter(Boolean).join('\n').trim();
+    }
+
+    function inferFeed(visualText){
+      const list = [];
+
+      const isNoFaceOrNoCharacter = /空镜|不露脸|背影/.test(visualText);
+      const hasBohe = /薄荷/.test(visualText);
+      const hasDog = /土狗|剩饭/.test(visualText);
+      const hasHandsFocus = /手|特写/.test(visualText);
+
+      // 只有“需要角色露脸/角色特征”的镜头才建议喂角色图
+      if (hasBohe && !isNoFaceOrNoCharacter) list.push(FEED.bohe);
+
+      // 手部特写即使不露脸也可能需要手部/装备一致性（可选）
+      if (hasBohe && hasHandsFocus && !/空镜/.test(visualText)) list.push(FEED.boheHands);
+
+      // 土狗出场才建议喂土狗参考（可选）
+      if (hasDog) list.push(FEED.shengfan);
+
+      if (/帐篷|露营|篝火|关东煮|溪水|煮锅|圆桌/.test(visualText)) list.push(FEED.campStyle);
+      return uniq(list);
+    }
+
+    function ensureNanoColumns(table){
+      const headRow = table.querySelector('thead tr');
+      if (headRow && headRow.children.length < 7) {
+        const th1 = document.createElement('th');
+        th1.textContent = 'NanoBanana 提示词';
+        th1.style.width = '380px';
+        const th2 = document.createElement('th');
+        th2.textContent = '喂图（参考）';
+        th2.style.width = '260px';
+        headRow.appendChild(th1);
+        headRow.appendChild(th2);
+      }
+
+      table.querySelectorAll('tbody tr').forEach((tr) => {
+        if (tr.children.length >= 7) return;
+
+        const tds = tr.querySelectorAll('td');
+        const id = (tds[0]?.innerText || '').trim();
+        const lensText = (tds[2]?.innerText || '').trim();
+        const visualText = (tds[3]?.innerText || '').trim();
+        const sfxText = (tds[4]?.innerText || '').trim();
+
+        const prompt = buildPrompt({lensText, visualText, sfxText});
+        const feed = inferFeed(visualText);
+
+        const tdPrompt = document.createElement('td');
+        const promptDiv = document.createElement('div');
+        promptDiv.className = 'prompt';
+        promptDiv.setAttribute('data-prompt', '');
+        promptDiv.innerText = prompt;
+        const copyBtn = document.createElement('button');
+        copyBtn.className = 'copy-btn';
+        copyBtn.type = 'button';
+        copyBtn.innerText = `复制提示词（${id}）`;
+        copyBtn.addEventListener('click', async () => {
+          try{
+            await navigator.clipboard.writeText(prompt);
+            const old = copyBtn.textContent;
+            copyBtn.textContent = '已复制';
+            setTimeout(() => copyBtn.textContent = old, 900);
+          }catch{
+            const ta = document.createElement('textarea');
+            ta.value = prompt;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            ta.remove();
+            const old = copyBtn.textContent;
+            copyBtn.textContent = '已复制';
+            setTimeout(() => copyBtn.textContent = old, 900);
+          }
+        });
+        tdPrompt.appendChild(promptDiv);
+        tdPrompt.appendChild(copyBtn);
+
+        const tdFeed = document.createElement('td');
+        const feedWrap = document.createElement('div');
+        feedWrap.className = 'feed';
+        if (feed.length === 0) {
+          const empty = document.createElement('div');
+          empty.style.color = 'var(--text-secondary)';
+          empty.style.fontWeight = '650';
+          empty.innerText = '无（可只用提示词生成）';
+          feedWrap.appendChild(empty);
+        } else {
+          feed.forEach((path) => {
+            const item = document.createElement('div');
+            item.className = 'feed-item';
+            item.innerHTML = `参考：<span>${path}</span>`;
+            feedWrap.appendChild(item);
+          });
+        }
+        tdFeed.appendChild(feedWrap);
+
+        tr.appendChild(tdPrompt);
+        tr.appendChild(tdFeed);
+      });
+    }
+
+    // 为每个分段表格补齐列与内容
+    document.querySelectorAll('table.shot-table').forEach(ensureNanoColumns);
+
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>场景库</title>
+  <link rel="stylesheet" href="../noodle-anime-style.css" />
+  <link rel="stylesheet" href="./scene-library.css" />
+</head>
+<body>
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <span class="brand-icon">🖼️</span>
+        <span>项目场景库</span>
+      </div>
+      <ul class="nav-menu" style="gap:16px;">
+        <li><a class="nav-link" href="../noodle-anime-plan.html#storyboards">返回策划页</a></li>
+        <li><a class="nav-link" href="../../Asset/character-library.html">资产库</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="scene-page">
+    <div class="container">
+      <header class="scene-header">
+        <div class="section-header" style="margin-bottom:12px;">
+          <span class="section-badge">Asset / Sence</span>
+          <div class="scene-title-row">
+            <span class="title-spacer" aria-hidden="true"></span>
+            <h1 class="section-title" style="margin-bottom:0;">场景图片库</h1>
+            <button class="icon-btn" id="btnRefreshIndex" type="button" aria-label="刷新并更新图片" title="刷新并更新图片">
+              ⟳
+            </button>
+          </div>
+        </div>
+
+        <div class="scene-toolbar" style="display:none;">
+          <div class="scene-actions" style="width:100%; justify-content:flex-end;">
+            <button class="btn secondary" id="btnCopyPageLink" type="button">复制当前筛选链接</button>
+          </div>
+        </div>
+
+        <div class="scene-meta" id="sceneMeta"></div>
+
+        <div class="scene-categories" id="categoryChips"></div>
+      </header>
+
+      <section class="scene-sections" id="sceneSections"></section>
+
+      <div class="scene-empty" id="sceneEmpty" style="display:none;">
+        没有匹配的图片
+      </div>
+    </div>
+  </main>
+
+  <!-- 预览弹层 -->
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content" role="dialog" aria-modal="true">
+      <button class="lightbox-close" type="button" aria-label="关闭预览" data-lightbox-close>✕</button>
+      <div class="lightbox-bar">
+        <div class="lightbox-title" id="lightboxTitle">—</div>
+        <div class="lightbox-buttons"></div>
+      </div>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="上一张">‹</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="下一张">›</button>
+      <img class="lightbox-image" id="lightboxImage" alt="图片预览">
+    </div>
+  </div>
+
+  <!-- 设置弹窗 -->
+  <div class="settings-modal" id="settingsModal" aria-hidden="true">
+    <div class="settings-backdrop" data-close-settings></div>
+    <div class="settings-content">
+      <h3 class="settings-title">图片设置</h3>
+      <div class="settings-body">
+        <div class="settings-preview">
+          <img id="settingsPreviewImg" src="" alt="预览">
+        </div>
+        <div class="settings-form">
+          <div class="settings-row">
+            <label class="settings-label">标签 (分类)</label>
+            <select class="settings-select" id="settingsCat"></select>
+          </div>
+          <div class="settings-row">
+            <label class="settings-label">时间 (天气)</label>
+            <select class="settings-select" id="settingsTime">
+              <option value="">未标记</option>
+              <option value="day">☀️ 白天</option>
+              <option value="dusk">🌆 黄昏</option>
+              <option value="night">🌙 晚上</option>
+              <option value="indoor">🏠 室内</option>
+            </select>
+          </div>
+          <div class="settings-row settings-checks">
+            <label class="check-label">
+              <input type="checkbox" id="settingsFav"> 🌟 加入收藏夹
+            </label>
+            <label class="check-label">
+              <input type="checkbox" id="settingsTrash"> 🗑️ 放入回收站
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="settings-actions">
+        <button class="settings-btn-save" id="btnSaveSettings" type="button">保存</button>
+        <button class="settings-btn-cancel" id="btnCancelSettings" type="button" data-close-settings>取消</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scene-db.data.js"></script>
+  <script src="./scene-library.js"></script>
+</body>
+</html>
+

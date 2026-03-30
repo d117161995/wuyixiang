@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻鲸季过场动画 · 心动小镇</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@300;400;500;700;900&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+:root{
+    --bg:#f0f7fa;--bg-white:#fff;--bg-cool:#e4f0f6;
+    --text:#1a2e3a;--text-dim:#5a7a8a;
+    --ocean:#0369a1;--ocean-deep:#075985;--teal:#0d9488;--sky:#38bdf8;--coral:#f97316;--pearl:#e2e8f0;
+    --shadow:0 3px 16px rgba(3,105,161,.07);
+    --shadow-lg:0 6px 28px rgba(3,105,161,.1);
+    --r:14px;--r-sm:8px;
+    --ff:'Noto Sans SC',sans-serif;--fb:'Noto Sans SC',sans-serif;--fs:'Noto Serif SC',serif;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:17px;scroll-padding-top:46px}
+body{font-family:var(--fb);color:var(--text);background:var(--bg);line-height:1.75;overflow-x:hidden;letter-spacing:.01em}
+.container{max-width:860px;margin:0 auto;padding:0 24px}
+
+.hero{
+    padding:3.5rem 0 2.5rem;display:flex;align-items:center;justify-content:center;text-align:center;
+    background:linear-gradient(170deg,#0c4a6e 0%,#0369a1 30%,#0d9488 60%,#38bdf8 100%);position:relative;overflow:hidden;
+}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Ccircle cx='200' cy='400' r='4' fill='%23fff' opacity='.15'/%3E%3Ccircle cx='500' cy='200' r='3' fill='%23fff' opacity='.1'/%3E%3Ccircle cx='900' cy='350' r='5' fill='%23fff' opacity='.12'/%3E%3Ccircle cx='1100' cy='150' r='3' fill='%23fff' opacity='.08'/%3E%3Ccircle cx='700' cy='500' r='4' fill='%23fff' opacity='.1'/%3E%3C/svg%3E");animation:drift 20s linear infinite}
+@keyframes drift{0%{transform:translateX(0)}100%{transform:translateX(-50px)}}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:40px;background:linear-gradient(to top,var(--bg),transparent)}
+.hero-content{position:relative;z-index:1}
+.hero-emoji{margin-bottom:.4rem;display:flex;justify-content:center}
+.hero-logo{height:110px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.2))}
+.hero h1{font-family:var(--ff);font-size:clamp(1.6rem,4.5vw,2.4rem);font-weight:900;color:#fff;margin-bottom:.2rem;line-height:1.25;text-shadow:0 2px 12px rgba(0,0,0,.2)}
+.hero-tagline{max-width:500px;margin:0 auto;background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);border-radius:var(--r-sm);padding:1rem 1.4rem;font-size:.95rem;line-height:1.8;text-align:left;color:#fff;font-weight:400}
+.hero-tagline strong{color:#fde68a}
+.hero-scroll{margin-top:.8rem;font-size:.8rem;color:rgba(255,255,255,.5);animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+.sec-title{font-family:var(--ff);font-size:1.4rem;font-weight:900;color:var(--ocean);text-align:center;margin-bottom:.3rem}
+.sec-sub{text-align:center;color:var(--text-dim);font-size:.88rem;margin-bottom:1.2rem;font-weight:400}
+
+.info-section{padding:1.5rem 0;background:var(--bg-cool)}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;max-width:680px;margin:0 auto}
+.info-card{background:var(--bg-white);border-radius:8px;padding:.8rem 1rem;box-shadow:var(--shadow)}
+.info-card strong{color:var(--ocean);font-size:.92rem;font-weight:700;display:block;margin-bottom:.2rem}
+.info-card p{font-size:.88rem;color:var(--text-dim);line-height:1.6}
+.info-card .todo{color:var(--coral);font-style:italic;font-size:.85rem}
+
+.char-section{padding:1.8rem 0}
+.char-list{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;max-width:720px;margin:0 auto}
+.char-list .char-lead{grid-column:1/-1;max-width:480px;justify-self:center}
+.char-card{background:var(--bg-white);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+.char-header{padding:.6rem 1.1rem;display:flex;align-items:center;gap:.6rem;background:linear-gradient(90deg,rgba(3,105,161,.06),transparent)}
+.char-header .char-icon{font-size:1.3rem}
+.char-header h3{font-family:var(--ff);font-size:.95rem;font-weight:700;color:var(--text)}
+.char-header .char-tag{font-size:.68rem;padding:.1rem .5rem;border-radius:999px;margin-left:auto;font-weight:600}
+.char-body{padding:.3rem 1.1rem .8rem;display:grid;gap:.15rem}
+.char-body .cf{font-size:.85rem;line-height:1.65;display:flex;gap:.4rem}
+.char-body .cf-label{font-weight:700;color:var(--ocean);font-size:.75rem;white-space:nowrap;min-width:4.2em}
+.char-body .cf-val{color:var(--text-dim)}
+.char-tags{display:flex;flex-wrap:wrap;gap:.3rem;padding:.3rem 1.1rem}
+.char-tags span{font-size:.68rem;padding:.15rem .5rem;border-radius:4px;background:rgba(3,105,161,.07);color:var(--ocean);font-weight:500}
+.char-todo{padding:.7rem 1.1rem;text-align:center;color:var(--coral);font-style:italic;font-size:.88rem}
+.char-body-with-img{display:flex;gap:.8rem;padding:.3rem 1.1rem .8rem;align-items:flex-start}
+.char-body-with-img .char-body{padding:0}
+.char-img-wrap{flex-shrink:0;display:flex;flex-direction:column;align-items:center;gap:.3rem}
+.char-img-label{font-size:.72rem;font-weight:600;color:var(--ocean);letter-spacing:.05em}
+.char-img-link{width:120px;border-radius:6px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);transition:transform .2s;cursor:pointer}
+.char-img-link:hover{transform:scale(1.03)}
+.char-design-img{width:100%;display:block}
+.lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.85);align-items:center;justify-content:center;cursor:zoom-out}
+.lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5)}
+
+.scene-section{padding:1.8rem 0;background:var(--bg-cool)}
+.scene-banner{max-width:700px;margin:0 auto 1rem;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.scene-banner img{width:100%;display:block}
+.scene-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;max-width:700px;margin:0 auto}
+.scene-card{background:var(--bg-white);border-radius:8px;padding:.9rem 1.1rem;box-shadow:var(--shadow)}
+.scene-card h3{font-weight:700;font-size:.95rem;color:var(--ocean);margin-bottom:.2rem}
+.scene-card p{font-size:.88rem;color:var(--text-dim);line-height:1.65}
+.scene-card.wide{grid-column:1/-1}
+.scene-highlight{background:linear-gradient(135deg,rgba(3,105,161,.04),rgba(13,148,136,.06));border:1px solid rgba(3,105,161,.1)}
+.ref-imgs{display:grid;gap:.4rem;margin-top:.4rem}
+.ref-imgs img{width:100%;border-radius:6px;display:block}
+
+.synopsis-section{padding:1.8rem 0;background:var(--bg-cool)}
+.synopsis-box{max-width:700px;margin:0 auto;background:var(--bg-white);border-radius:8px;box-shadow:var(--shadow);padding:1.2rem 1.4rem;border-left:4px solid var(--ocean)}
+.synopsis-box p{font-size:.92rem;color:var(--text);line-height:1.85;text-indent:2em}
+
+.style-section{padding:1.8rem 0}
+.style-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem;max-width:720px;margin:0 auto}
+.style-card{background:var(--bg-white);border-radius:8px;box-shadow:var(--shadow);padding:1rem 1.2rem}
+.style-card h3{font-family:var(--ff);font-size:1rem;font-weight:700;color:var(--ocean);margin-bottom:.4rem}
+.style-desc{font-size:.85rem;color:var(--text-dim);line-height:1.7;margin-bottom:.7rem}
+.style-refs{display:grid;gap:.3rem}
+.style-ref-item{font-size:.83rem;color:var(--text);display:flex;gap:.4rem;align-items:baseline;line-height:1.6}
+.style-ref-tag{font-size:.72rem;padding:.1rem .4rem;border-radius:4px;background:rgba(3,105,161,.08);color:var(--ocean);white-space:nowrap;font-weight:600}
+.style-ref-links{margin-top:.4rem;display:grid;gap:.2rem}
+.style-ref-links a{font-size:.83rem;color:var(--ocean);text-decoration:none;font-weight:500}
+.style-ref-links a:hover{text-decoration:underline}
+
+.story-section{padding:1.8rem 0}
+.story-tabs{display:flex;gap:.3rem;max-width:740px;margin:0 auto 1rem;padding:0 24px}
+.story-tab{padding:.35rem 1rem;border-radius:8px;border:2px solid var(--ocean);background:transparent;color:var(--ocean);font-family:var(--ff);font-size:.88rem;cursor:pointer;transition:.2s}
+.story-tab.active{background:var(--ocean);color:#fff}
+.story-tab:hover{background:var(--ocean);color:#fff;opacity:.85}
+.story-panel{display:none}
+.story-panel.active{display:block}
+
+.plan-placeholder{background:var(--bg-white);border-radius:8px;padding:1.5rem;box-shadow:var(--shadow);max-width:740px;margin:0 auto;text-align:center}
+.plan-placeholder .ph-icon{font-size:2rem;margin-bottom:.4rem}
+.plan-placeholder h3{font-family:var(--ff);font-size:1.15rem;font-weight:700;color:var(--ocean);margin-bottom:.3rem}
+.plan-placeholder p{color:var(--text-dim);font-size:.88rem}
+
+.storyboard{max-width:740px;margin:0 auto;display:grid;gap:.7rem}
+.sb-card{background:var(--bg-white);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+.sb-header{padding:.5rem 1.1rem;display:flex;align-items:center;gap:.5rem;background:linear-gradient(90deg,var(--ocean),var(--teal));color:#fff}
+.sb-header .sb-num{font-weight:700;font-size:1rem;min-width:2.5em}
+.sb-header .sb-type{font-size:.72rem;padding:.1rem .45rem;border-radius:999px;background:rgba(255,255,255,.2);margin-left:auto;white-space:nowrap}
+.sb-body{padding:.8rem 1.1rem}
+.sb-body .sb-visual{font-size:.88rem;color:var(--ocean-deep);line-height:1.7;margin-bottom:.5rem}
+.sb-body .sb-visual::before{content:'🎬 ';font-size:.85rem}
+.sb-body .sb-dialogue{background:var(--bg-cool);border-radius:8px;padding:.6rem .9rem;border-left:3px solid var(--ocean);margin-bottom:.5rem}
+.sb-body .sb-dialogue .who{font-size:.78rem;color:var(--text-dim);margin-bottom:.15rem;font-weight:600}
+.sb-body .sb-dialogue p{font-size:.95rem;line-height:1.7;margin-bottom:.15rem;font-weight:500}
+.sb-body .sb-note{font-size:.85rem;color:var(--text-dim);line-height:1.65;font-style:italic}
+.sb-body .sb-voiceover{background:rgba(13,148,136,.06);border-radius:8px;padding:.6rem .9rem;border-left:3px solid var(--teal);margin-bottom:.5rem}
+.sb-body .sb-voiceover::before{content:'🎙️ 画外音：';font-size:.8rem;color:var(--teal);font-weight:700}
+.sb-body .sb-voiceover p{font-size:.92rem;line-height:1.7;color:var(--text)}
+.sb-img{width:100%;display:block}
+
+.ref-section{padding:1.8rem 0}
+.ref-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;max-width:680px;margin:0 auto}
+.ref-card{background:var(--bg-white);border-radius:8px;padding:.8rem 1rem;box-shadow:var(--shadow)}
+.ref-card strong{color:var(--ocean);font-size:.92rem;font-weight:700;display:block;margin-bottom:.2rem}
+.ref-card p{font-size:.85rem;color:var(--text-dim);line-height:1.6}
+.ref-card a{color:var(--ocean);text-decoration:none;word-break:break-all;font-size:.85rem}
+.ref-card a:hover{text-decoration:underline}
+.ref-card .todo{color:var(--coral);font-style:italic;font-size:.82rem}
+
+.schedule-section{padding:1.8rem 0;background:var(--bg-cool)}
+
+.gantt-wrap{max-width:1100px;margin:0 auto;background:var(--bg-white);border-radius:var(--r);box-shadow:var(--shadow-lg);overflow:hidden}
+.gantt-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.gantt-scroll::-webkit-scrollbar{height:14px}
+.gantt-scroll::-webkit-scrollbar-track{background:rgba(3,105,161,.04);border-radius:7px}
+.gantt-scroll::-webkit-scrollbar-thumb{background:rgba(3,105,161,.25);border-radius:7px;border:3px solid transparent;background-clip:padding-box}
+.gantt-scroll::-webkit-scrollbar-thumb:hover{background:rgba(3,105,161,.4);border:3px solid transparent;background-clip:padding-box}
+.gantt-scroll{scrollbar-width:auto;scrollbar-color:rgba(3,105,161,.25) rgba(3,105,161,.04)}
+.gantt-header{display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.2rem;background:linear-gradient(135deg,var(--ocean-deep),var(--ocean),var(--teal));color:#fff}
+.gantt-header h3{font-family:var(--ff);font-size:1rem;font-weight:700;margin:0}
+.gantt-header .gantt-spec{font-size:.75rem;opacity:.8;display:flex;gap:.8rem}
+.gantt-header .gantt-spec span{background:rgba(255,255,255,.15);padding:.15rem .5rem;border-radius:4px}
+.gantt-table{width:100%;border-collapse:collapse;font-size:.82rem;table-layout:fixed}
+.gantt-table th,.gantt-table td{padding:.45rem .3rem;text-align:center;border:1px solid rgba(3,105,161,.08)}
+.gantt-table thead tr:first-child th{background:rgba(3,105,161,.06);font-weight:700;color:var(--ocean-deep);font-size:.85rem;border-bottom:2px solid rgba(3,105,161,.12)}
+.gantt-table thead tr:nth-child(2) th{background:rgba(3,105,161,.03);font-weight:600;color:var(--text-dim);font-size:.75rem;white-space:nowrap}
+.gantt-table .g-phase{font-weight:700;color:var(--ocean);background:rgba(3,105,161,.04);text-align:left;padding-left:.6rem;white-space:nowrap;font-size:.82rem}
+.gantt-table .g-task{text-align:left;padding-left:.6rem;color:var(--text);font-weight:500;white-space:nowrap;font-size:.8rem}
+.gantt-table .g-who{color:var(--text-dim);font-size:.75rem;white-space:nowrap}
+.gantt-bar{border-radius:4px;padding:.2rem .3rem;font-size:.72rem;font-weight:600;color:#fff;white-space:nowrap;display:inline-block;min-width:100%;box-sizing:border-box;text-align:center;line-height:1.4;animation:barIn .6s ease-out both}
+.g-pre{background:linear-gradient(90deg,#0ea5e9,#38bdf8)}
+.g-art{background:linear-gradient(90deg,#8b5cf6,#a78bfa)}
+.g-post{background:linear-gradient(90deg,#f97316,#fb923c)}
+.g-audio{background:linear-gradient(90deg,#10b981,#34d399)}
+.g-export{background:linear-gradient(90deg,#ef4444,#f87171)}
+.g-supply{background:linear-gradient(90deg,#64748b,#94a3b8)}
+.g-music{background:linear-gradient(90deg,#06b6d4,#22d3ee)}
+.g-voice{background:linear-gradient(90deg,#14b8a6,#2dd4bf)}
+.g-sfx{background:linear-gradient(90deg,#059669,#34d399)}
+.gantt-bar-empty{background:transparent}
+.gantt-table td.bar-cell{padding:.35rem .2rem;vertical-align:middle}
+@keyframes barIn{from{opacity:0;transform:scaleX(0)}to{opacity:1;transform:scaleX(1)}}
+.gantt-legend{display:flex;flex-wrap:wrap;gap:.4rem .8rem;padding:.6rem 1.2rem;border-top:1px solid rgba(3,105,161,.08);align-items:center}
+.gantt-legend-item{display:flex;align-items:center;gap:.25rem;font-size:.72rem;color:var(--text-dim)}
+.gantt-legend-dot{width:10px;height:10px;border-radius:3px}
+.gantt-deadline{display:flex;align-items:center;justify-content:center;gap:.4rem;padding:.5rem 1.2rem;background:linear-gradient(90deg,rgba(239,68,68,.06),rgba(239,68,68,.02));border-top:1px solid rgba(239,68,68,.1)}
+.gantt-deadline .dl-icon{font-size:1rem}
+.gantt-deadline .dl-text{font-size:.82rem;font-weight:700;color:#dc2626}
+.gantt-deadline .dl-date{font-size:.82rem;color:var(--text-dim);font-weight:500}
+.gantt-today-marker{position:relative}
+.gantt-today-marker::after{content:'TODAY';position:absolute;top:-1.1rem;left:50%;transform:translateX(-50%);font-size:.58rem;font-weight:800;color:#fff;background:#ef4444;padding:.05rem .3rem;border-radius:3px;letter-spacing:.05em;white-space:nowrap}
+
+.footer{padding:1.2rem 0;text-align:center;background:var(--bg-white);border-top:1px solid rgba(3,105,161,.08)}
+.footer-icons{margin-bottom:.4rem}
+.footer-logo{height:144px;width:auto;opacity:.7}
+.footer p{font-size:.82rem;color:var(--text-dim);margin-bottom:.15rem}
+.footer-quote{font-family:var(--ff);font-size:1rem;font-weight:700;color:var(--ocean);margin-top:.4rem}
+.tts-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.35rem .8rem;border-radius:8px;border:2px solid var(--teal);background:transparent;color:var(--teal);font-family:var(--ff);font-size:.82rem;font-weight:600;cursor:pointer;transition:.2s;margin-left:.4rem;vertical-align:middle}
+.tts-btn:hover{background:var(--teal);color:#fff}
+.tts-btn.playing{background:var(--teal);color:#fff;animation:pulse-tts 1.5s ease-in-out infinite}
+.tts-btn .tts-icon{font-size:1rem;line-height:1}
+@keyframes pulse-tts{0%,100%{opacity:1}50%{opacity:.6}}
+.tts-progress{display:none;max-width:740px;margin:.5rem auto 0;padding:0 24px}
+.tts-progress.show{display:block}
+.tts-progress-bar{height:4px;border-radius:2px;background:var(--pearl);overflow:hidden}
+.tts-progress-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--teal),var(--ocean));width:0%;transition:width .3s}
+.tts-current{margin-top:.3rem;font-size:.78rem;color:var(--text-dim);line-height:1.5;min-height:1.2em}
+.back-top{position:fixed;bottom:1.5rem;right:1.5rem;width:40px;height:40px;border-radius:50%;border:none;background:var(--ocean);color:#fff;font-size:1rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:100;box-shadow:0 3px 12px rgba(3,105,161,.3)}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--ocean-deep)}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:99;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(3,105,161,.1);padding:.3rem 0;transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 16px rgba(3,105,161,.12)}
+.nav-inner{max-width:880px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:.2rem;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;padding:.28rem .7rem;border-radius:6px;font-size:.8rem;font-weight:500;color:var(--text-dim);text-decoration:none;transition:.2s}
+.nav a:hover{color:var(--ocean);background:rgba(3,105,161,.06)}
+.nav a.active{color:#fff;background:var(--ocean)}
+.nav-title{font-weight:700;font-size:.85rem;color:var(--ocean-deep);margin-right:.4rem;white-space:nowrap;display:flex;align-items:center;gap:.3rem}
+.nav-logo{height:28px;width:auto}
+
+@media(max-width:700px){
+    html{font-size:15px}
+    .info-grid,.ref-grid,.scene-grid,.char-list,.style-grid{grid-template-columns:1fr}
+    .char-list .char-lead{max-width:none}
+    .storyboard{padding:0 20px}
+    .sb-body{padding:.8rem}
+    .story-tabs{flex-wrap:wrap}
+    .schedule-box{padding:1rem}
+    .nav a{font-size:.75rem;padding:.25rem .5rem}
+}
+    </style>
+</head>
+<body>
+
+<nav class="nav scrolled" id="mainNav">
+    <div class="nav-inner">
+        <span class="nav-title"><img src="../../assets/logo/小镇logo（透明底）.png" alt="心动小镇" class="nav-logo"> 寻鲸季过场动画</span>
+        <a href="#sec-hero">首页</a>
+        <a href="#sec-info">项目信息</a>
+        <a href="#sec-char">角色</a>
+        <a href="#sec-scene">场景</a>
+        <a href="#sec-ship">探索者号</a>
+        <a href="#sec-synopsis">梗概</a>
+        <a href="#sec-style">形式</a>
+        <a href="#sec-explore">风格探索</a>
+        <a href="#sec-storyboard">脚本</a>
+        <a href="#sec-schedule">排期</a>
+    </div>
+</nav>
+
+<section class="hero" id="sec-hero">
+    <div class="hero-content">
+        <div class="hero-emoji"><img src="../../assets/logo/小镇logo（透明底）.png" alt="心动小镇" class="hero-logo"></div>
+        <h1>寻鲸季 · 过场动画方案</h1>
+        <div class="hero-tagline">
+            那天，罗里和知允刚完成水下考古作业。<br>
+            <strong>海底地震</strong>突然爆发。潜水器在暗流中翻滚。<br><br>
+            在绝望中，罗里做了一个大胆的决定——<br>
+            <strong>冲向海底裂隙。</strong><br><br>
+            他们坠入了一片从未有人涉足过的世界——<br>
+            <strong>鲸落峡谷。</strong>
+        </div>
+        <div class="hero-scroll">↓ 往下看 ↓</div>
+    </div>
+</section>
+
+<!-- ==================== 项目信息 ==================== -->
+<section class="info-section" id="sec-info">
+    <div class="container">
+        <h2 class="sec-title">📋 项目信息</h2>
+        <p class="sec-sub">心动小镇 · 寻鲸季过场动画</p>
+        <div class="info-grid">
+            <div class="info-card" style="display:flex;align-items:center;gap:.6rem">
+                <strong style="margin-bottom:0">📅 交片时间</strong>
+                <p>2026/5/28</p>
+            </div>
+            <div class="info-card" style="display:flex;align-items:center;gap:.6rem">
+                <strong style="margin-bottom:0">⏱️ 时长</strong>
+                <p>90s 左右</p>
+            </div>
+            <div class="info-card" style="grid-column:1/-1">
+                <strong>📦 项目组提供资料</strong>
+                <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:.25rem .6rem;margin-top:.3rem">
+                    <p>· <a href="https://xd.feishu.cn/wiki/QX33w2v23iP0G8kLsZUcW3UsneG?from=from_copylink" target="_blank" style="color:var(--ocean);text-decoration:none;font-weight:500">海底大世界资产梳理</a></p>
+                    <p>· <a href="https://xd.feishu.cn/wiki/NAh7wUKaVi6UaekGRO2cMsAnnnd" target="_blank" style="color:var(--ocean);text-decoration:none;font-weight:500">海底世界「鲸落峡谷」</a></p>
+                    <p>· <a href="https://xd.feishu.cn/wiki/WGWKwEO6rilIknktMKfcDLD5n9g" target="_blank" style="color:var(--ocean);text-decoration:none;font-weight:500">寻鲸季背景及故事线</a></p>
+                    <p>· <a href="https://xd.feishu.cn/wiki/KMRFw69Esidh0xkmgI9cKvDrnqb?from=from_copylink" target="_blank" style="color:var(--ocean);text-decoration:none;font-weight:500">海底大世界氛围图布局图汇总</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 角色设定 ==================== -->
+<section class="char-section" id="sec-char">
+    <div class="container">
+        <h2 class="sec-title">🧩 角色信息</h2>
+        <p class="sec-sub">考古小队 · 五人组</p>
+        <div class="char-list">
+
+            <div class="char-card char-lead">
+                <div class="char-header">
+                    <div class="char-icon">🧭</div>
+                    <h3>罗里 Rory</h3>
+                    <span class="char-tag" style="background:#dbeafe;color:#1d4ed8">主角</span>
+                </div>
+                <div class="char-tags"><span>主驾驶</span><span>画外音</span><span>考古 & 艺术</span><span>安妮的姐姐</span></div>
+                <div class="char-body-with-img">
+                    <div class="char-body" style="flex:1">
+                        <div class="cf"><span class="cf-label">身份</span><span class="cf-val">安妮的姐姐，考古专业出身，自认主业搞艺术。</span></div>
+                        <div class="cf"><span class="cf-label">性格</span><span class="cf-val">果敢有主见，嫌队伍太死板，总想注入"想象力"。</span></div>
+                        <div class="cf"><span class="cf-label">剧情</span><span class="cf-val">全片画外音叙述者，危急时接管主驾驶带队脱困。</span></div>
+                    </div>
+                    <div class="char-img-wrap">
+                        <span class="char-img-label">角色设计</span>
+                        <div class="char-img-link" onclick="document.getElementById('lightbox').style.display='flex';document.getElementById('lightbox-img').src=this.querySelector('img').src">
+                            <img src="../../assets/海底世界/罗里设计02.jpg" alt="罗里设计图" class="char-design-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="char-card">
+                <div class="char-header">
+                    <div class="char-icon">🤿</div>
+                    <h3>林知允 Im Jiyoon</h3>
+                    <span class="char-tag" style="background:#fef3c7;color:#b45309">考古担当</span>
+                </div>
+                <div class="char-tags"><span>韩裔</span><span>外勤记录员</span><span>短发 / 工装</span></div>
+                <div class="char-body">
+                    <div class="cf"><span class="cf-label">身份</span><span class="cf-val">外勤发掘与样本采集，小队真正的考古主力。</span></div>
+                    <div class="cf"><span class="cf-label">性格</span><span class="cf-val">严谨认真，聊到考古就停不下来。</span></div>
+                    <div class="cf"><span class="cf-label">剧情</span><span class="cf-val">与罗里搭档水下作业，地震后追问情况、摇醒奥利弗。</span></div>
+                </div>
+            </div>
+
+            <div class="char-card">
+                <div class="char-header">
+                    <div class="char-icon">😰</div>
+                    <h3>奥利弗 Oliver</h3>
+                    <span class="char-tag" style="background:#fce7f3;color:#be185d">领队 · 金丝雀</span>
+                </div>
+                <div class="char-tags"><span>欧洲贵族</span><span>绿眼 · 卷毛</span><span>环保主义</span></div>
+                <div class="char-body">
+                    <div class="cf"><span class="cf-label">身份</span><span class="cf-val">名义领队，负责规划协调，靠家族关系上位。</span></div>
+                    <div class="cf"><span class="cf-label">性格</span><span class="cf-val">温文偏软弱，一紧张就口吃甚至"宕机"。</span></div>
+                    <div class="cf"><span class="cf-label">剧情</span><span class="cf-val">地震时惊慌宕机，被罗里拉下主驾。醒来后惊叹于鲸落。</span></div>
+                </div>
+            </div>
+
+            <div class="char-card">
+                <div class="char-header">
+                    <div class="char-icon">🛠️</div>
+                    <h3>贾拉尼 Jelani</h3>
+                    <span class="char-tag" style="background:#d1fae5;color:#065f46">机械师 · 副驾驶</span>
+                </div>
+                <div class="char-tags"><span>东非裔</span><span>资历最深</span><span>寸头 · 工装</span></div>
+                <div class="char-body">
+                    <div class="cf"><span class="cf-label">身份</span><span class="cf-val">负责设备维护和后勤保障，队内在编最久。</span></div>
+                    <div class="cf"><span class="cf-label">性格</span><span class="cf-val">沉默寡言总挂着笑，稳重可靠，指哪打哪。</span></div>
+                    <div class="cf"><span class="cf-label">剧情</span><span class="cf-val">考古作业时负责留守潜水器，地震爆发后迅速反应，与罗里默契配合帮助潜水器脱险。</span></div>
+                </div>
+            </div>
+
+            <div class="char-card">
+                <div class="char-header">
+                    <div class="char-icon">🔬</div>
+                    <h3>纳加斯瓦米 Nagaswamy</h3>
+                    <span class="char-tag" style="background:#ede9fe;color:#7c3aed">技术分析师</span>
+                </div>
+                <div class="char-tags"><span>印度裔</span><span>眼镜 · 衬衫</span><span>不下水</span></div>
+                <div class="char-body">
+                    <div class="cf"><span class="cf-label">身份</span><span class="cf-val">技术专家，负责分析样本、推动研究进展。</span></div>
+                    <div class="cf"><span class="cf-label">性格</span><span class="cf-val">工作积极但爱谈条件，嫌水太凉坚决不下水。</span></div>
+                    <div class="cf"><span class="cf-label">剧情</span><span class="cf-val">留守潜水器分析考古样本，危机中稳坐后排，静待脱险。</span></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 场景：鲸落峡谷 ==================== -->
+<section class="scene-section" id="sec-scene">
+    <div class="container">
+        <h2 class="sec-title">🌊 场景：鲸落峡谷</h2>
+        <p class="sec-sub">CG最终落点 · 一片未曾被人涉足过的海底生态奇观</p>
+        <div class="scene-banner"><img src="../../assets/海底世界/image.png" alt="鲸落峡谷概念图"></div>
+        <div class="scene-grid">
+            <div class="scene-card wide scene-highlight">
+                <h3>🐋 鲸落</h3>
+                <p>核心景观。一头来自异界的座头鲸的遗骸，已进入礁岩阶段，仅剩骨架。鲸落头部朝向深海。受律音鲸灵「瓦尔图」灵能蕴养，海水洁净时骨架散发柔和白光/蓝光/彩虹光，整个区域海水从幽蓝渐变为核心鲸落的色彩——极具神圣感。</p>
+            </div>
+            <div class="scene-card wide">
+                <h3>🎨 项目组美术图</h3>
+                <div class="ref-imgs">
+                    <img src="../../assets/海底世界/image (1).png" alt="鲸落峡谷概念设计">
+                </div>
+                <p style="margin-top:.5rem;font-size:.83rem"><a href="https://xd.feishu.cn/wiki/KMRFw69Esidh0xkmgI9cKvDrnqb?from=from_copylink" target="_blank" style="color:var(--ocean);text-decoration:none;font-weight:500">📎 海底大世界氛围图布局图汇总（项目组提供资料） →</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 载具：「探索者」号潜水艇 ==================== -->
+<section class="scene-section" id="sec-ship" style="background:var(--bg)">
+    <div class="container">
+        <h2 class="sec-title">🚢 载具：「探索者」号潜水艇</h2>
+        <p class="sec-sub">海洋考古小队的核心装备</p>
+        <div class="scene-grid">
+            <div class="scene-card wide scene-highlight">
+                <h3>📐 基本信息</h3>
+                <p>小型潜航器，核载约15人。投入使用近15年，保养不错但部分零件有年头。正是它载着考古小队在海底地震中避险，意外发现了鲸落峡谷。</p>
+            </div>
+            <div class="scene-card">
+                <h3>🔍 潜水艇参考</h3>
+                <div class="ref-imgs">
+                    <img src="../../assets/海底世界/潜水艇参考01.png" alt="潜水艇参考01">
+                    <img src="../../assets/海底世界/潜水艇参考02.webp" alt="潜水艇参考02">
+                </div>
+            </div>
+            <div class="scene-card">
+                <h3>🔍 内仓参考</h3>
+                <div class="ref-imgs">
+                    <img src="../../assets/海底世界/潜水艇仓内参考.png" alt="潜水艇仓内参考">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 故事梗概 ==================== -->
+<section class="synopsis-section" id="sec-synopsis">
+    <div class="container">
+        <h2 class="sec-title">📖 故事梗概</h2>
+        <p class="sec-sub">两个方案共用同一故事线</p>
+        <div class="synopsis-box">
+            <p>罗里的考古团队在完成水下考古作业后意外遭遇海底地震。面对领队奥利弗的宕机，罗里主动承担起带领队友脱困的重任。靠着她艺术家般的想象力和冒险精神，成功驾驶潜水器躲进海底裂隙，却因此意外发现了一片深藏于海底的世外桃源……</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 制作形式与参考 ==================== -->
+<section class="style-section" id="sec-style">
+    <div class="container">
+        <h2 class="sec-title">🎨 制作形式与参考</h2>
+        <p class="sec-sub">两种方案对应不同的动画制作风格</p>
+        <div class="style-grid">
+            <div class="style-card">
+                <h3>方案一 · 3D 动画</h3>
+                <p class="style-desc">皮克斯/迪士尼风格的三维 CG 动画，具备电影级别的光影与镜头表现力。适合呈现海底大场景和潜水器的空间感。</p>
+                <div class="style-refs">
+                    <div class="style-ref-item">
+                        <span class="style-ref-tag">🎬 参考</span>
+                        <a href="https://www.bilibili.com/bangumi/play/ss46307?theme=movie" target="_blank" style="color:var(--ocean);text-decoration:none;font-weight:500">《海底总动员》Finding Nemo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="style-card">
+                <h3>方案二 · Live2D 动画</h3>
+                <p class="style-desc">类似原神/崩坏星穹铁道的 Live2D / 2.5D 动画过场，以精美立绘+动态演出为核心。制作成本可控，适合角色表演与叙事节奏。</p>
+                <div class="style-refs">
+                    <div class="style-ref-item">
+                        <span class="style-ref-tag">🎬 动画参考</span>
+                        <a href="https://www.bilibili.com/video/BV1T94y1f7UE/" target="_blank" style="color:var(--ocean);text-decoration:none;font-weight:500">《原神》神里绫人角色PV——「灯火照夜」</a>
+                    </div>
+                </div>
+                <div style="margin-top:.5rem">
+                    <a href="javascript:void(0)" onclick="document.getElementById('video-lightbox').style.display='flex';document.getElementById('lightbox-video').src='../../assets/海底世界/快切参考1.mp4'" style="font-size:.83rem;color:var(--ocean);text-decoration:none;font-weight:500;cursor:pointer">🎞️ 地震时快切参考 ▶</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 风格探索（方案二） ==================== -->
+<section class="style-section" id="sec-explore" style="background:var(--bg-cool)">
+    <div class="container">
+        <h2 class="sec-title">🔍 风格探索（方案二）</h2>
+        <p class="sec-sub">Live2D 方向下的两种视觉风格尝试</p>
+        <div class="style-grid" style="max-width:860px;gap:.4rem">
+            <div class="style-card" style="padding:.6rem">
+                <h3 style="margin-bottom:.3rem;text-align:center">偏 2D 风格</h3>
+                <video src="../../assets/海底世界/2D风格.mp4" controls style="width:100%;border-radius:4px;display:block;margin-bottom:.4rem"></video>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:.3rem">
+                    <img src="../../assets/海底世界/潜水艇2D设计01.jpg" alt="潜水艇2D设计01" style="width:100%;border-radius:4px;display:block;cursor:pointer" onclick="document.getElementById('lightbox').style.display='flex';document.getElementById('lightbox-img').src=this.src">
+                    <img src="../../assets/海底世界/潜水艇2D设计02.jpg" alt="潜水艇2D设计02" style="width:100%;border-radius:4px;display:block;cursor:pointer" onclick="document.getElementById('lightbox').style.display='flex';document.getElementById('lightbox-img').src=this.src">
+                </div>
+            </div>
+            <div class="style-card" style="padding:.6rem">
+                <h3 style="margin-bottom:.3rem;text-align:center">偏 3D 风格</h3>
+                <video src="../../assets/海底世界/3D风格.mp4" controls style="width:100%;border-radius:4px;display:block;margin-bottom:.4rem"></video>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:.3rem">
+                    <img src="../../assets/海底世界/潜水艇3D设计01.jpg" alt="潜水艇3D设计01" style="width:100%;border-radius:4px;display:block;cursor:pointer" onclick="document.getElementById('lightbox').style.display='flex';document.getElementById('lightbox-img').src=this.src">
+                    <img src="../../assets/海底世界/潜水艇3D设计02.jpg" alt="潜水艇3D设计02" style="width:100%;border-radius:4px;display:block;cursor:pointer" onclick="document.getElementById('lightbox').style.display='flex';document.getElementById('lightbox-img').src=this.src">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== 脚本方案 ==================== -->
+<section class="story-section" id="sec-storyboard">
+    <div class="container">
+        <h2 class="sec-title">🎬 脚本方案</h2>
+        <p class="sec-sub">点击切换方案</p>
+    </div>
+
+    <div class="story-tabs">
+        <button class="story-tab" data-tab="plan1">方案一</button>
+        <button class="story-tab active" data-tab="plan2">方案二（推荐）</button>
+        <button class="tts-btn" id="ttsBtn" onclick="toggleTTS()"><span class="tts-icon">🔊</span><span id="ttsBtnText">朗读方案二</span></button>
+    </div>
+    <div class="tts-progress" id="ttsProgress">
+        <div class="tts-progress-bar"><div class="tts-progress-fill" id="ttsProgressFill"></div></div>
+        <div class="tts-current" id="ttsCurrent"></div>
+    </div>
+
+    <!-- 方案一 -->
+    <div class="story-panel" id="plan1">
+        <div class="storyboard">
+
+            <!-- 第一段 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">第一段</span>
+                    插科打诨，树立人设
+                    <span class="sb-type">约 30s</span>
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">外景，海底全景，彩色鱼群游过，镜头在珊瑚丛中穿过，神秘而又美丽。</div>
+                    <div class="sb-visual">知允穿着潜水服，拖着一个半人高的箱子漂浮在原地，像是在等什么人。箱子上刻着"人文遗产协会"的Logo。</div>
+                    <div class="sb-visual">罗里从海洋深处优雅地游了上来。（接下来一段角色通过安装在面罩上的水下对讲机对话，声音带有无线电处理后的音色）</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允（点了点自己手表）</div>
+                        <p>你迟到了。</p>
+                    </div>
+                    <div class="sb-visual">罗里游到知允身边，顺势用一只手接过知允手里的箱子，两人一边协力拖箱子潜泳一边对话。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>知道啦，"时刻表小姐"，但听听我录下的优美旋律，不值得多花几分钟么？</p>
+                    </div>
+                    <div class="sb-visual">罗里在无线电中播放了一段海豚的"歌声"。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>真是够业余的……这个团队里就只有一个人在认真考古么？</p>
+                    </div>
+                    <div class="sb-visual">两人已经能够看到"探索者"号潜水器了。无线电里传来了纳加斯瓦米的画外音。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加（画外音）</div>
+                        <p>多谢夸奖，我猜你说的是我。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>一个甚至不愿意亲临考古现场的人？</p>
+                    </div>
+                    <div class="sb-visual">切镜至潜水艇一个全是各种电子仪器的逼仄房间里，纳加一边专心致志地在工作台前分析考古样本，一边继续讲话。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加</div>
+                        <p>首先，我是个科学家，不是苦力。其次，外边水太凉。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 第二段 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">第二段</span>
+                    危机来袭，冒险开始
+                    <span class="sb-type">约 30s</span>
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">切镜回到海底，知允正要开口说话，奥利弗急吼吼地插话进来。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">奥利弗（画外音）</div>
+                        <p>快、快回来——</p>
+                    </div>
+                    <div class="sb-visual">切镜到潜水器的驾驶舱（参考银护飞船的驾驶舱设计），奥利弗和贾拉尼分别坐在主副驾驶上，周围的电脑屏幕上在疯狂闪烁着"地震波预警"。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">奥利弗（紧接上一句）</div>
+                        <p>我们遇到麻烦了！</p>
+                    </div>
+                    <div class="sb-visual">奥利弗和贾拉尼在各自的操作台上疯狂操作。透过全景窗看到远处混杂着泥沙、石块的浊流正如一线海浪般急速涌来。</div>
+                    <div class="sb-visual">外景，超大全景俯视海底，潜水器在海底显得十分渺小，而潜水器后侧不远的地方有两个更渺小的人影，她们丢掉手里的箱子，手脚并用地加速靠近潜水器。潜水器正前方的远处，巨量的浊流正在涌来，海底在隆隆颤动、鱼群四散奔逃，场面如同好莱坞灾难片一样壮观而又可怕。</div>
+                    <div class="sb-visual">切镜到潜水器后部的入口，知允已经爬了进去，罗里正要紧随其后钻进去，一股海流已经冲击到了潜水器，潜水器剧烈晃动，罗里脱手，惊叫一声被甩了出去。</div>
+                    <div class="sb-visual">眼见着罗里即将漂远，一只粗壮的大黑手从舱口伸了出来，一把抓住了罗里的胳膊。罗里看过去，是带着氧气面罩的贾拉尼。紧接着知允也赶忙回身帮忙，把摇摇晃晃的罗里拉了进去。</div>
+                    <div class="sb-visual">三人惊魂甫定地坐在干燥的隔水舱里。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>呼……欠你个人情，贾拉尼。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">贾拉尼</div>
+                        <p>嗯。</p>
+                    </div>
+                    <div class="sb-visual">话音刚落，潜水器突然开始剧烈翻转，变成了滚筒洗衣机。三人惊叫着随着潜水器的摇晃摔倒在地。画面快闪几次，黑屏。</div>
+                </div>
+            </div>
+
+            <!-- 第三段 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">第三段</span>
+                    随波逐流，险象环生
+                    <span class="sb-type">约 30s</span>
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">几个快闪画面：画面亮起，潜水器轰然撞在一块海底巨岩上，黑屏；画面亮起，潜水器在海流中翻滚，黑屏；一片海底斜坡坍塌，碎石被水流裹挟着如冰雹般砸在潜水器上，黑屏。</div>
+                    <div class="sb-visual">画面猛然亮起，特写，镜头怼脸拍奥利弗，他被安全带捆在主驾驶座椅上，瞪着眼睛满脸惊恐，脑子里满是耳鸣声。周围旋转闪烁的警报灯时不时照亮他的脸。镜头旋转着拉出来，潜水器上下翻转，奥利弗大头朝下。</div>
+                    <div class="sb-visual">画外传来渺远的、仿佛隔着一层水的呼喊声。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允（画外音）</div>
+                        <p>情况怎么样？</p>
+                    </div>
+                    <div class="sb-visual">知允跌跌撞撞地冲到驾驶位，摇晃着大脑一片空白的奥利弗。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>我问你情况怎么样？！</p>
+                    </div>
+                    <div class="sb-visual">另一边罗里也扑了过来，一把扯开奥利弗的安全带，把他推给跟在后边进入驾驶舱的贾拉尼。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>啊……咱们的金丝雀又宕机了。</p>
+                    </div>
+                    <div class="sb-visual">说罢，罗里当仁不让地坐在主驾驶位，系好安全带。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>贾拉尼。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">贾拉尼</div>
+                        <p>嗯。</p>
+                    </div>
+                    <div class="sb-visual">贾拉尼刚好安顿好奥利弗，随后自己坐上副驾。知允和纳加在驾驶舱最后排的两个位置上也坐好了。</div>
+                    <div class="sb-visual">罗里用力扭动舵轮，画面顺势切至外景，潜水器开始在海流中转向。</div>
+                    <div class="sb-note">接下来是一组内外景切换的蒙太奇：驾驶舱内，透过全景窗，看到外边的水流、鱼群、碎石从四面八方砸向潜水器，罗里和贾拉尼努力操控，让潜水器上下翻飞着躲避。驾驶舱外，不同景别的镜头展示潜水器在水流中穿梭躲闪的刺激画面（参考海王2）。</div>
+                    <div class="sb-visual">一段蒙太奇之后，画面切回驾驶舱。驾驶舱前方突然出现了上不见顶的岩壁。眼见着潜水器就要被裹挟着撞上去了。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加（惊叫）</div>
+                        <p>我们需要上浮！</p>
+                    </div>
+                    <div class="sb-visual">罗里看到崖壁有一处颜色更深，而且似乎在向内塌缩。她义无反顾地一扭舵轮，冲向那个方向。</div>
+                    <div class="sb-visual">罗里坚毅自信地笑了笑。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>不，我们需要想象力。</p>
+                    </div>
+                    <div class="sb-visual">外景，全景，伴随着尖叫声，潜水器径直撞向了崖壁（的裂隙），黑屏。</div>
+                </div>
+            </div>
+
+            <!-- 第四段 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">第四段</span>
+                    逃出生天，世外桃源
+                    <span class="sb-type">约 15s</span>
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">破破烂烂的潜水器在一个长满美丽珊瑚、漂浮着美丽发光海洋生物的隧道中缓缓漂浮。</div>
+                    <div class="sb-voiceover">
+                        <p>哇哦……</p>
+                    </div>
+                    <div class="sb-visual">隧道的尽头，一片华彩铺展开来。镜头切回驾驶舱内景，所有人都目瞪口呆地看着前方。奥利弗终于昏昏沉沉地醒了过来，下一秒也露出了难以置信的惊叹表情。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">奥利弗</div>
+                        <p>我们是……死了么？</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加 & 知允</div>
+                        <p>这是哪啊？</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>这是……缪斯的宫殿吧……</p>
+                    </div>
+                    <div class="sb-visual">接一个反打镜头，鲸落场景华丽地在众人眼前铺展开来。</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 方案二 -->
+    <div class="story-panel active" id="plan2">
+        <div class="storyboard">
+
+            <!-- 段落一：异样的前奏 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">段落一</span>
+                    异样的前奏
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">大全景：幽暗的海底遗迹，展示海底的美丽景色，鱼群、珊瑚、海底的古迹。罗里和知允在水下考古，清理着海底遗迹中的残片。不远处停放着"探索者"号潜水器。</div>
+                    <div class="sb-visual">中景：知允正小心翼翼地将一块精美的瓷器残片放入标有"人文遗产协会"Logo的采样箱。</div>
+                    <div class="sb-visual">中景：旁边的罗里也正要把样本放进箱子，却突然被斜后方惊惶游过的一条小丑鱼吸引了注意力，她手一松，样本险些坠落。知允眼疾手快接住，瞪了她一眼。罗里却全然不顾知允的抱怨，皱眉跟着小丑鱼游了过去。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>小心！这可是有几千年历史的文物。</p>
+                    </div>
+                    <div class="sb-visual">特写：小丑鱼居然钻入泥沙中，消失不见了，罗里追过来，惊讶地瞪着眼睛，寻找小丑鱼。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>消失了？下边有什么东西？</p>
+                    </div>
+                    <div class="sb-visual">近景：紧接着，地面开始颤动，沙石开始漂浮起来。罗里眼神瞬间变得严肃，猛地回头拉住还没反应过来的知允。正在这时，知允面带不满地跟了过来。罗里立刻回头对着她疯狂摆手。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>不太劲……快，回潜水器！有什么大事要发生了。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 段落二：海底裂变与营救 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">段落二</span>
+                    海底裂变与营救
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">漫画框效果：画面中弹出奥利弗的大头像。他满头大汗，手里攥着对讲机急吼吼地大喊，头甚至撞出了框边缘。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">奥利弗</div>
+                        <p>地震！是海底地震！你们两个别在外面谈心了！！</p>
+                    </div>
+                    <div class="sb-visual">大全景：海底地面剧烈震动，裂隙伴随尘烟四起，鱼群四散奔逃。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里 & 知允</div>
+                        <p>什么？！</p>
+                    </div>
+                    <div class="sb-note">一组镜头：海底地震时不同角度的画面。巨浪由远及近冲向潜水器。</div>
+                    <div class="sb-visual">中景：知允紧紧抱着沉重的采样箱，被激流冲得东倒西歪。一股强力水柱从地裂中喷出，眼看要将知允和箱子一起卷入深渊。罗里冲过来想要抓住知允，但差了半条手臂的距离，因为激流而始终够不到她。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>快！把手给我！</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>不行！箱子！箱子要掉了！</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>都什么时候了！</p>
+                    </div>
+                    <div class="sb-visual">全景：激流冲击到了潜水器，潜水打转翻滚。就在潜水器被水波冲击翻滚时，贾拉尼猛地推开舱门，冲出舱外，腰上捆着绳索。纳加半个身子探出舱外，单手死死扣住门边的把手，另一只手死死拉住绳子。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加</div>
+                        <p>快啊，我可不是什么健身教练，撑不了多久！</p>
+                    </div>
+                    <div class="sb-visual">中景：就在知允和罗里即将被激流冲散的瞬间，贾拉尼像个救星一样急速冲过来，用粗壮的手臂，一把抓住罗里，一把抓住知允。</div>
+                    <div class="sb-visual">中景：三人返回潜水器，在纳加的接应下，一起钻进了潜水器。惊魂甫定之下，罗里对贾拉尼表示感谢。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>贾拉尼，我欠你个人情……</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">贾拉尼</div>
+                        <p>嗯。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加</div>
+                        <p>喂喂，还有我呢！不要忽略我好吗？</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 段落三：计划逃脱 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">段落三</span>
+                    计划逃脱
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">潜水器内景/全景：罗里、知允和纳加狼狈地涌入驾驶舱。舱内警报灯狂闪。奥利弗坐在主驾驶位，表现出一丝惊恐，操作潜水器时手都在发抖。贾拉尼冲向副驾驶位坐好。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">奥利弗</div>
+                        <p>我可以……我可以的……</p>
+                    </div>
+                    <div class="sb-visual">中景：潜水器内部剧烈晃动。知允还没站稳就冲到雷达前。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>快，我们现在得赶紧上浮。</p>
+                    </div>
+                    <div class="sb-visual">中景：镜头给到纳加，他捧着笔记本电脑一边看数据一边忧心忡忡地分析。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加</div>
+                        <p>根据计算，上浮中继线点X72-C31在海流作用下，会产生超过探索者号推进器极限的水压。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>简单地说，我们得换条路？</p>
+                    </div>
+                    <div class="sb-visual">中景：奥利弗抖得更厉害了，眼神涣散，猛地松开了船舵，整个人缩在椅子里。贾拉尼急忙回头看向众人。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">贾拉尼</div>
+                        <p>不管往哪走，我们都得先帮奥利弗冷静下来。</p>
+                    </div>
+                    <div class="sb-visual">中景：罗里一把抹掉脸上的海水，眼神坚毅地上前，轻轻拍了拍瘫软的奥利弗，对着一旁的纳加和知允使了个眼色。知允和纳加对视了一眼，上前来拖走了奥利弗。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>得有人照顾我们的领队。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">奥利弗</div>
+                        <p>不、不行，我、我根本做不到……</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加</div>
+                        <p>也许下次我们该换个领队。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>这种事儿……我不用计算也知道……</p>
+                    </div>
+                    <div class="sb-visual">全景：罗里在主驾驶位置坐好，转头坚毅地看向贾拉尼。贾拉尼对着他点点头。纳加和知允在后排照顾奥利弗。潜水器依旧剧烈晃动，警报不断。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>我来吧！贾拉尼，你来帮我，其他人照顾好奥利弗。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加</div>
+                        <p>看来只有世界上最棒的驾驶员才能救我们了……</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>巧了，我就是。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>呃……我记错的话好像还没有执照吧……</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 段落四：逃出生天 -->
+            <div class="sb-card">
+                <div class="sb-header">
+                    <span class="sb-num">段落四</span>
+                    逃出生天
+                </div>
+                <div class="sb-body">
+                    <div class="sb-note">一组镜头：潜水器在海底随着地震掀起的水流四下翻滚，如同一个滚筒洗衣机；潜水器尾部的推进器爆发出耀眼的蓝光，在巨大的海床断裂流前艰难地保持姿态。一个巨大的石块击中它的尾翼，潜水器猛烈地翻滚了几圈，扬起一片泥沙。鱼群在潜水器周围四散奔逃。潜水器一侧的舷窗玻璃在巨大的水压下出现裂纹。一个黑色的岩石从裂缝中穿出，尖锐的石尖几乎擦着潜水器的侧身飞过，火花四溅。潜水器试图向上走，但都失败了。潜水器尾部的推进器又一次爆发耀眼蓝光，随后彻底宕机。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>根据应急避险手册第4章第21款，你应该保持45度角上浮匀速。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>匀速？写手册的人恐怕没见过这么剧烈的海底地震。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">奥利弗</div>
+                        <p>怎么办……姨妈，我该怎么办……</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">纳加</div>
+                        <p>根据计算，推进器马上就要过载了。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">贾拉尼</div>
+                        <p>哦，已经过载了。</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">其他人</div>
+                        <p>什么？！</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>事已至此，别想着上浮了，我们另寻出路。</p>
+                    </div>
+                    <div class="sb-visual">插入一个闪回画面：段落一中小丑鱼钻进地底泥沙消失的画面。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>既然它能做到……</p>
+                    </div>
+                    <div class="sb-visual">中景：潜水器像颗子弹一样突然垂直下坠，它的一个螺旋桨已经被碎石击损，发出怪异的卡顿声。前方是一个漆黑、扭曲的深渊裂缝。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>你疯了吗？</p>
+                    </div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>是时候发扬一下——</p>
+                    </div>
+                    <div class="sb-visual">另一个角度的中景：潜水器摇摇晃晃地笔直下坠，速度越来越快，画外音传来角色们的惊呼声。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>——冒险精神了！</p>
+                    </div>
+                    <div class="sb-visual">全景：潜水器冲向一个黑暗的海底裂隙，像是一头撞进了什么危险的环境，黑屏。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">众人</div>
+                        <p>啊！！！！</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 终幕：鲸落奇观 -->
+            <div class="sb-card" style="border:2px solid var(--ocean)">
+                <div class="sb-header" style="background:linear-gradient(90deg,#0c4a6e,var(--ocean))">
+                    <span class="sb-num">终幕</span>
+                    鲸落奇观
+                    <span class="sb-type">华丽展示 · 高潮</span>
+                </div>
+                <div class="sb-body">
+                    <div class="sb-visual">全景：画面缓缓淡入，破破烂烂的潜水器在一个长满美丽珊瑚，漂浮着美丽发光海洋生物的隧道中缓缓漂浮。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">罗里</div>
+                        <p>谢天谢地，我们成功了。</p>
+                    </div>
+                    <div class="sb-visual">中景：镜头切另一个角度，继续展示潜水器在海底穿行的画面。</div>
+                    <div class="sb-dialogue">
+                        <div class="who">知允</div>
+                        <p>可这又是……哪啊？</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sb-card" style="border:2px solid var(--ocean)">
+                <div class="sb-header" style="background:linear-gradient(90deg,#0c4a6e,var(--ocean))">
+                    <span class="sb-num">终幕</span>
+                    <span class="sb-type">华丽展示 · 高潮</span>
+                </div>
+                <div class="sb-body" style="text-align:center;padding:0">
+                    <img src="../../assets/海底世界/image (1).png" alt="鲸落峡谷华丽展示" class="sb-img">
+                    <div style="padding:1rem 1.2rem">
+                        <div style="font-family:var(--ff);font-size:1.4rem;font-weight:900;color:var(--ocean-deep);margin-top:.6rem;line-height:1.3">鲸落峡谷</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== 项目排期 ==================== -->
+<section class="schedule-section" id="sec-schedule">
+    <div class="container">
+        <h2 class="sec-title">📅 项目排期</h2>
+        <p class="sec-sub">甘特图 · 全阶段进度一览</p>
+
+        <div class="gantt-wrap">
+            <div class="gantt-header">
+                <h3>🗓️ 小镇_寻鲸季 · 过场动画排期表</h3>
+                <div class="gantt-spec">
+                    <span>1920×1080</span>
+                    <span>30fps</span>
+                    <span>~90s</span>
+                </div>
+            </div>
+            <div class="gantt-scroll">
+            <table class="gantt-table" style="min-width:960px">
+                <thead>
+                    <tr>
+                        <th style="width:70px" rowspan="2">阶段</th>
+                        <th style="width:52px" rowspan="2">环节</th>
+                        <th style="width:42px" rowspan="2">人员</th>
+                        <th colspan="2" style="border-bottom:2px solid rgba(3,105,161,.15)">3月</th>
+                        <th colspan="5" style="border-bottom:2px solid rgba(3,105,161,.15)">4月</th>
+                        <th colspan="4" style="border-bottom:2px solid rgba(3,105,161,.15)">5月</th>
+                    </tr>
+                    <tr>
+                        <th>16-20</th>
+                        <th>23-27</th>
+                        <th>30-03</th>
+                        <th>06-10</th>
+                        <th>13-17</th>
+                        <th>20-24</th>
+                        <th>27-01</th>
+                        <th>04-08</th>
+                        <th>11-15</th>
+                        <th>18-22</th>
+                        <th>25-29</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 研发需提供物料 -->
+                    <tr style="background:rgba(100,116,139,.04)">
+                        <td colspan="3" class="g-phase" style="text-align:center;color:#64748b;font-size:.7rem">📦 研发需提供物料</td>
+                        <td colspan="11" class="bar-cell"><div class="gantt-bar g-supply" style="opacity:.5;animation-delay:.1s">待确认</div></td>
+                    </tr>
+                    <!-- 前期 · 脚本 -->
+                    <tr>
+                        <td class="g-phase" rowspan="2">📝 前期</td>
+                        <td class="g-task">脚本</td>
+                        <td class="g-who">内部</td>
+                        <td class="bar-cell"><div class="gantt-bar g-pre" style="animation-delay:.15s">脚本</div></td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <!-- 前期 · 分镜 -->
+                    <tr>
+                        <td class="g-task">分镜</td>
+                        <td class="g-who">内部</td>
+                        <td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-pre" style="animation-delay:.2s">分镜</div></td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <!-- 原画 · 草稿 -->
+                    <tr>
+                        <td class="g-phase" rowspan="4">🎨 原画</td>
+                        <td class="g-task">草稿</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.25s">v01</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.3s;opacity:.7">v02</div></td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <!-- 原画 · 线稿 -->
+                    <tr>
+                        <td class="g-task">线稿</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.35s">v01</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.4s;opacity:.7">v02</div></td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <!-- 原画 · 色稿 -->
+                    <tr>
+                        <td class="g-task">色稿</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td><td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.45s">v01</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.5s;opacity:.7">v02</div></td>
+                        <td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <!-- 原画 · 细化 -->
+                    <tr>
+                        <td class="g-task">细化</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td><td></td><td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.55s">v01</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-art" style="animation-delay:.6s;opacity:.7">v02</div></td>
+                        <td></td><td></td><td></td><td></td>
+                    </tr>
+                    <!-- 后期动态 -->
+                    <tr>
+                        <td colspan="2" class="g-phase">🎬 后期动态</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-post" style="animation-delay:.65s">v01</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-post" style="animation-delay:.7s;opacity:.85">v02</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-post" style="animation-delay:.75s;opacity:.7">v03</div></td>
+                        <td></td><td></td>
+                    </tr>
+                    <!-- 剪辑 -->
+                    <tr style="background:rgba(249,115,22,.03)">
+                        <td colspan="2" class="g-phase">✂️ 剪辑</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <!-- 音乐音效/混音 -->
+                    <tr>
+                        <td colspan="2" class="g-phase">🎵 音乐音效</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-music" style="animation-delay:.8s">🎼 音乐</div></td>
+                        <td></td><td></td><td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-voice" style="animation-delay:.85s">🎙️ 配音</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-sfx" style="animation-delay:.9s">🔊 音效</div></td>
+                        <td></td><td></td>
+                    </tr>
+                    <!-- Export -->
+                    <tr style="background:rgba(239,68,68,.03)">
+                        <td colspan="2" class="g-phase">📤 Export</td>
+                        <td class="g-who">内部</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        <td class="bar-cell"><div class="gantt-bar g-export" style="animation-delay:.95s">ACO</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-export" style="animation-delay:1s;opacity:.85">BCO</div></td>
+                        <td class="bar-cell"><div class="gantt-bar g-export" style="animation-delay:1.05s;opacity:.7">成片</div></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+            <div class="gantt-legend">
+                <span style="font-size:.72rem;font-weight:600;color:var(--text);margin-right:.2rem">图例：</span>
+                <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:linear-gradient(90deg,#0ea5e9,#38bdf8)"></div>前期</div>
+                <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:linear-gradient(90deg,#8b5cf6,#a78bfa)"></div>原画</div>
+                <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:linear-gradient(90deg,#f97316,#fb923c)"></div>后期动态</div>
+                <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:linear-gradient(90deg,#06b6d4,#22d3ee)"></div>音乐</div>
+                <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:linear-gradient(90deg,#14b8a6,#2dd4bf)"></div>配音</div>
+                <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:linear-gradient(90deg,#059669,#34d399)"></div>音效</div>
+                <div class="gantt-legend-item"><div class="gantt-legend-dot" style="background:linear-gradient(90deg,#ef4444,#f87171)"></div>输出</div>
+            </div>
+
+            <div class="gantt-deadline">
+                <span class="dl-icon">🚨</span>
+                <span class="dl-text">交片截止</span>
+                <span class="dl-date">2026 年 5 月 28 日（周四）</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-icons"><img src="../../assets/logo/小镇logo（透明底）.png" alt="心动小镇" class="footer-logo"></div>
+        <p>寻鲸季过场动画 · 心动小镇</p>
+        <p class="footer-quote">"我们进入了一片未曾被人涉足过的世界。"</p>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="大图预览">
+</div>
+
+<div class="lightbox" id="video-lightbox" onclick="this.style.display='none';document.getElementById('lightbox-video').pause()">
+    <video id="lightbox-video" src="" controls autoplay onclick="event.stopPropagation()" style="max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5)"></video>
+</div>
+
+<button class="back-top" id="btt">↑</button>
+<script>
+var btt=document.getElementById('btt');
+var nav=document.getElementById('mainNav');
+var navLinks=nav.querySelectorAll('a[href^="#"]');
+var sections=[];
+navLinks.forEach(function(a){
+    var sec=document.querySelector(a.getAttribute('href'));
+    if(sec) sections.push({el:sec,link:a});
+});
+
+function onScroll(){
+    var y=window.scrollY;
+    btt.classList.toggle('show',y>500);
+
+    var navH=nav.offsetHeight+20;
+    var cur=null;
+    for(var i=sections.length-1;i>=0;i--){
+        if(sections[i].el.offsetTop-navH<=y) {cur=sections[i].link;break;}
+    }
+    navLinks.forEach(function(a){a.classList.remove('active')});
+    if(cur) cur.classList.add('active');
+}
+window.addEventListener('scroll',onScroll);
+onScroll();
+
+btt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+
+document.querySelectorAll('.story-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+        document.querySelectorAll('.story-tab').forEach(function(t){t.classList.remove('active')});
+        document.querySelectorAll('.story-panel').forEach(function(p){p.classList.remove('active')});
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+});
+
+var ttsPlaying=false, ttsQueue=[], ttsIndex=0, ttsSynth=window.speechSynthesis;
+
+function buildTTSQueue(){
+    var items=[];
+    var panel=document.getElementById('plan2');
+    var cards=panel.querySelectorAll('.sb-card');
+    cards.forEach(function(card){
+        var hdr=card.querySelector('.sb-header');
+        if(hdr){
+            var num=hdr.querySelector('.sb-num');
+            var title=hdr.textContent.replace(num?num.textContent:'','').replace(hdr.querySelector('.sb-type')?hdr.querySelector('.sb-type').textContent:'','').trim();
+            if(num) items.push({type:'header',text:num.textContent.trim()+'，'+title});
+        }
+        var body=card.querySelector('.sb-body');
+        if(!body) return;
+        var children=body.children;
+        for(var i=0;i<children.length;i++){
+            var el=children[i];
+            if(el.classList.contains('sb-visual')){
+                var t=el.textContent.trim().replace(/^🎬\s*/,'');
+                if(t) items.push({type:'visual',text:'【画面】'+t});
+            } else if(el.classList.contains('sb-dialogue')){
+                var who=el.querySelector('.who');
+                var lines=el.querySelectorAll('p');
+                var txt='';
+                lines.forEach(function(p){txt+=p.textContent.trim()+' '});
+                items.push({type:'dialogue',text:(who?who.textContent.trim()+'：':'')+txt.trim()});
+            } else if(el.classList.contains('sb-voiceover')){
+                var vt='';
+                el.querySelectorAll('p').forEach(function(p){vt+=p.textContent.trim()+' '});
+                items.push({type:'voiceover',text:'【画外音】'+vt.trim()});
+            } else if(el.classList.contains('sb-note')){
+                items.push({type:'note',text:'【导演注释】'+el.textContent.trim()});
+            }
+        }
+    });
+    return items;
+}
+
+function updateTTSProgress(){
+    var fill=document.getElementById('ttsProgressFill');
+    var cur=document.getElementById('ttsCurrent');
+    if(ttsQueue.length===0){fill.style.width='0%';return;}
+    fill.style.width=Math.round((ttsIndex/ttsQueue.length)*100)+'%';
+    if(ttsIndex<ttsQueue.length) cur.textContent=ttsQueue[ttsIndex].text;
+}
+
+function highlightCard(idx){
+    var panel=document.getElementById('plan2');
+    panel.querySelectorAll('.sb-card').forEach(function(c){c.style.outline='none'});
+    if(idx<0||idx>=ttsQueue.length) return;
+    var count=0, cardIdx=0;
+    var cards=panel.querySelectorAll('.sb-card');
+    for(var i=0;i<ttsQueue.length&&i<=idx;i++){
+        if(ttsQueue[i].type==='header') cardIdx=count++;
+    }
+    if(cardIdx<cards.length){
+        cards[cardIdx].style.outline='2px solid var(--teal)';
+        cards[cardIdx].scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
+}
+
+function speakNext(){
+    if(!ttsPlaying||ttsIndex>=ttsQueue.length){stopTTS();return;}
+    updateTTSProgress();
+    highlightCard(ttsIndex);
+    var item=ttsQueue[ttsIndex];
+    var u=new SpeechSynthesisUtterance(item.text);
+    u.lang='zh-CN';
+    u.rate=1.05;
+    u.pitch=1;
+    if(item.type==='dialogue') u.rate=1.1;
+    if(item.type==='header'){u.rate=0.95;u.pitch=1.1;}
+    u.onend=function(){ttsIndex++;speakNext();};
+    u.onerror=function(){ttsIndex++;speakNext();};
+    ttsSynth.speak(u);
+}
+
+function toggleTTS(){
+    if(ttsPlaying){stopTTS();}
+    else{startTTS();}
+}
+
+function startTTS(){
+    ttsSynth.cancel();
+    ttsQueue=buildTTSQueue();
+    ttsIndex=0;
+    ttsPlaying=true;
+    document.getElementById('ttsBtn').classList.add('playing');
+    document.getElementById('ttsBtnText').textContent='停止朗读';
+    document.getElementById('ttsProgress').classList.add('show');
+    speakNext();
+}
+
+function stopTTS(){
+    ttsPlaying=false;
+    ttsSynth.cancel();
+    document.getElementById('ttsBtn').classList.remove('playing');
+    document.getElementById('ttsBtnText').textContent='朗读方案二';
+    document.getElementById('ttsProgress').classList.remove('show');
+    document.getElementById('ttsProgressFill').style.width='0%';
+    document.getElementById('ttsCurrent').textContent='';
+    var panel=document.getElementById('plan2');
+    panel.querySelectorAll('.sb-card').forEach(function(c){c.style.outline='none'});
+}
+</script>
+</body>
+</html>

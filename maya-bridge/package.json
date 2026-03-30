@@ -1,0 +1,12 @@
+{
+  "name": "maya-bridge",
+  "version": "1.0.0",
+  "description": "网页控制 Maya 的中间层服务",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

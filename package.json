@@ -1,0 +1,30 @@
+{
+  "name": "wuyixiang",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:web": "vite --config vite.config.js",
+    "build:web": "vite build --config vite.config.js",
+    "dev:personal": "vite --config 个人主页/vite.config.ts",
+    "build:personal": "vite build --config 个人主页/vite.config.ts && powershell -File 个人主页/deploy.ps1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5",
+    "three": "^0.183.2"
+  }
+}

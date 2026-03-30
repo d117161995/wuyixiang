@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视动画视频支撑品类全景图</title>
+<style>
+:root {
+  --bg: #0b1120;
+  --text: #e2e8f0;
+  --muted: rgba(255,255,255,0.45);
+  --pink: #e05586;
+  --pink-soft: rgba(224,85,134,0.15);
+  --blue: #5b8def;
+  --blue-soft: rgba(91,141,239,0.15);
+  --purple: #9c36b5;
+  --purple-soft: rgba(156,54,181,0.15);
+  --violet: #7950f2;
+  --violet-soft: rgba(121,80,242,0.15);
+  --teal: #0c8599;
+  --teal-soft: rgba(12,133,153,0.15);
+  --green: #22c55e;
+  --green-soft: rgba(34,197,94,0.12);
+  --scene-bg: #4a3b8f;
+  --scene-soft: rgba(74,59,143,0.25);
+  --leaf-bg: rgba(226,232,240,0.92);
+  --leaf-text: #1e293b;
+  --derive-bg: #0891b2;
+  --derive-soft: rgba(8,145,178,0.15);
+  --line-color: rgba(255,255,255,0.18);
+  --glow-pink: rgba(224,85,134,0.5);
+  --glow-blue: rgba(91,141,239,0.5);
+  --glow-purple: rgba(156,54,181,0.5);
+  --glow-violet: rgba(121,80,242,0.5);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+/* ambient glow */
+.ambient {
+  position:fixed; top:0; left:0; width:100vw; height:100vh;
+  pointer-events:none; z-index:0;
+}
+.ambient::before, .ambient::after {
+  content:''; position:absolute; border-radius:50%; filter:blur(160px); opacity:0.07;
+  animation: ambFloat 28s infinite alternate ease-in-out;
+}
+.ambient::before { width:700px; height:700px; background:var(--violet); top:-250px; left:-150px; }
+.ambient::after  { width:600px; height:600px; background:var(--pink); bottom:-200px; right:-100px; animation-delay:-14s; }
+@keyframes ambFloat {
+  0%   { transform:translate(0,0) scale(1); }
+  50%  { transform:translate(60px,40px) scale(1.1); }
+  100% { transform:translate(-40px,80px) scale(0.95); }
+}
+
+/* header */
+.page-header {
+  position:relative; z-index:2;
+  text-align:center; padding:48px 24px 12px;
+}
+.page-header h1 {
+  font-size:2.2rem; font-weight:900; letter-spacing:0.04em;
+  background:linear-gradient(135deg, #a78bfa 0%, #e879a8 50%, #60a5fa 100%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.page-header .subtitle {
+  color:var(--muted); font-size:0.95rem; margin-top:6px; font-weight:500;
+}
+
+/* canvas area */
+.map-container {
+  position:relative; z-index:1;
+  width:1200px; margin:24px auto 60px;
+  height:720px;
+}
+
+/* SVG lines layer */
+.lines-svg {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  pointer-events:none; z-index:0;
+}
+.conn {
+  fill:none; stroke:var(--line-color); stroke-width:2;
+  stroke-dasharray:8 5;
+}
+.conn.solid { stroke-dasharray:none; }
+.conn.glow-pink   { stroke:var(--pink);   stroke-opacity:0.5; }
+.conn.glow-blue   { stroke:var(--blue);   stroke-opacity:0.4; }
+.conn.glow-purple { stroke:var(--purple); stroke-opacity:0.4; }
+.conn.glow-violet { stroke:var(--violet); stroke-opacity:0.4; }
+.conn.glow-teal   { stroke:var(--teal);   stroke-opacity:0.4; }
+.conn.glow-scene  { stroke:var(--scene-bg); stroke-opacity:0.3; stroke-dasharray:none; }
+.conn.glow-derive { stroke:var(--derive-bg); stroke-opacity:0.4; stroke-dasharray:none; }
+.conn.glow-leaf   { stroke:rgba(100,116,139,0.35); stroke-dasharray:none; }
+
+@keyframes dashFlow {
+  to { stroke-dashoffset: -26; }
+}
+.conn.flow { animation: dashFlow 1.8s linear infinite; }
+
+/* arrow marker */
+.lines-svg .arrow-head { fill: rgba(255,255,255,0.3); }
+
+/* nodes */
+.node {
+  position:absolute; z-index:2;
+  border-radius:10px; padding:10px 18px;
+  font-weight:700; font-size:0.88rem;
+  white-space:nowrap; text-align:center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor:default;
+  opacity:0; transform:translateY(12px);
+  animation: nodeIn 0.5s ease forwards;
+}
+@keyframes nodeIn {
+  to { opacity:1; transform:translateY(0); }
+}
+.node:hover {
+  transform:translateY(-3px) scale(1.04);
+  z-index:10;
+}
+.node .sub {
+  display:block; font-size:0.7rem; font-weight:500; opacity:0.7; margin-top:2px;
+}
+
+/* origin */
+.node.origin {
+  font-size:1.3rem; font-weight:900; letter-spacing:0.06em;
+  background:transparent; color:#fff;
+  line-height:1.5;
+}
+
+/* type A */
+.node.type-a {
+  background:var(--pink); color:#fff;
+  box-shadow:0 0 20px var(--pink-soft);
+}
+.node.type-a:hover { box-shadow:0 0 32px var(--glow-pink); }
+
+/* type BC */
+.node.type-b { background:var(--blue); color:#fff; box-shadow:0 0 20px var(--blue-soft); }
+.node.type-b:hover { box-shadow:0 0 32px var(--glow-blue); }
+.node.type-c { background:var(--blue); color:#fff; box-shadow:0 0 20px var(--blue-soft); margin-left:4px; }
+.node.type-c:hover { box-shadow:0 0 32px var(--glow-blue); }
+
+/* type D */
+.node.type-d { background:var(--purple); color:#fff; box-shadow:0 0 20px var(--purple-soft); }
+.node.type-d:hover { box-shadow:0 0 32px var(--glow-purple); }
+
+/* product nodes */
+.node.product {
+  background:var(--teal); color:#fff;
+  box-shadow:0 0 16px var(--teal-soft);
+  font-size:0.82rem;
+}
+.node.product:hover { box-shadow:0 0 28px rgba(12,133,153,0.5); }
+
+/* budget tag */
+.node .budget {
+  display:block; font-size:0.68rem; font-weight:500; color:rgba(255,255,255,0.65);
+  margin-top:4px; line-height:1.4;
+}
+
+/* S class */
+.node.type-s {
+  background:var(--pink); color:#fff;
+  box-shadow:0 0 20px var(--pink-soft);
+}
+.node.type-s:hover { box-shadow:0 0 32px var(--glow-pink); }
+
+/* AI flow */
+.node.ai-flow {
+  background:var(--violet); color:#fff;
+  box-shadow:0 0 18px var(--violet-soft);
+}
+.node.ai-flow:hover { box-shadow:0 0 30px var(--glow-violet); }
+
+/* API */
+.node.api {
+  background:var(--violet); color:#fff;
+  box-shadow:0 0 14px var(--violet-soft);
+  font-size:0.82rem;
+}
+
+/* scene category */
+.node.scene-cat {
+  background:var(--scene-bg); color:#fff;
+  box-shadow:0 0 14px var(--scene-soft);
+  font-size:0.82rem;
+}
+.node.scene-cat:hover { box-shadow:0 0 24px rgba(74,59,143,0.5); }
+
+/* scene leaf */
+.node.scene-leaf {
+  background:var(--leaf-bg); color:var(--leaf-text);
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  font-size:0.78rem; font-weight:600;
+  border-radius:8px; padding:7px 14px;
+}
+.node.scene-leaf:hover { box-shadow:0 4px 16px rgba(0,0,0,0.2); transform:translateY(-2px) scale(1.03); }
+
+/* derive */
+.node.derive-title {
+  background:var(--derive-bg); color:#fff;
+  box-shadow:0 0 16px var(--derive-soft);
+  font-size:0.85rem;
+}
+.node.derive-title:hover { box-shadow:0 0 28px rgba(8,145,178,0.5); }
+.node.derive-leaf {
+  background:var(--leaf-bg); color:var(--leaf-text);
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  font-size:0.78rem; font-weight:600;
+  border-radius:8px; padding:7px 14px;
+}
+.node.derive-leaf:hover { box-shadow:0 4px 16px rgba(0,0,0,0.2); }
+
+/* annotation label */
+.node.anno {
+  background:transparent; color:var(--pink); font-size:0.72rem; font-weight:600;
+  padding:4px 8px; opacity:0.8;
+}
+.node.anno.blue { color:var(--blue); }
+.node.anno.purple { color:var(--purple); }
+.node.anno.teal { color:var(--teal); }
+.node.anno.muted { color:var(--muted); font-weight:500; }
+
+/* legend */
+.legend {
+  position:relative; z-index:2;
+  display:flex; gap:20px; justify-content:center; flex-wrap:wrap;
+  padding:0 24px 48px; opacity:0.7;
+}
+.legend-item {
+  display:flex; align-items:center; gap:6px; font-size:0.75rem; color:var(--muted);
+}
+.legend-dot {
+  width:10px; height:10px; border-radius:3px; flex-shrink:0;
+}
+
+/* footer */
+.page-footer {
+  text-align:center; padding:20px; color:rgba(255,255,255,0.2);
+  font-size:0.75rem; border-top:1px solid rgba(255,255,255,0.05);
+}
+</style>
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<header class="page-header">
+  <h1>影视动画 · 视频支撑品类全景图</h1>
+  <p class="subtitle">A / B·C / D / S 四大品类 × 九大业务场景，从传统三维到全自动 AI 流程的演进脉络</p>
+</header>
+
+<div class="map-container" id="mapContainer">
+  <svg class="lines-svg" id="linesSvg">
+    <defs>
+      <marker id="arrowW" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6" class="arrow-head"/>
+      </marker>
+    </defs>
+  </svg>
+
+  <!-- ═══ Col 0: Origin ═══ -->
+  <div class="node origin" id="n-origin" style="left:20px; top:300px; animation-delay:0s">
+    影视动画<br>视频支撑品类
+  </div>
+
+  <!-- ═══ Col 1: Categories ═══ -->
+  <div class="node type-a" id="n-a" style="left:215px; top:120px; animation-delay:0.1s">A类</div>
+  <div class="node anno" id="n-a-anno" style="left:198px; top:165px; animation-delay:0.15s">传统三维流程</div>
+
+  <div class="node type-b" id="n-b" style="left:195px; top:300px; animation-delay:0.15s">B类</div>
+  <div class="node type-c" id="n-c" style="left:255px; top:300px; animation-delay:0.15s">C类</div>
+  <div class="node anno blue" id="n-bc-anno" style="left:188px; top:345px; animation-delay:0.2s">引擎流程<br>二维流程</div>
+
+  <div class="node type-d" id="n-d" style="left:215px; top:530px; animation-delay:0.2s">D类</div>
+  <div class="node anno purple" id="n-d-anno" style="left:198px; top:575px; animation-delay:0.25s">AI短剧流程</div>
+
+  <!-- ═══ Col 2: Products ═══ -->
+  <div class="node product" id="n-hicg" style="left:410px; top:70px; animation-delay:0.25s">
+    高品质CG
+    <span class="budget">预算：50w+<br>周期：3个月+</span>
+  </div>
+
+  <div class="node product" id="n-gamepv" style="left:410px; top:250px; animation-delay:0.3s">
+    游戏品质PV
+    <span class="budget">预算：10~50w<br>周期：1~2个月</span>
+  </div>
+
+  <div class="node product" id="n-buypv" style="left:390px; top:470px; animation-delay:0.3s">
+    高品质买量pv
+    <span class="budget">短周期：1周~<br>低预算</span>
+  </div>
+  <div class="node anno muted" id="n-buypv-anno" style="left:400px; top:558px; animation-delay:0.35s; font-size:0.68rem">
+    大数量：多条并行<br>人力/环节<br>构架重组
+  </div>
+
+  <!-- ═══ Col 3: AI Flow ═══ -->
+  <div class="node type-s" id="n-s" style="left:620px; top:90px; animation-delay:0.35s">
+    S类
+    <span class="sub">AI参考+环节辅助<br>CG+AI 大镜头制作</span>
+  </div>
+
+  <div class="node ai-flow" id="n-semi" style="left:620px; top:265px; animation-delay:0.4s">半自动AI流程</div>
+
+  <div class="node ai-flow" id="n-full" style="left:610px; top:510px; animation-delay:0.4s">全自动AI流程</div>
+  <div class="node api" id="n-api" style="left:640px; top:575px; animation-delay:0.45s">API</div>
+
+  <!-- ═══ Col 4: Scene Categories ═══ -->
+  <div class="node scene-cat" id="n-sc-qx"   style="left:850px; top:60px;  animation-delay:0.45s">启宣</div>
+  <div class="node scene-cat" id="n-sc-sj"   style="left:850px; top:120px; animation-delay:0.48s">赛季版本</div>
+  <div class="node scene-cat" id="n-sc-jq"   style="left:850px; top:175px; animation-delay:0.5s">剧情动画</div>
+  <div class="node scene-cat" id="n-sc-gc"   style="left:850px; top:230px; animation-delay:0.52s">过场动画</div>
+  <div class="node scene-cat" id="n-sc-kc"   style="left:850px; top:285px; animation-delay:0.54s">开场动画</div>
+  <div class="node scene-cat" id="n-sc-ld"   style="left:850px; top:340px; animation-delay:0.56s">联动动画</div>
+  <div class="node scene-cat" id="n-sc-wf"   style="left:850px; top:395px; animation-delay:0.58s">玩法动画</div>
+  <div class="node scene-cat" id="n-sc-hd"   style="left:850px; top:450px; animation-delay:0.6s">活动宣传</div>
+
+  <!-- ═══ Col 5: Scene Leaves ═══ -->
+  <div class="node scene-leaf" id="n-sl-sp"   style="left:990px; top:30px;  animation-delay:0.55s">首曝</div>
+  <div class="node scene-leaf" id="n-sl-gc2"  style="left:990px; top:75px;  animation-delay:0.57s">公测</div>
+  <div class="node scene-leaf" id="n-sl-xbb"  style="left:990px; top:125px; animation-delay:0.59s">新版本亮点展示</div>
+  <div class="node scene-leaf" id="n-sl-szy"  style="left:990px; top:175px; animation-delay:0.61s">塑造英雄</div>
+  <div class="node scene-leaf" id="n-sl-yxgc" style="left:990px; top:230px; animation-delay:0.63s">游戏过场</div>
+  <div class="node scene-leaf" id="n-sl-sjg"  style="left:990px; top:285px; animation-delay:0.65s">游戏世界观展示</div>
+  <div class="node scene-leaf" id="n-sl-ppld" style="left:990px; top:340px; animation-delay:0.67s">品牌联动</div>
+  <div class="node scene-leaf" id="n-sl-wl"   style="left:990px; top:395px; animation-delay:0.69s">游戏新物料展示</div>
+  <div class="node scene-leaf" id="n-sl-jr"   style="left:990px; top:450px; animation-delay:0.71s">节日，周年庆宣传</div>
+
+  <!-- ═══ Derive ═══ -->
+  <div class="node derive-title" id="n-derive" style="left:850px; top:580px; animation-delay:0.65s">
+    游戏衍生<br>动画
+  </div>
+  <div class="node derive-leaf" id="n-dl-1" style="left:990px; top:555px; animation-delay:0.7s">低成本讲故事</div>
+  <div class="node derive-leaf" id="n-dl-2" style="left:990px; top:600px; animation-delay:0.72s">快速出内容</div>
+  <div class="node derive-leaf" id="n-dl-3" style="left:990px; top:645px; animation-delay:0.74s">做账号做IP</div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:var(--pink)"></div>A类 / S类（传统CG）</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div>B·C类（引擎/二维）</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div>D类（AI短剧）</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--violet)"></div>AI流程节点</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div>产出品类</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--scene-bg)"></div>业务场景</div>
+  <div class="legend-item"><div class="legend-dot" style="background:var(--derive-bg)"></div>游戏衍生</div>
+</div>
+
+<footer class="page-footer">&copy; 2026 影视创意组 &middot; 视频支撑品类全景图</footer>
+
+<script>
+(function(){
+  const svg = document.getElementById('linesSvg');
+  const container = document.getElementById('mapContainer');
+
+  function getCenter(id) {
+    const el = document.getElementById(id);
+    if (!el) return {x:0, y:0};
+    return {
+      x: el.offsetLeft + el.offsetWidth / 2,
+      y: el.offsetTop + el.offsetHeight / 2
+    };
+  }
+  function getRight(id) {
+    const el = document.getElementById(id);
+    if (!el) return {x:0, y:0};
+    return { x: el.offsetLeft + el.offsetWidth, y: el.offsetTop + el.offsetHeight / 2 };
+  }
+  function getLeft(id) {
+    const el = document.getElementById(id);
+    if (!el) return {x:0, y:0};
+    return { x: el.offsetLeft, y: el.offsetTop + el.offsetHeight / 2 };
+  }
+
+  function drawLine(from, to, cls, curved) {
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    let d;
+    if (curved) {
+      const cx = (from.x + to.x) / 2;
+      d = `M${from.x},${from.y} C${cx},${from.y} ${cx},${to.y} ${to.x},${to.y}`;
+    } else {
+      d = `M${from.x},${from.y} L${to.x},${to.y}`;
+    }
+    path.setAttribute('d', d);
+    path.setAttribute('class', 'conn flow ' + (cls || ''));
+    path.setAttribute('marker-end', 'url(#arrowW)');
+    svg.appendChild(path);
+  }
+
+  function buildLines() {
+    svg.querySelectorAll('.conn').forEach(p => p.remove());
+
+    // Origin → A, B, D (curved)
+    drawLine(getRight('n-origin'), getLeft('n-a'), 'glow-pink', true);
+    drawLine(getRight('n-origin'), getLeft('n-b'), 'glow-blue', true);
+    drawLine(getRight('n-origin'), getLeft('n-d'), 'glow-purple', true);
+
+    // A → HiCG
+    drawLine(getRight('n-a'), getLeft('n-hicg'), 'glow-pink', false);
+    // HiCG → S
+    drawLine(getRight('n-hicg'), getLeft('n-s'), 'glow-pink', false);
+
+    // B/C → GamePV
+    drawLine(getRight('n-c'), getLeft('n-gamepv'), 'glow-blue', false);
+    // GamePV → Semi
+    drawLine(getRight('n-gamepv'), getLeft('n-semi'), 'glow-blue', false);
+
+    // D → BuyPV
+    drawLine(getRight('n-d'), getLeft('n-buypv'), 'glow-purple', false);
+    // BuyPV → Full
+    drawLine(getRight('n-buypv'), getLeft('n-full'), 'glow-purple', false);
+    // Full → API
+    drawLine(getRight('n-full'), getLeft('n-api'), 'glow-violet', false);
+
+    // S → scene categories
+    const sceneIds = ['n-sc-qx','n-sc-sj','n-sc-jq','n-sc-gc','n-sc-kc','n-sc-ld','n-sc-wf','n-sc-hd'];
+    for (const id of sceneIds) {
+      drawLine(getRight('n-s'), getLeft(id), 'glow-scene', true);
+    }
+    // Semi → scene categories
+    for (const id of sceneIds) {
+      drawLine(getRight('n-semi'), getLeft(id), 'glow-scene', true);
+    }
+
+    // Scene cat → leaf
+    const sceneMap = [
+      ['n-sc-qx', 'n-sl-sp'],
+      ['n-sc-qx', 'n-sl-gc2'],
+      ['n-sc-sj', 'n-sl-xbb'],
+      ['n-sc-jq', 'n-sl-szy'],
+      ['n-sc-gc', 'n-sl-yxgc'],
+      ['n-sc-kc', 'n-sl-sjg'],
+      ['n-sc-ld', 'n-sl-ppld'],
+      ['n-sc-wf', 'n-sl-wl'],
+      ['n-sc-hd', 'n-sl-jr'],
+    ];
+    for (const [from, to] of sceneMap) {
+      drawLine(getRight(from), getLeft(to), 'glow-leaf', false);
+    }
+
+    // Derive connections
+    drawLine(getRight('n-full'), getLeft('n-derive'), 'glow-derive', true);
+    drawLine(getRight('n-derive'), getLeft('n-dl-1'), 'glow-derive', false);
+    drawLine(getRight('n-derive'), getLeft('n-dl-2'), 'glow-derive', false);
+    drawLine(getRight('n-derive'), getLeft('n-dl-3'), 'glow-derive', false);
+  }
+
+  // initial draw after layout settles
+  requestAnimationFrame(() => {
+    requestAnimationFrame(buildLines);
+  });
+  window.addEventListener('resize', buildLines);
+})();
+</script>
+</body>
+</html>

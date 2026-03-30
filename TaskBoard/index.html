@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视创意组 · 全项目任务看板</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f4f6fa;--surface:#fff;--text:#1d1f27;--text2:#5a5e6e;--text3:#9499ab;
+  --border:#e6e9f0;--accent:#4f46e5;--accent-light:#eef2ff;
+  --green:#16a34a;--green-bg:#f0fdf4;
+  --amber:#d97706;--amber-bg:#fffbeb;
+  --red:#dc2626;--red-bg:#fef2f2;
+  --blue:#2563eb;--blue-bg:#eff6ff;
+  --purple:#7c3aed;--purple-bg:#f5f3ff;
+  --cyan:#0891b2;--cyan-bg:#ecfeff;
+  --pink:#db2777;--pink-bg:#fdf2f8;
+  --radius:12px;--radius-sm:8px;
+  --shadow:0 1px 3px rgba(0,0,0,.05),0 2px 8px rgba(0,0,0,.04);
+  --shadow-lg:0 4px 20px rgba(0,0,0,.08);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+html{font-size:14.5px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:100vh}
+
+/* ── Header ────────────────────────────────────────────── */
+.header{background:linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#a855f7 100%);color:#fff;padding:24px 32px 18px;position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.06)}
+.header h1{font-size:1.4rem;font-weight:700;letter-spacing:-.01em}
+.header p{font-size:.82rem;opacity:.65;margin-top:3px}
+.header-row{display:flex;gap:16px;margin-top:12px;font-size:.75rem;opacity:.55;flex-wrap:wrap}
+
+/* ── 快捷入口 ──────────────────────────────────────────── */
+.quick-links{padding:12px 32px 0;display:flex;gap:10px;flex-wrap:wrap}
+.link-card{display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);text-decoration:none;color:var(--text);transition:.2s;cursor:pointer}
+.link-card:hover{transform:translateY(-1px);box-shadow:var(--shadow-lg);border-color:var(--accent)}
+.link-card-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff}
+.link-card-title{font-size:.82rem;font-weight:600}
+.link-card-desc{font-size:.68rem;color:var(--text3)}
+.link-card-arrow{font-size:.72rem;color:var(--text3);margin-left:auto}
+
+/* ── Tab 导航 ──────────────────────────────────────────── */
+.tab-bar{display:flex;gap:4px;padding:8px 32px;background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:90;overflow-x:auto;scrollbar-width:none}
+.tab-bar::-webkit-scrollbar{display:none}
+.tab-btn{padding:8px 18px;border-radius:var(--radius-sm);border:none;background:transparent;cursor:pointer;font-size:.82rem;font-weight:500;color:var(--text2);transition:.2s;font-family:var(--font);white-space:nowrap;flex-shrink:0}
+.tab-btn:hover{background:var(--accent-light);color:var(--accent)}
+.tab-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(79,70,229,.3)}
+
+/* ── 通用 ──────────────────────────────────────────────── */
+.board{display:none;padding:20px 32px 48px;animation:fadeUp .3s ease}
+.board.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-bottom:16px;border:1px solid var(--border)}
+.card-title{font-size:.76rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+
+/* ── 统计卡片 ──────────────────────────────────────────── */
+.stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:16px}
+.stat-card{background:var(--surface);border-radius:var(--radius);padding:16px;border:1px solid var(--border);box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
+.stat-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.stat-icon.blue{background:var(--blue-bg);color:var(--blue)}
+.stat-icon.green{background:var(--green-bg);color:var(--green)}
+.stat-icon.amber{background:var(--amber-bg);color:var(--amber)}
+.stat-icon.red{background:var(--red-bg);color:var(--red)}
+.stat-icon.purple{background:var(--purple-bg);color:var(--purple)}
+.stat-icon.cyan{background:var(--cyan-bg);color:var(--cyan)}
+.stat-value{font-size:1.6rem;font-weight:700;line-height:1}
+.stat-label{font-size:.72rem;color:var(--text3);margin-top:1px}
+
+/* ── 项目进度条 ────────────────────────────────────────── */
+.proj-list{display:flex;flex-direction:column;gap:10px}
+.proj-item{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--radius-sm);background:var(--bg)}
+.proj-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
+.proj-name{font-size:.85rem;font-weight:500;width:160px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.proj-bar{flex:1;height:8px;border-radius:4px;background:var(--border);overflow:hidden}
+.proj-bar-fill{height:100%;border-radius:4px;transition:width .8s ease}
+.proj-stats{font-size:.72rem;color:var(--text3);width:80px;text-align:right;flex-shrink:0}
+
+/* ── 项目对比看板 ──────────────────────────────────────── */
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.proj-card-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.proj-card-dot{width:12px;height:12px;border-radius:4px;flex-shrink:0}
+.proj-card-name{font-size:.95rem;font-weight:600;flex:1}
+.proj-card-count{font-size:.72rem;color:var(--text3);background:var(--bg);padding:2px 10px;border-radius:20px}
+.mini-stats{display:flex;gap:12px;margin-bottom:10px;font-size:.75rem;color:var(--text2)}
+.mini-bar{height:6px;border-radius:3px;background:var(--border);overflow:hidden;margin-bottom:8px}
+.mini-bar-fill{height:100%;border-radius:3px}
+.proj-task-item{display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:6px;background:var(--bg);margin-bottom:4px;font-size:.78rem}
+.proj-task-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.proj-task-name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.proj-task-person{font-size:.7rem;color:var(--text3);flex-shrink:0}
+
+/* ── 人员看板 ──────────────────────────────────────────── */
+.person-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.person-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.person-avatar{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.88rem;font-weight:700;color:#fff;flex-shrink:0}
+.person-name{font-size:.92rem;font-weight:600}
+.person-email{font-size:.68rem;color:var(--text3)}
+.person-bar{height:6px;border-radius:3px;background:var(--border);overflow:hidden;margin:8px 0 6px}
+.person-bar-fill{height:100%;border-radius:3px;transition:width .8s ease}
+.person-meta{display:flex;gap:12px;font-size:.72rem;color:var(--text2);margin-bottom:8px}
+.person-projs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.person-proj-tag{font-size:.66rem;padding:2px 8px;border-radius:12px;background:var(--accent-light);color:var(--accent);font-weight:500}
+
+/* ── 甘特图 ───────────────────────────────────────────── */
+.gantt-container{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.gantt{min-width:900px}
+.gantt-group-title{font-size:.8rem;font-weight:600;padding:8px 0 4px;color:var(--accent);border-bottom:1px solid var(--border);margin-top:8px;display:flex;align-items:center;gap:6px}
+.gantt-group-title:first-child{margin-top:0}
+.gantt-header{display:flex;border-bottom:2px solid var(--border);padding-bottom:6px;margin-bottom:2px}
+.gantt-label-col{width:220px;flex-shrink:0;font-size:.72rem;font-weight:600;color:var(--text3)}
+.gantt-timeline{flex:1;display:flex}
+.gantt-week{flex:1;text-align:center;font-size:.66rem;color:var(--text3);border-left:1px solid #f0f1f5;padding:2px 0}
+.gantt-row{display:flex;align-items:center;min-height:30px;border-bottom:1px solid #f3f4f8}
+.gantt-row:hover{background:#fafaff}
+.gantt-row-label{width:220px;flex-shrink:0;font-size:.76rem;padding:2px 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gantt-row-timeline{flex:1;position:relative;height:20px}
+.gantt-bar{position:absolute;height:16px;top:2px;border-radius:4px;display:flex;align-items:center;padding:0 6px;font-size:.62rem;color:#fff;font-weight:500;white-space:nowrap;overflow:hidden;min-width:4px}
+.gantt-bar.done{background:linear-gradient(90deg,#16a34a,#22c55e)}
+.gantt-bar.wip{background:linear-gradient(90deg,#2563eb,#3b82f6)}
+.gantt-bar.delayed{background:linear-gradient(90deg,#dc2626,#ef4444)}
+.gantt-bar.paused{background:linear-gradient(90deg,#9ca3af,#d1d5db)}
+
+/* ── 风险看板 ──────────────────────────────────────────── */
+.risk-card{padding:12px 14px;border-radius:var(--radius-sm);margin-bottom:8px;display:flex;align-items:flex-start;gap:10px}
+.risk-card.delayed{background:var(--red-bg);border-left:3px solid var(--red)}
+.risk-card.upcoming{background:var(--amber-bg);border-left:3px solid var(--amber)}
+.risk-icon{font-size:1rem;flex-shrink:0;margin-top:1px}
+.risk-title{font-size:.85rem;font-weight:500}
+.risk-meta{font-size:.72rem;color:var(--text2);margin-top:2px;display:flex;flex-wrap:wrap;gap:8px}
+.risk-proj{font-size:.68rem;padding:1px 8px;border-radius:10px;background:rgba(0,0,0,.06);color:var(--text2)}
+
+/* ── 筛选栏 ───────────────────────────────────────────── */
+.filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;align-items:flex-start}
+.filter-group{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.filter-label{font-size:.72rem;font-weight:600;color:var(--text3);margin-right:4px;white-space:nowrap;line-height:28px}
+.filter-pill{
+  padding:4px 12px;border-radius:20px;border:1px solid var(--border);
+  background:var(--surface);cursor:pointer;font-size:.74rem;font-weight:500;
+  color:var(--text2);transition:.15s;font-family:var(--font);white-space:nowrap;
+  line-height:1.4;
+}
+.filter-pill:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-light)}
+.filter-pill.active{background:var(--accent);color:#fff;border-color:var(--accent);box-shadow:0 1px 4px rgba(79,70,229,.25)}
+.filter-sep{width:1px;height:20px;background:var(--border);margin:0 6px;flex-shrink:0;align-self:center}
+.filter-count{font-size:.66rem;color:var(--text3);margin-left:2px}
+.no-data{text-align:center;padding:30px;color:var(--text3);font-size:.88rem}
+
+/* ── 响应式：平板 ─────────────────────────────────────── */
+@media(max-width:960px){.grid-2,.grid-3{grid-template-columns:1fr}.gantt-label-col,.gantt-row-label{width:160px}}
+/* ── 响应式：手机 ─────────────────────────────────────── */
+@media(max-width:768px){
+  html{font-size:13.5px}
+  .header,.tab-bar,.board,.quick-links{padding-left:14px;padding-right:14px}
+  .header{padding-top:18px;padding-bottom:14px}
+  .header h1{font-size:1.2rem}
+  .quick-links{flex-direction:column}
+  .link-card{width:100%}
+  .tab-btn{padding:7px 13px;font-size:.78rem}
+  .board{padding:14px 14px 36px}
+  .card{padding:14px}
+  .stats-row{grid-template-columns:1fr 1fr;gap:8px}
+  .stat-card{padding:12px}
+  .stat-icon{width:34px;height:34px;font-size:.95rem}
+  .stat-value{font-size:1.3rem}
+  .proj-name{width:100px;font-size:.78rem}
+  .gantt{min-width:600px}
+  .gantt-label-col,.gantt-row-label{width:110px;font-size:.66rem}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .person-projs{gap:3px}
+}
+@media(max-width:400px){
+  html{font-size:13px}
+  .stats-row{grid-template-columns:1fr}
+  .proj-name{width:80px}
+  .gantt-label-col,.gantt-row-label{width:80px;font-size:.6rem}
+}
+</style>
+</head>
+<body>
+<script src="taskboard-db.data.js"></script>
+
+<header class="header">
+  <h1>影视创意组 · 全项目任务看板</h1>
+  <p>Film Creativity Group · Multi-Project Dashboard</p>
+  <div class="header-row">
+    <span id="metaTotal"></span>
+    <span id="metaProjects"></span>
+    <span id="metaDate"></span>
+  </div>
+</header>
+
+<div class="quick-links">
+  <a class="link-card" href="file:///Y:/tmp/WuYiXiang/wuyixiang/w_work.html" target="_blank">
+    <div class="link-card-icon">🎬</div>
+    <div><div class="link-card-title">工作展示 · WuYiXiang</div><div class="link-card-desc">个人工作作品集</div></div>
+    <div class="link-card-arrow">→</div>
+  </a>
+  <a class="link-card" href="https://xd.feishu.cn/base/SFpqbX6Zda0cRssqqLEcp7Ranmh?table=tblTUjW19PAj3OtA&view=vewXxBNTOK" target="_blank">
+    <div class="link-card-icon">📊</div>
+    <div><div class="link-card-title">飞书数据源</div><div class="link-card-desc">打开飞书多维表格</div></div>
+    <div class="link-card-arrow">→</div>
+  </a>
+</div>
+
+<nav class="tab-bar">
+  <button class="tab-btn active" data-tab="overview">📊 全局总览</button>
+  <button class="tab-btn" data-tab="projects">🗂️ 项目对比</button>
+  <button class="tab-btn" data-tab="team">👥 人员工作量</button>
+  <button class="tab-btn" data-tab="gantt">📅 甘特时间线</button>
+  <button class="tab-btn" data-tab="risk">⚠️ 风险监控</button>
+</nav>
+
+<section class="board active" id="board-overview">
+  <div class="filter-bar" id="filterOverview"></div>
+  <div class="stats-row" id="statsRow"></div>
+  <div class="grid-2">
+    <div class="card"><div class="card-title">各项目完成进度</div><div class="proj-list" id="projProgress"></div></div>
+    <div class="card"><div class="card-title">状态分布</div><div id="statusChart" style="display:flex;align-items:center;justify-content:center;gap:40px;padding:10px 0;flex-wrap:wrap"></div></div>
+  </div>
+</section>
+
+<section class="board" id="board-projects">
+  <div class="filter-bar" id="filterProjects"></div>
+  <div class="grid-3" id="projGrid"></div>
+</section>
+
+<section class="board" id="board-team">
+  <div class="filter-bar" id="filterTeam"></div>
+  <div class="grid-3" id="teamGrid"></div>
+</section>
+
+<section class="board" id="board-gantt">
+  <div class="filter-bar" id="filterGantt"></div>
+  <div class="card"><div class="card-title">甘特时间线</div><div class="gantt-container" id="ganttContainer"></div></div>
+</section>
+
+<section class="board" id="board-risk">
+  <div class="filter-bar" id="filterRisk"></div>
+  <div class="grid-2">
+    <div class="card"><div class="card-title">🚨 已延期任务</div><div id="delayedList"></div></div>
+    <div class="card"><div class="card-title">⏳ 进行中任务</div><div id="wipList"></div></div>
+  </div>
+</section>
+
+<script>
+const DB = window.__TASKBOARD_DB__;
+const tasks = DB.tasks;
+const meta = DB.meta;
+
+document.getElementById('metaTotal').textContent = `📋 ${meta.totalTasks} 项任务`;
+document.getElementById('metaProjects').textContent = `🗂️ ${meta.totalProjects} 个项目`;
+document.getElementById('metaDate').textContent = `🕒 ${new Date(meta.generatedAt).toLocaleString('zh-CN')}`;
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.board').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('board-' + btn.dataset.tab).classList.add('active');
+  });
+});
+
+function fmt(d) { return d ? d.replace(/-/g, '/') : '—'; }
+function daysBetween(a, b) { return Math.ceil((new Date(b) - new Date(a)) / 86400000); }
+
+const DONE_STATUSES  = ['已完成'];
+const WIP_STATUSES   = ['进行中', '今日待提交'];
+const PAUSE_STATUSES = ['暂停中'];
+const ALL_STATUSES   = ['已完成', '进行中', '今日待提交', '暂停中', '待开始'];
+const people = [...new Set(tasks.map(t => t.assignee).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
+
+const PROJ_COLORS = ['#4f46e5','#7c3aed','#2563eb','#0891b2','#16a34a','#d97706','#dc2626','#db2777','#ea580c','#0d9488','#6366f1'];
+const projColorMap = {};
+meta.projects.forEach((p, i) => { projColorMap[p] = PROJ_COLORS[i % PROJ_COLORS.length]; });
+const avatarColors = ['#4f46e5','#7c3aed','#d97706','#16a34a','#dc2626','#db2777','#0891b2','#ea580c','#6366f1','#0d9488'];
+const personColorMap = {};
+people.forEach((p, i) => { personColorMap[p] = avatarColors[i % avatarColors.length]; });
+
+/* ── 筛选器工具 ─────────────────────────────────────── */
+function buildFilterGroup(label, options, onChange) {
+  const wrap = document.createElement('div');
+  wrap.className = 'filter-group';
+  wrap.innerHTML = `<span class="filter-label">${label}</span>`;
+  let active = '全部';
+
+  const allBtn = document.createElement('button');
+  allBtn.className = 'filter-pill active';
+  allBtn.textContent = '全部';
+  allBtn.onclick = () => { active = '全部'; updateActive(); onChange('全部'); };
+  wrap.appendChild(allBtn);
+
+  options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-pill';
+    btn.textContent = opt;
+    btn.onclick = () => { active = opt; updateActive(); onChange(opt); };
+    wrap.appendChild(btn);
+  });
+
+  function updateActive() {
+    wrap.querySelectorAll('.filter-pill').forEach(b => {
+      b.classList.toggle('active', b.textContent === active);
+    });
+  }
+  return wrap;
+}
+
+function addSep(container) {
+  const sep = document.createElement('div');
+  sep.className = 'filter-sep';
+  container.appendChild(sep);
+}
+
+/* ── 通用筛选函数 ──────────────────────────────────── */
+function filterTasks(src, { proj, person, status, delayOnly } = {}) {
+  let list = src;
+  if (proj && proj !== '全部') list = list.filter(t => t.project === proj);
+  if (person && person !== '全部') list = list.filter(t => t.assignee === person);
+  if (status && status !== '全部') {
+    if (status === '已延期') list = list.filter(t => t.isDelayed);
+    else list = list.filter(t => t.status === status);
+  }
+  if (delayOnly) list = list.filter(t => t.isDelayed);
+  return list;
+}
+
+/* ═══════════════════════════════════════════════════════
+   看板 1 · 全局总览（筛选：按项目 / 按人员）
+   ═══════════════════════════════════════════════════════ */
+const overviewState = { proj: '全部', person: '全部' };
+
+function renderOverview() {
+  const ft = filterTasks(tasks, overviewState);
+  const completed  = ft.filter(t => DONE_STATUSES.includes(t.status));
+  const inProgress = ft.filter(t => WIP_STATUSES.includes(t.status));
+  const delayed    = ft.filter(t => t.isDelayed);
+  const ppl        = [...new Set(ft.map(t => t.assignee).filter(Boolean))];
+  const projs      = [...new Set(ft.map(t => t.project))];
+
+  const statsData = [
+    { icon: '📋', label: '总任务', value: ft.length, cls: 'blue' },
+    { icon: '🗂️', label: '项目数', value: projs.length, cls: 'purple' },
+    { icon: '✅', label: '已完成', value: completed.length, cls: 'green' },
+    { icon: '🔄', label: '进行中', value: inProgress.length, cls: 'amber' },
+    { icon: '🚨', label: '已延期', value: delayed.length, cls: 'red' },
+    { icon: '👥', label: '参与人', value: ppl.length, cls: 'cyan' },
+  ];
+  document.getElementById('statsRow').innerHTML = statsData.map(s =>
+    `<div class="stat-card"><div class="stat-icon ${s.cls}">${s.icon}</div><div><div class="stat-value">${s.value}</div><div class="stat-label">${s.label}</div></div></div>`
+  ).join('');
+
+  const pp = document.getElementById('projProgress');
+  pp.innerHTML = '';
+  projs.forEach(proj => {
+    const pTasks = ft.filter(t => t.project === proj);
+    const pDone = pTasks.filter(t => DONE_STATUSES.includes(t.status)).length;
+    const ratio = pTasks.length ? Math.round(pDone / pTasks.length * 100) : 0;
+    const color = projColorMap[proj] || '#888';
+    pp.innerHTML += `<div class="proj-item"><div class="proj-dot" style="background:${color}"></div><div class="proj-name" title="${proj}">${proj}</div><div class="proj-bar"><div class="proj-bar-fill" style="width:${ratio}%;background:${color}"></div></div><div class="proj-stats">${pDone}/${pTasks.length} (${ratio}%)</div></div>`;
+  });
+
+  // 甜甜圈
+  const statusGroups = [
+    { label:'已完成', count:completed.length, color:'#16a34a' },
+    { label:'进行中', count:ft.filter(t=>t.status==='进行中').length, color:'#2563eb' },
+    { label:'今日待提交', count:ft.filter(t=>t.status==='今日待提交').length, color:'#d97706' },
+    { label:'暂停中', count:ft.filter(t=>PAUSE_STATUSES.includes(t.status)).length, color:'#9ca3af' },
+    { label:'待开始', count:ft.filter(t=>t.status==='待开始').length, color:'#a855f7' },
+    { label:'已延期', count:delayed.length, color:'#dc2626' },
+  ].filter(s => s.count > 0);
+  const r=65,cx=80,cy=80,circ=2*Math.PI*r;
+  let offset=0, paths='', lgd='';
+  const total = ft.length || 1;
+  statusGroups.forEach(s => {
+    const pct=s.count/total, dash=circ*pct;
+    paths+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${s.color}" stroke-width="16" stroke-dasharray="${dash} ${circ-dash}" stroke-dashoffset="${-offset}"/>`;
+    offset+=dash;
+    lgd+=`<div style="display:flex;align-items:center;gap:8px;font-size:.82rem"><div style="width:10px;height:10px;border-radius:50%;background:${s.color}"></div>${s.label} ${s.count} (${Math.round(pct*100)}%)</div>`;
+  });
+  document.getElementById('statusChart').innerHTML = `<svg viewBox="0 0 160 160" width="160" height="160" style="transform:rotate(-90deg)"><circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--border)" stroke-width="16"/>${paths}</svg><div style="display:flex;flex-direction:column;gap:8px">${lgd}</div>`;
+}
+
+const fOverview = document.getElementById('filterOverview');
+fOverview.appendChild(buildFilterGroup('项目', meta.projects, v => { overviewState.proj = v; renderOverview(); }));
+addSep(fOverview);
+fOverview.appendChild(buildFilterGroup('人员', people, v => { overviewState.person = v; renderOverview(); }));
+renderOverview();
+
+/* ═══════════════════════════════════════════════════════
+   看板 2 · 项目对比（筛选：按状态 / 按人员）
+   ═══════════════════════════════════════════════════════ */
+const projState = { status: '全部', person: '全部' };
+
+function renderProjects() {
+  const grid = document.getElementById('projGrid');
+  grid.innerHTML = '';
+  meta.projects.forEach(proj => {
+    let pTasks = tasks.filter(t => t.project === proj);
+    pTasks = filterTasks(pTasks, { status: projState.status, person: projState.person });
+    if (!pTasks.length) return;
+    const pDone = pTasks.filter(t => DONE_STATUSES.includes(t.status)).length;
+    const pWip = pTasks.filter(t => WIP_STATUSES.includes(t.status)).length;
+    const pDelay = pTasks.filter(t => t.isDelayed).length;
+    const ratio = Math.round(pDone / pTasks.length * 100);
+    const color = projColorMap[proj];
+    const listHtml = pTasks.slice(0, 8).map(t => {
+      const dc = DONE_STATUSES.includes(t.status)?'var(--green)':t.isDelayed?'var(--red)':'var(--blue)';
+      return `<div class="proj-task-item"><div class="proj-task-dot" style="background:${dc}"></div><div class="proj-task-name">${t.title}</div><div class="proj-task-person">${t.assignee}</div></div>`;
+    }).join('');
+    const more = pTasks.length > 8 ? `<div style="font-size:.7rem;color:var(--text3);text-align:center;padding:4px">还有 ${pTasks.length-8} 项…</div>` : '';
+    grid.innerHTML += `<div class="proj-card"><div class="proj-card-header"><div class="proj-card-dot" style="background:${color}"></div><div class="proj-card-name">${proj}</div><div class="proj-card-count">${pTasks.length} 项</div></div><div class="mini-bar"><div class="mini-bar-fill" style="width:${ratio}%;background:${color}"></div></div><div class="mini-stats"><span>✅ ${pDone}</span><span>🔄 ${pWip}</span>${pDelay?`<span>🚨 ${pDelay}</span>`:''}<span style="margin-left:auto;font-weight:600">${ratio}%</span></div>${listHtml}${more}</div>`;
+  });
+  if (!grid.innerHTML) grid.innerHTML = '<div class="no-data">没有匹配的项目数据</div>';
+}
+
+const fProj = document.getElementById('filterProjects');
+fProj.appendChild(buildFilterGroup('状态', [...ALL_STATUSES, '已延期'], v => { projState.status = v; renderProjects(); }));
+addSep(fProj);
+fProj.appendChild(buildFilterGroup('人员', people, v => { projState.person = v; renderProjects(); }));
+renderProjects();
+
+/* ═══════════════════════════════════════════════════════
+   看板 3 · 人员工作量（筛选：按项目 / 按状态）
+   ═══════════════════════════════════════════════════════ */
+const teamState = { proj: '全部', status: '全部' };
+
+function renderTeam() {
+  const grid = document.getElementById('teamGrid');
+  grid.innerHTML = '';
+  const byPerson = {};
+  const ft = filterTasks(tasks, { proj: teamState.proj, status: teamState.status });
+  ft.forEach(t => {
+    if (!t.assignee) return;
+    if (!byPerson[t.assignee]) byPerson[t.assignee] = { email: t.email, tasks: [], projects: new Set() };
+    byPerson[t.assignee].tasks.push(t);
+    byPerson[t.assignee].projects.add(t.project);
+  });
+  const sorted = Object.entries(byPerson).sort((a,b) => b[1].tasks.length - a[1].tasks.length);
+  if (!sorted.length) { grid.innerHTML = '<div class="no-data">没有匹配的人员数据</div>'; return; }
+  sorted.forEach(([name, data]) => {
+    const total = data.tasks.length;
+    const done = data.tasks.filter(t => DONE_STATUSES.includes(t.status)).length;
+    const dly = data.tasks.filter(t => t.isDelayed).length;
+    const ratio = Math.round(done / total * 100);
+    const color = personColorMap[name] || '#888';
+    const projTags = [...data.projects].map(p => `<span class="person-proj-tag">${p}</span>`).join('');
+    grid.innerHTML += `<div class="person-card"><div class="person-header"><div class="person-avatar" style="background:${color}">${name[0]}</div><div><div class="person-name">${name}</div><div class="person-email">${data.email}</div></div></div><div class="person-bar"><div class="person-bar-fill" style="width:${ratio}%;background:${color}"></div></div><div class="person-meta"><span>完成率 ${ratio}%</span><span>✅ ${done}/${total}</span>${dly?`<span style="color:var(--red)">🚨 ${dly}</span>`:''}</div><div class="person-projs">${projTags}</div></div>`;
+  });
+}
+
+const fTeam = document.getElementById('filterTeam');
+fTeam.appendChild(buildFilterGroup('项目', meta.projects, v => { teamState.proj = v; renderTeam(); }));
+addSep(fTeam);
+fTeam.appendChild(buildFilterGroup('状态', [...ALL_STATUSES, '已延期'], v => { teamState.status = v; renderTeam(); }));
+renderTeam();
+
+/* ═══════════════════════════════════════════════════════
+   看板 4 · 甘特时间线（筛选：按项目 / 按人员 / 按状态）
+   ═══════════════════════════════════════════════════════ */
+const ganttState = { proj: '全部', person: '全部', status: '全部' };
+
+function renderGantt() {
+  const ft = filterTasks(tasks.filter(t => t.startDate), ganttState);
+  const container = document.getElementById('ganttContainer');
+  if (!ft.length) { container.innerHTML = '<div class="no-data">没有匹配的任务</div>'; return; }
+
+  const allDates = ft.flatMap(t => [t.startDate, t.dueDate, t.completedDate].filter(Boolean));
+  const minDate = new Date(Math.min(...allDates.map(d => new Date(d))));
+  const maxDate = new Date(Math.max(...allDates.map(d => new Date(d))));
+  minDate.setDate(minDate.getDate() - 3);
+  maxDate.setDate(maxDate.getDate() + 7);
+  const totalDays = daysBetween(minDate.toISOString(), maxDate.toISOString());
+  const weeks = [];
+  const cur = new Date(minDate);
+  while (cur <= maxDate) { weeks.push(cur.toISOString().slice(5,10).replace('-','/')); cur.setDate(cur.getDate()+7); }
+
+  function pctPos(ds) { return ((new Date(ds)-minDate)/(maxDate-minDate)*100).toFixed(2); }
+  function pctWidth(a,b) { return (daysBetween(a,b)/totalDays*100).toFixed(2); }
+
+  let html = `<div class="gantt"><div class="gantt-header"><div class="gantt-label-col">任务</div><div class="gantt-timeline">${weeks.map(w=>`<div class="gantt-week">${w}</div>`).join('')}</div></div>`;
+
+  const projs = [...new Set(ft.map(t => t.project))];
+  projs.forEach(proj => {
+    const pTasks = ft.filter(t => t.project === proj);
+    if (!pTasks.length) return;
+    const color = projColorMap[proj] || '#888';
+    html += `<div class="gantt-group-title"><div style="width:10px;height:10px;border-radius:3px;background:${color}"></div>${proj} (${pTasks.length})</div>`;
+    pTasks.forEach(t => {
+      const endDate = t.completedDate || t.dueDate || t.startDate;
+      const left = pctPos(t.startDate);
+      const width = Math.max(parseFloat(pctWidth(t.startDate, endDate)), 0.6);
+      const cls = t.isDelayed?'delayed':DONE_STATUSES.includes(t.status)?'done':PAUSE_STATUSES.includes(t.status)?'paused':'wip';
+      html += `<div class="gantt-row"><div class="gantt-row-label" title="${t.title}">${t.title}</div><div class="gantt-row-timeline"><div class="gantt-bar ${cls}" style="left:${left}%;width:${width}%" title="${t.title}\n${t.assignee}\n${fmt(t.startDate)} → ${fmt(endDate)}">${t.assignee}</div></div></div>`;
+    });
+  });
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+const fGantt = document.getElementById('filterGantt');
+fGantt.appendChild(buildFilterGroup('项目', meta.projects, v => { ganttState.proj = v; renderGantt(); }));
+addSep(fGantt);
+fGantt.appendChild(buildFilterGroup('人员', people, v => { ganttState.person = v; renderGantt(); }));
+addSep(fGantt);
+fGantt.appendChild(buildFilterGroup('状态', [...ALL_STATUSES, '已延期'], v => { ganttState.status = v; renderGantt(); }));
+renderGantt();
+
+/* ═══════════════════════════════════════════════════════
+   看板 5 · 风险监控（筛选：按项目 / 按人员）
+   ═══════════════════════════════════════════════════════ */
+const riskState = { proj: '全部', person: '全部' };
+
+function renderRisk() {
+  const base = filterTasks(tasks, { proj: riskState.proj, person: riskState.person });
+  const delayed = base.filter(t => t.isDelayed);
+  const wip = base.filter(t => WIP_STATUSES.includes(t.status) && !t.isDelayed);
+
+  const dl = document.getElementById('delayedList');
+  if (!delayed.length) { dl.innerHTML = '<div class="no-data">🎉 暂无延期任务</div>'; }
+  else { dl.innerHTML = delayed.map(t => `<div class="risk-card delayed"><div class="risk-icon">🚨</div><div style="flex:1"><div class="risk-title">${t.title}</div><div class="risk-meta"><span>👤 ${t.assignee}</span><span>📅 截止 ${fmt(t.dueDate)}</span><span class="risk-proj">${t.project}</span></div>${t.reason?`<div style="font-size:.72rem;color:var(--text2);margin-top:4px">📝 ${t.reason}</div>`:''}</div></div>`).join(''); }
+
+  const wl = document.getElementById('wipList');
+  if (!wip.length) { wl.innerHTML = '<div class="no-data">暂无进行中任务</div>'; }
+  else { wl.innerHTML = wip.map(t => `<div class="risk-card upcoming"><div class="risk-icon">🔄</div><div style="flex:1"><div class="risk-title">${t.title}</div><div class="risk-meta"><span>👤 ${t.assignee}</span><span>📅 截止 ${fmt(t.dueDate)}</span><span class="risk-proj">${t.project}</span></div></div></div>`).join(''); }
+}
+
+const fRisk = document.getElementById('filterRisk');
+fRisk.appendChild(buildFilterGroup('项目', meta.projects, v => { riskState.proj = v; renderRisk(); }));
+addSep(fRisk);
+fRisk.appendChild(buildFilterGroup('人员', people, v => { riskState.person = v; renderRisk(); }));
+renderRisk();
+</script>
+</body>
+</html>

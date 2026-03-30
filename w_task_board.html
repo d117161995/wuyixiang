@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>任务管理看板 · AI制作组</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f0f2f5;--surface:#fff;--surface-alt:#f8fafc;--border:#e2e8f0;--border-light:#f1f5f9;
+  --text:#0f172a;--text-2:#475569;--text-3:#94a3b8;
+  --primary:#6366f1;--primary-light:#e0e7ff;--primary-dark:#4f46e5;
+  --radius:12px;--radius-sm:8px;--radius-xs:6px;
+  --shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+  --shadow-md:0 4px 6px -1px rgba(0,0,0,.07),0 2px 4px -2px rgba(0,0,0,.05);
+  --shadow-lg:0 10px 15px -3px rgba(0,0,0,.08),0 4px 6px -4px rgba(0,0,0,.04);
+  --transition:all .2s ease;
+}
+html{font-size:14px;scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+
+/* === 头部 === */
+.header{background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 50%,#a78bfa 100%);color:#fff;position:sticky;top:0;z-index:100;box-shadow:0 4px 20px rgba(99,102,241,.3)}
+.header-inner{max-width:1440px;margin:0 auto;padding:20px 32px 0;display:flex;align-items:center;justify-content:space-between}
+.header h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+.header .sync-info{font-size:.8rem;opacity:.75;display:flex;align-items:center;gap:6px}
+.header .sync-info::before{content:'';width:8px;height:8px;background:#4ade80;border-radius:50%;display:inline-block}
+
+/* === 导航标签 === */
+.nav-tabs{max-width:1440px;margin:0 auto;padding:12px 32px 0;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.tab{background:none;border:none;color:rgba(255,255,255,.7);font-size:.82rem;font-weight:500;padding:10px 16px;cursor:pointer;border-radius:var(--radius-sm) var(--radius-sm) 0 0;transition:var(--transition);white-space:nowrap;font-family:inherit;position:relative}
+.tab:hover{color:#fff;background:rgba(255,255,255,.1)}
+.tab.active{color:#4f46e5;background:var(--bg);font-weight:600}
+
+/* === 主内容 === */
+.main{max-width:1440px;margin:0 auto;padding:24px 32px 48px}
+
+/* === 通用组件 === */
+.card{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border-light);transition:var(--transition)}
+.card:hover{box-shadow:var(--shadow-md)}
+.card-title{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.badge{display:inline-flex;align-items:center;padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:500;white-space:nowrap}
+.project-tag{display:inline-flex;align-items:center;padding:2px 8px;border-radius:4px;font-size:.7rem;font-weight:500;white-space:nowrap;max-width:120px;overflow:hidden;text-overflow:ellipsis}
+.view-title{font-size:1.3rem;font-weight:700;color:var(--text);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.empty-state{text-align:center;padding:48px;color:var(--text-3);font-size:.95rem}
+
+/* === 视图1: 数据总览 === */
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px}
+.stat-card{padding:24px;display:flex;align-items:center;gap:16px}
+.stat-icon{width:48px;height:48px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.stat-value{font-size:2rem;font-weight:800;line-height:1;letter-spacing:-.03em}
+.stat-label{font-size:.8rem;color:var(--text-3);margin-top:4px}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.chart-card{padding:24px}
+.chart-card.wide{grid-column:1/-1}
+.hbar{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.hbar-label{width:90px;font-size:.8rem;color:var(--text-2);text-align:right;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hbar-track{flex:1;height:24px;background:var(--bg);border-radius:12px;overflow:hidden}
+.hbar-fill{height:100%;border-radius:12px;transition:width .6s ease;min-width:2px}
+.hbar-val{width:30px;font-size:.8rem;font-weight:600;color:var(--text-2);text-align:right}
+.vbar-chart{display:flex;align-items:flex-end;gap:12px;height:160px;padding-top:10px}
+.vbar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.vbar-bar{width:100%;border-radius:6px 6px 0 0;transition:height .6s ease;min-height:4px;position:relative}
+.vbar-name{font-size:.7rem;color:var(--text-3);text-align:center;max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vbar-num{font-size:.75rem;font-weight:700;color:var(--text)}
+
+/* === 视图2: 看板 === */
+.kanban{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px}
+.kanban-col{min-width:240px;max-width:280px;flex:1;display:flex;flex-direction:column}
+.kanban-header{padding:12px 16px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-weight:600;font-size:.85rem}
+.kanban-count{background:rgba(255,255,255,.6);padding:2px 8px;border-radius:10px;font-size:.75rem}
+.kanban-cards{display:flex;flex-direction:column;gap:8px;flex:1}
+.kanban-card{padding:14px;cursor:default}
+.kanban-card .task-name{font-size:.85rem;font-weight:500;margin-bottom:8px;line-height:1.4}
+.kanban-card .card-meta{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.kanban-card .assignee{font-size:.75rem;color:var(--text-3)}
+
+/* === 视图3: 人员 === */
+.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.person-card{padding:20px}
+.person-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border-light)}
+.person-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:600;color:#fff;flex-shrink:0}
+.person-name{font-weight:600;font-size:1rem}
+.person-count{font-size:.75rem;color:var(--text-3)}
+.person-tasks{display:flex;flex-direction:column;gap:6px}
+.person-task{display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--surface-alt);border-radius:var(--radius-xs);font-size:.82rem}
+.person-task .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* === 视图4: 项目 === */
+.project-sections{display:flex;flex-direction:column;gap:16px}
+.project-section{padding:20px;border-left:4px solid transparent}
+.project-section-title{font-size:1rem;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.project-task-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.project-task-item{padding:12px 14px;background:var(--surface-alt);border-radius:var(--radius-xs);display:flex;flex-direction:column;gap:6px}
+.project-task-item .task-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.project-task-item .task-text{font-size:.85rem;font-weight:500;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* === 视图5: 周任务安排 === */
+.weekly-wrap{overflow-x:auto}
+.weekly{display:grid;grid-template-columns:100px repeat(7,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface);min-width:700px}
+.weekly-corner{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;padding:14px 10px;font-weight:600;font-size:.82rem;display:flex;align-items:center;justify-content:center}
+.weekly-day{padding:10px 6px;text-align:center;font-size:.78rem;font-weight:600;color:var(--text-2);background:var(--surface-alt);border-bottom:2px solid var(--border)}
+.weekly-day.today{background:#e0e7ff;color:var(--primary)}
+.weekly-person{padding:10px;font-size:.82rem;font-weight:500;color:var(--text);display:flex;align-items:center;border-bottom:1px solid var(--border-light);border-right:1px solid var(--border-light);background:var(--surface)}
+.weekly-cell{padding:4px;border-bottom:1px solid var(--border-light);border-right:1px solid var(--border-light);display:flex;flex-direction:column;gap:3px;min-height:50px}
+.weekly-cell.today-col{background:#f5f3ff}
+.task-block{height:10px;border-radius:3px;cursor:default;transition:var(--transition);opacity:.85}
+.task-block:hover{opacity:1;transform:scaleY(1.5)}
+
+/* === 视图6: 时间线 === */
+.timeline-wrap{overflow-x:auto}
+.timeline{min-width:800px}
+.timeline-header{display:flex;padding-left:180px;margin-bottom:8px}
+.timeline-date{flex:1;text-align:center;font-size:.7rem;color:var(--text-3);font-weight:500}
+.timeline-date.today{color:var(--primary);font-weight:700}
+.timeline-row{display:flex;align-items:center;margin-bottom:6px}
+.timeline-label{width:180px;flex-shrink:0;font-size:.78rem;font-weight:500;padding-right:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:right;color:var(--text-2)}
+.timeline-track{flex:1;height:22px;position:relative;background:var(--surface-alt);border-radius:4px}
+.timeline-bar{position:absolute;height:100%;border-radius:4px;top:0;opacity:.8;transition:var(--transition);display:flex;align-items:center;padding:0 6px;overflow:hidden}
+.timeline-bar:hover{opacity:1;z-index:2;box-shadow:var(--shadow-md)}
+.timeline-bar span{font-size:.65rem;color:#fff;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.timeline-today{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--primary);z-index:3}
+
+/* === 视图7: 延期预警 === */
+.overdue-list{display:flex;flex-direction:column;gap:10px}
+.overdue-card{padding:16px 20px;border-left:4px solid #ef4444;display:flex;align-items:center;gap:16px}
+.overdue-icon{font-size:1.5rem}
+.overdue-body{flex:1}
+.overdue-task{font-weight:600;font-size:.95rem;margin-bottom:4px}
+.overdue-meta{font-size:.78rem;color:var(--text-3);display:flex;gap:16px;flex-wrap:wrap}
+.overdue-days{background:#fee2e2;color:#dc2626;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:600;white-space:nowrap}
+
+/* === 视图8: 日历 === */
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.cal-header{padding:10px;text-align:center;font-weight:600;font-size:.82rem;color:var(--text-2);background:var(--surface-alt);border-bottom:1px solid var(--border)}
+.cal-cell{padding:8px;min-height:90px;border-bottom:1px solid var(--border-light);border-right:1px solid var(--border-light);position:relative}
+.cal-cell:nth-child(7n){border-right:none}
+.cal-cell.other-month{background:var(--surface-alt)}
+.cal-cell.today{background:#f5f3ff}
+.cal-num{font-size:.82rem;font-weight:600;color:var(--text-2);margin-bottom:4px}
+.cal-cell.today .cal-num{color:var(--primary);background:var(--primary-light);width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cal-dots{display:flex;flex-direction:column;gap:2px}
+.cal-dot{height:6px;border-radius:3px;font-size:0}
+
+/* === 视图9: 矩阵 === */
+.matrix-wrap{overflow-x:auto}
+.matrix{border-collapse:collapse;width:100%;background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border)}
+.matrix th,.matrix td{padding:10px 12px;text-align:center;font-size:.82rem;border:1px solid var(--border-light)}
+.matrix th{background:var(--surface-alt);font-weight:600;color:var(--text-2);position:sticky;top:0}
+.matrix th:first-child{text-align:left;min-width:140px}
+.matrix td:first-child{text-align:left;font-weight:500;color:var(--text)}
+.matrix .cell-val{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;font-weight:700;font-size:.8rem}
+
+/* === 视图10: 数据表 === */
+.table-controls{display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.search-input{padding:8px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.85rem;width:260px;outline:none;transition:var(--transition);font-family:inherit}
+.search-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-light)}
+.filter-select{padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:.85rem;outline:none;background:var(--surface);font-family:inherit;cursor:pointer}
+.data-table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--border)}
+.data-table{width:100%;border-collapse:collapse;background:var(--surface);min-width:900px}
+.data-table th{background:var(--surface-alt);padding:12px 14px;text-align:left;font-weight:600;font-size:.82rem;color:var(--text-2);border-bottom:2px solid var(--border);cursor:pointer;user-select:none;white-space:nowrap;transition:var(--transition)}
+.data-table th:hover{color:var(--primary)}
+.data-table th .sort-icon{margin-left:4px;opacity:.4}
+.data-table th.sorted .sort-icon{opacity:1;color:var(--primary)}
+.data-table td{padding:10px 14px;font-size:.85rem;border-bottom:1px solid var(--border-light);max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.data-table tr:hover td{background:var(--surface-alt)}
+
+/* === 动画 === */
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.main>div{animation:fadeIn .3s ease}
+
+/* === 响应式 === */
+@media(max-width:768px){
+  .header-inner{padding:16px 16px 0}
+  .nav-tabs{padding:8px 16px 0}
+  .main{padding:16px}
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .chart-grid{grid-template-columns:1fr}
+  .tab{padding:8px 12px;font-size:.78rem}
+}
+
+/* === 滚动条 === */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#94a3b8}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <h1>📊 AI制作组 · 任务管理看板</h1>
+    <div style="display:flex;align-items:center;gap:16px">
+      <a href="w_work/data-logic.html" style="font-size:.78rem;color:rgba(255,255,255,.65);text-decoration:none;transition:color .15s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.65)'">数据逻辑</a>
+      <div class="sync-info" id="syncInfo"></div>
+    </div>
+  </div>
+  <nav class="nav-tabs" id="navTabs">
+    <button class="tab active" data-view="dashboard">📊 数据总览</button>
+    <button class="tab" data-view="kanban">📋 看板</button>
+    <button class="tab" data-view="people">👥 人员负荷</button>
+    <button class="tab" data-view="projects">🏗️ 项目总览</button>
+    <button class="tab" data-view="weekly">📅 周任务安排</button>
+    <button class="tab" data-view="timeline">⏰ 时间线</button>
+    <button class="tab" data-view="overdue">🚨 延期预警</button>
+    <button class="tab" data-view="calendar">📆 日历</button>
+    <button class="tab" data-view="matrix">🔲 矩阵</button>
+    <button class="tab" data-view="table">📝 数据表</button>
+  </nav>
+</header>
+
+<div class="main" id="app"></div>
+
+<script>document.write('<scr'+'ipt src="w_work/db_data.js?t='+Date.now()+'"><\/scr'+'ipt>');</script>
+<script>
+(function(){
+'use strict';
+
+// ========== 配置 ==========
+const STATUS_CFG = {
+  '今日待提交':{color:'#eab308',bg:'#fef9c3',icon:'📤'},
+  '待开始':{color:'#6b7280',bg:'#f3f4f6',icon:'⏳'},
+  '进行中':{color:'#3b82f6',bg:'#dbeafe',icon:'🔄'},
+  '已完成':{color:'#22c55e',bg:'#dcfce7',icon:'✅'},
+  '暂停中':{color:'#f97316',bg:'#ffedd5',icon:'⏸️'},
+  '未按时完成':{color:'#ef4444',bg:'#fee2e2',icon:'❌'}
+};
+const STATUS_ORDER = ['今日待提交','进行中','待开始','已完成','暂停中','未按时完成'];
+
+const PROJECT_CFG = {
+  '伊瑟-莎朗':{color:'#ec4899',bg:'#fce7f3'},
+  '火炬-ss12赛季':{color:'#f97316',bg:'#fff7ed'},
+  '火炬-ss12英雄':{color:'#ea580c',bg:'#fef3c7'},
+  'RO2-过场CG':{color:'#8b5cf6',bg:'#ede9fe'},
+  'RO2-AI番剧':{color:'#6366f1',bg:'#e0e7ff'},
+  '香肠-AI番剧':{color:'#ef4444',bg:'#fee2e2'},
+  '小镇-海底CG':{color:'#06b6d4',bg:'#cffafe'},
+  '小镇-潜水艇戴夫联动':{color:'#14b8a6',bg:'#ccfbf1'},
+  'AI分享':{color:'#10b981',bg:'#d1fae5'},
+  'SS15赛季':{color:'#6366f1',bg:'#e0e7ff'},
+  'SS15英雄':{color:'#3b82f6',bg:'#dbeafe'}
+};
+
+const AVATAR_COLORS = ['#6366f1','#ec4899','#f97316','#06b6d4','#8b5cf6','#10b981','#ef4444','#eab308','#14b8a6','#3b82f6'];
+const DAY_MS = 86400000;
+
+// ========== 数据 ==========
+const db = window.WORK_DB;
+const records = db.records.filter(r => r.task);
+const allPeople = [...new Set(records.map(r=>r.assignee).filter(Boolean))];
+const configOrder = db.config?.people_order || [];
+const people = [
+  ...configOrder,
+  ...allPeople.filter(p => !configOrder.includes(p))
+];
+const projects = [...new Set(records.map(r=>r.project).filter(Boolean))];
+
+// ========== 工具函数 ==========
+function fmtDate(ts){
+  if(!ts) return '-';
+  const d=new Date(ts);
+  return `${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}`;
+}
+function shortDate(ts){
+  if(!ts) return '';
+  const d=new Date(ts);
+  return `${d.getMonth()+1}/${d.getDate()}`;
+}
+function dayStart(date){
+  const d=new Date(date);d.setHours(0,0,0,0);return d.getTime();
+}
+function getMonday(date){
+  const d=new Date(date);const day=d.getDay();
+  const diff=d.getDate()-day+(day===0?-6:1);
+  d.setDate(diff);d.setHours(0,0,0,0);return d;
+}
+function groupBy(arr,key){
+  return arr.reduce((a,item)=>{const k=item[key]||'未设置';(a[k]=a[k]||[]).push(item);return a;},{});
+}
+function sc(status){return STATUS_CFG[status]||{color:'#94a3b8',bg:'#f1f5f9',icon:'•'};}
+function pc(project){return PROJECT_CFG[project]||{color:'#6b7280',bg:'#f3f4f6'};}
+function esc(s){if(!s)return '';return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function statusBadge(s){const c=sc(s);return `<span class="badge" style="background:${c.bg};color:${c.color}">${c.icon} ${esc(s)||'未设置'}</span>`;}
+function projectTag(p){const c=pc(p);return `<span class="project-tag" style="background:${c.bg};color:${c.color}" title="${esc(p)}">${esc(p)}</span>`;}
+const today = dayStart(new Date());
+
+// ========== 视图1: 数据总览 ==========
+function renderDashboard(){
+  const total=records.length;
+  const inProg=records.filter(r=>r.status==='进行中').length;
+  const dueToday=records.filter(r=>r.status==='今日待提交').length;
+  const overdue=records.filter(r=>r.overdue).length;
+
+  const byStatus=groupBy(records,'status');
+  const byProject=groupBy(records,'project');
+  const byPerson=groupBy(records,'assignee');
+
+  const maxStatus=Math.max(...Object.values(byStatus).map(v=>v.length),1);
+  const maxProject=Math.max(...Object.values(byProject).map(v=>v.length),1);
+  const maxPerson=Math.max(...Object.values(byPerson).map(v=>v.length),1);
+
+  const statCards=[
+    {icon:'📋',label:'总任务数',val:total,bg:'#e0e7ff',color:'#4f46e5'},
+    {icon:'🔄',label:'进行中',val:inProg,bg:'#dbeafe',color:'#2563eb'},
+    {icon:'📤',label:'今日待提交',val:dueToday,bg:'#fef9c3',color:'#ca8a04'},
+    {icon:'🚨',label:'已延期',val:overdue,bg:'#fee2e2',color:'#dc2626'},
+  ];
+
+  return `
+    <div class="stat-grid">${statCards.map(s=>`
+      <div class="card stat-card">
+        <div class="stat-icon" style="background:${s.bg};color:${s.color}">${s.icon}</div>
+        <div><div class="stat-value" style="color:${s.color}">${s.val}</div><div class="stat-label">${s.label}</div></div>
+      </div>`).join('')}
+    </div>
+    <div class="chart-grid">
+      <div class="card chart-card">
+        <div class="card-title">📊 进展分布</div>
+        ${STATUS_ORDER.filter(s=>byStatus[s]).map(s=>{const cnt=byStatus[s].length;const c=sc(s);
+        return `<div class="hbar"><span class="hbar-label">${c.icon} ${s}</span><div class="hbar-track"><div class="hbar-fill" style="width:${cnt/maxStatus*100}%;background:${c.color}"></div></div><span class="hbar-val">${cnt}</span></div>`;}).join('')}
+      </div>
+      <div class="card chart-card">
+        <div class="card-title">🏗️ 项目分布</div>
+        ${Object.entries(byProject).sort((a,b)=>b[1].length-a[1].length).map(([p,arr])=>{const c=pc(p);
+        return `<div class="hbar"><span class="hbar-label" title="${esc(p)}">${esc(p)}</span><div class="hbar-track"><div class="hbar-fill" style="width:${arr.length/maxProject*100}%;background:${c.color}"></div></div><span class="hbar-val">${arr.length}</span></div>`;}).join('')}
+      </div>
+    </div>
+    <div class="card chart-card" style="margin-top:0">
+      <div class="card-title">👥 人员工作负荷</div>
+      <div class="vbar-chart">
+        ${people.map((p,i)=>{const cnt=(byPerson[p]||[]).length;const c=AVATAR_COLORS[i%AVATAR_COLORS.length];
+        return `<div class="vbar-col"><div class="vbar-num">${cnt}</div><div class="vbar-bar" style="height:${cnt/maxPerson*100}%;background:${c}"></div><div class="vbar-name" title="${esc(p)}">${esc(p)}</div></div>`;}).join('')}
+      </div>
+    </div>`;
+}
+
+// ========== 视图2: 看板 ==========
+function renderKanban(){
+  const byStatus=groupBy(records,'status');
+  return `<div class="view-title">📋 任务看板</div><div class="kanban">${STATUS_ORDER.map(s=>{
+    const arr=byStatus[s]||[];const c=sc(s);
+    return `<div class="kanban-col">
+      <div class="kanban-header" style="background:${c.bg};color:${c.color}"><span>${c.icon} ${s}</span><span class="kanban-count">${arr.length}</span></div>
+      <div class="kanban-cards">${arr.map(r=>`
+        <div class="card kanban-card">
+          <div class="task-name">${esc(r.task)}</div>
+          <div class="card-meta">${projectTag(r.project)}<span class="assignee">${esc(r.assignee)||''}</span></div>
+        </div>`).join('')}
+      </div></div>`;}).join('')}</div>`;
+}
+
+// ========== 视图3: 人员负荷 ==========
+function renderPeople(){
+  const byPerson=groupBy(records,'assignee');
+  return `<div class="view-title">👥 人员负荷</div><div class="people-grid">${people.map((p,i)=>{
+    const arr=byPerson[p]||[];const color=AVATAR_COLORS[i%AVATAR_COLORS.length];
+    return `<div class="card person-card">
+      <div class="person-header">
+        <div class="person-avatar" style="background:${color}">${p[0]}</div>
+        <div><div class="person-name">${esc(p)}</div><div class="person-count">${arr.length} 个任务</div></div>
+      </div>
+      <div class="person-tasks">${arr.map(r=>{const c=pc(r.project);const sc2=sc(r.status);
+        return `<div class="person-task"><span class="dot" style="background:${c.color}"></span><span style="flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${esc(r.task)}">${esc(r.task)}</span>${statusBadge(r.status)}</div>`;}).join('')}
+      </div></div>`;}).join('')}</div>`;
+}
+
+// ========== 视图4: 项目总览 ==========
+function renderProjects(){
+  const byProject=groupBy(records,'project');
+  return `<div class="view-title">🏗️ 项目总览</div><div class="project-sections">${projects.map(p=>{
+    const arr=byProject[p]||[];const c=pc(p);
+    return `<div class="card project-section" style="border-left-color:${c.color}">
+      <div class="project-section-title"><span style="color:${c.color}">●</span> ${esc(p)} <span class="badge" style="background:${c.bg};color:${c.color}">${arr.length}</span></div>
+      <div class="project-task-list">${arr.map(r=>`
+        <div class="project-task-item">
+          <div class="task-row"><span class="task-text" title="${esc(r.task)}">${esc(r.task)}</span>${statusBadge(r.status)}</div>
+          <div class="task-row"><span class="assignee" style="font-size:.75rem;color:var(--text-3)">${esc(r.assignee)||'未分配'}</span><span style="font-size:.72rem;color:var(--text-3)">${shortDate(r.start_date)}${r.due_date?' → '+shortDate(r.due_date):''}</span></div>
+        </div>`).join('')}
+      </div></div>`;}).join('')}</div>`;
+}
+
+// ========== 视图5: 周任务安排（固定需求） ==========
+let weekOffset=0;
+
+function renderWeekly(){
+  const baseMonday=getMonday(new Date());
+  const monday=new Date(baseMonday);
+  monday.setDate(monday.getDate()+weekOffset*7);
+  const dayNames=['周一','周二','周三','周四','周五','周六','周日'];
+  const days=[];
+  for(let i=0;i<7;i++){
+    const d=new Date(monday);d.setDate(d.getDate()+i);
+    days.push({ts:d.getTime(),label:`${dayNames[i]}<br>${d.getMonth()+1}/${d.getDate()}`,isToday:dayStart(d)===today});
+  }
+
+  const isCurrentWeek=(weekOffset===0);
+  const weekLabel=isCurrentWeek?'本周':weekOffset<0?`${Math.abs(weekOffset)}周前`:`${weekOffset}周后`;
+
+  function isActiveOn(r,dayTs){
+    const st=r.start_date;const ed=r.due_date||r.end_date;
+    if(!st) return false;
+    const dayEnd=dayTs+DAY_MS-1;
+    if(st>dayEnd) return false;
+    if(ed && ed<dayTs) return false;
+    if(!ed && st<dayTs && (r.status==='已完成')) return false;
+    return true;
+  }
+
+  const rows=people.map(p=>{
+    const personTasks=records.filter(r=>r.assignee===p);
+    const cells=days.map(d=>{
+      const active=personTasks.filter(r=>isActiveOn(r,d.ts));
+      return {tasks:active,isToday:d.isToday};
+    });
+    return {name:p,cells};
+  });
+
+  return `<div class="view-title" style="justify-content:space-between;flex-wrap:wrap">
+      <span>📅 ${weekLabel}任务安排 <span style="font-size:.82rem;font-weight:400;color:var(--text-3)">${shortDate(days[0].ts)} - ${shortDate(days[6].ts)}</span></span>
+      <div style="display:flex;align-items:center;gap:8px">
+        <button onclick="App.weekPrev()" style="padding:6px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--text-2);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-2)'">← 上一周</button>
+        <button onclick="App.weekToday()" style="padding:6px 14px;border:1px solid ${isCurrentWeek?'var(--primary)':'var(--border)'};border-radius:var(--radius-sm);background:${isCurrentWeek?'var(--primary-light)':'var(--surface)'};cursor:pointer;font-size:.82rem;font-weight:${isCurrentWeek?'600':'400'};font-family:inherit;color:${isCurrentWeek?'var(--primary)':'var(--text-2)'};transition:var(--transition)">本周</button>
+        <button onclick="App.weekNext()" style="padding:6px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--surface);cursor:pointer;font-size:.82rem;font-family:inherit;color:var(--text-2);transition:var(--transition)" onmouseover="this.style.borderColor='var(--primary)';this.style.color='var(--primary)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-2)'">下一周 →</button>
+      </div>
+    </div>
+    <div class="weekly-wrap"><div class="weekly">
+      <div class="weekly-corner">人员</div>
+      ${days.map(d=>`<div class="weekly-day${d.isToday?' today':''}">${d.label}</div>`).join('')}
+      ${rows.map(row=>`
+        <div class="weekly-person">${esc(row.name)}</div>
+        ${row.cells.map(cell=>`<div class="weekly-cell${cell.isToday?' today-col':''}">
+          ${cell.tasks.map(t=>{const c=pc(t.project);return `<div class="task-block" style="background:${c.color}" title="${esc(t.task)} (${esc(t.project)})"></div>`;}).join('')}
+        </div>`).join('')}`).join('')}
+    </div></div>
+    <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+      ${projects.map(p=>{const c=pc(p);return `<span style="display:inline-flex;align-items:center;gap:4px;font-size:.75rem;color:var(--text-2)"><span style="width:12px;height:12px;border-radius:3px;background:${c.color};display:inline-block"></span>${esc(p)}</span>`;}).join('')}
+    </div>`;
+}
+
+// ========== 视图6: 时间线 ==========
+function renderTimeline(){
+  const sorted=records.filter(r=>r.start_date).sort((a,b)=>a.start_date-b.start_date);
+  if(!sorted.length) return '<div class="empty-state">暂无数据</div>';
+
+  const minTs=Math.min(...sorted.map(r=>r.start_date))-DAY_MS;
+  const maxTs=Math.max(...sorted.map(r=>r.due_date||r.end_date||r.start_date))+DAY_MS*2;
+  const totalDays=Math.ceil((maxTs-minTs)/DAY_MS);
+  const dateHeaders=[];
+  for(let i=0;i<totalDays;i++){
+    const ts=minTs+i*DAY_MS;
+    const d=new Date(ts);
+    dateHeaders.push({ts,label:`${d.getMonth()+1}/${d.getDate()}`,isToday:dayStart(d)===today});
+  }
+
+  const todayPct=totalDays>0?((today-minTs)/DAY_MS)/totalDays*100:0;
+
+  return `<div class="view-title">⏰ 时间线</div><div class="card" style="padding:20px"><div class="timeline-wrap"><div class="timeline">
+    <div class="timeline-header">${dateHeaders.filter((_,i)=>i%2===0).map(d=>`<div class="timeline-date${d.isToday?' today':''}" style="flex:2">${d.label}</div>`).join('')}</div>
+    ${sorted.map(r=>{
+      const start=(r.start_date-minTs)/DAY_MS;
+      const end=((r.due_date||r.end_date||r.start_date)-minTs)/DAY_MS+1;
+      const left=start/totalDays*100;
+      const width=Math.max((end-start)/totalDays*100,2);
+      const c=pc(r.project);
+      return `<div class="timeline-row">
+        <div class="timeline-label" title="${esc(r.task)}">${esc(r.task)}</div>
+        <div class="timeline-track">${todayPct>0&&todayPct<100?`<div class="timeline-today" style="left:${todayPct}%"></div>`:''}
+          <div class="timeline-bar" style="left:${left}%;width:${width}%;background:${c.color}" title="${esc(r.task)} | ${esc(r.assignee)} | ${fmtDate(r.start_date)}→${fmtDate(r.due_date)}"><span>${esc(r.assignee)||''}</span></div>
+        </div></div>`;}).join('')}
+  </div></div></div>`;
+}
+
+// ========== 视图7: 延期预警 ==========
+function renderOverdue(){
+  const overdueItems=records.filter(r=>r.overdue);
+  if(!overdueItems.length) return `<div class="view-title">🚨 延期预警</div><div class="card" style="padding:40px;text-align:center;color:var(--text-3)">✅ 暂无延期任务，一切正常！</div>`;
+
+  return `<div class="view-title">🚨 延期预警 <span class="badge" style="background:#fee2e2;color:#dc2626">${overdueItems.length} 项</span></div>
+    <div class="overdue-list">${overdueItems.map(r=>{
+      let daysLate='';
+      if(r.due_date){const diff=Math.ceil((today-r.due_date)/DAY_MS);if(diff>0) daysLate=`延期 ${diff} 天`;}
+      return `<div class="card overdue-card">
+        <div class="overdue-icon">⚠️</div>
+        <div class="overdue-body">
+          <div class="overdue-task">${esc(r.task)}</div>
+          <div class="overdue-meta">
+            ${projectTag(r.project)}
+            <span>👤 ${esc(r.assignee)||'未分配'}</span>
+            <span>📅 ${fmtDate(r.start_date)} → ${fmtDate(r.due_date)}</span>
+            ${statusBadge(r.status)}
+          </div>
+        </div>
+        ${daysLate?`<div class="overdue-days">${daysLate}</div>`:''}
+      </div>`;}).join('')}</div>`;
+}
+
+// ========== 视图8: 日历 ==========
+function renderCalendar(){
+  const now=new Date();
+  const year=now.getFullYear(),month=now.getMonth();
+  const firstDay=new Date(year,month,1);
+  const lastDay=new Date(year,month+1,0);
+  let startDay=firstDay.getDay()-1;if(startDay<0)startDay=6;
+  const totalCells=startDay+lastDay.getDate();
+  const rows=Math.ceil(totalCells/7);
+  const dayNames=['一','二','三','四','五','六','日'];
+
+  const tasksByDay={};
+  records.forEach(r=>{
+    if(!r.start_date) return;
+    const st=r.start_date;
+    const ed=r.due_date||r.end_date||st;
+    for(let t=st;t<=ed;t+=DAY_MS){
+      const d=new Date(t);
+      if(d.getMonth()===month&&d.getFullYear()===year){
+        const key=d.getDate();
+        (tasksByDay[key]=tasksByDay[key]||[]).push(r);
+      }
+    }
+  });
+
+  let cells='';
+  for(let i=0;i<rows*7;i++){
+    const dayNum=i-startDay+1;
+    const inMonth=dayNum>=1&&dayNum<=lastDay.getDate();
+    const dayTs=inMonth?dayStart(new Date(year,month,dayNum)):0;
+    const isToday=dayTs===today;
+    const tasks=inMonth?(tasksByDay[dayNum]||[]):[];
+    const uniqueTasks=[...new Map(tasks.map(t=>[t.id,t])).values()].slice(0,4);
+    cells+=`<div class="cal-cell${inMonth?'':' other-month'}${isToday?' today':''}">
+      ${inMonth?`<div class="cal-num">${dayNum}</div>
+      <div class="cal-dots">${uniqueTasks.map(t=>{const c=pc(t.project);return `<div class="cal-dot" style="background:${c.color}" title="${esc(t.task)}"></div>`;}).join('')}${tasks.length>4?`<div style="font-size:.65rem;color:var(--text-3)">+${tasks.length-4}</div>`:''}</div>`:''}
+    </div>`;
+  }
+
+  return `<div class="view-title">📆 ${year}年${month+1}月</div>
+    <div class="calendar">
+      ${dayNames.map(d=>`<div class="cal-header">${d}</div>`).join('')}
+      ${cells}
+    </div>
+    <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+      ${projects.map(p=>{const c=pc(p);return `<span style="display:inline-flex;align-items:center;gap:4px;font-size:.75rem;color:var(--text-2)"><span style="width:10px;height:10px;border-radius:2px;background:${c.color};display:inline-block"></span>${esc(p)}</span>`;}).join('')}
+    </div>`;
+}
+
+// ========== 视图9: 矩阵 ==========
+function renderMatrix(){
+  const matrix={};
+  projects.forEach(p=>{matrix[p]={};people.forEach(person=>{matrix[p][person]=0;});});
+  records.forEach(r=>{if(r.project&&r.assignee&&matrix[r.project])matrix[r.project][r.assignee]=(matrix[r.project][r.assignee]||0)+1;});
+  const maxVal=Math.max(...Object.values(matrix).flatMap(row=>Object.values(row)),1);
+
+  return `<div class="view-title">🔲 项目 × 人员矩阵</div>
+    <div class="matrix-wrap"><table class="matrix">
+      <thead><tr><th>项目 \\ 人员</th>${people.map(p=>`<th>${esc(p)}</th>`).join('')}<th>合计</th></tr></thead>
+      <tbody>${projects.map(p=>{const c=pc(p);const rowTotal=Object.values(matrix[p]).reduce((a,b)=>a+b,0);
+        return `<tr><td>${projectTag(p)}</td>${people.map(person=>{const v=matrix[p][person];
+          const opacity=v?(.2+v/maxVal*.8):0;
+          return `<td><span class="cell-val" style="background:rgba(99,102,241,${opacity});color:${v?'#fff':'var(--text-3)'}">${v||'-'}</span></td>`;}).join('')}
+          <td><strong>${rowTotal}</strong></td></tr>`;}).join('')}
+        <tr style="font-weight:600"><td>合计</td>${people.map(person=>{
+          const colTotal=records.filter(r=>r.assignee===person).length;
+          return `<td>${colTotal}</td>`;}).join('')}<td><strong>${records.length}</strong></td></tr>
+      </tbody></table></div>`;
+}
+
+// ========== 视图10: 数据表 ==========
+let tableSortKey='start_date',tableSortDesc=true,tableFilter='',tableStatusFilter='';
+
+function renderTable(){
+  let filtered=records;
+  if(tableFilter){const kw=tableFilter.toLowerCase();filtered=filtered.filter(r=>(r.task||'').toLowerCase().includes(kw)||(r.assignee||'').toLowerCase().includes(kw)||(r.project||'').toLowerCase().includes(kw));}
+  if(tableStatusFilter)filtered=filtered.filter(r=>r.status===tableStatusFilter);
+
+  const sorted=[...filtered].sort((a,b)=>{
+    let va=a[tableSortKey],vb=b[tableSortKey];
+    if(va==null) va=tableSortDesc?-Infinity:Infinity;
+    if(vb==null) vb=tableSortDesc?-Infinity:Infinity;
+    if(typeof va==='string') return tableSortDesc?vb.localeCompare(va):va.localeCompare(vb);
+    return tableSortDesc?vb-va:va-vb;
+  });
+
+  const cols=[
+    {key:'task',label:'任务',w:'240px'},
+    {key:'project',label:'项目',w:'130px'},
+    {key:'status',label:'进展',w:'110px'},
+    {key:'assignee',label:'执行人',w:'80px'},
+    {key:'start_date',label:'开始日期',w:'100px'},
+    {key:'due_date',label:'截止日期',w:'100px'},
+    {key:'overdue',label:'状态',w:'80px'},
+  ];
+
+  const statusOptions=STATUS_ORDER.map(s=>`<option value="${s}"${tableStatusFilter===s?' selected':''}>${s}</option>`).join('');
+
+  return `<div class="view-title">📝 数据表 <span style="font-size:.82rem;font-weight:400;color:var(--text-3)">${filtered.length} 条记录</span></div>
+    <div class="table-controls">
+      <input class="search-input" type="text" placeholder="搜索任务、人员、项目..." value="${esc(tableFilter)}" oninput="App.onTableSearch(this.value)">
+      <select class="filter-select" onchange="App.onStatusFilter(this.value)"><option value="">全部进展</option>${statusOptions}</select>
+    </div>
+    <div class="data-table-wrap"><table class="data-table">
+      <thead><tr>${cols.map(c=>`<th class="${tableSortKey===c.key?'sorted':''}" style="width:${c.w}" onclick="App.onTableSort('${c.key}')">${c.label}<span class="sort-icon">${tableSortKey===c.key?(tableSortDesc?'↓':'↑'):'↕'}</span></th>`).join('')}</tr></thead>
+      <tbody>${sorted.map(r=>`<tr>
+        <td title="${esc(r.task)}">${esc(r.task)}</td>
+        <td>${projectTag(r.project)}</td>
+        <td>${statusBadge(r.status)}</td>
+        <td>${esc(r.assignee)||'-'}</td>
+        <td>${fmtDate(r.start_date)}</td>
+        <td>${fmtDate(r.due_date)}</td>
+        <td>${r.overdue?'<span style="color:#dc2626;font-weight:600">🚨 延期</span>':'<span style="color:#22c55e">✅ 正常</span>'}</td>
+      </tr>`).join('')}</tbody>
+    </table></div>`;
+}
+
+// ========== 应用控制 ==========
+const viewMap={
+  dashboard:renderDashboard,kanban:renderKanban,people:renderPeople,projects:renderProjects,
+  weekly:renderWeekly,timeline:renderTimeline,overdue:renderOverdue,calendar:renderCalendar,
+  matrix:renderMatrix,table:renderTable
+};
+
+const App={
+  current:'dashboard',
+  render(){document.getElementById('app').innerHTML=viewMap[this.current]();},
+  switchTo(view){
+    this.current=view;
+    document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.view===view));
+    this.render();
+  },
+  onTableSort(key){
+    if(tableSortKey===key)tableSortDesc=!tableSortDesc;else{tableSortKey=key;tableSortDesc=true;}
+    this.render();
+  },
+  onTableSearch(val){tableFilter=val;this.render();},
+  onStatusFilter(val){tableStatusFilter=val;this.render();},
+  weekPrev(){weekOffset--;this.render();},
+  weekNext(){weekOffset++;this.render();},
+  weekToday(){weekOffset=0;this.render();}
+};
+window.App=App;
+
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('syncInfo').textContent=`最后同步: ${db.meta.last_synced}`;
+  document.querySelectorAll('.tab').forEach(tab=>{
+    tab.addEventListener('click',()=>App.switchTo(tab.dataset.view));
+  });
+  App.render();
+});
+
+})();
+</script>
+</body>
+</html>

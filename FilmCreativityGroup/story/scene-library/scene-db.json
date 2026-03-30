@@ -1,0 +1,4379 @@
+{
+  "version": 1,
+  "generatedAt": "2026-02-22T10:46:05.984Z",
+  "sourceDir": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence",
+  "total": 545,
+  "categories": [
+    "城市中心",
+    "城镇",
+    "室内",
+    "岩石、温泉",
+    "森林、河谷、瀑布",
+    "渔村",
+    "薰衣草、沙滩"
+  ],
+  "items": [
+    {
+      "category": "城市中心",
+      "name": "01b16a8c-3514-4c12-a288-06261eae2095.png",
+      "rel": "城市中心/01b16a8c-3514-4c12-a288-06261eae2095.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\01b16a8c-3514-4c12-a288-06261eae2095.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/01b16a8c-3514-4c12-a288-06261eae2095.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "04.png",
+      "rel": "城市中心/04.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\04.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/04.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "05.png",
+      "rel": "城市中心/05.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\05.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/05.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "06.png",
+      "rel": "城市中心/06.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\06.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/06.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "08.png",
+      "rel": "城市中心/08.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\08.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/08.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "0881a1b2-80fb-4331-973b-be3e99dba070.png",
+      "rel": "城市中心/0881a1b2-80fb-4331-973b-be3e99dba070.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\0881a1b2-80fb-4331-973b-be3e99dba070.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/0881a1b2-80fb-4331-973b-be3e99dba070.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "09.png",
+      "rel": "城市中心/09.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\09.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/09.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "0a3c2dc4-7000-478c-99fb-29d82cc13f3b.png",
+      "rel": "城市中心/0a3c2dc4-7000-478c-99fb-29d82cc13f3b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\0a3c2dc4-7000-478c-99fb-29d82cc13f3b.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/0a3c2dc4-7000-478c-99fb-29d82cc13f3b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "0bebf009-741c-45e9-9087-5bb44ba895db.png",
+      "rel": "城市中心/0bebf009-741c-45e9-9087-5bb44ba895db.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\0bebf009-741c-45e9-9087-5bb44ba895db.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/0bebf009-741c-45e9-9087-5bb44ba895db.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "1.png",
+      "rel": "城市中心/1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\1.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/1.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "10.png",
+      "rel": "城市中心/10.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\10.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/10.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "100.png",
+      "rel": "城市中心/100.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\100.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/100.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "101.png",
+      "rel": "城市中心/101.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\101.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/101.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "102.png",
+      "rel": "城市中心/102.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\102.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/102.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "11.png",
+      "rel": "城市中心/11.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\11.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/11.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "12.png",
+      "rel": "城市中心/12.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\12.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/12.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "13.png",
+      "rel": "城市中心/13.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\13.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/13.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "14.png",
+      "rel": "城市中心/14.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\14.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/14.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "15.png",
+      "rel": "城市中心/15.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\15.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/15.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "16.png",
+      "rel": "城市中心/16.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\16.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/16.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "17.png",
+      "rel": "城市中心/17.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\17.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/17.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "18.png",
+      "rel": "城市中心/18.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\18.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/18.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "19.png",
+      "rel": "城市中心/19.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\19.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/19.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "1b5c47c1-51af-429c-8c26-95c2bd684c9d.png",
+      "rel": "城市中心/1b5c47c1-51af-429c-8c26-95c2bd684c9d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\1b5c47c1-51af-429c-8c26-95c2bd684c9d.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/1b5c47c1-51af-429c-8c26-95c2bd684c9d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "1c6c373e-bf1e-446a-96aa-1ef14a704754.png",
+      "rel": "城市中心/1c6c373e-bf1e-446a-96aa-1ef14a704754.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\1c6c373e-bf1e-446a-96aa-1ef14a704754.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/1c6c373e-bf1e-446a-96aa-1ef14a704754.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "2.png",
+      "rel": "城市中心/2.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\2.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/2.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "20.png",
+      "rel": "城市中心/20.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\20.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/20.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "21.png",
+      "rel": "城市中心/21.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\21.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/21.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "21a4a449-e420-4c1b-8b80-a231b5b084ba.png",
+      "rel": "城市中心/21a4a449-e420-4c1b-8b80-a231b5b084ba.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\21a4a449-e420-4c1b-8b80-a231b5b084ba.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/21a4a449-e420-4c1b-8b80-a231b5b084ba.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "22.png",
+      "rel": "城市中心/22.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\22.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/22.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "228b3974-7753-4039-9b2f-6355fcad0071.png",
+      "rel": "城市中心/228b3974-7753-4039-9b2f-6355fcad0071.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\228b3974-7753-4039-9b2f-6355fcad0071.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/228b3974-7753-4039-9b2f-6355fcad0071.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "23.png",
+      "rel": "城市中心/23.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\23.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/23.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "24.png",
+      "rel": "城市中心/24.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\24.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/24.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "25.png",
+      "rel": "城市中心/25.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\25.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/25.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "25d66b02-9b43-46c9-b9b2-ab5fa0dfed2d.png",
+      "rel": "城市中心/25d66b02-9b43-46c9-b9b2-ab5fa0dfed2d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\25d66b02-9b43-46c9-b9b2-ab5fa0dfed2d.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/25d66b02-9b43-46c9-b9b2-ab5fa0dfed2d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "2f50d1cc-bdf4-42ce-a46a-df57525aa6b6.png",
+      "rel": "城市中心/2f50d1cc-bdf4-42ce-a46a-df57525aa6b6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\2f50d1cc-bdf4-42ce-a46a-df57525aa6b6.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/2f50d1cc-bdf4-42ce-a46a-df57525aa6b6.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "3.png",
+      "rel": "城市中心/3.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\3.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/3.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "32.png",
+      "rel": "城市中心/32.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\32.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/32.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "33.png",
+      "rel": "城市中心/33.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\33.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/33.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "34.png",
+      "rel": "城市中心/34.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\34.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/34.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "35.png",
+      "rel": "城市中心/35.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\35.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/35.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "36.png",
+      "rel": "城市中心/36.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\36.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/36.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "37.png",
+      "rel": "城市中心/37.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\37.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/37.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "377ebe11-3930-4a9a-9670-ce174f49c363.png",
+      "rel": "城市中心/377ebe11-3930-4a9a-9670-ce174f49c363.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\377ebe11-3930-4a9a-9670-ce174f49c363.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/377ebe11-3930-4a9a-9670-ce174f49c363.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "38.png",
+      "rel": "城市中心/38.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\38.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/38.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "39.png",
+      "rel": "城市中心/39.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\39.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/39.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "3b003712-053b-4cd4-902b-7263ca406563.png",
+      "rel": "城市中心/3b003712-053b-4cd4-902b-7263ca406563.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\3b003712-053b-4cd4-902b-7263ca406563.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/3b003712-053b-4cd4-902b-7263ca406563.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "3cb73be9-0238-43cd-8d88-a480e94af260.png",
+      "rel": "城市中心/3cb73be9-0238-43cd-8d88-a480e94af260.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\3cb73be9-0238-43cd-8d88-a480e94af260.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/3cb73be9-0238-43cd-8d88-a480e94af260.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "40.png",
+      "rel": "城市中心/40.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\40.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/40.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "41.png",
+      "rel": "城市中心/41.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\41.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/41.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "42.png",
+      "rel": "城市中心/42.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\42.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/42.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "42ec40c5-fd90-430b-8205-b04b7df17bd5.png",
+      "rel": "城市中心/42ec40c5-fd90-430b-8205-b04b7df17bd5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\42ec40c5-fd90-430b-8205-b04b7df17bd5.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/42ec40c5-fd90-430b-8205-b04b7df17bd5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "43.png",
+      "rel": "城市中心/43.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\43.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/43.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "43d916ba-8ef8-47f0-b8d5-b5c9bb77215f.png",
+      "rel": "城市中心/43d916ba-8ef8-47f0-b8d5-b5c9bb77215f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\43d916ba-8ef8-47f0-b8d5-b5c9bb77215f.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/43d916ba-8ef8-47f0-b8d5-b5c9bb77215f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "44.png",
+      "rel": "城市中心/44.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\44.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/44.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "44b2fc4c-1d39-4822-8289-33b27be83bfe.png",
+      "rel": "城市中心/44b2fc4c-1d39-4822-8289-33b27be83bfe.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\44b2fc4c-1d39-4822-8289-33b27be83bfe.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/44b2fc4c-1d39-4822-8289-33b27be83bfe.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "45.png",
+      "rel": "城市中心/45.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\45.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/45.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "46.png",
+      "rel": "城市中心/46.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\46.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/46.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "47.png",
+      "rel": "城市中心/47.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\47.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/47.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "470847bc-6c9f-4339-9e89-98b4fab7473a.png",
+      "rel": "城市中心/470847bc-6c9f-4339-9e89-98b4fab7473a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\470847bc-6c9f-4339-9e89-98b4fab7473a.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/470847bc-6c9f-4339-9e89-98b4fab7473a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "4c70ccf3-efb8-4aa2-8862-bc69f9f80060.png",
+      "rel": "城市中心/4c70ccf3-efb8-4aa2-8862-bc69f9f80060.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\4c70ccf3-efb8-4aa2-8862-bc69f9f80060.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/4c70ccf3-efb8-4aa2-8862-bc69f9f80060.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "4fac0ee2-12fe-4674-884a-4b3a52f08d77.png",
+      "rel": "城市中心/4fac0ee2-12fe-4674-884a-4b3a52f08d77.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\4fac0ee2-12fe-4674-884a-4b3a52f08d77.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/4fac0ee2-12fe-4674-884a-4b3a52f08d77.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "50d5eaf2-d36d-429c-9c4e-aab3c48ea187.png",
+      "rel": "城市中心/50d5eaf2-d36d-429c-9c4e-aab3c48ea187.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\50d5eaf2-d36d-429c-9c4e-aab3c48ea187.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/50d5eaf2-d36d-429c-9c4e-aab3c48ea187.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "52c18a70-c488-488e-8fe3-c25bd5eba6b6.png",
+      "rel": "城市中心/52c18a70-c488-488e-8fe3-c25bd5eba6b6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\52c18a70-c488-488e-8fe3-c25bd5eba6b6.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/52c18a70-c488-488e-8fe3-c25bd5eba6b6.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "54.png",
+      "rel": "城市中心/54.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\54.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/54.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "55.png",
+      "rel": "城市中心/55.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\55.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/55.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "57.png",
+      "rel": "城市中心/57.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\57.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/57.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "58.png",
+      "rel": "城市中心/58.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\58.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/58.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "5d0684d1-8896-41c2-b403-2ccbc1154741.png",
+      "rel": "城市中心/5d0684d1-8896-41c2-b403-2ccbc1154741.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\5d0684d1-8896-41c2-b403-2ccbc1154741.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/5d0684d1-8896-41c2-b403-2ccbc1154741.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "5e1900ef-6134-4e86-bf5e-373ef837a53b.png",
+      "rel": "城市中心/5e1900ef-6134-4e86-bf5e-373ef837a53b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\5e1900ef-6134-4e86-bf5e-373ef837a53b.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/5e1900ef-6134-4e86-bf5e-373ef837a53b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "5f928d55-c110-4cb4-9fb2-211de7b18a65.png",
+      "rel": "城市中心/5f928d55-c110-4cb4-9fb2-211de7b18a65.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\5f928d55-c110-4cb4-9fb2-211de7b18a65.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/5f928d55-c110-4cb4-9fb2-211de7b18a65.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "61.png",
+      "rel": "城市中心/61.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\61.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/61.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "62.png",
+      "rel": "城市中心/62.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\62.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/62.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "63.png",
+      "rel": "城市中心/63.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\63.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/63.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "64.png",
+      "rel": "城市中心/64.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\64.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/64.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "646be8e7-5621-49f6-907d-9edeff3db6b7.png",
+      "rel": "城市中心/646be8e7-5621-49f6-907d-9edeff3db6b7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\646be8e7-5621-49f6-907d-9edeff3db6b7.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/646be8e7-5621-49f6-907d-9edeff3db6b7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "6485b0a0-7d47-4101-a833-ab63969c85d4.png",
+      "rel": "城市中心/6485b0a0-7d47-4101-a833-ab63969c85d4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\6485b0a0-7d47-4101-a833-ab63969c85d4.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/6485b0a0-7d47-4101-a833-ab63969c85d4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "65.png",
+      "rel": "城市中心/65.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\65.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/65.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "66.png",
+      "rel": "城市中心/66.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\66.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/66.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "67.png",
+      "rel": "城市中心/67.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\67.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/67.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "68.png",
+      "rel": "城市中心/68.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\68.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/68.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "69.png",
+      "rel": "城市中心/69.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\69.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/69.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "6cad9505-ef0c-42e9-9bf7-0731b62bc310.png",
+      "rel": "城市中心/6cad9505-ef0c-42e9-9bf7-0731b62bc310.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\6cad9505-ef0c-42e9-9bf7-0731b62bc310.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/6cad9505-ef0c-42e9-9bf7-0731b62bc310.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "70.png",
+      "rel": "城市中心/70.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\70.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/70.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "71.png",
+      "rel": "城市中心/71.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\71.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/71.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "72.png",
+      "rel": "城市中心/72.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\72.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/72.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "72d1cf96-1676-435f-aca1-fa75fed7dbe9.png",
+      "rel": "城市中心/72d1cf96-1676-435f-aca1-fa75fed7dbe9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\72d1cf96-1676-435f-aca1-fa75fed7dbe9.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/72d1cf96-1676-435f-aca1-fa75fed7dbe9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "73.png",
+      "rel": "城市中心/73.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\73.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/73.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "74.png",
+      "rel": "城市中心/74.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\74.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/74.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "75.png",
+      "rel": "城市中心/75.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\75.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/75.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "76.png",
+      "rel": "城市中心/76.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\76.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/76.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "77.png",
+      "rel": "城市中心/77.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\77.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/77.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "78.png",
+      "rel": "城市中心/78.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\78.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/78.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "79.png",
+      "rel": "城市中心/79.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\79.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/79.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "7fa1a00b-21a6-4e59-8d14-d922c0efd889.png",
+      "rel": "城市中心/7fa1a00b-21a6-4e59-8d14-d922c0efd889.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\7fa1a00b-21a6-4e59-8d14-d922c0efd889.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/7fa1a00b-21a6-4e59-8d14-d922c0efd889.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "80.png",
+      "rel": "城市中心/80.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\80.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/80.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "81.png",
+      "rel": "城市中心/81.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\81.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/81.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "82.png",
+      "rel": "城市中心/82.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\82.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/82.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "83.png",
+      "rel": "城市中心/83.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\83.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/83.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "84.png",
+      "rel": "城市中心/84.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\84.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/84.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "85.png",
+      "rel": "城市中心/85.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\85.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/85.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "86.png",
+      "rel": "城市中心/86.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\86.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/86.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "87.png",
+      "rel": "城市中心/87.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\87.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/87.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "872c2ee7-31fd-45be-91cb-61fd8faaac9f.png",
+      "rel": "城市中心/872c2ee7-31fd-45be-91cb-61fd8faaac9f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\872c2ee7-31fd-45be-91cb-61fd8faaac9f.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/872c2ee7-31fd-45be-91cb-61fd8faaac9f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "88.png",
+      "rel": "城市中心/88.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\88.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/88.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "89.png",
+      "rel": "城市中心/89.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\89.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/89.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "8a79cca3-ce0a-408e-9fc0-42a62848fc00.png",
+      "rel": "城市中心/8a79cca3-ce0a-408e-9fc0-42a62848fc00.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\8a79cca3-ce0a-408e-9fc0-42a62848fc00.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/8a79cca3-ce0a-408e-9fc0-42a62848fc00.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "8bf8087d-9ef8-484e-b1e9-a56ba526b100.png",
+      "rel": "城市中心/8bf8087d-9ef8-484e-b1e9-a56ba526b100.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\8bf8087d-9ef8-484e-b1e9-a56ba526b100.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/8bf8087d-9ef8-484e-b1e9-a56ba526b100.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "90.png",
+      "rel": "城市中心/90.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\90.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/90.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "91.png",
+      "rel": "城市中心/91.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\91.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/91.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "92.png",
+      "rel": "城市中心/92.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\92.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/92.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "94.png",
+      "rel": "城市中心/94.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\94.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/94.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "95.png",
+      "rel": "城市中心/95.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\95.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/95.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "95a720c9-b37f-47d4-88b7-8cf48bf81dd1.png",
+      "rel": "城市中心/95a720c9-b37f-47d4-88b7-8cf48bf81dd1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\95a720c9-b37f-47d4-88b7-8cf48bf81dd1.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/95a720c9-b37f-47d4-88b7-8cf48bf81dd1.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "96.png",
+      "rel": "城市中心/96.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\96.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/96.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "97.png",
+      "rel": "城市中心/97.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\97.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/97.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "98.png",
+      "rel": "城市中心/98.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\98.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/98.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "99.png",
+      "rel": "城市中心/99.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\99.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/99.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "9d34e1f4-0a69-4119-98b6-7943a0ae1802.png",
+      "rel": "城市中心/9d34e1f4-0a69-4119-98b6-7943a0ae1802.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\9d34e1f4-0a69-4119-98b6-7943a0ae1802.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/9d34e1f4-0a69-4119-98b6-7943a0ae1802.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "雷雨.png",
+      "rel": "城市中心/雷雨.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\雷雨.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E9%9B%B7%E9%9B%A8.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "桃花雨.png",
+      "rel": "城市中心/桃花雨.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\桃花雨.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E6%A1%83%E8%8A%B1%E9%9B%A8.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210151756.png",
+      "rel": "城市中心/微信截图_20260210151756.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210151756.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210151756.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210151900.png",
+      "rel": "城市中心/微信截图_20260210151900.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210151900.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210151900.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210152004.png",
+      "rel": "城市中心/微信截图_20260210152004.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210152004.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210152004.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210152131.png",
+      "rel": "城市中心/微信截图_20260210152131.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210152131.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210152131.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210152245.png",
+      "rel": "城市中心/微信截图_20260210152245.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210152245.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210152245.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210152329.png",
+      "rel": "城市中心/微信截图_20260210152329.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210152329.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210152329.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210154531.png",
+      "rel": "城市中心/微信截图_20260210154531.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210154531.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210154531.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210154716.png",
+      "rel": "城市中心/微信截图_20260210154716.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210154716.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210154716.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210154749.png",
+      "rel": "城市中心/微信截图_20260210154749.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210154749.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210154749.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210154844.png",
+      "rel": "城市中心/微信截图_20260210154844.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210154844.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210154844.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210154921.png",
+      "rel": "城市中心/微信截图_20260210154921.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210154921.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210154921.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210154937.png",
+      "rel": "城市中心/微信截图_20260210154937.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210154937.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210154937.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155010.png",
+      "rel": "城市中心/微信截图_20260210155010.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155010.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155010.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155154.png",
+      "rel": "城市中心/微信截图_20260210155154.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155154.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155154.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155434.png",
+      "rel": "城市中心/微信截图_20260210155434.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155434.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155434.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155532.png",
+      "rel": "城市中心/微信截图_20260210155532.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155532.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155532.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155624.png",
+      "rel": "城市中心/微信截图_20260210155624.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155624.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155624.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155648.png",
+      "rel": "城市中心/微信截图_20260210155648.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155648.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155648.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155837.png",
+      "rel": "城市中心/微信截图_20260210155837.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155837.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155837.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210155857.png",
+      "rel": "城市中心/微信截图_20260210155857.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210155857.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210155857.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210160312.png",
+      "rel": "城市中心/微信截图_20260210160312.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210160312.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210160312.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210160431.png",
+      "rel": "城市中心/微信截图_20260210160431.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210160431.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210160431.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210160451.png",
+      "rel": "城市中心/微信截图_20260210160451.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210160451.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210160451.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "微信截图_20260210160629.png",
+      "rel": "城市中心/微信截图_20260210160629.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\微信截图_20260210160629.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210160629.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "雪月.png",
+      "rel": "城市中心/雪月.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\雪月.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/%E9%9B%AA%E6%9C%88.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "城市中心",
+      "name": "a1242083-e6dd-4c3c-b5ef-2753fce803f8.png",
+      "rel": "城市中心/a1242083-e6dd-4c3c-b5ef-2753fce803f8.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\a1242083-e6dd-4c3c-b5ef-2753fce803f8.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/a1242083-e6dd-4c3c-b5ef-2753fce803f8.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "c40b5f2b-6a2f-40be-954b-f584391efbeb.png",
+      "rel": "城市中心/c40b5f2b-6a2f-40be-954b-f584391efbeb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\c40b5f2b-6a2f-40be-954b-f584391efbeb.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/c40b5f2b-6a2f-40be-954b-f584391efbeb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "c827dc96-a1e4-4d22-be03-3db41f0bee4a.png",
+      "rel": "城市中心/c827dc96-a1e4-4d22-be03-3db41f0bee4a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\c827dc96-a1e4-4d22-be03-3db41f0bee4a.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/c827dc96-a1e4-4d22-be03-3db41f0bee4a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "c935f034-930f-4296-883e-f17a09386e2d.png",
+      "rel": "城市中心/c935f034-930f-4296-883e-f17a09386e2d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\c935f034-930f-4296-883e-f17a09386e2d.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/c935f034-930f-4296-883e-f17a09386e2d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "e04d2d8a-3bc7-4a01-8428-82b05b7ba5da.png",
+      "rel": "城市中心/e04d2d8a-3bc7-4a01-8428-82b05b7ba5da.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\e04d2d8a-3bc7-4a01-8428-82b05b7ba5da.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/e04d2d8a-3bc7-4a01-8428-82b05b7ba5da.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "e76fb55d-66ae-4231-a54e-2867d538a61d.png",
+      "rel": "城市中心/e76fb55d-66ae-4231-a54e-2867d538a61d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\e76fb55d-66ae-4231-a54e-2867d538a61d.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/e76fb55d-66ae-4231-a54e-2867d538a61d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "e84e6137-de28-49f0-87ff-6eab693d80fb.png",
+      "rel": "城市中心/e84e6137-de28-49f0-87ff-6eab693d80fb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\e84e6137-de28-49f0-87ff-6eab693d80fb.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/e84e6137-de28-49f0-87ff-6eab693d80fb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "ea78255e-42bf-4531-8ea8-512ec165a10f.png",
+      "rel": "城市中心/ea78255e-42bf-4531-8ea8-512ec165a10f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\ea78255e-42bf-4531-8ea8-512ec165a10f.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/ea78255e-42bf-4531-8ea8-512ec165a10f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "fccb8aff-d9e4-48e2-8cd1-d965b2457ce4.png",
+      "rel": "城市中心/fccb8aff-d9e4-48e2-8cd1-d965b2457ce4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\fccb8aff-d9e4-48e2-8cd1-d965b2457ce4.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/fccb8aff-d9e4-48e2-8cd1-d965b2457ce4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城市中心",
+      "name": "fd22a30f-3f62-493d-a616-b33f21f7c7a4.png",
+      "rel": "城市中心/fd22a30f-3f62-493d-a616-b33f21f7c7a4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城市中心\\fd22a30f-3f62-493d-a616-b33f21f7c7a4.png",
+      "url": "/sence/%E5%9F%8E%E5%B8%82%E4%B8%AD%E5%BF%83/fd22a30f-3f62-493d-a616-b33f21f7c7a4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "0c4b1cb8-c512-4707-a577-545164a76051.png",
+      "rel": "城镇/0c4b1cb8-c512-4707-a577-545164a76051.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\0c4b1cb8-c512-4707-a577-545164a76051.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/0c4b1cb8-c512-4707-a577-545164a76051.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "0fb5edc6-da2d-4a7c-abe3-750068c55ece.png",
+      "rel": "城镇/0fb5edc6-da2d-4a7c-abe3-750068c55ece.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\0fb5edc6-da2d-4a7c-abe3-750068c55ece.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/0fb5edc6-da2d-4a7c-abe3-750068c55ece.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "11bfce2b-ae11-4c36-9d26-a054b0dca78a.png",
+      "rel": "城镇/11bfce2b-ae11-4c36-9d26-a054b0dca78a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\11bfce2b-ae11-4c36-9d26-a054b0dca78a.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/11bfce2b-ae11-4c36-9d26-a054b0dca78a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "18669359-2b3f-41f9-91a8-d487caf375df.png",
+      "rel": "城镇/18669359-2b3f-41f9-91a8-d487caf375df.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\18669359-2b3f-41f9-91a8-d487caf375df.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/18669359-2b3f-41f9-91a8-d487caf375df.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "21574501-9ac9-41f4-ab32-e82d3e85d7da.png",
+      "rel": "城镇/21574501-9ac9-41f4-ab32-e82d3e85d7da.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\21574501-9ac9-41f4-ab32-e82d3e85d7da.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/21574501-9ac9-41f4-ab32-e82d3e85d7da.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "22414dbb-6925-44fe-bcd8-d0facc9c4dcd.png",
+      "rel": "城镇/22414dbb-6925-44fe-bcd8-d0facc9c4dcd.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\22414dbb-6925-44fe-bcd8-d0facc9c4dcd.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/22414dbb-6925-44fe-bcd8-d0facc9c4dcd.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "2376a57e-2311-4ced-a0b6-bf7ba7b6fd90.png",
+      "rel": "城镇/2376a57e-2311-4ced-a0b6-bf7ba7b6fd90.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\2376a57e-2311-4ced-a0b6-bf7ba7b6fd90.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/2376a57e-2311-4ced-a0b6-bf7ba7b6fd90.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "27bbc4ac-b68b-4fc8-8614-df446489c6b9.png",
+      "rel": "城镇/27bbc4ac-b68b-4fc8-8614-df446489c6b9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\27bbc4ac-b68b-4fc8-8614-df446489c6b9.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/27bbc4ac-b68b-4fc8-8614-df446489c6b9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "29582706-3247-46ea-a68b-62bd3a59bfb5.png",
+      "rel": "城镇/29582706-3247-46ea-a68b-62bd3a59bfb5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\29582706-3247-46ea-a68b-62bd3a59bfb5.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/29582706-3247-46ea-a68b-62bd3a59bfb5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "29a81441-f267-4f6d-903d-257e249cbb45.png",
+      "rel": "城镇/29a81441-f267-4f6d-903d-257e249cbb45.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\29a81441-f267-4f6d-903d-257e249cbb45.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/29a81441-f267-4f6d-903d-257e249cbb45.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "2b0809f6-ea2a-438b-b513-becfcf2c91c1.png",
+      "rel": "城镇/2b0809f6-ea2a-438b-b513-becfcf2c91c1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\2b0809f6-ea2a-438b-b513-becfcf2c91c1.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/2b0809f6-ea2a-438b-b513-becfcf2c91c1.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "2fea50e3-207f-4fdf-bd1d-16df07a12354.png",
+      "rel": "城镇/2fea50e3-207f-4fdf-bd1d-16df07a12354.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\2fea50e3-207f-4fdf-bd1d-16df07a12354.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/2fea50e3-207f-4fdf-bd1d-16df07a12354.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "316cdb56-5735-4b6e-a7f2-f308f1822ed7.png",
+      "rel": "城镇/316cdb56-5735-4b6e-a7f2-f308f1822ed7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\316cdb56-5735-4b6e-a7f2-f308f1822ed7.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/316cdb56-5735-4b6e-a7f2-f308f1822ed7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "32b08525-4b2e-4b2f-abf8-9d1045f925f0.png",
+      "rel": "城镇/32b08525-4b2e-4b2f-abf8-9d1045f925f0.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\32b08525-4b2e-4b2f-abf8-9d1045f925f0.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/32b08525-4b2e-4b2f-abf8-9d1045f925f0.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "342e78c7-dcc1-49a4-8635-a521508be4f2.png",
+      "rel": "城镇/342e78c7-dcc1-49a4-8635-a521508be4f2.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\342e78c7-dcc1-49a4-8635-a521508be4f2.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/342e78c7-dcc1-49a4-8635-a521508be4f2.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "38531020-d5a8-4666-8020-08f963b54229.png",
+      "rel": "城镇/38531020-d5a8-4666-8020-08f963b54229.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\38531020-d5a8-4666-8020-08f963b54229.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/38531020-d5a8-4666-8020-08f963b54229.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "39dfabf8-45d5-455d-8a93-0ebe393bd74a.png",
+      "rel": "城镇/39dfabf8-45d5-455d-8a93-0ebe393bd74a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\39dfabf8-45d5-455d-8a93-0ebe393bd74a.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/39dfabf8-45d5-455d-8a93-0ebe393bd74a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "3c1cd227-683f-4c9b-85eb-79b5d55c5929.png",
+      "rel": "城镇/3c1cd227-683f-4c9b-85eb-79b5d55c5929.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\3c1cd227-683f-4c9b-85eb-79b5d55c5929.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/3c1cd227-683f-4c9b-85eb-79b5d55c5929.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "3c390eb3-d243-4e5a-b443-35a778783dad.png",
+      "rel": "城镇/3c390eb3-d243-4e5a-b443-35a778783dad.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\3c390eb3-d243-4e5a-b443-35a778783dad.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/3c390eb3-d243-4e5a-b443-35a778783dad.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "3e11658a-8d43-42fe-9b05-210a1a570947.png",
+      "rel": "城镇/3e11658a-8d43-42fe-9b05-210a1a570947.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\3e11658a-8d43-42fe-9b05-210a1a570947.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/3e11658a-8d43-42fe-9b05-210a1a570947.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "40bf0516-e082-4beb-b18e-2c3172567a8f.png",
+      "rel": "城镇/40bf0516-e082-4beb-b18e-2c3172567a8f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\40bf0516-e082-4beb-b18e-2c3172567a8f.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/40bf0516-e082-4beb-b18e-2c3172567a8f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "43616b06-58fe-43e9-81f3-dc83538a4a2c.png",
+      "rel": "城镇/43616b06-58fe-43e9-81f3-dc83538a4a2c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\43616b06-58fe-43e9-81f3-dc83538a4a2c.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/43616b06-58fe-43e9-81f3-dc83538a4a2c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "4532cc9d-a134-49ee-a11c-f734638575ec.png",
+      "rel": "城镇/4532cc9d-a134-49ee-a11c-f734638575ec.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\4532cc9d-a134-49ee-a11c-f734638575ec.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/4532cc9d-a134-49ee-a11c-f734638575ec.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "477b9532-5e2e-4daa-bc43-3d6293a8765d.png",
+      "rel": "城镇/477b9532-5e2e-4daa-bc43-3d6293a8765d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\477b9532-5e2e-4daa-bc43-3d6293a8765d.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/477b9532-5e2e-4daa-bc43-3d6293a8765d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "54c0cec8-dc2b-44ec-a67e-c05621c80d33.png",
+      "rel": "城镇/54c0cec8-dc2b-44ec-a67e-c05621c80d33.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\54c0cec8-dc2b-44ec-a67e-c05621c80d33.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/54c0cec8-dc2b-44ec-a67e-c05621c80d33.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "56ca27fe-181c-4c29-89ca-6f0d7ab68562.png",
+      "rel": "城镇/56ca27fe-181c-4c29-89ca-6f0d7ab68562.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\56ca27fe-181c-4c29-89ca-6f0d7ab68562.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/56ca27fe-181c-4c29-89ca-6f0d7ab68562.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "5aaca734-22ed-44e9-963c-f3a50077c26b.png",
+      "rel": "城镇/5aaca734-22ed-44e9-963c-f3a50077c26b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\5aaca734-22ed-44e9-963c-f3a50077c26b.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/5aaca734-22ed-44e9-963c-f3a50077c26b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "5bce7408-e72e-404b-a637-a96488e7d7c5.png",
+      "rel": "城镇/5bce7408-e72e-404b-a637-a96488e7d7c5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\5bce7408-e72e-404b-a637-a96488e7d7c5.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/5bce7408-e72e-404b-a637-a96488e7d7c5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "5c4d4b50-f84b-4a68-ab53-6de176f25d41.png",
+      "rel": "城镇/5c4d4b50-f84b-4a68-ab53-6de176f25d41.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\5c4d4b50-f84b-4a68-ab53-6de176f25d41.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/5c4d4b50-f84b-4a68-ab53-6de176f25d41.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "5de268cf-6d06-477c-a00a-ba62dd22db9c.png",
+      "rel": "城镇/5de268cf-6d06-477c-a00a-ba62dd22db9c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\5de268cf-6d06-477c-a00a-ba62dd22db9c.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/5de268cf-6d06-477c-a00a-ba62dd22db9c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "5f914b39-b0d4-496c-916d-442c406378d0.png",
+      "rel": "城镇/5f914b39-b0d4-496c-916d-442c406378d0.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\5f914b39-b0d4-496c-916d-442c406378d0.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/5f914b39-b0d4-496c-916d-442c406378d0.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "66a4ef27-96c3-4fd2-917e-4a6a27ffd026.png",
+      "rel": "城镇/66a4ef27-96c3-4fd2-917e-4a6a27ffd026.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\66a4ef27-96c3-4fd2-917e-4a6a27ffd026.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/66a4ef27-96c3-4fd2-917e-4a6a27ffd026.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "675bb01c-6b8e-4549-a0eb-4e8477cad91b.png",
+      "rel": "城镇/675bb01c-6b8e-4549-a0eb-4e8477cad91b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\675bb01c-6b8e-4549-a0eb-4e8477cad91b.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/675bb01c-6b8e-4549-a0eb-4e8477cad91b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "686a833d-26bf-4db1-9718-0e1bf3ad07e4.png",
+      "rel": "城镇/686a833d-26bf-4db1-9718-0e1bf3ad07e4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\686a833d-26bf-4db1-9718-0e1bf3ad07e4.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/686a833d-26bf-4db1-9718-0e1bf3ad07e4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "6bf76f1e-ea0f-4fc1-bf9d-1444256542eb.png",
+      "rel": "城镇/6bf76f1e-ea0f-4fc1-bf9d-1444256542eb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\6bf76f1e-ea0f-4fc1-bf9d-1444256542eb.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/6bf76f1e-ea0f-4fc1-bf9d-1444256542eb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "6d2a8f52-caee-460b-b482-19f3436eaf02.png",
+      "rel": "城镇/6d2a8f52-caee-460b-b482-19f3436eaf02.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\6d2a8f52-caee-460b-b482-19f3436eaf02.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/6d2a8f52-caee-460b-b482-19f3436eaf02.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "6e398957-c229-4bf0-a1a4-bb19cce54fdd.png",
+      "rel": "城镇/6e398957-c229-4bf0-a1a4-bb19cce54fdd.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\6e398957-c229-4bf0-a1a4-bb19cce54fdd.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/6e398957-c229-4bf0-a1a4-bb19cce54fdd.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "6e60c294-1e7e-4fb0-ac07-2c2c13e84cbb.png",
+      "rel": "城镇/6e60c294-1e7e-4fb0-ac07-2c2c13e84cbb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\6e60c294-1e7e-4fb0-ac07-2c2c13e84cbb.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/6e60c294-1e7e-4fb0-ac07-2c2c13e84cbb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "732a9de8-f572-4086-96f4-fe39cf423895.png",
+      "rel": "城镇/732a9de8-f572-4086-96f4-fe39cf423895.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\732a9de8-f572-4086-96f4-fe39cf423895.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/732a9de8-f572-4086-96f4-fe39cf423895.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "73e41d09-c93d-4985-aba4-1421cec66742.png",
+      "rel": "城镇/73e41d09-c93d-4985-aba4-1421cec66742.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\73e41d09-c93d-4985-aba4-1421cec66742.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/73e41d09-c93d-4985-aba4-1421cec66742.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "742757ea-b536-4218-a4e0-b7e64e269e0c.png",
+      "rel": "城镇/742757ea-b536-4218-a4e0-b7e64e269e0c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\742757ea-b536-4218-a4e0-b7e64e269e0c.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/742757ea-b536-4218-a4e0-b7e64e269e0c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "79041127-51b1-42ff-9820-eabd26f11f0e.png",
+      "rel": "城镇/79041127-51b1-42ff-9820-eabd26f11f0e.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\79041127-51b1-42ff-9820-eabd26f11f0e.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/79041127-51b1-42ff-9820-eabd26f11f0e.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "7b187a91-372e-489d-b9fe-39e2c6cbdd43.png",
+      "rel": "城镇/7b187a91-372e-489d-b9fe-39e2c6cbdd43.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\7b187a91-372e-489d-b9fe-39e2c6cbdd43.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/7b187a91-372e-489d-b9fe-39e2c6cbdd43.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "7b9d993b-7ca1-4db6-8f2d-1b9138f2ceda.png",
+      "rel": "城镇/7b9d993b-7ca1-4db6-8f2d-1b9138f2ceda.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\7b9d993b-7ca1-4db6-8f2d-1b9138f2ceda.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/7b9d993b-7ca1-4db6-8f2d-1b9138f2ceda.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "7c038e47-b00f-4f79-8fd8-f3d5a443c750.png",
+      "rel": "城镇/7c038e47-b00f-4f79-8fd8-f3d5a443c750.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\7c038e47-b00f-4f79-8fd8-f3d5a443c750.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/7c038e47-b00f-4f79-8fd8-f3d5a443c750.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "7ee632f0-01e3-4d39-ae69-df20d1c9a91b.png",
+      "rel": "城镇/7ee632f0-01e3-4d39-ae69-df20d1c9a91b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\7ee632f0-01e3-4d39-ae69-df20d1c9a91b.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/7ee632f0-01e3-4d39-ae69-df20d1c9a91b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "80769f17-9b3c-457d-9c47-e18c8ba3e6f2.png",
+      "rel": "城镇/80769f17-9b3c-457d-9c47-e18c8ba3e6f2.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\80769f17-9b3c-457d-9c47-e18c8ba3e6f2.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/80769f17-9b3c-457d-9c47-e18c8ba3e6f2.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "85270de3-7e57-4c87-be60-9e1875a6cf39.png",
+      "rel": "城镇/85270de3-7e57-4c87-be60-9e1875a6cf39.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\85270de3-7e57-4c87-be60-9e1875a6cf39.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/85270de3-7e57-4c87-be60-9e1875a6cf39.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "8cf291a7-32a2-4fb8-8af2-f72c659b14ef.png",
+      "rel": "城镇/8cf291a7-32a2-4fb8-8af2-f72c659b14ef.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\8cf291a7-32a2-4fb8-8af2-f72c659b14ef.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/8cf291a7-32a2-4fb8-8af2-f72c659b14ef.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "8df86816-d586-4bfc-a5ca-1637af3d76c7.png",
+      "rel": "城镇/8df86816-d586-4bfc-a5ca-1637af3d76c7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\8df86816-d586-4bfc-a5ca-1637af3d76c7.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/8df86816-d586-4bfc-a5ca-1637af3d76c7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "8f0df965-e2e5-45d0-b242-03deeea0e689.png",
+      "rel": "城镇/8f0df965-e2e5-45d0-b242-03deeea0e689.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\8f0df965-e2e5-45d0-b242-03deeea0e689.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/8f0df965-e2e5-45d0-b242-03deeea0e689.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "8f60c71f-62fa-41ad-8e73-7536ed8e4744.png",
+      "rel": "城镇/8f60c71f-62fa-41ad-8e73-7536ed8e4744.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\8f60c71f-62fa-41ad-8e73-7536ed8e4744.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/8f60c71f-62fa-41ad-8e73-7536ed8e4744.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "8ffc6ac2-0348-480e-bfef-328a8dc4283c.png",
+      "rel": "城镇/8ffc6ac2-0348-480e-bfef-328a8dc4283c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\8ffc6ac2-0348-480e-bfef-328a8dc4283c.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/8ffc6ac2-0348-480e-bfef-328a8dc4283c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "91da5663-bcf9-452c-857a-d5f14654351c.png",
+      "rel": "城镇/91da5663-bcf9-452c-857a-d5f14654351c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\91da5663-bcf9-452c-857a-d5f14654351c.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/91da5663-bcf9-452c-857a-d5f14654351c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "93d62732-4b70-4a1c-8d26-78daf2df72fa.png",
+      "rel": "城镇/93d62732-4b70-4a1c-8d26-78daf2df72fa.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\93d62732-4b70-4a1c-8d26-78daf2df72fa.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/93d62732-4b70-4a1c-8d26-78daf2df72fa.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "956444bd-1e4e-47e1-bcfa-6cfedae72fbf.png",
+      "rel": "城镇/956444bd-1e4e-47e1-bcfa-6cfedae72fbf.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\956444bd-1e4e-47e1-bcfa-6cfedae72fbf.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/956444bd-1e4e-47e1-bcfa-6cfedae72fbf.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "97b8ea75-7af8-47b5-828b-003b2ea3ce1e.png",
+      "rel": "城镇/97b8ea75-7af8-47b5-828b-003b2ea3ce1e.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\97b8ea75-7af8-47b5-828b-003b2ea3ce1e.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/97b8ea75-7af8-47b5-828b-003b2ea3ce1e.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "9b15708c-d5a3-4821-a218-00124833019c.png",
+      "rel": "城镇/9b15708c-d5a3-4821-a218-00124833019c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\9b15708c-d5a3-4821-a218-00124833019c.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/9b15708c-d5a3-4821-a218-00124833019c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "9ba24b79-2455-4ed5-8f38-8a58e1722e1e.png",
+      "rel": "城镇/9ba24b79-2455-4ed5-8f38-8a58e1722e1e.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\9ba24b79-2455-4ed5-8f38-8a58e1722e1e.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/9ba24b79-2455-4ed5-8f38-8a58e1722e1e.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "a0ea8b4f-0fab-42d3-af18-8d33c06115b7.png",
+      "rel": "城镇/a0ea8b4f-0fab-42d3-af18-8d33c06115b7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\a0ea8b4f-0fab-42d3-af18-8d33c06115b7.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/a0ea8b4f-0fab-42d3-af18-8d33c06115b7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "a20d6a65-68a8-4392-a5f4-ec29eb7230af.png",
+      "rel": "城镇/a20d6a65-68a8-4392-a5f4-ec29eb7230af.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\a20d6a65-68a8-4392-a5f4-ec29eb7230af.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/a20d6a65-68a8-4392-a5f4-ec29eb7230af.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "a94512e2-bda2-4bca-bb37-ce231a1b251f.png",
+      "rel": "城镇/a94512e2-bda2-4bca-bb37-ce231a1b251f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\a94512e2-bda2-4bca-bb37-ce231a1b251f.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/a94512e2-bda2-4bca-bb37-ce231a1b251f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "aa7732db-a485-4d33-966e-48983b19e209.png",
+      "rel": "城镇/aa7732db-a485-4d33-966e-48983b19e209.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\aa7732db-a485-4d33-966e-48983b19e209.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/aa7732db-a485-4d33-966e-48983b19e209.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "aaf5641d-496c-4286-89d0-989c5cc41747.png",
+      "rel": "城镇/aaf5641d-496c-4286-89d0-989c5cc41747.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\aaf5641d-496c-4286-89d0-989c5cc41747.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/aaf5641d-496c-4286-89d0-989c5cc41747.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "rel": "城镇/b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "b2e8d819-1bf0-4e81-aeca-b3ab95f75e1b.png",
+      "rel": "城镇/b2e8d819-1bf0-4e81-aeca-b3ab95f75e1b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\b2e8d819-1bf0-4e81-aeca-b3ab95f75e1b.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/b2e8d819-1bf0-4e81-aeca-b3ab95f75e1b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "rel": "城镇/b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "bb1696a9-6ed3-4f01-b770-fafeda04ae16.png",
+      "rel": "城镇/bb1696a9-6ed3-4f01-b770-fafeda04ae16.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\bb1696a9-6ed3-4f01-b770-fafeda04ae16.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/bb1696a9-6ed3-4f01-b770-fafeda04ae16.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "bb23f281-7d60-4cf5-8911-27de2c7bcb2e.png",
+      "rel": "城镇/bb23f281-7d60-4cf5-8911-27de2c7bcb2e.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\bb23f281-7d60-4cf5-8911-27de2c7bcb2e.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/bb23f281-7d60-4cf5-8911-27de2c7bcb2e.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "bb487fe6-1c0a-4788-b10f-95909b716e21.png",
+      "rel": "城镇/bb487fe6-1c0a-4788-b10f-95909b716e21.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\bb487fe6-1c0a-4788-b10f-95909b716e21.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/bb487fe6-1c0a-4788-b10f-95909b716e21.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "bbae5ff5-8840-4ebd-8624-76cfadf67776.png",
+      "rel": "城镇/bbae5ff5-8840-4ebd-8624-76cfadf67776.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\bbae5ff5-8840-4ebd-8624-76cfadf67776.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/bbae5ff5-8840-4ebd-8624-76cfadf67776.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "bd9adbf7-b21e-4640-b124-767ae1870a51.png",
+      "rel": "城镇/bd9adbf7-b21e-4640-b124-767ae1870a51.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\bd9adbf7-b21e-4640-b124-767ae1870a51.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/bd9adbf7-b21e-4640-b124-767ae1870a51.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "bea7c909-61c3-4e31-8353-c0d0fdcd2cbf.png",
+      "rel": "城镇/bea7c909-61c3-4e31-8353-c0d0fdcd2cbf.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\bea7c909-61c3-4e31-8353-c0d0fdcd2cbf.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/bea7c909-61c3-4e31-8353-c0d0fdcd2cbf.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "bf525aa3-c8a7-4b4d-b81e-1296580e343f.png",
+      "rel": "城镇/bf525aa3-c8a7-4b4d-b81e-1296580e343f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\bf525aa3-c8a7-4b4d-b81e-1296580e343f.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/bf525aa3-c8a7-4b4d-b81e-1296580e343f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "c00e3a60-3fbf-43ee-8d0b-937d36b784e4.png",
+      "rel": "城镇/c00e3a60-3fbf-43ee-8d0b-937d36b784e4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\c00e3a60-3fbf-43ee-8d0b-937d36b784e4.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/c00e3a60-3fbf-43ee-8d0b-937d36b784e4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "c3dd14d1-d6d8-45d2-be79-8a3176f131db.png",
+      "rel": "城镇/c3dd14d1-d6d8-45d2-be79-8a3176f131db.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\c3dd14d1-d6d8-45d2-be79-8a3176f131db.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/c3dd14d1-d6d8-45d2-be79-8a3176f131db.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "c7bc142c-4661-48df-b74a-31b26710535c.png",
+      "rel": "城镇/c7bc142c-4661-48df-b74a-31b26710535c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\c7bc142c-4661-48df-b74a-31b26710535c.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/c7bc142c-4661-48df-b74a-31b26710535c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "cc96afde-9c34-4361-8f8b-97cd1cd9a07a.png",
+      "rel": "城镇/cc96afde-9c34-4361-8f8b-97cd1cd9a07a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\cc96afde-9c34-4361-8f8b-97cd1cd9a07a.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/cc96afde-9c34-4361-8f8b-97cd1cd9a07a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "cf37ff40-9429-4efb-a19f-90944cf924b2.png",
+      "rel": "城镇/cf37ff40-9429-4efb-a19f-90944cf924b2.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\cf37ff40-9429-4efb-a19f-90944cf924b2.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/cf37ff40-9429-4efb-a19f-90944cf924b2.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "城镇",
+      "name": "d182d7cf-fc1f-43cb-a213-bd25ae35a89d.png",
+      "rel": "城镇/d182d7cf-fc1f-43cb-a213-bd25ae35a89d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\d182d7cf-fc1f-43cb-a213-bd25ae35a89d.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/d182d7cf-fc1f-43cb-a213-bd25ae35a89d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "d2ac5382-e3f4-4160-9186-30a6d41404e7.png",
+      "rel": "城镇/d2ac5382-e3f4-4160-9186-30a6d41404e7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\d2ac5382-e3f4-4160-9186-30a6d41404e7.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/d2ac5382-e3f4-4160-9186-30a6d41404e7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "d7d7e960-af55-4583-bb7e-d07ba25a2fa6.png",
+      "rel": "城镇/d7d7e960-af55-4583-bb7e-d07ba25a2fa6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\d7d7e960-af55-4583-bb7e-d07ba25a2fa6.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/d7d7e960-af55-4583-bb7e-d07ba25a2fa6.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "d7f2b746-d528-4a89-9d8e-55776294dc04.png",
+      "rel": "城镇/d7f2b746-d528-4a89-9d8e-55776294dc04.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\d7f2b746-d528-4a89-9d8e-55776294dc04.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/d7f2b746-d528-4a89-9d8e-55776294dc04.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "d80d6c22-8cd7-4f5b-a9c6-df6662b28ead.png",
+      "rel": "城镇/d80d6c22-8cd7-4f5b-a9c6-df6662b28ead.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\d80d6c22-8cd7-4f5b-a9c6-df6662b28ead.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/d80d6c22-8cd7-4f5b-a9c6-df6662b28ead.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "d999f046-e42f-4371-8ba8-c4fa2160b200.png",
+      "rel": "城镇/d999f046-e42f-4371-8ba8-c4fa2160b200.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\d999f046-e42f-4371-8ba8-c4fa2160b200.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/d999f046-e42f-4371-8ba8-c4fa2160b200.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "de603a1d-5e18-4c84-9f50-92bc0a5482cd.png",
+      "rel": "城镇/de603a1d-5e18-4c84-9f50-92bc0a5482cd.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\de603a1d-5e18-4c84-9f50-92bc0a5482cd.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/de603a1d-5e18-4c84-9f50-92bc0a5482cd.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "e15a88d8-b21a-4cc2-b65f-42cd430f8e9a.png",
+      "rel": "城镇/e15a88d8-b21a-4cc2-b65f-42cd430f8e9a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\e15a88d8-b21a-4cc2-b65f-42cd430f8e9a.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/e15a88d8-b21a-4cc2-b65f-42cd430f8e9a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "e2b2b19d-02c5-4ef9-b868-4b2ecd7d50eb.png",
+      "rel": "城镇/e2b2b19d-02c5-4ef9-b868-4b2ecd7d50eb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\e2b2b19d-02c5-4ef9-b868-4b2ecd7d50eb.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/e2b2b19d-02c5-4ef9-b868-4b2ecd7d50eb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "e4dd31db-22fc-4f53-8de4-c25db23d3690.png",
+      "rel": "城镇/e4dd31db-22fc-4f53-8de4-c25db23d3690.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\e4dd31db-22fc-4f53-8de4-c25db23d3690.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/e4dd31db-22fc-4f53-8de4-c25db23d3690.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "e94762f9-1d2d-4acf-9dc2-2d37b19a3eec.png",
+      "rel": "城镇/e94762f9-1d2d-4acf-9dc2-2d37b19a3eec.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\e94762f9-1d2d-4acf-9dc2-2d37b19a3eec.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/e94762f9-1d2d-4acf-9dc2-2d37b19a3eec.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "eab447f3-1a75-4bdb-954a-1694b5dbeace.png",
+      "rel": "城镇/eab447f3-1a75-4bdb-954a-1694b5dbeace.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\eab447f3-1a75-4bdb-954a-1694b5dbeace.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/eab447f3-1a75-4bdb-954a-1694b5dbeace.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "ef2984ab-528a-4b36-928f-7895625b4143.png",
+      "rel": "城镇/ef2984ab-528a-4b36-928f-7895625b4143.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\ef2984ab-528a-4b36-928f-7895625b4143.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/ef2984ab-528a-4b36-928f-7895625b4143.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "f21324a6-659d-434b-b09c-4848902664f2.png",
+      "rel": "城镇/f21324a6-659d-434b-b09c-4848902664f2.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\f21324a6-659d-434b-b09c-4848902664f2.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/f21324a6-659d-434b-b09c-4848902664f2.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "f5465520-3fbc-4f63-8a68-958fcf7aaa16.png",
+      "rel": "城镇/f5465520-3fbc-4f63-8a68-958fcf7aaa16.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\f5465520-3fbc-4f63-8a68-958fcf7aaa16.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/f5465520-3fbc-4f63-8a68-958fcf7aaa16.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "f7fc99b1-dbbf-4102-8b9f-97a188bc3a97.png",
+      "rel": "城镇/f7fc99b1-dbbf-4102-8b9f-97a188bc3a97.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\f7fc99b1-dbbf-4102-8b9f-97a188bc3a97.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/f7fc99b1-dbbf-4102-8b9f-97a188bc3a97.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "f86622c3-ce9b-4d5e-b2df-9d9e60dd84f8.png",
+      "rel": "城镇/f86622c3-ce9b-4d5e-b2df-9d9e60dd84f8.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\f86622c3-ce9b-4d5e-b2df-9d9e60dd84f8.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/f86622c3-ce9b-4d5e-b2df-9d9e60dd84f8.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "f91d73cc-bb8d-407f-a79e-08e80df280db.png",
+      "rel": "城镇/f91d73cc-bb8d-407f-a79e-08e80df280db.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\f91d73cc-bb8d-407f-a79e-08e80df280db.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/f91d73cc-bb8d-407f-a79e-08e80df280db.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "f9433e9d-9ae8-4dfd-89b2-38e056aa0f7e.png",
+      "rel": "城镇/f9433e9d-9ae8-4dfd-89b2-38e056aa0f7e.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\f9433e9d-9ae8-4dfd-89b2-38e056aa0f7e.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/f9433e9d-9ae8-4dfd-89b2-38e056aa0f7e.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "fbb57910-8869-4985-9d78-db4e025b7361.png",
+      "rel": "城镇/fbb57910-8869-4985-9d78-db4e025b7361.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\fbb57910-8869-4985-9d78-db4e025b7361.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/fbb57910-8869-4985-9d78-db4e025b7361.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "fe12133a-b240-45da-a26a-0fc571c83ba8.png",
+      "rel": "城镇/fe12133a-b240-45da-a26a-0fc571c83ba8.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\fe12133a-b240-45da-a26a-0fc571c83ba8.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/fe12133a-b240-45da-a26a-0fc571c83ba8.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "城镇",
+      "name": "fee9b95a-9dcc-42b4-8945-84ca4dd6aad6.png",
+      "rel": "城镇/fee9b95a-9dcc-42b4-8945-84ca4dd6aad6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\城镇\\fee9b95a-9dcc-42b4-8945-84ca4dd6aad6.png",
+      "url": "/sence/%E5%9F%8E%E9%95%87/fee9b95a-9dcc-42b4-8945-84ca4dd6aad6.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "00c9ae55-2ea8-4f6f-9993-26a3a1f4daec.png",
+      "rel": "森林、河谷、瀑布/00c9ae55-2ea8-4f6f-9993-26a3a1f4daec.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\00c9ae55-2ea8-4f6f-9993-26a3a1f4daec.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/00c9ae55-2ea8-4f6f-9993-26a3a1f4daec.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "0767f220-510b-4c47-bb6f-dda9a04f887b.png",
+      "rel": "森林、河谷、瀑布/0767f220-510b-4c47-bb6f-dda9a04f887b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\0767f220-510b-4c47-bb6f-dda9a04f887b.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/0767f220-510b-4c47-bb6f-dda9a04f887b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "08d4eec9-9abc-46f1-bb81-10bc8984bf29.png",
+      "rel": "森林、河谷、瀑布/08d4eec9-9abc-46f1-bb81-10bc8984bf29.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\08d4eec9-9abc-46f1-bb81-10bc8984bf29.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/08d4eec9-9abc-46f1-bb81-10bc8984bf29.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "09d79c19-f4ba-45ef-af54-1c1cad05ab01.png",
+      "rel": "森林、河谷、瀑布/09d79c19-f4ba-45ef-af54-1c1cad05ab01.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\09d79c19-f4ba-45ef-af54-1c1cad05ab01.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/09d79c19-f4ba-45ef-af54-1c1cad05ab01.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "0cf2a683-1e79-4f54-a302-c733db7aa5e5.png",
+      "rel": "森林、河谷、瀑布/0cf2a683-1e79-4f54-a302-c733db7aa5e5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\0cf2a683-1e79-4f54-a302-c733db7aa5e5.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/0cf2a683-1e79-4f54-a302-c733db7aa5e5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "15cee44b-8e73-4547-971d-7405eda9ad66.png",
+      "rel": "森林、河谷、瀑布/15cee44b-8e73-4547-971d-7405eda9ad66.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\15cee44b-8e73-4547-971d-7405eda9ad66.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/15cee44b-8e73-4547-971d-7405eda9ad66.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "1b754688-e1e2-4d88-ab24-a9698d000855.png",
+      "rel": "森林、河谷、瀑布/1b754688-e1e2-4d88-ab24-a9698d000855.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\1b754688-e1e2-4d88-ab24-a9698d000855.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/1b754688-e1e2-4d88-ab24-a9698d000855.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "1dc5cc57-4227-4d50-8041-ace3af076173.png",
+      "rel": "森林、河谷、瀑布/1dc5cc57-4227-4d50-8041-ace3af076173.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\1dc5cc57-4227-4d50-8041-ace3af076173.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/1dc5cc57-4227-4d50-8041-ace3af076173.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "1f414ffc-8ab1-4781-a330-cbad9ee19f1c.png",
+      "rel": "森林、河谷、瀑布/1f414ffc-8ab1-4781-a330-cbad9ee19f1c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\1f414ffc-8ab1-4781-a330-cbad9ee19f1c.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/1f414ffc-8ab1-4781-a330-cbad9ee19f1c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "25b84966-4252-4b3c-8dbb-41e997b94b2b.png",
+      "rel": "森林、河谷、瀑布/25b84966-4252-4b3c-8dbb-41e997b94b2b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\25b84966-4252-4b3c-8dbb-41e997b94b2b.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/25b84966-4252-4b3c-8dbb-41e997b94b2b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "2f1516f8-9bed-431e-b5ad-245191170cd0.png",
+      "rel": "森林、河谷、瀑布/2f1516f8-9bed-431e-b5ad-245191170cd0.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\2f1516f8-9bed-431e-b5ad-245191170cd0.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/2f1516f8-9bed-431e-b5ad-245191170cd0.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "3557b49d-06c2-44ea-b7d7-4c9a39e0e03f.png",
+      "rel": "森林、河谷、瀑布/3557b49d-06c2-44ea-b7d7-4c9a39e0e03f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\3557b49d-06c2-44ea-b7d7-4c9a39e0e03f.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/3557b49d-06c2-44ea-b7d7-4c9a39e0e03f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "3c1a3e40-7563-4a4c-8547-bd4cc594d65d.png",
+      "rel": "森林、河谷、瀑布/3c1a3e40-7563-4a4c-8547-bd4cc594d65d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\3c1a3e40-7563-4a4c-8547-bd4cc594d65d.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/3c1a3e40-7563-4a4c-8547-bd4cc594d65d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "3fb5d6d5-bc99-4753-997f-ca8a09af53f4.png",
+      "rel": "森林、河谷、瀑布/3fb5d6d5-bc99-4753-997f-ca8a09af53f4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\3fb5d6d5-bc99-4753-997f-ca8a09af53f4.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/3fb5d6d5-bc99-4753-997f-ca8a09af53f4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "4b1ca278-b527-4fe7-8cbc-96d873cbc180.png",
+      "rel": "森林、河谷、瀑布/4b1ca278-b527-4fe7-8cbc-96d873cbc180.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\4b1ca278-b527-4fe7-8cbc-96d873cbc180.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/4b1ca278-b527-4fe7-8cbc-96d873cbc180.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "4c360abf-020b-4982-9f8e-6c5ba56c53de.png",
+      "rel": "森林、河谷、瀑布/4c360abf-020b-4982-9f8e-6c5ba56c53de.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\4c360abf-020b-4982-9f8e-6c5ba56c53de.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/4c360abf-020b-4982-9f8e-6c5ba56c53de.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "53d1b578-6041-423f-9bee-51e616a271ac.png",
+      "rel": "森林、河谷、瀑布/53d1b578-6041-423f-9bee-51e616a271ac.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\53d1b578-6041-423f-9bee-51e616a271ac.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/53d1b578-6041-423f-9bee-51e616a271ac.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "54.png",
+      "rel": "森林、河谷、瀑布/54.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\54.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/54.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "55.png",
+      "rel": "森林、河谷、瀑布/55.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\55.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/55.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "56.png",
+      "rel": "森林、河谷、瀑布/56.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\56.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/56.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "57.png",
+      "rel": "森林、河谷、瀑布/57.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\57.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/57.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "58.png",
+      "rel": "森林、河谷、瀑布/58.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\58.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/58.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "59.png",
+      "rel": "森林、河谷、瀑布/59.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\59.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/59.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "5ec34494-fafa-408c-9f5e-2133309ebe69.png",
+      "rel": "森林、河谷、瀑布/5ec34494-fafa-408c-9f5e-2133309ebe69.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\5ec34494-fafa-408c-9f5e-2133309ebe69.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/5ec34494-fafa-408c-9f5e-2133309ebe69.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "60.png",
+      "rel": "森林、河谷、瀑布/60.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\60.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/60.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "61.png",
+      "rel": "森林、河谷、瀑布/61.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\61.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/61.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "62.png",
+      "rel": "森林、河谷、瀑布/62.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\62.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/62.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "63.png",
+      "rel": "森林、河谷、瀑布/63.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\63.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/63.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "64.png",
+      "rel": "森林、河谷、瀑布/64.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\64.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/64.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "65.png",
+      "rel": "森林、河谷、瀑布/65.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\65.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/65.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "664dd054-9db3-466d-b406-9807e6c915b1.png",
+      "rel": "森林、河谷、瀑布/664dd054-9db3-466d-b406-9807e6c915b1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\664dd054-9db3-466d-b406-9807e6c915b1.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/664dd054-9db3-466d-b406-9807e6c915b1.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "68970473-dd89-4948-9bc8-1a84db32cbb1.png",
+      "rel": "森林、河谷、瀑布/68970473-dd89-4948-9bc8-1a84db32cbb1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\68970473-dd89-4948-9bc8-1a84db32cbb1.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/68970473-dd89-4948-9bc8-1a84db32cbb1.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "6e0301ef-a092-4dc4-98ec-708861b2c843.png",
+      "rel": "森林、河谷、瀑布/6e0301ef-a092-4dc4-98ec-708861b2c843.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\6e0301ef-a092-4dc4-98ec-708861b2c843.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/6e0301ef-a092-4dc4-98ec-708861b2c843.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "71816fa7-e786-400b-a3ea-ef76e2dd7396.png",
+      "rel": "森林、河谷、瀑布/71816fa7-e786-400b-a3ea-ef76e2dd7396.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\71816fa7-e786-400b-a3ea-ef76e2dd7396.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/71816fa7-e786-400b-a3ea-ef76e2dd7396.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "71ca8387-a76a-4ec4-88a6-26b301578b5d.png",
+      "rel": "森林、河谷、瀑布/71ca8387-a76a-4ec4-88a6-26b301578b5d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\71ca8387-a76a-4ec4-88a6-26b301578b5d.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/71ca8387-a76a-4ec4-88a6-26b301578b5d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "7a3138fc-a10f-44c3-97ce-1c2e51f62dd7.png",
+      "rel": "森林、河谷、瀑布/7a3138fc-a10f-44c3-97ce-1c2e51f62dd7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\7a3138fc-a10f-44c3-97ce-1c2e51f62dd7.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/7a3138fc-a10f-44c3-97ce-1c2e51f62dd7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "7fc97347-cdc7-4252-b90c-0ee56e033709.png",
+      "rel": "森林、河谷、瀑布/7fc97347-cdc7-4252-b90c-0ee56e033709.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\7fc97347-cdc7-4252-b90c-0ee56e033709.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/7fc97347-cdc7-4252-b90c-0ee56e033709.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "815ad48d-3454-4c15-822e-b1cb1d88e347.png",
+      "rel": "森林、河谷、瀑布/815ad48d-3454-4c15-822e-b1cb1d88e347.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\815ad48d-3454-4c15-822e-b1cb1d88e347.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/815ad48d-3454-4c15-822e-b1cb1d88e347.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "8493562f-ae67-4aae-9fb7-c780dd8a8cb1.png",
+      "rel": "森林、河谷、瀑布/8493562f-ae67-4aae-9fb7-c780dd8a8cb1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\8493562f-ae67-4aae-9fb7-c780dd8a8cb1.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/8493562f-ae67-4aae-9fb7-c780dd8a8cb1.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "8b2a7d8e-1ecf-40b8-bd75-abae7e44a415.png",
+      "rel": "森林、河谷、瀑布/8b2a7d8e-1ecf-40b8-bd75-abae7e44a415.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\8b2a7d8e-1ecf-40b8-bd75-abae7e44a415.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/8b2a7d8e-1ecf-40b8-bd75-abae7e44a415.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "94311d43-84b5-4c89-aae8-65aac96249a1.png",
+      "rel": "森林、河谷、瀑布/94311d43-84b5-4c89-aae8-65aac96249a1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\94311d43-84b5-4c89-aae8-65aac96249a1.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/94311d43-84b5-4c89-aae8-65aac96249a1.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "977deeec-3b61-4b27-bf59-97993ff21d8f.png",
+      "rel": "森林、河谷、瀑布/977deeec-3b61-4b27-bf59-97993ff21d8f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\977deeec-3b61-4b27-bf59-97993ff21d8f.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/977deeec-3b61-4b27-bf59-97993ff21d8f.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "9eb4feb8-052f-47eb-a370-c4813e390d4d.png",
+      "rel": "森林、河谷、瀑布/9eb4feb8-052f-47eb-a370-c4813e390d4d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\9eb4feb8-052f-47eb-a370-c4813e390d4d.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/9eb4feb8-052f-47eb-a370-c4813e390d4d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210161725.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210161725.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210161725.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210161725.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210161820.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210161820.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210161820.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210161820.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210161910.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210161910.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210161910.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210161910.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210162053.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210162053.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210162053.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210162053.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210162135.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210162135.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210162135.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210162135.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210162412.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210162412.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210162412.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210162412.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210162515.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210162515.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210162515.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210162515.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210162852.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210162852.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210162852.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210162852.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210162917.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210162917.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210162917.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210162917.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210163049.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210163049.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210163049.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210163049.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210163254.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210163254.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210163254.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210163254.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210163314.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210163314.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210163314.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210163314.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210163833.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210163833.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210163833.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210163833.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210165714.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210165714.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210165714.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210165714.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210170136.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210170136.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210170136.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210170136.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210171151.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210171151.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210171151.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210171151.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210173054.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210173054.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210173054.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210173054.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210173232.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210173232.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210173232.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210173232.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210174227.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210174227.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210174227.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210174227.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210180845.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210180845.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210180845.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210180845.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210180912.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210180912.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210180912.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210180912.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "微信截图_20260210181106.png",
+      "rel": "森林、河谷、瀑布/微信截图_20260210181106.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\微信截图_20260210181106.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210181106.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "a002b6d5-5710-42a6-9735-4735a30ca075.png",
+      "rel": "森林、河谷、瀑布/a002b6d5-5710-42a6-9735-4735a30ca075.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\a002b6d5-5710-42a6-9735-4735a30ca075.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/a002b6d5-5710-42a6-9735-4735a30ca075.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "a14345a1-b876-44aa-81be-ab121ee3b64d.png",
+      "rel": "森林、河谷、瀑布/a14345a1-b876-44aa-81be-ab121ee3b64d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\a14345a1-b876-44aa-81be-ab121ee3b64d.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/a14345a1-b876-44aa-81be-ab121ee3b64d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "a6039d8f-7588-45bc-b72d-90ad30567b3a.png",
+      "rel": "森林、河谷、瀑布/a6039d8f-7588-45bc-b72d-90ad30567b3a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\a6039d8f-7588-45bc-b72d-90ad30567b3a.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/a6039d8f-7588-45bc-b72d-90ad30567b3a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "a6b9f64f-0d0a-4d6e-a13b-c6b87bf93da5.png",
+      "rel": "森林、河谷、瀑布/a6b9f64f-0d0a-4d6e-a13b-c6b87bf93da5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\a6b9f64f-0d0a-4d6e-a13b-c6b87bf93da5.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/a6b9f64f-0d0a-4d6e-a13b-c6b87bf93da5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "a6d53c5d-4257-4b85-965f-f06249405362.png",
+      "rel": "森林、河谷、瀑布/a6d53c5d-4257-4b85-965f-f06249405362.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\a6d53c5d-4257-4b85-965f-f06249405362.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/a6d53c5d-4257-4b85-965f-f06249405362.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "rel": "森林、河谷、瀑布/b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/b000b557-0d27-49a0-8c36-7a764e7ec3ea.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "b40b412b-5d0f-47c7-99b9-36cdc08e4075.png",
+      "rel": "森林、河谷、瀑布/b40b412b-5d0f-47c7-99b9-36cdc08e4075.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\b40b412b-5d0f-47c7-99b9-36cdc08e4075.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/b40b412b-5d0f-47c7-99b9-36cdc08e4075.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "b7481504-f19b-46bd-8fe2-81324520588f.png",
+      "rel": "森林、河谷、瀑布/b7481504-f19b-46bd-8fe2-81324520588f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\b7481504-f19b-46bd-8fe2-81324520588f.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/b7481504-f19b-46bd-8fe2-81324520588f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "rel": "森林、河谷、瀑布/b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/b7ec175c-a5c6-49a6-a93d-d54a5728c1d7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "ba662805-36e0-4908-be8b-8b8c7fbf6722.png",
+      "rel": "森林、河谷、瀑布/ba662805-36e0-4908-be8b-8b8c7fbf6722.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\ba662805-36e0-4908-be8b-8b8c7fbf6722.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/ba662805-36e0-4908-be8b-8b8c7fbf6722.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "beb252ab-20c2-43f3-8d5e-4c4efc8e0db1.png",
+      "rel": "森林、河谷、瀑布/beb252ab-20c2-43f3-8d5e-4c4efc8e0db1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\beb252ab-20c2-43f3-8d5e-4c4efc8e0db1.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/beb252ab-20c2-43f3-8d5e-4c4efc8e0db1.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "cd8f361c-becc-4b77-9be3-e0d180c3cc13.png",
+      "rel": "森林、河谷、瀑布/cd8f361c-becc-4b77-9be3-e0d180c3cc13.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\cd8f361c-becc-4b77-9be3-e0d180c3cc13.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/cd8f361c-becc-4b77-9be3-e0d180c3cc13.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "cec216c7-3aa6-4f0c-ac8b-95b94c8c48a5.png",
+      "rel": "森林、河谷、瀑布/cec216c7-3aa6-4f0c-ac8b-95b94c8c48a5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\cec216c7-3aa6-4f0c-ac8b-95b94c8c48a5.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/cec216c7-3aa6-4f0c-ac8b-95b94c8c48a5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "d71058d3-609d-4a82-923f-a11fefc81b96.png",
+      "rel": "森林、河谷、瀑布/d71058d3-609d-4a82-923f-a11fefc81b96.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\d71058d3-609d-4a82-923f-a11fefc81b96.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/d71058d3-609d-4a82-923f-a11fefc81b96.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "d924c94d-0653-44d0-a891-61f934a06325.png",
+      "rel": "森林、河谷、瀑布/d924c94d-0653-44d0-a891-61f934a06325.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\d924c94d-0653-44d0-a891-61f934a06325.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/d924c94d-0653-44d0-a891-61f934a06325.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "d9543ff2-bc7c-486f-9c36-0dadf357fe3a.png",
+      "rel": "森林、河谷、瀑布/d9543ff2-bc7c-486f-9c36-0dadf357fe3a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\d9543ff2-bc7c-486f-9c36-0dadf357fe3a.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/d9543ff2-bc7c-486f-9c36-0dadf357fe3a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "d9bd75c1-b8fe-4286-a020-0deaa38090af.png",
+      "rel": "森林、河谷、瀑布/d9bd75c1-b8fe-4286-a020-0deaa38090af.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\d9bd75c1-b8fe-4286-a020-0deaa38090af.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/d9bd75c1-b8fe-4286-a020-0deaa38090af.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "db034b40-439c-4aeb-9cea-c949d1eb4125.png",
+      "rel": "森林、河谷、瀑布/db034b40-439c-4aeb-9cea-c949d1eb4125.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\db034b40-439c-4aeb-9cea-c949d1eb4125.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/db034b40-439c-4aeb-9cea-c949d1eb4125.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "deb4917c-a8f5-4cd1-876e-fb6637b06566.png",
+      "rel": "森林、河谷、瀑布/deb4917c-a8f5-4cd1-876e-fb6637b06566.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\deb4917c-a8f5-4cd1-876e-fb6637b06566.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/deb4917c-a8f5-4cd1-876e-fb6637b06566.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "e242a45a-459a-44c3-8d60-282f924f74db.png",
+      "rel": "森林、河谷、瀑布/e242a45a-459a-44c3-8d60-282f924f74db.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\e242a45a-459a-44c3-8d60-282f924f74db.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/e242a45a-459a-44c3-8d60-282f924f74db.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "e733bcde-01c6-4c84-bd36-0d12b35f5908.png",
+      "rel": "森林、河谷、瀑布/e733bcde-01c6-4c84-bd36-0d12b35f5908.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\e733bcde-01c6-4c84-bd36-0d12b35f5908.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/e733bcde-01c6-4c84-bd36-0d12b35f5908.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "森林、河谷、瀑布",
+      "name": "f7dd562e-407f-4a09-90de-536f6efbe8ce.png",
+      "rel": "森林、河谷、瀑布/f7dd562e-407f-4a09-90de-536f6efbe8ce.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\森林、河谷、瀑布\\f7dd562e-407f-4a09-90de-536f6efbe8ce.png",
+      "url": "/sence/%E6%A3%AE%E6%9E%97%E3%80%81%E6%B2%B3%E8%B0%B7%E3%80%81%E7%80%91%E5%B8%83/f7dd562e-407f-4a09-90de-536f6efbe8ce.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "室内",
+      "name": "27.png",
+      "rel": "室内/27.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\27.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/27.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "室内",
+      "name": "28.png",
+      "rel": "室内/28.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\28.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/28.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "室内",
+      "name": "29.png",
+      "rel": "室内/29.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\29.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/29.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "室内",
+      "name": "30.png",
+      "rel": "室内/30.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\30.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/30.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "室内",
+      "name": "48.png",
+      "rel": "室内/48.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\48.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/48.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "室内",
+      "name": "49.png",
+      "rel": "室内/49.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\49.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/49.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "室内",
+      "name": "50.png",
+      "rel": "室内/50.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\50.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/50.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "室内",
+      "name": "51.png",
+      "rel": "室内/51.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\室内\\51.png",
+      "url": "/sence/%E5%AE%A4%E5%86%85/51.png",
+      "timeOfDay": "indoor"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "00ec9eb5-0429-4ad7-bf8f-96a97e39722c.png",
+      "rel": "薰衣草、沙滩/00ec9eb5-0429-4ad7-bf8f-96a97e39722c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\00ec9eb5-0429-4ad7-bf8f-96a97e39722c.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/00ec9eb5-0429-4ad7-bf8f-96a97e39722c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "01d9fd0d-a181-49ac-a5b3-7211eb35bb75.png",
+      "rel": "薰衣草、沙滩/01d9fd0d-a181-49ac-a5b3-7211eb35bb75.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\01d9fd0d-a181-49ac-a5b3-7211eb35bb75.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/01d9fd0d-a181-49ac-a5b3-7211eb35bb75.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "0586df99-c34a-4754-adef-25cac86ecd42.png",
+      "rel": "薰衣草、沙滩/0586df99-c34a-4754-adef-25cac86ecd42.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\0586df99-c34a-4754-adef-25cac86ecd42.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/0586df99-c34a-4754-adef-25cac86ecd42.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "074b0a21-a3f0-4a2c-b22b-d6d60c043dee.png",
+      "rel": "薰衣草、沙滩/074b0a21-a3f0-4a2c-b22b-d6d60c043dee.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\074b0a21-a3f0-4a2c-b22b-d6d60c043dee.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/074b0a21-a3f0-4a2c-b22b-d6d60c043dee.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "1a62d4bc-e18f-4815-9a27-22f7d048b453.png",
+      "rel": "薰衣草、沙滩/1a62d4bc-e18f-4815-9a27-22f7d048b453.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\1a62d4bc-e18f-4815-9a27-22f7d048b453.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/1a62d4bc-e18f-4815-9a27-22f7d048b453.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "23183c18-07e8-4581-ac9b-0a74b475ebf8.png",
+      "rel": "薰衣草、沙滩/23183c18-07e8-4581-ac9b-0a74b475ebf8.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\23183c18-07e8-4581-ac9b-0a74b475ebf8.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/23183c18-07e8-4581-ac9b-0a74b475ebf8.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "28543e46-2f1e-4e25-9543-bccf9d53b435.png",
+      "rel": "薰衣草、沙滩/28543e46-2f1e-4e25-9543-bccf9d53b435.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\28543e46-2f1e-4e25-9543-bccf9d53b435.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/28543e46-2f1e-4e25-9543-bccf9d53b435.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "2d815827-6995-465e-b29f-27017429e114.png",
+      "rel": "薰衣草、沙滩/2d815827-6995-465e-b29f-27017429e114.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\2d815827-6995-465e-b29f-27017429e114.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/2d815827-6995-465e-b29f-27017429e114.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "36223814-fa8e-4ec9-a206-b7036048015a.png",
+      "rel": "薰衣草、沙滩/36223814-fa8e-4ec9-a206-b7036048015a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\36223814-fa8e-4ec9-a206-b7036048015a.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/36223814-fa8e-4ec9-a206-b7036048015a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "366ad869-623b-486d-a119-e3301cd6f267.png",
+      "rel": "薰衣草、沙滩/366ad869-623b-486d-a119-e3301cd6f267.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\366ad869-623b-486d-a119-e3301cd6f267.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/366ad869-623b-486d-a119-e3301cd6f267.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "43bc30f8-9b99-418a-bf63-6f3a1de591c4.png",
+      "rel": "薰衣草、沙滩/43bc30f8-9b99-418a-bf63-6f3a1de591c4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\43bc30f8-9b99-418a-bf63-6f3a1de591c4.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/43bc30f8-9b99-418a-bf63-6f3a1de591c4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "46e51bd6-d5b3-4edd-958e-c00cde56ac0a.png",
+      "rel": "薰衣草、沙滩/46e51bd6-d5b3-4edd-958e-c00cde56ac0a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\46e51bd6-d5b3-4edd-958e-c00cde56ac0a.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/46e51bd6-d5b3-4edd-958e-c00cde56ac0a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "59f82668-7c5d-4889-9c90-888668f41e6d.png",
+      "rel": "薰衣草、沙滩/59f82668-7c5d-4889-9c90-888668f41e6d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\59f82668-7c5d-4889-9c90-888668f41e6d.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/59f82668-7c5d-4889-9c90-888668f41e6d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "5a15a259-f4d7-4448-bcd9-5a07462a913a.png",
+      "rel": "薰衣草、沙滩/5a15a259-f4d7-4448-bcd9-5a07462a913a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\5a15a259-f4d7-4448-bcd9-5a07462a913a.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/5a15a259-f4d7-4448-bcd9-5a07462a913a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "62282231-6a17-45f8-a7ba-8e6b67feef5c.png",
+      "rel": "薰衣草、沙滩/62282231-6a17-45f8-a7ba-8e6b67feef5c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\62282231-6a17-45f8-a7ba-8e6b67feef5c.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/62282231-6a17-45f8-a7ba-8e6b67feef5c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "631b3114-6c6a-44ee-b014-772ea84002ae.png",
+      "rel": "薰衣草、沙滩/631b3114-6c6a-44ee-b014-772ea84002ae.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\631b3114-6c6a-44ee-b014-772ea84002ae.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/631b3114-6c6a-44ee-b014-772ea84002ae.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "65f0c478-d97d-4b0d-99a0-4008149e2d4c.png",
+      "rel": "薰衣草、沙滩/65f0c478-d97d-4b0d-99a0-4008149e2d4c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\65f0c478-d97d-4b0d-99a0-4008149e2d4c.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/65f0c478-d97d-4b0d-99a0-4008149e2d4c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "66862a71-916f-42ea-9ff8-3b8a3ee9d8d5.png",
+      "rel": "薰衣草、沙滩/66862a71-916f-42ea-9ff8-3b8a3ee9d8d5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\66862a71-916f-42ea-9ff8-3b8a3ee9d8d5.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/66862a71-916f-42ea-9ff8-3b8a3ee9d8d5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "674743a9-71d5-45c1-b574-ef25b9eb898f.png",
+      "rel": "薰衣草、沙滩/674743a9-71d5-45c1-b574-ef25b9eb898f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\674743a9-71d5-45c1-b574-ef25b9eb898f.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/674743a9-71d5-45c1-b574-ef25b9eb898f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "747e39c7-e209-4ee6-b35d-7c7312bba1e6.png",
+      "rel": "薰衣草、沙滩/747e39c7-e209-4ee6-b35d-7c7312bba1e6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\747e39c7-e209-4ee6-b35d-7c7312bba1e6.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/747e39c7-e209-4ee6-b35d-7c7312bba1e6.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "90848831-8a2e-4792-a48a-6db1864aad0a.png",
+      "rel": "薰衣草、沙滩/90848831-8a2e-4792-a48a-6db1864aad0a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\90848831-8a2e-4792-a48a-6db1864aad0a.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/90848831-8a2e-4792-a48a-6db1864aad0a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "91ae4905-2f35-40f9-b8f9-5ee226a1794f.png",
+      "rel": "薰衣草、沙滩/91ae4905-2f35-40f9-b8f9-5ee226a1794f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\91ae4905-2f35-40f9-b8f9-5ee226a1794f.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/91ae4905-2f35-40f9-b8f9-5ee226a1794f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "微信截图_20260210181805.png",
+      "rel": "薰衣草、沙滩/微信截图_20260210181805.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\微信截图_20260210181805.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210181805.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "微信截图_20260210181831.png",
+      "rel": "薰衣草、沙滩/微信截图_20260210181831.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\微信截图_20260210181831.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210181831.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "微信截图_20260210181939.png",
+      "rel": "薰衣草、沙滩/微信截图_20260210181939.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\微信截图_20260210181939.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210181939.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "微信截图_20260210182550.png",
+      "rel": "薰衣草、沙滩/微信截图_20260210182550.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\微信截图_20260210182550.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210182550.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "微信截图_20260210182610.png",
+      "rel": "薰衣草、沙滩/微信截图_20260210182610.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\微信截图_20260210182610.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210182610.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "微信截图_20260210183415.png",
+      "rel": "薰衣草、沙滩/微信截图_20260210183415.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\微信截图_20260210183415.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210183415.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "微信截图_20260210183946.png",
+      "rel": "薰衣草、沙滩/微信截图_20260210183946.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\微信截图_20260210183946.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20260210183946.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "a3eba5c7-67bc-42f2-8a0a-d8b9835720f4.png",
+      "rel": "薰衣草、沙滩/a3eba5c7-67bc-42f2-8a0a-d8b9835720f4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\a3eba5c7-67bc-42f2-8a0a-d8b9835720f4.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/a3eba5c7-67bc-42f2-8a0a-d8b9835720f4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "rel": "薰衣草、沙滩/ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "b648e300-020d-4330-b029-e890bd22d04d.png",
+      "rel": "薰衣草、沙滩/b648e300-020d-4330-b029-e890bd22d04d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\b648e300-020d-4330-b029-e890bd22d04d.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/b648e300-020d-4330-b029-e890bd22d04d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "rel": "薰衣草、沙滩/c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "c447a5ac-5970-4788-bfeb-d00064af5088.png",
+      "rel": "薰衣草、沙滩/c447a5ac-5970-4788-bfeb-d00064af5088.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\c447a5ac-5970-4788-bfeb-d00064af5088.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/c447a5ac-5970-4788-bfeb-d00064af5088.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "d004220c-1504-4ed8-bb78-8cbf97114532.png",
+      "rel": "薰衣草、沙滩/d004220c-1504-4ed8-bb78-8cbf97114532.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\d004220c-1504-4ed8-bb78-8cbf97114532.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/d004220c-1504-4ed8-bb78-8cbf97114532.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "d38ae6b9-53ae-4cf3-abcd-6d67daa36148.png",
+      "rel": "薰衣草、沙滩/d38ae6b9-53ae-4cf3-abcd-6d67daa36148.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\d38ae6b9-53ae-4cf3-abcd-6d67daa36148.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/d38ae6b9-53ae-4cf3-abcd-6d67daa36148.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "d7252b3a-ea65-4104-80e6-9ade9f405510.png",
+      "rel": "薰衣草、沙滩/d7252b3a-ea65-4104-80e6-9ade9f405510.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\d7252b3a-ea65-4104-80e6-9ade9f405510.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/d7252b3a-ea65-4104-80e6-9ade9f405510.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "d82e2187-ef51-4573-b662-4115d3df5f7f.png",
+      "rel": "薰衣草、沙滩/d82e2187-ef51-4573-b662-4115d3df5f7f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\d82e2187-ef51-4573-b662-4115d3df5f7f.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/d82e2187-ef51-4573-b662-4115d3df5f7f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "dc00c8f3-4f37-4909-ad52-0571657f65ed.png",
+      "rel": "薰衣草、沙滩/dc00c8f3-4f37-4909-ad52-0571657f65ed.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\dc00c8f3-4f37-4909-ad52-0571657f65ed.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/dc00c8f3-4f37-4909-ad52-0571657f65ed.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "薰衣草、沙滩",
+      "name": "dd3f2aa5-1310-42ca-8301-ae0b76ce404b.png",
+      "rel": "薰衣草、沙滩/dd3f2aa5-1310-42ca-8301-ae0b76ce404b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\薰衣草、沙滩\\dd3f2aa5-1310-42ca-8301-ae0b76ce404b.png",
+      "url": "/sence/%E8%96%B0%E8%A1%A3%E8%8D%89%E3%80%81%E6%B2%99%E6%BB%A9/dd3f2aa5-1310-42ca-8301-ae0b76ce404b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "0741edef-4bc6-48dc-b2b7-330ebb94cc8c.png",
+      "rel": "岩石、温泉/0741edef-4bc6-48dc-b2b7-330ebb94cc8c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\0741edef-4bc6-48dc-b2b7-330ebb94cc8c.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/0741edef-4bc6-48dc-b2b7-330ebb94cc8c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "1.png",
+      "rel": "岩石、温泉/1.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\1.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/1.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "10.png",
+      "rel": "岩石、温泉/10.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\10.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/10.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "10919938-ad78-4121-b82d-5c3c0de01fa5.png",
+      "rel": "岩石、温泉/10919938-ad78-4121-b82d-5c3c0de01fa5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\10919938-ad78-4121-b82d-5c3c0de01fa5.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/10919938-ad78-4121-b82d-5c3c0de01fa5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "11.png",
+      "rel": "岩石、温泉/11.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\11.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/11.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "12.png",
+      "rel": "岩石、温泉/12.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\12.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/12.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "12d2394b-77fc-48ff-af7b-36d4182a57b6.png",
+      "rel": "岩石、温泉/12d2394b-77fc-48ff-af7b-36d4182a57b6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\12d2394b-77fc-48ff-af7b-36d4182a57b6.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/12d2394b-77fc-48ff-af7b-36d4182a57b6.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "13.png",
+      "rel": "岩石、温泉/13.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\13.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/13.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "13c15db8-53b3-4c14-a2d3-f74caad6d748.png",
+      "rel": "岩石、温泉/13c15db8-53b3-4c14-a2d3-f74caad6d748.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\13c15db8-53b3-4c14-a2d3-f74caad6d748.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/13c15db8-53b3-4c14-a2d3-f74caad6d748.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "15.png",
+      "rel": "岩石、温泉/15.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\15.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/15.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "16.png",
+      "rel": "岩石、温泉/16.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\16.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/16.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "17.png",
+      "rel": "岩石、温泉/17.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\17.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/17.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "17ecc49c-39a6-482a-9cd2-8c0e337d4e07.png",
+      "rel": "岩石、温泉/17ecc49c-39a6-482a-9cd2-8c0e337d4e07.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\17ecc49c-39a6-482a-9cd2-8c0e337d4e07.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/17ecc49c-39a6-482a-9cd2-8c0e337d4e07.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "17f6ca53-66bb-486b-b4ce-fe9f7bee4706.png",
+      "rel": "岩石、温泉/17f6ca53-66bb-486b-b4ce-fe9f7bee4706.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\17f6ca53-66bb-486b-b4ce-fe9f7bee4706.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/17f6ca53-66bb-486b-b4ce-fe9f7bee4706.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "18.png",
+      "rel": "岩石、温泉/18.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\18.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/18.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "19.png",
+      "rel": "岩石、温泉/19.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\19.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/19.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "1f92c4ae-78af-489b-b127-f553c67c1970.png",
+      "rel": "岩石、温泉/1f92c4ae-78af-489b-b127-f553c67c1970.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\1f92c4ae-78af-489b-b127-f553c67c1970.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/1f92c4ae-78af-489b-b127-f553c67c1970.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "2.png",
+      "rel": "岩石、温泉/2.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\2.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/2.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "20.png",
+      "rel": "岩石、温泉/20.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\20.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/20.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "20968c29-65bb-48b4-b0ae-9361b579ff38.png",
+      "rel": "岩石、温泉/20968c29-65bb-48b4-b0ae-9361b579ff38.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\20968c29-65bb-48b4-b0ae-9361b579ff38.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/20968c29-65bb-48b4-b0ae-9361b579ff38.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "21.png",
+      "rel": "岩石、温泉/21.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\21.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/21.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "22.png",
+      "rel": "岩石、温泉/22.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\22.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/22.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "23.png",
+      "rel": "岩石、温泉/23.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\23.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/23.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "23abc64d-6f76-4bee-997e-898a7dc9b8a2.png",
+      "rel": "岩石、温泉/23abc64d-6f76-4bee-997e-898a7dc9b8a2.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\23abc64d-6f76-4bee-997e-898a7dc9b8a2.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/23abc64d-6f76-4bee-997e-898a7dc9b8a2.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "24.png",
+      "rel": "岩石、温泉/24.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\24.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/24.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "25.png",
+      "rel": "岩石、温泉/25.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\25.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/25.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "257a4989-e1e6-411f-b8e9-b21be6a88525.png",
+      "rel": "岩石、温泉/257a4989-e1e6-411f-b8e9-b21be6a88525.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\257a4989-e1e6-411f-b8e9-b21be6a88525.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/257a4989-e1e6-411f-b8e9-b21be6a88525.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "26.png",
+      "rel": "岩石、温泉/26.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\26.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/26.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "27.png",
+      "rel": "岩石、温泉/27.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\27.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/27.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "28.png",
+      "rel": "岩石、温泉/28.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\28.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/28.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "29.png",
+      "rel": "岩石、温泉/29.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\29.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/29.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "3.png",
+      "rel": "岩石、温泉/3.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\3.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/3.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "30.png",
+      "rel": "岩石、温泉/30.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\30.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/30.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "31.png",
+      "rel": "岩石、温泉/31.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\31.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/31.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "32.png",
+      "rel": "岩石、温泉/32.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\32.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/32.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "33.png",
+      "rel": "岩石、温泉/33.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\33.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/33.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "34.png",
+      "rel": "岩石、温泉/34.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\34.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/34.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "35.png",
+      "rel": "岩石、温泉/35.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\35.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/35.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "36.png",
+      "rel": "岩石、温泉/36.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\36.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/36.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "37.png",
+      "rel": "岩石、温泉/37.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\37.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/37.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "38.png",
+      "rel": "岩石、温泉/38.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\38.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/38.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "39.png",
+      "rel": "岩石、温泉/39.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\39.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/39.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "3c9073ee-c0f6-485e-b39e-f911f554c981.png",
+      "rel": "岩石、温泉/3c9073ee-c0f6-485e-b39e-f911f554c981.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\3c9073ee-c0f6-485e-b39e-f911f554c981.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/3c9073ee-c0f6-485e-b39e-f911f554c981.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "4.png",
+      "rel": "岩石、温泉/4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\4.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/4.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "40.png",
+      "rel": "岩石、温泉/40.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\40.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/40.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "41.png",
+      "rel": "岩石、温泉/41.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\41.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/41.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "42.png",
+      "rel": "岩石、温泉/42.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\42.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/42.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "43.png",
+      "rel": "岩石、温泉/43.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\43.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/43.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "44.png",
+      "rel": "岩石、温泉/44.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\44.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/44.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "45.png",
+      "rel": "岩石、温泉/45.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\45.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/45.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "46.png",
+      "rel": "岩石、温泉/46.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\46.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/46.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "47.png",
+      "rel": "岩石、温泉/47.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\47.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/47.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "472a373a-e05c-437d-9852-37b2c1b16b29.png",
+      "rel": "岩石、温泉/472a373a-e05c-437d-9852-37b2c1b16b29.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\472a373a-e05c-437d-9852-37b2c1b16b29.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/472a373a-e05c-437d-9852-37b2c1b16b29.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "48.png",
+      "rel": "岩石、温泉/48.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\48.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/48.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "49.png",
+      "rel": "岩石、温泉/49.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\49.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/49.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "4ac0429a-1463-400c-85f3-59db84e47ea9.png",
+      "rel": "岩石、温泉/4ac0429a-1463-400c-85f3-59db84e47ea9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\4ac0429a-1463-400c-85f3-59db84e47ea9.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/4ac0429a-1463-400c-85f3-59db84e47ea9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "5.png",
+      "rel": "岩石、温泉/5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\5.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/5.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "50.png",
+      "rel": "岩石、温泉/50.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\50.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/50.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "51.png",
+      "rel": "岩石、温泉/51.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\51.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/51.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "52.png",
+      "rel": "岩石、温泉/52.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\52.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/52.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "53.png",
+      "rel": "岩石、温泉/53.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\53.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/53.png",
+      "timeOfDay": "night"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "5f4c70f2-6e8e-45d3-954f-9240291f53be.png",
+      "rel": "岩石、温泉/5f4c70f2-6e8e-45d3-954f-9240291f53be.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\5f4c70f2-6e8e-45d3-954f-9240291f53be.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/5f4c70f2-6e8e-45d3-954f-9240291f53be.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "6.png",
+      "rel": "岩石、温泉/6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\6.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/6.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "627288f5-3c18-4d42-ba6c-adce3948d986.png",
+      "rel": "岩石、温泉/627288f5-3c18-4d42-ba6c-adce3948d986.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\627288f5-3c18-4d42-ba6c-adce3948d986.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/627288f5-3c18-4d42-ba6c-adce3948d986.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "65515f4d-f65e-4302-9d21-8222ce7c9d9e.png",
+      "rel": "岩石、温泉/65515f4d-f65e-4302-9d21-8222ce7c9d9e.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\65515f4d-f65e-4302-9d21-8222ce7c9d9e.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/65515f4d-f65e-4302-9d21-8222ce7c9d9e.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "69bbea58-eae1-4041-9818-51e07e98c311.png",
+      "rel": "岩石、温泉/69bbea58-eae1-4041-9818-51e07e98c311.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\69bbea58-eae1-4041-9818-51e07e98c311.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/69bbea58-eae1-4041-9818-51e07e98c311.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "6abce52e-8ff9-45f1-b7fc-13f757943b02.png",
+      "rel": "岩石、温泉/6abce52e-8ff9-45f1-b7fc-13f757943b02.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\6abce52e-8ff9-45f1-b7fc-13f757943b02.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/6abce52e-8ff9-45f1-b7fc-13f757943b02.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "7.png",
+      "rel": "岩石、温泉/7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\7.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/7.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "77619896-ca3c-4cb3-8bca-942bb47b27b7.png",
+      "rel": "岩石、温泉/77619896-ca3c-4cb3-8bca-942bb47b27b7.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\77619896-ca3c-4cb3-8bca-942bb47b27b7.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/77619896-ca3c-4cb3-8bca-942bb47b27b7.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "7b00afa4-bc53-4cb6-a3af-d8a2c7bba21a.png",
+      "rel": "岩石、温泉/7b00afa4-bc53-4cb6-a3af-d8a2c7bba21a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\7b00afa4-bc53-4cb6-a3af-d8a2c7bba21a.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/7b00afa4-bc53-4cb6-a3af-d8a2c7bba21a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "7d41b296-51ed-4b0c-86fb-2f24d7bc1c41.png",
+      "rel": "岩石、温泉/7d41b296-51ed-4b0c-86fb-2f24d7bc1c41.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\7d41b296-51ed-4b0c-86fb-2f24d7bc1c41.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/7d41b296-51ed-4b0c-86fb-2f24d7bc1c41.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "8.png",
+      "rel": "岩石、温泉/8.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\8.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/8.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "8ab5c249-071e-449c-8ce0-62f97b96bdce.png",
+      "rel": "岩石、温泉/8ab5c249-071e-449c-8ce0-62f97b96bdce.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\8ab5c249-071e-449c-8ce0-62f97b96bdce.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/8ab5c249-071e-449c-8ce0-62f97b96bdce.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "9.png",
+      "rel": "岩石、温泉/9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\9.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/9.png",
+      "timeOfDay": "dusk"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "90b6d75f-f716-4d53-a883-8f2278bd0373.png",
+      "rel": "岩石、温泉/90b6d75f-f716-4d53-a883-8f2278bd0373.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\90b6d75f-f716-4d53-a883-8f2278bd0373.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/90b6d75f-f716-4d53-a883-8f2278bd0373.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "92f840e7-6ee2-45fc-a9b7-c152daa85f22.png",
+      "rel": "岩石、温泉/92f840e7-6ee2-45fc-a9b7-c152daa85f22.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\92f840e7-6ee2-45fc-a9b7-c152daa85f22.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/92f840e7-6ee2-45fc-a9b7-c152daa85f22.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "9ba0c022-c296-4220-93b2-02b49c37d204.png",
+      "rel": "岩石、温泉/9ba0c022-c296-4220-93b2-02b49c37d204.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\9ba0c022-c296-4220-93b2-02b49c37d204.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/9ba0c022-c296-4220-93b2-02b49c37d204.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "a35d786b-8d16-41ea-8758-7afeed73f09c.png",
+      "rel": "岩石、温泉/a35d786b-8d16-41ea-8758-7afeed73f09c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\a35d786b-8d16-41ea-8758-7afeed73f09c.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/a35d786b-8d16-41ea-8758-7afeed73f09c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "a83dc98e-eeaa-49ac-9a5e-bd83219b5b17.png",
+      "rel": "岩石、温泉/a83dc98e-eeaa-49ac-9a5e-bd83219b5b17.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\a83dc98e-eeaa-49ac-9a5e-bd83219b5b17.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/a83dc98e-eeaa-49ac-9a5e-bd83219b5b17.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "aaa4ce46-21ad-4d17-b30e-d2696f53783c.png",
+      "rel": "岩石、温泉/aaa4ce46-21ad-4d17-b30e-d2696f53783c.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\aaa4ce46-21ad-4d17-b30e-d2696f53783c.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/aaa4ce46-21ad-4d17-b30e-d2696f53783c.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "b8e6441f-415c-4128-84d2-f81157ba5404.png",
+      "rel": "岩石、温泉/b8e6441f-415c-4128-84d2-f81157ba5404.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\b8e6441f-415c-4128-84d2-f81157ba5404.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/b8e6441f-415c-4128-84d2-f81157ba5404.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "bd5645ae-12ec-4630-a25a-d8128e171b53.png",
+      "rel": "岩石、温泉/bd5645ae-12ec-4630-a25a-d8128e171b53.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\bd5645ae-12ec-4630-a25a-d8128e171b53.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/bd5645ae-12ec-4630-a25a-d8128e171b53.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "c3354af6-53b9-47ba-af3d-cfd5c2ae63bc.png",
+      "rel": "岩石、温泉/c3354af6-53b9-47ba-af3d-cfd5c2ae63bc.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\c3354af6-53b9-47ba-af3d-cfd5c2ae63bc.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/c3354af6-53b9-47ba-af3d-cfd5c2ae63bc.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "c3bb8bb6-abfe-41e1-8cb6-e6e7b52d71eb.png",
+      "rel": "岩石、温泉/c3bb8bb6-abfe-41e1-8cb6-e6e7b52d71eb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\c3bb8bb6-abfe-41e1-8cb6-e6e7b52d71eb.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/c3bb8bb6-abfe-41e1-8cb6-e6e7b52d71eb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "c4b6deda-876c-4091-91a0-90d259d41217.png",
+      "rel": "岩石、温泉/c4b6deda-876c-4091-91a0-90d259d41217.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\c4b6deda-876c-4091-91a0-90d259d41217.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/c4b6deda-876c-4091-91a0-90d259d41217.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "d71a9b84-b205-4973-b590-cc29bd550722.png",
+      "rel": "岩石、温泉/d71a9b84-b205-4973-b590-cc29bd550722.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\d71a9b84-b205-4973-b590-cc29bd550722.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/d71a9b84-b205-4973-b590-cc29bd550722.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "d86ffa2d-0643-46b6-9dba-994ec2c01012.png",
+      "rel": "岩石、温泉/d86ffa2d-0643-46b6-9dba-994ec2c01012.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\d86ffa2d-0643-46b6-9dba-994ec2c01012.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/d86ffa2d-0643-46b6-9dba-994ec2c01012.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "d9ba802f-5cf1-4aa4-9c41-ecfd69ab3261.png",
+      "rel": "岩石、温泉/d9ba802f-5cf1-4aa4-9c41-ecfd69ab3261.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\d9ba802f-5cf1-4aa4-9c41-ecfd69ab3261.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/d9ba802f-5cf1-4aa4-9c41-ecfd69ab3261.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "dbb13a60-b247-461c-82ec-ba531f229b60.png",
+      "rel": "岩石、温泉/dbb13a60-b247-461c-82ec-ba531f229b60.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\dbb13a60-b247-461c-82ec-ba531f229b60.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/dbb13a60-b247-461c-82ec-ba531f229b60.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "dd09ae2b-bc00-4aa0-830c-473176f1ae08.png",
+      "rel": "岩石、温泉/dd09ae2b-bc00-4aa0-830c-473176f1ae08.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\dd09ae2b-bc00-4aa0-830c-473176f1ae08.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/dd09ae2b-bc00-4aa0-830c-473176f1ae08.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "ddd52444-3802-44ed-aef8-c2a10f45f518.png",
+      "rel": "岩石、温泉/ddd52444-3802-44ed-aef8-c2a10f45f518.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\ddd52444-3802-44ed-aef8-c2a10f45f518.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/ddd52444-3802-44ed-aef8-c2a10f45f518.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "e068616c-3d56-4450-80cc-7384a4174a5d.png",
+      "rel": "岩石、温泉/e068616c-3d56-4450-80cc-7384a4174a5d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\e068616c-3d56-4450-80cc-7384a4174a5d.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/e068616c-3d56-4450-80cc-7384a4174a5d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "e27b2de9-99d9-44d0-bb4e-39bbe25cadc8.png",
+      "rel": "岩石、温泉/e27b2de9-99d9-44d0-bb4e-39bbe25cadc8.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\e27b2de9-99d9-44d0-bb4e-39bbe25cadc8.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/e27b2de9-99d9-44d0-bb4e-39bbe25cadc8.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "eed04e82-2474-4a77-a7e3-2be45941a7f5.png",
+      "rel": "岩石、温泉/eed04e82-2474-4a77-a7e3-2be45941a7f5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\eed04e82-2474-4a77-a7e3-2be45941a7f5.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/eed04e82-2474-4a77-a7e3-2be45941a7f5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "f3ee67ba-6a86-4d39-a0f7-bf3929c8e16a.png",
+      "rel": "岩石、温泉/f3ee67ba-6a86-4d39-a0f7-bf3929c8e16a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\f3ee67ba-6a86-4d39-a0f7-bf3929c8e16a.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/f3ee67ba-6a86-4d39-a0f7-bf3929c8e16a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "f41cd435-8442-41e8-a4be-46b36bec377b.png",
+      "rel": "岩石、温泉/f41cd435-8442-41e8-a4be-46b36bec377b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\f41cd435-8442-41e8-a4be-46b36bec377b.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/f41cd435-8442-41e8-a4be-46b36bec377b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "f527d4d2-231e-46f6-8c03-6e40a326a98b.png",
+      "rel": "岩石、温泉/f527d4d2-231e-46f6-8c03-6e40a326a98b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\f527d4d2-231e-46f6-8c03-6e40a326a98b.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/f527d4d2-231e-46f6-8c03-6e40a326a98b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "f5b77792-220b-4045-8179-6b104a1233e9.png",
+      "rel": "岩石、温泉/f5b77792-220b-4045-8179-6b104a1233e9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\f5b77792-220b-4045-8179-6b104a1233e9.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/f5b77792-220b-4045-8179-6b104a1233e9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "f98ebc5b-5eda-4ee1-b385-2a19731541b3.png",
+      "rel": "岩石、温泉/f98ebc5b-5eda-4ee1-b385-2a19731541b3.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\f98ebc5b-5eda-4ee1-b385-2a19731541b3.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/f98ebc5b-5eda-4ee1-b385-2a19731541b3.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "faed2cf2-9af8-4f77-9b20-87e68b1cc6a4.png",
+      "rel": "岩石、温泉/faed2cf2-9af8-4f77-9b20-87e68b1cc6a4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\faed2cf2-9af8-4f77-9b20-87e68b1cc6a4.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/faed2cf2-9af8-4f77-9b20-87e68b1cc6a4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "fb5adbd2-072f-44e1-bac0-e2c33811b09a.png",
+      "rel": "岩石、温泉/fb5adbd2-072f-44e1-bac0-e2c33811b09a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\fb5adbd2-072f-44e1-bac0-e2c33811b09a.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/fb5adbd2-072f-44e1-bac0-e2c33811b09a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "岩石、温泉",
+      "name": "ff88e699-b91b-4ee3-9ec3-b4c5d9af5d77.png",
+      "rel": "岩石、温泉/ff88e699-b91b-4ee3-9ec3-b4c5d9af5d77.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\岩石、温泉\\ff88e699-b91b-4ee3-9ec3-b4c5d9af5d77.png",
+      "url": "/sence/%E5%B2%A9%E7%9F%B3%E3%80%81%E6%B8%A9%E6%B3%89/ff88e699-b91b-4ee3-9ec3-b4c5d9af5d77.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "089cb72d-bbc9-465f-bac1-5f92bef9360a.png",
+      "rel": "渔村/089cb72d-bbc9-465f-bac1-5f92bef9360a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\089cb72d-bbc9-465f-bac1-5f92bef9360a.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/089cb72d-bbc9-465f-bac1-5f92bef9360a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "116c3501-ac1d-441d-b097-79b162c1aa86.png",
+      "rel": "渔村/116c3501-ac1d-441d-b097-79b162c1aa86.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\116c3501-ac1d-441d-b097-79b162c1aa86.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/116c3501-ac1d-441d-b097-79b162c1aa86.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "1533e5b4-0a41-477a-af12-75b530601996.png",
+      "rel": "渔村/1533e5b4-0a41-477a-af12-75b530601996.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\1533e5b4-0a41-477a-af12-75b530601996.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/1533e5b4-0a41-477a-af12-75b530601996.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "1aaa3ca7-935f-4702-b063-a02d083117bb.png",
+      "rel": "渔村/1aaa3ca7-935f-4702-b063-a02d083117bb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\1aaa3ca7-935f-4702-b063-a02d083117bb.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/1aaa3ca7-935f-4702-b063-a02d083117bb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "1fa3a736-c908-443d-8ae4-0cf3c2e6e27d.png",
+      "rel": "渔村/1fa3a736-c908-443d-8ae4-0cf3c2e6e27d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\1fa3a736-c908-443d-8ae4-0cf3c2e6e27d.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/1fa3a736-c908-443d-8ae4-0cf3c2e6e27d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "2683af6f-7b41-499a-811c-b8479d54a9d5.png",
+      "rel": "渔村/2683af6f-7b41-499a-811c-b8479d54a9d5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\2683af6f-7b41-499a-811c-b8479d54a9d5.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/2683af6f-7b41-499a-811c-b8479d54a9d5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "32d9e431-b485-47bf-a301-5b33d1554aa4.png",
+      "rel": "渔村/32d9e431-b485-47bf-a301-5b33d1554aa4.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\32d9e431-b485-47bf-a301-5b33d1554aa4.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/32d9e431-b485-47bf-a301-5b33d1554aa4.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "3692cb01-1156-4517-99dc-01fd99f4f946.png",
+      "rel": "渔村/3692cb01-1156-4517-99dc-01fd99f4f946.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\3692cb01-1156-4517-99dc-01fd99f4f946.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/3692cb01-1156-4517-99dc-01fd99f4f946.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "3bcefca5-e031-44d5-8d76-a57b16f52a04.png",
+      "rel": "渔村/3bcefca5-e031-44d5-8d76-a57b16f52a04.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\3bcefca5-e031-44d5-8d76-a57b16f52a04.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/3bcefca5-e031-44d5-8d76-a57b16f52a04.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "3dfd842a-f725-49ba-b7c6-50da046aac2d.png",
+      "rel": "渔村/3dfd842a-f725-49ba-b7c6-50da046aac2d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\3dfd842a-f725-49ba-b7c6-50da046aac2d.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/3dfd842a-f725-49ba-b7c6-50da046aac2d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "520231c4-0f1a-482c-bb7a-0e6c64cc78cb.png",
+      "rel": "渔村/520231c4-0f1a-482c-bb7a-0e6c64cc78cb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\520231c4-0f1a-482c-bb7a-0e6c64cc78cb.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/520231c4-0f1a-482c-bb7a-0e6c64cc78cb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "556de5c2-8a88-4782-942e-c6f2ce5c1a60.png",
+      "rel": "渔村/556de5c2-8a88-4782-942e-c6f2ce5c1a60.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\556de5c2-8a88-4782-942e-c6f2ce5c1a60.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/556de5c2-8a88-4782-942e-c6f2ce5c1a60.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "5ac7a423-0a79-4b04-9bf3-b1935f80d353.png",
+      "rel": "渔村/5ac7a423-0a79-4b04-9bf3-b1935f80d353.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\5ac7a423-0a79-4b04-9bf3-b1935f80d353.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/5ac7a423-0a79-4b04-9bf3-b1935f80d353.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "5cdf066c-0bcc-42ed-8340-7251801c6a86.png",
+      "rel": "渔村/5cdf066c-0bcc-42ed-8340-7251801c6a86.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\5cdf066c-0bcc-42ed-8340-7251801c6a86.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/5cdf066c-0bcc-42ed-8340-7251801c6a86.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "693e967d-32b0-4251-9ad2-b314e210724b.png",
+      "rel": "渔村/693e967d-32b0-4251-9ad2-b314e210724b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\693e967d-32b0-4251-9ad2-b314e210724b.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/693e967d-32b0-4251-9ad2-b314e210724b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "694b9589-bb1a-43c9-95cd-5d5c2f82ace5.png",
+      "rel": "渔村/694b9589-bb1a-43c9-95cd-5d5c2f82ace5.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\694b9589-bb1a-43c9-95cd-5d5c2f82ace5.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/694b9589-bb1a-43c9-95cd-5d5c2f82ace5.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "789d15d4-32d9-4bfb-a570-820386905c38.png",
+      "rel": "渔村/789d15d4-32d9-4bfb-a570-820386905c38.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\789d15d4-32d9-4bfb-a570-820386905c38.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/789d15d4-32d9-4bfb-a570-820386905c38.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "7a00f099-977c-446d-80bd-234ba82564aa.png",
+      "rel": "渔村/7a00f099-977c-446d-80bd-234ba82564aa.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\7a00f099-977c-446d-80bd-234ba82564aa.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/7a00f099-977c-446d-80bd-234ba82564aa.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "7a8a5fc9-5a29-4d13-8c4a-4221b1e97cc6.png",
+      "rel": "渔村/7a8a5fc9-5a29-4d13-8c4a-4221b1e97cc6.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\7a8a5fc9-5a29-4d13-8c4a-4221b1e97cc6.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/7a8a5fc9-5a29-4d13-8c4a-4221b1e97cc6.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "84d40528-d829-4d14-aeac-6699dc769c30.png",
+      "rel": "渔村/84d40528-d829-4d14-aeac-6699dc769c30.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\84d40528-d829-4d14-aeac-6699dc769c30.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/84d40528-d829-4d14-aeac-6699dc769c30.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "85ea4a4f-bb27-4166-9350-81307aa61e71.png",
+      "rel": "渔村/85ea4a4f-bb27-4166-9350-81307aa61e71.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\85ea4a4f-bb27-4166-9350-81307aa61e71.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/85ea4a4f-bb27-4166-9350-81307aa61e71.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "87d5973d-2248-422d-bdf8-0c785fc53f4b.png",
+      "rel": "渔村/87d5973d-2248-422d-bdf8-0c785fc53f4b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\87d5973d-2248-422d-bdf8-0c785fc53f4b.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/87d5973d-2248-422d-bdf8-0c785fc53f4b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "8ebffc76-787f-49e6-bbcd-3df8e71a8c57.png",
+      "rel": "渔村/8ebffc76-787f-49e6-bbcd-3df8e71a8c57.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\8ebffc76-787f-49e6-bbcd-3df8e71a8c57.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/8ebffc76-787f-49e6-bbcd-3df8e71a8c57.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "927eeea3-41dc-48f3-b202-e007cb56c6e9.png",
+      "rel": "渔村/927eeea3-41dc-48f3-b202-e007cb56c6e9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\927eeea3-41dc-48f3-b202-e007cb56c6e9.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/927eeea3-41dc-48f3-b202-e007cb56c6e9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "93dcee72-fca1-4e33-a51c-c2a079f19905.png",
+      "rel": "渔村/93dcee72-fca1-4e33-a51c-c2a079f19905.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\93dcee72-fca1-4e33-a51c-c2a079f19905.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/93dcee72-fca1-4e33-a51c-c2a079f19905.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "95e1c9e6-32b0-4aaa-b282-2090fc78ac25.png",
+      "rel": "渔村/95e1c9e6-32b0-4aaa-b282-2090fc78ac25.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\95e1c9e6-32b0-4aaa-b282-2090fc78ac25.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/95e1c9e6-32b0-4aaa-b282-2090fc78ac25.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "97445bd8-f25f-4249-94d6-d4e94af2a0e9.png",
+      "rel": "渔村/97445bd8-f25f-4249-94d6-d4e94af2a0e9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\97445bd8-f25f-4249-94d6-d4e94af2a0e9.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/97445bd8-f25f-4249-94d6-d4e94af2a0e9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "989b5269-d7ad-438a-b6a0-4e2692b1a16a.png",
+      "rel": "渔村/989b5269-d7ad-438a-b6a0-4e2692b1a16a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\989b5269-d7ad-438a-b6a0-4e2692b1a16a.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/989b5269-d7ad-438a-b6a0-4e2692b1a16a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "9a37f49e-21e5-4bfd-8a34-b444add9100d.png",
+      "rel": "渔村/9a37f49e-21e5-4bfd-8a34-b444add9100d.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\9a37f49e-21e5-4bfd-8a34-b444add9100d.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/9a37f49e-21e5-4bfd-8a34-b444add9100d.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "9f246211-a920-4eeb-bc3b-67fea4b46a5f.png",
+      "rel": "渔村/9f246211-a920-4eeb-bc3b-67fea4b46a5f.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\9f246211-a920-4eeb-bc3b-67fea4b46a5f.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/9f246211-a920-4eeb-bc3b-67fea4b46a5f.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "9ff789ec-5e74-4e7a-98df-7110ca7c5dbb.png",
+      "rel": "渔村/9ff789ec-5e74-4e7a-98df-7110ca7c5dbb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\9ff789ec-5e74-4e7a-98df-7110ca7c5dbb.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/9ff789ec-5e74-4e7a-98df-7110ca7c5dbb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "a102d1fe-337d-4157-bd85-5f274553c5f9.png",
+      "rel": "渔村/a102d1fe-337d-4157-bd85-5f274553c5f9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\a102d1fe-337d-4157-bd85-5f274553c5f9.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/a102d1fe-337d-4157-bd85-5f274553c5f9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "a213ef1c-cc76-49bd-884e-c7fac8898061.png",
+      "rel": "渔村/a213ef1c-cc76-49bd-884e-c7fac8898061.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\a213ef1c-cc76-49bd-884e-c7fac8898061.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/a213ef1c-cc76-49bd-884e-c7fac8898061.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "a306f217-c3cf-4e2b-b555-6bd346ba6cf9.png",
+      "rel": "渔村/a306f217-c3cf-4e2b-b555-6bd346ba6cf9.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\a306f217-c3cf-4e2b-b555-6bd346ba6cf9.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/a306f217-c3cf-4e2b-b555-6bd346ba6cf9.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "a9ec2589-d4e5-4061-9001-0e01347dd0bc.png",
+      "rel": "渔村/a9ec2589-d4e5-4061-9001-0e01347dd0bc.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\a9ec2589-d4e5-4061-9001-0e01347dd0bc.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/a9ec2589-d4e5-4061-9001-0e01347dd0bc.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "ad91a4a2-c7ca-4d55-bdda-863ff9561b3b.png",
+      "rel": "渔村/ad91a4a2-c7ca-4d55-bdda-863ff9561b3b.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\ad91a4a2-c7ca-4d55-bdda-863ff9561b3b.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/ad91a4a2-c7ca-4d55-bdda-863ff9561b3b.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "rel": "渔村/ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/ae19fd0d-c868-49cb-a322-1f10cca1f6df.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "ae5e4e6f-ccdb-43b5-919f-c1b15cf61b03.png",
+      "rel": "渔村/ae5e4e6f-ccdb-43b5-919f-c1b15cf61b03.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\ae5e4e6f-ccdb-43b5-919f-c1b15cf61b03.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/ae5e4e6f-ccdb-43b5-919f-c1b15cf61b03.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "b3701df2-d617-415b-bd89-875b922c5874.png",
+      "rel": "渔村/b3701df2-d617-415b-bd89-875b922c5874.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\b3701df2-d617-415b-bd89-875b922c5874.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/b3701df2-d617-415b-bd89-875b922c5874.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "b3c16700-374e-4852-b04c-69df221a452a.png",
+      "rel": "渔村/b3c16700-374e-4852-b04c-69df221a452a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\b3c16700-374e-4852-b04c-69df221a452a.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/b3c16700-374e-4852-b04c-69df221a452a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "b99ae818-5e5a-4bf6-94cb-3e31e79d5816.png",
+      "rel": "渔村/b99ae818-5e5a-4bf6-94cb-3e31e79d5816.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\b99ae818-5e5a-4bf6-94cb-3e31e79d5816.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/b99ae818-5e5a-4bf6-94cb-3e31e79d5816.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "bdda94b1-ae47-4400-83b8-a49382f4ff78.png",
+      "rel": "渔村/bdda94b1-ae47-4400-83b8-a49382f4ff78.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\bdda94b1-ae47-4400-83b8-a49382f4ff78.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/bdda94b1-ae47-4400-83b8-a49382f4ff78.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "rel": "渔村/c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/c25ada4c-4933-496e-b922-cd1088deb919.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "c2fb867d-f416-408c-89cc-ed67dafc01eb.png",
+      "rel": "渔村/c2fb867d-f416-408c-89cc-ed67dafc01eb.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\c2fb867d-f416-408c-89cc-ed67dafc01eb.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/c2fb867d-f416-408c-89cc-ed67dafc01eb.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "c3120104-6a95-4d1b-82f4-ef730bc710e3.png",
+      "rel": "渔村/c3120104-6a95-4d1b-82f4-ef730bc710e3.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\c3120104-6a95-4d1b-82f4-ef730bc710e3.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/c3120104-6a95-4d1b-82f4-ef730bc710e3.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "c9090202-5ee7-47be-9a2b-645ca1ccddb3.png",
+      "rel": "渔村/c9090202-5ee7-47be-9a2b-645ca1ccddb3.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\c9090202-5ee7-47be-9a2b-645ca1ccddb3.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/c9090202-5ee7-47be-9a2b-645ca1ccddb3.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "d61f3246-b814-4eee-96f6-52edf8f9709a.png",
+      "rel": "渔村/d61f3246-b814-4eee-96f6-52edf8f9709a.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\d61f3246-b814-4eee-96f6-52edf8f9709a.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/d61f3246-b814-4eee-96f6-52edf8f9709a.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "d8a09435-7201-438e-be0a-87378f00a1ae.png",
+      "rel": "渔村/d8a09435-7201-438e-be0a-87378f00a1ae.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\d8a09435-7201-438e-be0a-87378f00a1ae.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/d8a09435-7201-438e-be0a-87378f00a1ae.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "e8faea6f-2054-47e4-96f2-53f6b95cc867.png",
+      "rel": "渔村/e8faea6f-2054-47e4-96f2-53f6b95cc867.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\e8faea6f-2054-47e4-96f2-53f6b95cc867.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/e8faea6f-2054-47e4-96f2-53f6b95cc867.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "e9c1b169-3c18-4ce7-8bea-9e6e8bbeeb70.png",
+      "rel": "渔村/e9c1b169-3c18-4ce7-8bea-9e6e8bbeeb70.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\e9c1b169-3c18-4ce7-8bea-9e6e8bbeeb70.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/e9c1b169-3c18-4ce7-8bea-9e6e8bbeeb70.png",
+      "timeOfDay": "day"
+    },
+    {
+      "category": "渔村",
+      "name": "fd431628-e4c8-40b1-8c5e-6756e2491440.png",
+      "rel": "渔村/fd431628-e4c8-40b1-8c5e-6756e2491440.png",
+      "abs": "Y:\\tmp\\WuYiXiang\\XXD_AI\\Asset\\Sence\\渔村\\fd431628-e4c8-40b1-8c5e-6756e2491440.png",
+      "url": "/sence/%E6%B8%94%E6%9D%91/fd431628-e4c8-40b1-8c5e-6756e2491440.png",
+      "timeOfDay": "day"
+    }
+  ],
+  "favorites": [],
+  "trash": []
+}

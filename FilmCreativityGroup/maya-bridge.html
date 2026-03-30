@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maya Bridge - 网页控制面板</title>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+    --bg:#0a0a0a;--surface:rgba(20,20,20,0.6);--surface-solid:#141414;
+    --border:rgba(255,255,255,0.08);--border-light:rgba(255,255,255,0.15);
+    --text:#ffffff;--text-dim:#888888;--text-code:#b0b0b0;
+    --accent:#00e5ff;--accent-glow:rgba(0,229,255,0.12);
+    --green:#3fb950;--red:#f85149;--orange:#d29922;--purple:#bc8cff;
+    --radius:10px;
+    --mono:'Consolas','Courier New',monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+html,body{height:100%;font-family:var(--sans);background:var(--bg);color:var(--text);
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+/* ── 背景 ── */
+.ambient{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;overflow:hidden}
+.ambient::before,.ambient::after{content:'';position:absolute;border-radius:50%;filter:blur(120px);opacity:0.12;animation:float 20s infinite alternate ease-in-out}
+.ambient::before{width:500px;height:500px;background:var(--accent);top:-180px;left:-80px}
+.ambient::after{width:400px;height:400px;background:var(--purple);bottom:-80px;right:-60px;animation-delay:-10s}
+@keyframes float{0%{transform:translate(0,0) scale(1)}100%{transform:translate(80px,40px) scale(1.15)}}
+
+/* ── 布局 ── */
+.app{position:relative;z-index:1;display:grid;grid-template-columns:300px 1fr;grid-template-rows:52px 1fr;height:100vh}
+.header{grid-column:1/-1;display:flex;align-items:center;gap:14px;padding:0 20px;
+    background:var(--surface-solid);border-bottom:1px solid var(--border);z-index:10}
+.sidebar{grid-row:2;display:flex;flex-direction:column;gap:10px;padding:12px;
+    background:var(--surface-solid);border-right:1px solid var(--border);overflow-y:auto}
+.main{grid-row:2;display:flex;flex-direction:column;overflow:hidden}
+
+/* ── 头部 ── */
+.header .back-link{display:flex;align-items:center;gap:6px;color:var(--text-dim);
+    text-decoration:none;font-size:0.8rem;padding:6px 10px;border-radius:6px;transition:all .2s}
+.header .back-link:hover{color:var(--text);background:rgba(255,255,255,0.06)}
+.header .back-link i{font-size:1rem}
+.header-sep{width:1px;height:22px;background:var(--border)}
+.header h1{font-size:1rem;font-weight:600;letter-spacing:.5px}
+.header h1 span{color:var(--accent)}
+.status-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;transition:background .3s,box-shadow .3s}
+.status-dot.on{background:var(--green);box-shadow:0 0 8px var(--green)}
+.status-dot.off{background:var(--red);box-shadow:0 0 8px var(--red)}
+.status-text{font-size:12px;color:var(--text-dim)}
+.header-actions{margin-left:auto;display:flex;gap:6px}
+
+/* ── 按钮 ── */
+.btn{display:inline-flex;align-items:center;gap:5px;padding:6px 12px;
+    border:1px solid var(--border);border-radius:6px;background:transparent;
+    color:var(--text);font-size:12px;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:var(--sans)}
+.btn:hover{border-color:var(--accent);background:var(--accent-glow)}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--accent-glow);border-color:rgba(0,229,255,0.3);color:var(--accent)}
+.btn.danger{border-color:rgba(248,81,73,0.3);color:var(--red)}
+.btn.danger:hover{background:rgba(248,81,73,.08)}
+
+/* ── 侧边栏面板 ── */
+.panel{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.panel-header{display:flex;align-items:center;gap:7px;padding:9px 12px;
+    font-size:11px;font-weight:600;color:var(--text-dim);border-bottom:1px solid var(--border);
+    text-transform:uppercase;letter-spacing:1px}
+.panel-header i{font-size:14px}
+.panel-body{padding:8px;display:flex;flex-direction:column;gap:5px}
+
+.quick-btn{display:flex;align-items:center;gap:9px;width:100%;padding:9px 10px;
+    border:1px solid var(--border);border-radius:8px;background:transparent;
+    color:var(--text);font-size:12px;cursor:pointer;transition:all .2s;text-align:left;font-family:var(--sans)}
+.quick-btn:hover{border-color:rgba(0,229,255,0.3);background:var(--accent-glow);transform:translateX(3px)}
+.quick-btn .qicon{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;
+    justify-content:center;font-size:15px;flex-shrink:0}
+.quick-btn .qicon.c1{background:rgba(0,229,255,0.1)}
+.quick-btn .qicon.c2{background:rgba(63,185,80,0.1)}
+.quick-btn .qicon.c3{background:rgba(210,153,34,0.1)}
+.quick-btn .qicon.c4{background:rgba(188,140,255,0.1)}
+.quick-btn .qicon.c5{background:rgba(248,81,73,0.1)}
+.quick-btn .qlabel{font-weight:500}
+.quick-btn .qdesc{font-size:10px;color:var(--text-dim);margin-top:1px}
+
+.scene-info{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:8px}
+.info-item{padding:7px 9px;background:rgba(255,255,255,0.03);border-radius:6px;border:1px solid var(--border)}
+.info-item .ilabel{font-size:9px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.5px}
+.info-item .ivalue{font-size:13px;font-weight:600;margin-top:1px;font-family:var(--mono)}
+
+.history-list{max-height:180px;overflow-y:auto}
+.history-item{padding:7px 10px;font-family:var(--mono);font-size:11px;color:var(--text-dim);
+    border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.history-item:hover{background:var(--accent-glow);color:var(--text)}
+
+/* ── 主编辑区 ── */
+.editor-area{flex:1;display:flex;flex-direction:column;padding:14px;gap:10px;overflow:hidden}
+.code-wrap{flex:1;display:flex;flex-direction:column;border:1px solid var(--border);
+    border-radius:var(--radius);overflow:hidden;min-height:0}
+.code-toolbar{display:flex;align-items:center;gap:8px;padding:7px 12px;
+    background:var(--surface-solid);border-bottom:1px solid var(--border)}
+.code-toolbar .lang-tag{font-size:10px;padding:2px 7px;border-radius:4px;
+    background:rgba(188,140,255,0.12);color:var(--purple);font-weight:600;letter-spacing:.5px}
+.code-editor{flex:1;resize:none;border:none;background:transparent;color:var(--text);
+    font-family:var(--mono);font-size:13px;line-height:1.7;padding:14px;outline:none;
+    tab-size:4;min-height:100px}
+.code-editor::placeholder{color:rgba(255,255,255,0.2)}
+
+.output-wrap{height:200px;min-height:80px;display:flex;flex-direction:column;
+    border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.output-toolbar{display:flex;align-items:center;gap:8px;padding:7px 12px;
+    background:var(--surface-solid);border-bottom:1px solid var(--border)}
+.output-toolbar .olabel{font-size:11px;color:var(--text-dim);font-weight:600}
+.output{flex:1;padding:10px 14px;font-family:var(--mono);font-size:12px;line-height:1.6;
+    overflow-y:auto;white-space:pre-wrap;word-break:break-all;color:var(--text-dim);background:transparent}
+.output .line{margin-bottom:1px}
+.output .line.error{color:var(--red)}
+.output .line.success{color:var(--green)}
+.output .line.info{color:var(--accent)}
+.output .line.warn{color:var(--orange)}
+
+/* ── 滚动条 ── */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,0.2)}
+
+/* ── 响应式 ── */
+@media(max-width:860px){
+    .app{grid-template-columns:1fr;grid-template-rows:52px auto 1fr}
+    .sidebar{grid-row:2;border-right:none;border-bottom:1px solid var(--border);
+        flex-direction:row;flex-wrap:wrap;max-height:150px;overflow-y:auto;gap:6px}
+    .panel{min-width:240px;flex:1}
+    .main{grid-row:3}
+}
+</style>
+</head>
+<body>
+
+<div class="ambient"></div>
+
+<div class="app">
+    <!-- 头部 -->
+    <header class="header">
+        <a class="back-link" href="index.html">
+            <i class="ph ph-arrow-left"></i> 返回展示中心
+        </a>
+        <div class="header-sep"></div>
+        <h1>Maya <span>Bridge</span></h1>
+        <div class="status-dot off" id="statusDot"></div>
+        <span class="status-text" id="statusText">未连接 Maya</span>
+        <div class="header-actions">
+            <button class="btn" onclick="pingMaya()"><i class="ph ph-plugs-connected"></i> 检测连接</button>
+            <button class="btn" onclick="refreshScene()"><i class="ph ph-arrows-clockwise"></i> 刷新场景</button>
+        </div>
+    </header>
+
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+        <!-- 快捷命令 -->
+        <div class="panel" style="flex:1">
+            <div class="panel-header"><i class="ph ph-lightning"></i> 快捷命令</div>
+            <div class="panel-body">
+                <button class="quick-btn" onclick="quickCmd('newScene')">
+                    <div class="qicon c1">📄</div>
+                    <div><div class="qlabel">新建场景</div><div class="qdesc">创建空白场景</div></div>
+                </button>
+                <button class="quick-btn" onclick="quickCmd('listObjects')">
+                    <div class="qicon c2">📋</div>
+                    <div><div class="qlabel">列出对象</div><div class="qdesc">场景中所有 transform 节点</div></div>
+                </button>
+                <button class="quick-btn" onclick="quickCmd('createCube')">
+                    <div class="qicon c3">📦</div>
+                    <div><div class="qlabel">创建方块</div><div class="qdesc">polyCube</div></div>
+                </button>
+                <button class="quick-btn" onclick="quickCmd('createSphere')">
+                    <div class="qicon c4">🔮</div>
+                    <div><div class="qlabel">创建球体</div><div class="qdesc">polySphere</div></div>
+                </button>
+                <button class="quick-btn" onclick="quickCmd('playblast')">
+                    <div class="qicon c5">🎬</div>
+                    <div><div class="qlabel">拍屏预览</div><div class="qdesc">Playblast 当前视角</div></div>
+                </button>
+                <button class="quick-btn" onclick="quickCmd('getSelection')">
+                    <div class="qicon c1">🎯</div>
+                    <div><div class="qlabel">获取选择</div><div class="qdesc">当前选中的对象</div></div>
+                </button>
+                <button class="quick-btn" onclick="quickCmd('getTimeRange')">
+                    <div class="qicon c2">⏱️</div>
+                    <div><div class="qlabel">时间范围</div><div class="qdesc">时间线起止帧</div></div>
+                </button>
+                <button class="quick-btn" onclick="quickCmd('saveScene')">
+                    <div class="qicon c3">💾</div>
+                    <div><div class="qlabel">保存场景</div><div class="qdesc">保存当前场景文件</div></div>
+                </button>
+            </div>
+        </div>
+
+        <!-- 场景信息 -->
+        <div class="panel">
+            <div class="panel-header"><i class="ph ph-info"></i> 场景信息</div>
+            <div class="scene-info">
+                <div class="info-item"><div class="ilabel">文件</div><div class="ivalue" id="infoFile">-</div></div>
+                <div class="info-item"><div class="ilabel">对象数</div><div class="ivalue" id="infoCount">-</div></div>
+                <div class="info-item"><div class="ilabel">帧范围</div><div class="ivalue" id="infoFrames">-</div></div>
+                <div class="info-item"><div class="ilabel">FPS</div><div class="ivalue" id="infoFps">-</div></div>
+            </div>
+        </div>
+
+        <!-- 历史记录 -->
+        <div class="panel">
+            <div class="panel-header"><i class="ph ph-clock-counter-clockwise"></i> 历史记录</div>
+            <div class="history-list" id="historyList"></div>
+        </div>
+    </aside>
+
+    <!-- 主编辑区 -->
+    <div class="main">
+        <div class="editor-area">
+            <div class="code-wrap">
+                <div class="code-toolbar">
+                    <span class="lang-tag">PYTHON</span>
+                    <span style="font-size:11px;color:var(--text-dim)">发送 Python 代码到 Maya</span>
+                    <div style="margin-left:auto;display:flex;gap:5px">
+                        <button class="btn primary" onclick="runCode()"><i class="ph-fill ph-play"></i> 执行 (Ctrl+Enter)</button>
+                        <button class="btn" onclick="clearEditor()">清空</button>
+                    </div>
+                </div>
+                <textarea class="code-editor" id="codeEditor"
+                    placeholder="# 输入 Maya Python 代码...&#10;# 例如:&#10;import maya.cmds as cmds&#10;cmds.polyCube()&#10;&#10;# 按 Ctrl+Enter 执行"
+                    spellcheck="false"></textarea>
+            </div>
+            <div class="output-wrap">
+                <div class="output-toolbar">
+                    <span class="olabel"><i class="ph ph-terminal"></i> 输出</span>
+                    <div style="margin-left:auto">
+                        <button class="btn danger" onclick="clearOutput()">清空</button>
+                    </div>
+                </div>
+                <div class="output" id="output">
+                    <div class="line info">[就绪] Maya Bridge — 请确保 Maya 已开启 commandPort，且 Node.js 服务已启动</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const WS_URL = `ws://${location.hostname}:7890`;
+let ws = null;
+let msgId = 0;
+let history = [];
+
+const cmds = {
+    newScene:     'import maya.cmds as cmds\ncmds.file(new=True, force=True)\nprint("新场景已创建")',
+    listObjects:  'import maya.cmds as cmds\nobjs = cmds.ls(type="transform")\nprint("\\n".join(objs) if objs else "场景为空")',
+    createCube:   'import maya.cmds as cmds\nresult = cmds.polyCube()\nprint("已创建:", result[0])',
+    createSphere: 'import maya.cmds as cmds\nresult = cmds.polySphere()\nprint("已创建:", result[0])',
+    playblast:    'import maya.cmds as cmds\nf = cmds.playblast(format="image", sequenceTime=0, clearCache=1, viewer=1, fp=0, percent=100, compression="png", quality=100, widthHeight=[1920,1080])\nprint("Playblast:", f)',
+    getSelection: 'import maya.cmds as cmds\nsel = cmds.ls(selection=True)\nprint("选中:", sel if sel else "无")',
+    getTimeRange: 'import maya.cmds as cmds\ns = cmds.playbackOptions(q=True, min=True)\ne = cmds.playbackOptions(q=True, max=True)\nprint(f"时间范围: {int(s)} - {int(e)}")',
+    saveScene:    'import maya.cmds as cmds\nf = cmds.file(save=True)\nprint("已保存:", f)',
+};
+
+const sceneInfoCode = `import maya.cmds as cmds
+import json
+info = {}
+info['file'] = cmds.file(q=True, sceneName=True) or 'untitled'
+info['count'] = len(cmds.ls(type='transform') or [])
+s = cmds.playbackOptions(q=True, min=True)
+e = cmds.playbackOptions(q=True, max=True)
+info['frames'] = f'{int(s)}-{int(e)}'
+info['fps'] = cmds.currentUnit(q=True, time=True)
+print('__SCENE_INFO__' + json.dumps(info))`;
+
+function connect() {
+    ws = new WebSocket(WS_URL);
+    ws.onopen = () => appendOutput('WebSocket 已连接到服务器', 'info');
+    ws.onmessage = e => {
+        const msg = JSON.parse(e.data);
+        if (msg.type === 'status') updateStatus(msg.connected);
+        if (msg.type === 'result') handleResult(msg);
+        if (msg.type === 'error') appendOutput('错误: ' + msg.error, 'error');
+    };
+    ws.onclose = () => {
+        updateStatus(false);
+        appendOutput('WebSocket 断开，3秒后重连...', 'warn');
+        setTimeout(connect, 3000);
+    };
+    ws.onerror = () => {};
+}
+
+function updateStatus(connected) {
+    document.getElementById('statusDot').className = 'status-dot ' + (connected ? 'on' : 'off');
+    document.getElementById('statusText').textContent = connected ? '已连接 Maya ✓' : '未连接 Maya';
+}
+
+function send(code, id) {
+    if (!ws || ws.readyState !== 1) { appendOutput('未连接到服务器', 'error'); return; }
+    ws.send(JSON.stringify({ type: 'exec', code, id: id || ++msgId }));
+}
+
+function handleResult(msg) {
+    const text = msg.result || '(无返回)';
+    if (text.includes('__SCENE_INFO__')) {
+        try {
+            const info = JSON.parse(text.split('__SCENE_INFO__')[1]);
+            document.getElementById('infoFile').textContent = info.file.split('/').pop() || 'untitled';
+            document.getElementById('infoCount').textContent = info.count;
+            document.getElementById('infoFrames').textContent = info.frames;
+            document.getElementById('infoFps').textContent = info.fps;
+        } catch {}
+        return;
+    }
+    appendOutput(text, 'success');
+}
+
+function appendOutput(text, cls) {
+    const out = document.getElementById('output');
+    const div = document.createElement('div');
+    div.className = 'line ' + (cls || '');
+    const now = new Date();
+    const ts = `[${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}:${String(now.getSeconds()).padStart(2,'0')}]`;
+    div.textContent = ts + ' ' + text;
+    out.appendChild(div);
+    out.scrollTop = out.scrollHeight;
+}
+
+function runCode() {
+    const code = document.getElementById('codeEditor').value.trim();
+    if (!code) return;
+    appendOutput('>>> ' + code.split('\n')[0] + (code.includes('\n') ? ' ...' : ''), 'info');
+    send(code);
+    addHistory(code);
+}
+
+function clearEditor() { document.getElementById('codeEditor').value = ''; }
+function clearOutput() { document.getElementById('output').innerHTML = ''; }
+
+function quickCmd(key) {
+    const code = cmds[key];
+    if (!code) return;
+    document.getElementById('codeEditor').value = code;
+    appendOutput('>>> [快捷] ' + code.split('\n')[0] + ' ...', 'info');
+    send(code);
+    addHistory(code);
+}
+
+function addHistory(code) {
+    history.unshift(code);
+    if (history.length > 30) history.pop();
+    const list = document.getElementById('historyList');
+    list.innerHTML = history.map((c, i) =>
+        `<div class="history-item" onclick="loadHistory(${i})">${c.split('\n')[0]}</div>`
+    ).join('');
+}
+
+function loadHistory(i) { document.getElementById('codeEditor').value = history[i]; }
+
+function pingMaya() {
+    if (!ws || ws.readyState !== 1) { appendOutput('未连接到服务器', 'error'); return; }
+    ws.send(JSON.stringify({ type: 'ping' }));
+    appendOutput('正在检测 Maya 连接...', 'info');
+}
+
+function refreshScene() {
+    send(sceneInfoCode);
+    appendOutput('正在获取场景信息...', 'info');
+}
+
+document.getElementById('codeEditor').addEventListener('keydown', e => {
+    if (e.ctrlKey && e.key === 'Enter') { e.preventDefault(); runCode(); }
+    if (e.key === 'Tab') {
+        e.preventDefault();
+        const ta = e.target, s = ta.selectionStart;
+        ta.value = ta.value.substring(0, s) + '    ' + ta.value.substring(ta.selectionEnd);
+        ta.selectionStart = ta.selectionEnd = s + 4;
+    }
+});
+
+connect();
+</script>
+</body>
+</html>

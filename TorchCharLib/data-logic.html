@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>火炬影视资产库 · 数据逻辑</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f0f2f5;--card:#fff;--accent:#4f46e5;--accent-light:#eef2ff;--border:#e2e8f0;--text:#1f2a44;--muted:#64748b;--radius:12px;--shadow:0 4px 16px rgba(15,23,42,.06)}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0}
+
+    .page-header{
+      background:linear-gradient(135deg,#1e1b4b 0%,#312e81 60%,#4338ca 100%);
+      color:#fff;padding:32px 40px;
+    }
+    .page-header .top{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+    .page-header img{width:42px;height:42px;object-fit:contain;border-radius:6px;filter:drop-shadow(0 2px 6px rgba(0,0,0,.3))}
+    .page-header h1{
+      font-size:1.6rem;font-weight:900;
+      background:linear-gradient(135deg,#f9a825 0%,#ffcc02 40%,#fff 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .page-header p{font-size:.9rem;color:rgba(255,255,255,.6);margin-top:4px}
+    .back-link{display:inline-block;margin-top:10px;font-size:.8rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s}
+    .back-link:hover{color:#fff}
+
+    .container{max-width:1100px;margin:0 auto;padding:24px 32px 48px}
+
+    .section{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden;
+    }
+    .section-header{
+      padding:14px 20px;border-bottom:1px solid var(--border);
+      display:flex;align-items:center;gap:10px;
+      background:linear-gradient(135deg,#fafafe 0%,#f5f3ff 100%);
+    }
+    .section-icon{font-size:1.1rem}
+    .section-title{font-size:1rem;font-weight:800;color:#1e1b4b}
+    .section-body{padding:18px 22px}
+
+    h3{font-size:.92rem;font-weight:700;color:#312e81;margin:14px 0 8px;display:flex;align-items:center;gap:6px}
+    h3:first-child{margin-top:0}
+    h3 .step{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;
+      font-size:.7rem;font-weight:800;flex-shrink:0;
+    }
+
+    p,li{font-size:.85rem;color:#334155}
+    ul,ol{padding-left:1.4em;margin:4px 0 10px}
+    li{margin-bottom:4px}
+
+    .tag{
+      display:inline-block;font-size:.65rem;font-weight:700;padding:2px 8px;
+      border-radius:4px;margin-right:4px;vertical-align:middle;
+    }
+    .tag-source{background:#dbeafe;color:#1d4ed8}
+    .tag-fallback{background:#fef3c7;color:#92400e}
+    .tag-filter{background:#fce7f3;color:#9d174d}
+    .tag-field{background:#e0e7ff;color:#3730a3}
+
+    .code{
+      font-family:"Cascadia Code","Fira Code",monospace;font-size:.78rem;
+      background:#f1f5f9;border:1px solid var(--border);border-radius:6px;
+      padding:2px 7px;color:#475569;word-break:break-all;
+    }
+
+    .path-block{
+      background:#f8fafc;border:1px solid var(--border);border-radius:8px;
+      padding:10px 14px;margin:6px 0 10px;font-family:"Cascadia Code","Fira Code",monospace;
+      font-size:.78rem;color:#334155;line-height:1.8;white-space:pre-wrap;word-break:break-all;
+    }
+
+    table{width:100%;border-collapse:collapse;margin:8px 0 12px;font-size:.82rem}
+    th{background:#f1f5f9;text-align:left;padding:8px 12px;font-weight:700;color:#1e1b4b;border:1px solid var(--border)}
+    td{padding:8px 12px;border:1px solid var(--border);vertical-align:top}
+    tr:nth-child(even) td{background:#fafafa}
+
+    .flow-chart{
+      display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 14px;
+    }
+    .flow-step{
+      background:var(--accent-light);border:1px solid #c7d2fe;border-radius:8px;
+      padding:6px 12px;font-size:.78rem;font-weight:700;color:var(--accent);
+    }
+    .flow-arrow{color:var(--muted);font-size:.8rem;font-weight:700}
+
+    .note-box{
+      background:#fffbeb;border:1px solid #fde68a;border-radius:8px;
+      padding:10px 14px;margin:8px 0;font-size:.82rem;color:#92400e;
+    }
+    .note-box strong{color:#78350f}
+
+    .cmd-box{
+      background:#1e1b4b;color:#e0e7ff;border-radius:8px;padding:12px 16px;
+      font-family:"Cascadia Code","Fira Code",monospace;font-size:.8rem;
+      margin:8px 0 12px;line-height:1.6;
+    }
+    .cmd-box .comment{color:#6366f1}
+    .cmd-box .highlight{color:#fbbf24}
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="top">
+    <img src="./torch-logo.png" alt="火炬之光" />
+    <h1>火炬影视资产库 · 数据逻辑文档</h1>
+  </div>
+  <p>JSON 数据库结构、数据来源、资产扫描规则与更新流程</p>
+  <a class="back-link" href="./index.html">← 返回资产库</a>
+</div>
+
+<div class="container">
+
+  <!-- ====== JSON 结构 ====== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">📦</span>
+      <span class="section-title">JSON 数据库结构 (torch-char-db.json)</span>
+    </div>
+    <div class="section-body">
+      <p>数据库为单一 JSON 文件，根级包含项目元信息和角色数组：</p>
+      <table>
+        <tr><th>字段</th><th>类型</th><th>说明</th></tr>
+        <tr><td><span class="code">version</span></td><td>string</td><td>数据库版本号</td></tr>
+        <tr><td><span class="code">project</span></td><td>string</td><td>项目名称 "火炬 TLI"</td></tr>
+        <tr><td><span class="code">source</span></td><td>string</td><td>资产根路径 X:/projects2024/TLI/Asset/Cha</td></tr>
+        <tr><td><span class="code">generatedAt</span></td><td>string</td><td>数据库生成时间 (ISO)</td></tr>
+        <tr><td><span class="code">totalCharacters</span></td><td>number</td><td>角色总数</td></tr>
+        <tr><td><span class="code">characters</span></td><td>array</td><td>角色数据数组</td></tr>
+      </table>
+
+      <h3>单个角色条目字段</h3>
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><span class="code">id</span></td><td>string</td><td>目录名</td><td>资产ID，如 c013_Erica3</td></tr>
+        <tr><td><span class="code">cn_name</span></td><td>string</td><td>CGTeamwork</td><td>CGTW 中文名，如 猫女3</td></tr>
+        <tr><td><span class="code">first_appear</span></td><td>string</td><td>CGTeamwork</td><td>首次出现集数（CGTW字段），如 ss9、ss11_1、ss12_2</td></tr>
+        <tr><td><span class="code">create_time</span></td><td>string</td><td>CGTeamwork</td><td>角色创建时间，如 2025-10-09 19:56:10</td></tr>
+        <tr><td><span class="code">notes_episode</span></td><td>string</td><td>CGTeamwork</td><td>notes备注中的集数段，如 ss10_英雄pv</td></tr>
+        <tr><td><span class="code">notes_cn</span></td><td>string</td><td>CGTeamwork</td><td>角色中文名，如 猫女</td></tr>
+        <tr><td><span class="code">notes_en</span></td><td>string</td><td>CGTeamwork</td><td>角色英文名，如 Erica</td></tr>
+        <tr><td><span class="code">notes_role</span></td><td>string</td><td>CGTeamwork</td><td>角色等级：主角 / 配角</td></tr>
+        <tr><td><span class="code">basePath</span></td><td>string</td><td>本地扫描</td><td>角色资产根目录完整路径</td></tr>
+        <tr><td><span class="code">prodesign_game</span></td><td>object</td><td>本地扫描</td><td>2D游戏设计 { label, images[] }</td></tr>
+        <tr><td><span class="code">prodesign_film</span></td><td>object</td><td>本地扫描</td><td>2D影视设计 { label, images[] }</td></tr>
+        <tr><td><span class="code">lookdev</span></td><td>object</td><td>本地扫描</td><td>3D影视设计 { label, videos[], images[] }</td></tr>
+        <tr><td><span class="code">mod</span></td><td>object</td><td>本地扫描</td><td>模型 { label, path, fbxFiles[] }</td></tr>
+        <tr><td><span class="code">tex</span></td><td>object</td><td>本地扫描</td><td>贴图 Maya { label, path }</td></tr>
+        <tr><td><span class="code">rig</span></td><td>object</td><td>本地扫描</td><td>绑定 { label, path }</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ====== 数据来源与扫描规则 ====== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔍</span>
+      <span class="section-title">各模块数据来源与扫描规则</span>
+    </div>
+    <div class="section-body">
+
+      <h3>2D游戏设计</h3>
+      <p><span class="tag tag-source">唯一来源</span> <span class="code">{角色}/Prodesign/work/</span> 下的图片</p>
+      <p><span class="tag tag-filter">排除</span> <span class="code">.tga</span>、<span class="code">.gif</span> 格式</p>
+
+      <h3>2D影视设计</h3>
+      <p><span class="tag tag-source">唯一来源</span> <span class="code">{角色}/Prodesign/approved/</span> 下的图片</p>
+      <p>无回退路径。<span class="tag tag-filter">排除</span> <span class="code">.tga</span>、<span class="code">.gif</span> 格式</p>
+
+      <h3>3D影视设计（LookDev）</h3>
+      <p><span class="tag tag-source">唯一来源</span> <span class="code">{角色}/LookDev/approved/</span> 下的视频和图片</p>
+      <p>视频多于一个时只保留最新一个。<span class="tag tag-filter">排除</span> <span class="code">.tga</span>、<span class="code">.gif</span> 格式</p>
+
+      <h3>模型 (MOD)</h3>
+      <p><span class="tag tag-source">MA 文件</span> <span class="code">{角色}/MOD/work/{id}_mod.ma</span></p>
+      <p><span class="tag tag-source">FBX 文件</span> 从以下路径中搜索所有 <span class="code">.fbx</span> 文件，<strong>只保留修改日期最新的 1 个</strong>（按文件系统 mtime 比较）：</p>
+      <div class="path-block">MOD/work/
+RIG/work/
+RIG/work/fbx/
+RIG/publish/</div>
+      <div class="note-box">
+        <strong>FBX 规则：</strong> 无论上述路径下有多少个 FBX 文件，最终 <span class="code">fbxFiles[]</span> 数组中最多只保留 <strong>1 个</strong>（修改日期最新的）。若无 FBX 则为空数组。
+      </div>
+
+      <h3>贴图 Maya (TEX)</h3>
+      <p><span class="code">{角色}/TEX/publish/maya/{id}_tex.ma</span></p>
+
+      <h3>绑定 (RIG)</h3>
+      <p><span class="code">{角色}/RIG/publish/{id}_rig.ma</span></p>
+
+      <div class="note-box">
+        <strong>全局排除：</strong> rig2、render_tex、render_rig、eyemask_mod 路径；<span class="code">.tga</span>、<span class="code">.gif</span> 图片格式；history/metadata/backup 子目录。
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 角色筛选逻辑 ====== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🚦</span>
+      <span class="section-title">角色筛选 / 过滤逻辑</span>
+    </div>
+    <div class="section-body">
+      <p>角色列表直接来源于 CGTeamwork，不依赖本地目录是否存在。需要同时满足以下条件：</p>
+      <ol>
+        <li><span class="tag tag-filter">条件1</span> 角色在 CGTeamwork <span class="code">proj_film.m_asset</span>（type=Cha）中存在</li>
+        <li><span class="tag tag-filter">条件2 · 核心</span> CGTW 自定义备注（<span class="code">m_asset.notes</span>）<strong>不为空</strong> — notes 为空的角色直接剔除，不论本地目录是否存在、是否有资产文件</li>
+        <li><span class="tag tag-filter">条件3</span> CGTW 资产状态（<span class="code">m_asset.status</span>）不为 <span class="code">Close</span></li>
+      </ol>
+      <div class="note-box">
+        <strong>关键规则：</strong> notes 为空 = 不收录。即使本地 <span class="code">X:\...\Cha\{角色}</span> 目录已存在且有完整资产，只要 CGTW 中 notes 字段为空，该角色就不会出现在数据库中。
+      </div>
+      <p>满足条件的角色全部进入数据库。若本地 <span class="code">X:\projects2024\TLI\Asset\Cha\{角色}</span> 目录存在，则扫描其资产文件；若不存在，角色仍保留在库中（资产模块显示"暂无资源"）。</p>
+      <div class="note-box">
+        <strong>notes 格式：</strong> <span class="code">ss10_英雄pv|宾|Bin|主角</span><br>
+        四段含义：首次出现集数 | 中文名 | 英文名 | 角色等级（主角/配角）
+      </div>
+      <h3>排序规则（主角/配角各自独立排序）</h3>
+      <p>侧边栏角色排序分为主角组和配角组，每组内的排序逻辑相同：</p>
+      <ol>
+        <li><span class="tag tag-field">第一级</span> 按 <span class="code">first_appear</span>（首次出现集数）从大到小排序。集数格式如 <span class="code">ss12_2 &gt; ss12_1 &gt; ss11_2 &gt; ss11_1 &gt; ss10 &gt; ss9</span></li>
+        <li><span class="tag tag-field">第二级</span> 同一集数内，按 <span class="code">create_time</span>（角色创建时间）从新到旧排序</li>
+        <li><span class="tag tag-field">第三级 · 同前缀聚合</span> 同一集数内，如果多个角色的命名前缀相同（如 Mouse 系列的 MouseC / MouseD / MouseF），则将它们聚合在一起，插入到该前缀中创建时间最新的那个角色的位置</li>
+      </ol>
+      <div class="note-box">
+        <strong>前缀提取规则：</strong>从 ID 中提取字母部分，去掉末尾的单个大写字母后缀和数字后缀。<br>
+        例：<span class="code">c028_MaoB</span> → <span class="code">mao</span>，<span class="code">c013_Erica3</span> → <span class="code">erica</span>，<span class="code">c019_MouseC</span> → <span class="code">mouse</span>
+      </div>
+      <p><strong>聚合示例：</strong>假设时间排序本应为 猪、猫03、狗、猫02、猫01 → 聚合后变为 猪、猫03、猫02、猫01、狗。同前缀的角色"吸附"到该前缀首次出现的位置。</p>
+    </div>
+  </div>
+
+  <!-- ====== 数据更新流程 ====== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔄</span>
+      <span class="section-title">数据更新流程</span>
+    </div>
+    <div class="section-body">
+      <p>更新数据库分两步执行，需在项目根目录下运行：</p>
+
+      <h3><span class="step">1</span> 拉取 CGTeamwork 数据</h3>
+      <p>从 CGTeamwork 获取所有 Cha 资产的中文名、notes 备注、status 状态、首次出现集数、创建时间和缩略图。</p>
+      <div class="cmd-box">
+        <span class="comment"># 登录 CGTW → 查询资产 → 下载缩略图 → 输出 cgtw-asset-names.json</span><br>
+        <span class="highlight">node TorchCharLib/fetch-cgtw-names.mjs</span>
+      </div>
+      <p>输出文件：</p>
+      <ul>
+        <li><span class="code">cgtw-asset-names.json</span> — CGTW 资产元数据（含 cn_name, notes, status, first_appear, create_time, thumbnail）</li>
+        <li><span class="code">thumbnails/</span> — 下载的缩略图文件夹</li>
+      </ul>
+
+      <h3><span class="step">2</span> 扫描本地资产目录</h3>
+      <p>扫描 <span class="code">X:\projects2024\TLI\Asset\Cha</span>，结合 CGTW 白名单过滤，生成最终数据库。</p>
+      <div class="cmd-box">
+        <span class="comment"># 读 cgtw-asset-names.json → 扫描本地文件 → 过滤 → 输出 JSON</span><br>
+        <span class="highlight">node TorchCharLib/scan-char-assets.mjs</span>
+      </div>
+      <p>输出文件：</p>
+      <ul>
+        <li><span class="code">torch-char-db.json</span> — 完整角色数据库（前端 fetch 用）</li>
+        <li><span class="code">torch-char-db.data.js</span> — 内联 JS 数据（作为 window.__TORCH_CHAR_DB__）</li>
+      </ul>
+
+      <h3>完整更新流水线</h3>
+      <div class="flow-chart">
+        <span class="flow-step">CGTeamwork API</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">cgtw-asset-names.json</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">过滤 (notes + status)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">本地资产扫描（若目录存在）</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">torch-char-db.json</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">网页渲染</span>
+      </div>
+
+      <div class="cmd-box">
+        <span class="comment"># 一键更新（两步合一）</span><br>
+        <span class="highlight">node TorchCharLib/fetch-cgtw-names.mjs</span><br>
+        <span class="highlight">node TorchCharLib/scan-char-assets.mjs</span>
+      </div>
+
+      <div class="note-box">
+        <strong>注意：</strong> 执行脚本需要能访问 X: 盘（资产服务器）和 CGTeamwork 内网。更新后刷新浏览器即可看到最新数据（已配置 Cache-Control: no-cache）。
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 网页端数据加载 ====== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🌐</span>
+      <span class="section-title">网页端数据加载与展示</span>
+    </div>
+    <div class="section-body">
+      <h3>数据加载</h3>
+      <p>页面加载时优先通过 <span class="code">fetch</span> 从服务器获取 <span class="code">torch-char-db.json</span>（带时间戳和 <span class="code">cache: "no-store"</span> 绕过缓存）。如果 fetch 失败，回退到内联的 <span class="code">torch-char-db.data.js</span>（<span class="code">window.__TORCH_CHAR_DB__</span>）。</p>
+
+      <h3>刷新数据库按钮</h3>
+      <p>点击页面上的"刷新数据库"按钮会重新 fetch 最新 JSON 并更新 UI，无需整页刷新。尝试保留当前选中的角色。</p>
+
+      <h3>侧边栏展示</h3>
+      <ul>
+        <li>角色显示名：<span class="code">notes_episode + notes_cn</span></li>
+        <li>角色页面标题：<span class="code">notes_cn - notes_en (notes_role)</span></li>
+        <li>分组：主角组 / 配角组（折叠面板）</li>
+        <li>排序：按 JSON 数据中的顺序（已在生成时排好）</li>
+      </ul>
+
+      <h3>图片展示规则（2D游戏设计 / 2D影视设计模块）</h3>
+      <ul>
+        <li><strong>1张图</strong>：填满模块 100% 宽高，<span class="code">object-fit: contain</span></li>
+        <li><strong>2张图</strong>：各占 50% 宽、100% 高，<span class="code">object-fit: contain</span></li>
+        <li><strong>3-4张图</strong>：2×2 网格，各占 50% 宽高，<span class="code">object-fit: contain</span></li>
+        <li><strong>5张及以上</strong>：同 2×2 网格，超出部分滚动</li>
+      </ul>
+      <p>模块固定高度 <span class="code">400px</span>，图片保持原始比例不裁切。</p>
+
+      <h3>视觉布局</h3>
+      <p>右侧资产展示分为上下两部分：</p>
+      <ul>
+        <li><strong>上部</strong>：左右结构 — 左侧竖排"2D游戏设计"和"2D影视设计"，右侧"3D影视设计（LookDev）"占满左侧两个模块的总高度</li>
+        <li><strong>下部</strong>：左右各半 — 左列"模型/贴图Maya/绑定"文件路径（可点击复制），右列内联 3D FBX 查看器</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ====== CGTeamwork 接口 ====== -->
+  <div class="section">
+    <div class="section-header">
+      <span class="section-icon">🔗</span>
+      <span class="section-title">CGTeamwork 接口说明</span>
+    </div>
+    <div class="section-body">
+      <table>
+        <tr><th>参数</th><th>值</th></tr>
+        <tr><td>API 地址</td><td><span class="code">https://cgt-artstudio.xindong.com/api.php</span></td></tr>
+        <tr><td>请求方式</td><td>POST, <span class="code">application/x-www-form-urlencoded</span></td></tr>
+        <tr><td>认证方式</td><td>Cookie: <span class="code">token={login_token}</span></td></tr>
+        <tr><td>数据库</td><td><span class="code">proj_film</span></td></tr>
+        <tr><td>模块</td><td><span class="code">m_asset</span></td></tr>
+        <tr><td>筛选条件</td><td><span class="code">m_asset.type = "Cha"</span></td></tr>
+      </table>
+      <h3>查询字段</h3>
+      <ul>
+        <li><span class="tag tag-field">entity</span> 资产ID</li>
+        <li><span class="tag tag-field">cn_name</span> 中文名</li>
+        <li><span class="tag tag-field">image</span> 缩略图 URL</li>
+        <li><span class="tag tag-field">notes</span> 自定义备注（4段式：首次出现集数|中文名|英文名|角色等级）</li>
+        <li><span class="tag tag-field">status</span> 资产状态（Work / Close）</li>
+        <li><span class="tag tag-field">first_appear</span> 首次出现集数（如 ss9、ss11_1、ss12_2），用于排序</li>
+        <li><span class="tag tag-field">create_time</span> 角色创建时间（如 2025-10-09 19:56:10），用于排序</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seedance 2.0 Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0a0a0f;
+  --surface: #13131a;
+  --surface2: #1a1a24;
+  --border: #2a2a3a;
+  --border-hover: #3a3a5a;
+  --text: #e8e8f0;
+  --text-dim: #8888a0;
+  --accent: #6c5ce7;
+  --accent-light: #a29bfe;
+  --accent-glow: rgba(108, 92, 231, 0.15);
+  --success: #00b894;
+  --warning: #fdcb6e;
+  --danger: #e17055;
+  --radius: 10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-light), #fd79a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s;
+}
+
+.card:hover { border-color: var(--border-hover); }
+
+.card-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-light);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-title::before {
+  content: '';
+  width: 3px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+
+input[type="text"], input[type="password"], input[type="number"], textarea, select {
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+textarea { resize: vertical; min-height: 100px; }
+
+select { cursor: pointer; }
+select option { background: var(--surface2); color: var(--text); }
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.field { margin-bottom: 16px; }
+.field:last-child { margin-bottom: 0; }
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.toggle-row label {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggle input { display: none; }
+
+.toggle .slider {
+  position: absolute;
+  inset: 0;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: 0.2s;
+}
+
+.toggle .slider::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: var(--text-dim);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.toggle input:checked + .slider {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.toggle input:checked + .slider::after {
+  transform: translateX(20px);
+  background: #fff;
+}
+
+.media-section {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.media-section:last-child { margin-bottom: 0; }
+
+.media-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.media-header span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.media-items { display: flex; flex-direction: column; gap: 8px; }
+
+.media-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.media-item input { flex: 1; }
+
+.media-item select {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface2);
+  color: var(--text-dim);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-icon:hover {
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+.btn-icon.danger:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.btn-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-add:hover {
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+.submit-area {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.btn-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 48px;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 24px rgba(108, 92, 231, 0.3);
+}
+
+.btn-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 32px rgba(108, 92, 231, 0.4);
+}
+
+.btn-submit:active { transform: translateY(0); }
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-submit .spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.result-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-top: 24px;
+  display: none;
+}
+
+.result-card.visible { display: block; }
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-badge.running {
+  background: rgba(108, 92, 231, 0.15);
+  color: var(--accent-light);
+}
+
+.status-badge.succeeded {
+  background: rgba(0, 184, 148, 0.15);
+  color: var(--success);
+}
+
+.status-badge.failed {
+  background: rgba(225, 112, 85, 0.15);
+  color: var(--danger);
+}
+
+.status-badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-badge.running .dot { animation: pulse 1.5s ease-in-out infinite; }
+
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+.result-meta {
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.result-video {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.result-video video {
+  width: 100%;
+  display: block;
+}
+
+.result-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-secondary {
+  padding: 8px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface2);
+  color: var(--text);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+.history-section {
+  margin-top: 40px;
+}
+
+.history-section h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.history-list { display: flex; flex-direction: column; gap: 10px; }
+
+.history-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history-item:hover {
+  border-color: var(--border-hover);
+  background: var(--surface2);
+}
+
+.history-item .info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.history-item .task-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--accent-light);
+}
+
+.history-item .prompt-preview {
+  font-size: 12px;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 14px;
+  color: var(--text);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.curl-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.curl-modal.show { display: flex; }
+
+.curl-modal-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 720px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.curl-modal-content h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--accent-light);
+  margin-bottom: 16px;
+}
+
+.curl-modal-content pre {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+}
+
+.curl-modal-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.tip {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.scenario-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.scenario-tab {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.scenario-tab:hover { border-color: var(--border-hover); color: var(--text); }
+
+.scenario-tab.active {
+  border-color: var(--accent);
+  background: var(--accent-glow);
+  color: var(--accent-light);
+}
+
+.key-row {
+  display: flex;
+  gap: 8px;
+}
+
+.key-row input { flex: 1; }
+
+.btn-save-key {
+  padding: 10px 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.2s;
+}
+
+.btn-save-key:hover { background: #7c6cf0; }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>Seedance 2.0 Studio</h1>
+    <p>视频生成任务可视化工具 &middot; 基于公司内部 AI Gateway</p>
+  </header>
+
+  <!-- API Key -->
+  <div class="card">
+    <div class="card-title">API 配置</div>
+    <div class="field">
+      <label>API Key</label>
+      <div class="key-row">
+        <input type="password" id="apiKey" placeholder="输入你的 API Key（自动保存到本地）">
+        <button class="btn-save-key" onclick="toggleKeyVisibility()">显示</button>
+      </div>
+      <div class="tip">申请地址：<a href="https://console.tapsvc.com/nova/#/ai-gateway?tab=keys" target="_blank" style="color:var(--accent-light)">console.tapsvc.com</a></div>
+    </div>
+    <div class="field" style="margin-top:16px">
+      <label>模型</label>
+      <select id="model">
+        <option value="doubao-seedance-2-0-fast-260128">Seedance 2.0 Fast（更快更省）</option>
+        <option value="doubao-seedance-2-0-260128">Seedance 2.0（最高品质）</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Scenario -->
+  <div class="card">
+    <div class="card-title">生成场景</div>
+    <div class="scenario-tabs" id="scenarioTabs">
+      <button class="scenario-tab active" data-scenario="t2v">文生视频</button>
+      <button class="scenario-tab" data-scenario="i2v-first">图生视频 · 首帧</button>
+      <button class="scenario-tab" data-scenario="i2v-fl">图生视频 · 首尾帧</button>
+      <button class="scenario-tab" data-scenario="multiref">多模态参考</button>
+      <button class="scenario-tab" data-scenario="edit">编辑视频</button>
+      <button class="scenario-tab" data-scenario="extend">延长视频</button>
+    </div>
+    <div id="scenarioHint" class="tip" style="margin-bottom: 0;"></div>
+  </div>
+
+  <!-- Prompt -->
+  <div class="card">
+    <div class="card-title">提示词</div>
+    <div class="field">
+      <textarea id="prompt" rows="4" placeholder="描述你想要生成的视频内容...&#10;建议中文不超过500字，英文不超过1000词"></textarea>
+    </div>
+  </div>
+
+  <!-- Media Inputs -->
+  <div class="card" id="mediaCard">
+    <div class="card-title">媒体输入</div>
+
+    <div class="media-section" id="imageSection">
+      <div class="media-header">
+        <span>图片</span>
+        <button class="btn-add" onclick="addMediaItem('image')">+ 添加图片</button>
+      </div>
+      <div class="media-items" id="imageItems"></div>
+    </div>
+
+    <div class="media-section" id="videoSection" style="display:none">
+      <div class="media-header">
+        <span>视频</span>
+        <button class="btn-add" onclick="addMediaItem('video')">+ 添加视频</button>
+      </div>
+      <div class="media-items" id="videoItems"></div>
+    </div>
+
+    <div class="media-section" id="audioSection" style="display:none">
+      <div class="media-header">
+        <span>音频</span>
+        <button class="btn-add" onclick="addMediaItem('audio')">+ 添加音频</button>
+      </div>
+      <div class="media-items" id="audioItems"></div>
+    </div>
+  </div>
+
+  <!-- Parameters -->
+  <div class="card">
+    <div class="card-title">输出参数</div>
+    <div class="row-3">
+      <div class="field">
+        <label>分辨率</label>
+        <select id="resolution">
+          <option value="720p">720p</option>
+          <option value="480p">480p</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>宽高比</label>
+        <select id="ratio">
+          <option value="adaptive">自适应</option>
+          <option value="16:9">16:9</option>
+          <option value="4:3">4:3</option>
+          <option value="1:1">1:1</option>
+          <option value="3:4">3:4</option>
+          <option value="9:16">9:16</option>
+          <option value="21:9">21:9</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>视频时长（秒）</label>
+        <input type="number" id="duration" value="5" min="4" max="15" step="1">
+        <div class="tip">4~15秒，-1 为智能选择</div>
+      </div>
+    </div>
+    <div style="margin-top: 8px">
+      <div class="toggle-row">
+        <label>生成有声视频</label>
+        <label class="toggle">
+          <input type="checkbox" id="generateAudio" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-row">
+        <label>添加水印</label>
+        <label class="toggle">
+          <input type="checkbox" id="watermark">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-row">
+        <label>联网搜索（仅文生视频）</label>
+        <label class="toggle">
+          <input type="checkbox" id="webSearch">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Actions -->
+  <div class="submit-area">
+    <button class="btn-submit" id="btnSubmit" onclick="submitTask()">
+      <span id="btnText">提交生成任务</span>
+    </button>
+    <div style="margin-top: 12px">
+      <button class="btn-secondary" onclick="showCurl()">查看 cURL</button>
+      <button class="btn-secondary" onclick="showJson()">查看 JSON</button>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="result-card" id="resultCard">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+      <div class="card-title" style="margin-bottom:0">任务结果</div>
+      <span class="status-badge" id="statusBadge">
+        <span class="dot"></span>
+        <span id="statusText">等待中</span>
+      </span>
+    </div>
+    <div class="result-meta" id="resultMeta"></div>
+    <div class="result-video" id="resultVideo" style="display:none">
+      <video controls id="videoPlayer"></video>
+    </div>
+    <div class="result-actions" id="resultActions" style="display:none">
+      <button class="btn-secondary" onclick="downloadVideo()">下载视频</button>
+      <button class="btn-secondary" onclick="copyVideoUrl()">复制链接</button>
+    </div>
+  </div>
+
+  <!-- History -->
+  <div class="history-section" id="historySection" style="display:none">
+    <h3>历史任务</h3>
+    <div class="history-list" id="historyList"></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- cURL Modal -->
+<div class="curl-modal" id="curlModal">
+  <div class="curl-modal-content">
+    <h3 id="modalTitle">cURL 命令</h3>
+    <pre id="modalCode"></pre>
+    <div class="curl-modal-actions">
+      <button class="btn-secondary" onclick="copyModalCode()">复制</button>
+      <button class="btn-secondary" onclick="closeCurlModal()">关闭</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const API_BASE = 'https://llm-proxy.tapsvc.com/volcengine/api/v3/contents/generations/tasks';
+let currentTaskId = null;
+let pollingTimer = null;
+let currentVideoUrl = null;
+
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('seedance_api_key');
+  if (saved) document.getElementById('apiKey').value = saved;
+  document.getElementById('apiKey').addEventListener('change', e => {
+    localStorage.setItem('seedance_api_key', e.target.value);
+  });
+  setupScenarioTabs();
+  updateScenario('t2v');
+  renderHistory();
+});
+
+function setupScenarioTabs() {
+  document.querySelectorAll('.scenario-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.scenario-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      updateScenario(tab.dataset.scenario);
+    });
+  });
+}
+
+const SCENARIO_HINTS = {
+  't2v': '纯文本提示词生成视频，无需上传媒体文件',
+  'i2v-first': '上传 1 张首帧图片 + 可选提示词，role 设为 first_frame',
+  'i2v-fl': '上传 2 张图片（首帧 + 尾帧），role 分别设为 first_frame 和 last_frame',
+  'multiref': '上传参考图片(1~9) + 参考视频(0~3) + 参考音频(0~3) + 可选提示词',
+  'edit': '上传参考视频 + 参考图片 + 提示词描述编辑内容',
+  'extend': '上传多段参考视频 + 提示词描述如何拼接延长',
+};
+
+function updateScenario(scenario) {
+  document.getElementById('scenarioHint').textContent = SCENARIO_HINTS[scenario] || '';
+  const imgSec = document.getElementById('imageSection');
+  const vidSec = document.getElementById('videoSection');
+  const audSec = document.getElementById('audioSection');
+  const mediaCard = document.getElementById('mediaCard');
+
+  document.getElementById('imageItems').innerHTML = '';
+  document.getElementById('videoItems').innerHTML = '';
+  document.getElementById('audioItems').innerHTML = '';
+
+  switch (scenario) {
+    case 't2v':
+      mediaCard.style.display = 'none';
+      break;
+    case 'i2v-first':
+      mediaCard.style.display = '';
+      imgSec.style.display = '';
+      vidSec.style.display = 'none';
+      audSec.style.display = 'none';
+      addMediaItem('image', 'first_frame');
+      break;
+    case 'i2v-fl':
+      mediaCard.style.display = '';
+      imgSec.style.display = '';
+      vidSec.style.display = 'none';
+      audSec.style.display = 'none';
+      addMediaItem('image', 'first_frame');
+      addMediaItem('image', 'last_frame');
+      break;
+    case 'multiref':
+      mediaCard.style.display = '';
+      imgSec.style.display = '';
+      vidSec.style.display = '';
+      audSec.style.display = '';
+      addMediaItem('image', 'reference_image');
+      break;
+    case 'edit':
+      mediaCard.style.display = '';
+      imgSec.style.display = '';
+      vidSec.style.display = '';
+      audSec.style.display = 'none';
+      addMediaItem('image', 'reference_image');
+      addMediaItem('video', 'reference_video');
+      break;
+    case 'extend':
+      mediaCard.style.display = '';
+      imgSec.style.display = 'none';
+      vidSec.style.display = '';
+      audSec.style.display = '';
+      addMediaItem('video', 'reference_video');
+      break;
+  }
+}
+
+function addMediaItem(type, defaultRole) {
+  const container = document.getElementById(type + 'Items');
+  const div = document.createElement('div');
+  div.className = 'media-item';
+
+  const roleOptions = {
+    image: ['first_frame', 'last_frame', 'reference_image'],
+    video: ['reference_video'],
+    audio: ['reference_audio'],
+  };
+  const roles = roleOptions[type];
+  const roleSelect = roles.length > 1
+    ? `<select class="media-role">${roles.map(r => `<option value="${r}" ${r === defaultRole ? 'selected' : ''}>${r}</option>`).join('')}</select>`
+    : `<select class="media-role"><option value="${roles[0]}" selected>${roles[0]}</option></select>`;
+
+  const placeholder = type === 'image' ? '图片 URL / Base64 / asset://...'
+    : type === 'video' ? '视频 URL / asset://...'
+    : '音频 URL / Base64 / asset://...';
+
+  div.innerHTML = `
+    <input type="text" class="media-url" placeholder="${placeholder}">
+    ${roleSelect}
+    <button class="btn-icon danger" onclick="this.parentElement.remove()" title="移除">&times;</button>
+  `;
+  container.appendChild(div);
+}
+
+function buildRequestBody() {
+  const model = document.getElementById('model').value;
+  const prompt = document.getElementById('prompt').value.trim();
+  const resolution = document.getElementById('resolution').value;
+  const ratio = document.getElementById('ratio').value;
+  const duration = parseInt(document.getElementById('duration').value);
+  const generateAudio = document.getElementById('generateAudio').checked;
+  const watermark = document.getElementById('watermark').checked;
+  const webSearch = document.getElementById('webSearch').checked;
+
+  const content = [];
+  if (prompt) {
+    content.push({ type: 'text', text: prompt });
+  }
+
+  document.querySelectorAll('#imageItems .media-item').forEach(item => {
+    const url = item.querySelector('.media-url').value.trim();
+    const role = item.querySelector('.media-role').value;
+    if (url) {
+      content.push({ type: 'image_url', image_url: { url }, role });
+    }
+  });
+
+  document.querySelectorAll('#videoItems .media-item').forEach(item => {
+    const url = item.querySelector('.media-url').value.trim();
+    const role = item.querySelector('.media-role').value;
+    if (url) {
+      content.push({ type: 'video_url', video_url: { url }, role });
+    }
+  });
+
+  document.querySelectorAll('#audioItems .media-item').forEach(item => {
+    const url = item.querySelector('.media-url').value.trim();
+    const role = item.querySelector('.media-role').value;
+    if (url) {
+      content.push({ type: 'audio_url', audio_url: { url }, role });
+    }
+  });
+
+  const body = { model, content, resolution, ratio, duration, watermark, generate_audio: generateAudio };
+  if (webSearch) {
+    body.tools = [{ type: 'web_search' }];
+  }
+  return body;
+}
+
+async function submitTask() {
+  const apiKey = document.getElementById('apiKey').value.trim();
+  if (!apiKey) { toast('请先填写 API Key'); return; }
+
+  const body = buildRequestBody();
+  if (body.content.length === 0) { toast('请至少输入提示词或媒体文件'); return; }
+
+  const btn = document.getElementById('btnSubmit');
+  const btnText = document.getElementById('btnText');
+  btn.disabled = true;
+  btnText.innerHTML = '<span class="spinner"></span> 提交中...';
+
+  try {
+    const res = await fetch(API_BASE, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify(body),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      toast(`提交失败: ${data.error?.message || JSON.stringify(data)}`);
+      btn.disabled = false;
+      btnText.textContent = '提交生成任务';
+      return;
+    }
+
+    currentTaskId = data.id;
+    toast(`任务已提交: ${currentTaskId}`);
+    saveHistory(currentTaskId, body.content.find(c => c.type === 'text')?.text || '(无提示词)');
+    showResult('running', currentTaskId);
+    startPolling(apiKey, currentTaskId);
+  } catch (err) {
+    toast(`请求错误: ${err.message}`);
+  }
+
+  btn.disabled = false;
+  btnText.textContent = '提交生成任务';
+}
+
+function startPolling(apiKey, taskId) {
+  if (pollingTimer) clearInterval(pollingTimer);
+
+  const poll = async () => {
+    try {
+      const res = await fetch(`${API_BASE}/${taskId}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+        },
+      });
+      const data = await res.json();
+      const status = data.status;
+
+      if (status === 'succeeded') {
+        clearInterval(pollingTimer);
+        pollingTimer = null;
+        const videoUrl = data.content?.video_url?.url;
+        const usage = data.usage;
+        showResult('succeeded', taskId, { videoUrl, usage, duration: data.duration, ratio: data.ratio });
+        if (videoUrl) currentVideoUrl = videoUrl;
+        toast('视频生成完成！');
+      } else if (status === 'failed') {
+        clearInterval(pollingTimer);
+        pollingTimer = null;
+        showResult('failed', taskId, { error: data.error });
+        toast('视频生成失败');
+      } else {
+        updateResultMeta(`任务 ID: ${taskId}\n状态: ${status}，轮询中...`);
+      }
+    } catch (err) {
+      updateResultMeta(`轮询出错: ${err.message}`);
+    }
+  };
+
+  poll();
+  pollingTimer = setInterval(poll, 10000);
+}
+
+function showResult(status, taskId, extra = {}) {
+  const card = document.getElementById('resultCard');
+  card.classList.add('visible');
+
+  const badge = document.getElementById('statusBadge');
+  badge.className = `status-badge ${status}`;
+  document.getElementById('statusText').textContent =
+    status === 'running' ? '生成中' : status === 'succeeded' ? '已完成' : '失败';
+
+  let meta = `任务 ID: ${taskId}`;
+  if (extra.duration) meta += `\n时长: ${extra.duration}s`;
+  if (extra.ratio) meta += `  |  宽高比: ${extra.ratio}`;
+  if (extra.usage) meta += `\nTokens: ${extra.usage.total_tokens?.toLocaleString() || '-'}`;
+  if (extra.error) meta += `\n错误: ${JSON.stringify(extra.error)}`;
+  updateResultMeta(meta);
+
+  const videoDiv = document.getElementById('resultVideo');
+  const actions = document.getElementById('resultActions');
+  if (extra.videoUrl) {
+    videoDiv.style.display = '';
+    document.getElementById('videoPlayer').src = extra.videoUrl;
+    actions.style.display = '';
+  } else {
+    videoDiv.style.display = 'none';
+    actions.style.display = 'none';
+  }
+
+  card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function updateResultMeta(text) {
+  document.getElementById('resultMeta').textContent = text;
+}
+
+function downloadVideo() {
+  if (currentVideoUrl) {
+    const a = document.createElement('a');
+    a.href = currentVideoUrl;
+    a.download = `seedance_${currentTaskId}.mp4`;
+    a.target = '_blank';
+    a.click();
+  }
+}
+
+function copyVideoUrl() {
+  if (currentVideoUrl) {
+    navigator.clipboard.writeText(currentVideoUrl);
+    toast('视频链接已复制');
+  }
+}
+
+function showCurl() {
+  const apiKey = document.getElementById('apiKey').value.trim() || '<YOUR_API_KEY>';
+  const body = buildRequestBody();
+  const json = JSON.stringify(body, null, 2);
+  const curl = `curl -X POST ${API_BASE} \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer ${apiKey}" \\
+  -d '${json}'`;
+
+  document.getElementById('modalTitle').textContent = 'cURL 命令';
+  document.getElementById('modalCode').textContent = curl;
+  document.getElementById('curlModal').classList.add('show');
+}
+
+function showJson() {
+  const body = buildRequestBody();
+  document.getElementById('modalTitle').textContent = '请求 JSON';
+  document.getElementById('modalCode').textContent = JSON.stringify(body, null, 2);
+  document.getElementById('curlModal').classList.add('show');
+}
+
+function closeCurlModal() {
+  document.getElementById('curlModal').classList.remove('show');
+}
+
+function copyModalCode() {
+  const code = document.getElementById('modalCode').textContent;
+  navigator.clipboard.writeText(code);
+  toast('已复制到剪贴板');
+}
+
+document.getElementById('curlModal').addEventListener('click', e => {
+  if (e.target === e.currentTarget) closeCurlModal();
+});
+
+function toggleKeyVisibility() {
+  const input = document.getElementById('apiKey');
+  const btn = input.nextElementSibling;
+  if (input.type === 'password') {
+    input.type = 'text';
+    btn.textContent = '隐藏';
+  } else {
+    input.type = 'password';
+    btn.textContent = '显示';
+  }
+}
+
+function saveHistory(taskId, prompt) {
+  const history = JSON.parse(localStorage.getItem('seedance_history') || '[]');
+  history.unshift({ taskId, prompt: prompt.slice(0, 100), time: new Date().toLocaleString() });
+  if (history.length > 20) history.length = 20;
+  localStorage.setItem('seedance_history', JSON.stringify(history));
+  renderHistory();
+}
+
+function renderHistory() {
+  const history = JSON.parse(localStorage.getItem('seedance_history') || '[]');
+  const section = document.getElementById('historySection');
+  const list = document.getElementById('historyList');
+
+  if (history.length === 0) { section.style.display = 'none'; return; }
+  section.style.display = '';
+
+  list.innerHTML = history.map(h => `
+    <div class="history-item" onclick="queryTask('${h.taskId}')">
+      <div class="info">
+        <span class="task-id">${h.taskId}</span>
+        <span class="prompt-preview">${h.prompt}</span>
+      </div>
+      <span style="color:var(--text-dim);font-size:12px;flex-shrink:0;margin-left:12px">${h.time}</span>
+    </div>
+  `).join('');
+}
+
+async function queryTask(taskId) {
+  const apiKey = document.getElementById('apiKey').value.trim();
+  if (!apiKey) { toast('请先填写 API Key'); return; }
+
+  currentTaskId = taskId;
+  showResult('running', taskId);
+  startPolling(apiKey, taskId);
+}
+
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 3000);
+}
+</script>
+</body>
+</html>

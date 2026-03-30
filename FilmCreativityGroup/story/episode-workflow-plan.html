@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>单集制作流程图方案（可编辑）</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --primary: #4f46e5;
+      --primary-2: #6366f1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      gap: 16px;
+      min-height: 100vh;
+    }
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+    }
+    .left {
+      padding: 16px;
+      overflow: auto;
+    }
+    .right {
+      padding: 14px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 10px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      color: var(--primary);
+    }
+    .desc {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .module {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #fcfdff;
+    }
+    .module-title {
+      font-weight: 800;
+      margin: 0 0 8px;
+      color: #111827;
+      font-size: 15px;
+    }
+    .step {
+      display: grid;
+      grid-template-columns: 26px 1fr auto;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .step:last-child { margin-bottom: 0; }
+    .idx {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #eef2ff;
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .step input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 8px 10px;
+      font-size: 13px;
+      color: var(--text);
+      outline: none;
+    }
+    .step input:focus {
+      border-color: var(--primary-2);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.14);
+    }
+    .btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text);
+      border-radius: 9px;
+      padding: 7px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .btn:hover { border-color: #cfd5df; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      border: none;
+    }
+    .toolbar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    #diagram {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px;
+      background: #fff;
+      overflow: auto;
+      min-height: 420px;
+    }
+    #code {
+      width: 100%;
+      height: 170px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      font-family: Consolas, Monaco, monospace;
+      font-size: 12px;
+      resize: vertical;
+      color: #111827;
+      background: #fafafa;
+    }
+    @media (max-width: 1100px) {
+      .wrap { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <section class="panel left">
+      <h1>单集制作流程图（可编辑）</h1>
+      <p class="desc">
+        直接改左侧步骤文字，点击“刷新流程图”即可更新右侧流程。<br />
+        你可以随时增删步骤（每个模块内），快速测试逻辑顺序。
+      </p>
+
+      <div class="module" data-module="aiCopy" data-label="模块一：AI文案">
+        <p class="module-title">模块一：AI文案</p>
+        <div class="step"><span class="idx">1</span><input value="AI故事脚本（输出文字，工具：Cursor_Gemini 3 Pro）" /><button class="btn del">删</button></div>
+        <div class="step"><span class="idx">2</span><input value="AI分镜设计（输出文字，工具：Cursor_Gemini 3 Pro）" /><button class="btn del">删</button></div>
+        <div class="step"><span class="idx">3</span><input value="AI关键字咒语（输出文字，工具：Cursor_Gemini 3 Pro）" /><button class="btn del">删</button></div>
+        <button class="btn add-step">+ 添加步骤</button>
+      </div>
+
+      <div class="module" data-module="aiVideo" data-label="模块二：AI视频制作">
+        <p class="module-title">模块二：AI视频制作</p>
+        <div class="step"><span class="idx">1</span><input value="资产准备（系列通用+本集脚本相关，输出图片）" /><button class="btn del">删</button></div>
+        <div class="step"><span class="idx">2</span><input value="AI风格设计（Nano-banana，输入为资产图片，输出为风格设计图）" /><button class="btn del">删</button></div>
+        <div class="step"><span class="idx">3</span><input value="AI视频制作（Seedance 2.0，输出视频：仅音效，通常15秒）" /><button class="btn del">删</button></div>
+        <button class="btn add-step">+ 添加步骤</button>
+      </div>
+
+      <div class="module" data-module="postPack" data-label="模块三：剪辑后效处理">
+        <p class="module-title">模块三：剪辑后效处理</p>
+        <div class="step"><span class="idx">1</span><input value="导演剪辑（输出视频）" /><button class="btn del">删</button></div>
+        <div class="step"><span class="idx">2</span><input value="AI配乐（输出视频）" /><button class="btn del">删</button></div>
+        <div class="step"><span class="idx">3</span><input value="后效处理（AI包装+后效制作+AI去水印，输出视频）" /><button class="btn del">删</button></div>
+        <button class="btn add-step">+ 添加步骤</button>
+      </div>
+    </section>
+
+    <section class="panel right">
+      <div class="toolbar">
+        <button id="renderBtn" class="btn btn-primary">刷新流程图</button>
+        <button id="copyBtn" class="btn">复制 Mermaid 代码</button>
+      </div>
+      <div id="diagram"></div>
+      <textarea id="code" readonly></textarea>
+    </section>
+  </div>
+
+  <script>
+    mermaid.initialize({ startOnLoad: false });
+
+    function updateIndices(module) {
+      const steps = module.querySelectorAll(".step");
+      steps.forEach((el, i) => {
+        el.querySelector(".idx").textContent = String(i + 1);
+      });
+    }
+
+    function collectSteps(module) {
+      return Array.from(module.querySelectorAll(".step input"))
+        .map((i) => i.value.trim())
+        .filter(Boolean);
+    }
+
+    function esc(text) {
+      return text.replace(/"/g, '\\"');
+    }
+
+    function buildMermaid() {
+      const modules = Array.from(document.querySelectorAll(".module"));
+      const lines = [];
+      lines.push("flowchart TD");
+      lines.push('    start["单集立项"] --> m1s1');
+
+      const moduleNodes = {};
+      const moduleStepTexts = {};
+
+      modules.forEach((module, mIndex) => {
+        const moduleId = module.dataset.module;
+        const moduleLabel = module.dataset.label;
+        const steps = collectSteps(module);
+        if (steps.length === 0) return;
+
+        moduleNodes[moduleId] = steps.map((_, sIndex) => `m${mIndex + 1}s${sIndex + 1}`);
+        moduleStepTexts[moduleId] = steps;
+
+        lines.push(`    subgraph ${moduleId} ["${esc(moduleLabel)}"]`);
+        steps.forEach((stepText, sIndex) => {
+          const nodeId = `m${mIndex + 1}s${sIndex + 1}`;
+          lines.push(`        ${nodeId}["${esc(stepText)}"]`);
+
+          // 模块二（AI视频制作）使用定制连线，不走默认串行
+          const useDefaultLinear = moduleId !== "aiVideo";
+          if (useDefaultLinear && sIndex > 0) {
+            const prevId = `m${mIndex + 1}s${sIndex}`;
+            lines.push(`        ${prevId} --> ${nodeId}`);
+          }
+        });
+        lines.push("    end");
+      });
+
+      // 业务定制连线：
+      // 1) AI关键字咒语 -> AI视频制作（Seedance 2.0）
+      // 2) 资产准备无上游，且有两个下游：AI风格设计、AI视频制作
+      // 3) AI视频制作 -> 剪辑包装处理起点
+      const aiCopy = moduleNodes.aiCopy || [];
+      const aiVideo = moduleNodes.aiVideo || [];
+      const postPack = moduleNodes.postPack || [];
+      const aiCopyTexts = moduleStepTexts.aiCopy || [];
+      const aiVideoTexts = moduleStepTexts.aiVideo || [];
+
+      const findNodeByKeyword = (nodes, texts, keywordRegex, fallbackIndex = -1) => {
+        const idx = texts.findIndex((t) => keywordRegex.test(t));
+        if (idx >= 0) return nodes[idx];
+        if (fallbackIndex >= 0) return nodes[fallbackIndex];
+        return nodes[nodes.length - 1];
+      };
+
+      const keywordNode = findNodeByKeyword(aiCopy, aiCopyTexts, /关键字|咒语/i);
+      const storyScriptNode = findNodeByKeyword(aiCopy, aiCopyTexts, /故事脚本/i, 0);
+      const styleNode = findNodeByKeyword(aiVideo, aiVideoTexts, /风格设计|nano/i);
+      const videoNode = findNodeByKeyword(aiVideo, aiVideoTexts, /视频制作|seedance/i);
+      const assetNodes = aiVideo.filter((_, idx) => /资产准备|资产/i.test(aiVideoTexts[idx] || ""));
+      const assetStoryNode = aiVideo.find((_, idx) => /脚本/.test(aiVideoTexts[idx] || ""));
+
+      const postStartNode = postPack[0];
+      const postEndNode = postPack[postPack.length - 1];
+
+      assetNodes.forEach((assetNode) => {
+        if (assetNode && styleNode) lines.push(`    ${assetNode} --> ${styleNode}`);
+        if (assetNode && videoNode) lines.push(`    ${assetNode} --> ${videoNode}`);
+      });
+      if (storyScriptNode && assetStoryNode) lines.push(`    ${storyScriptNode} --> ${assetStoryNode}`);
+      if (styleNode && videoNode) lines.push(`    ${styleNode} --> ${videoNode}`);
+      if (keywordNode && videoNode) lines.push(`    ${keywordNode} --> ${videoNode}`);
+      if (videoNode && postStartNode) lines.push(`    ${videoNode} --> ${postStartNode}`);
+      if (postEndNode) {
+        lines.push(`    ${postEndNode} --> output["成片输出"]`);
+      }
+
+      return lines.join("\n");
+    }
+
+    async function render() {
+      const code = buildMermaid();
+      document.getElementById("code").value = code;
+      const target = document.getElementById("diagram");
+      target.innerHTML = "";
+      try {
+        const { svg } = await mermaid.render("flow_" + Date.now(), code);
+        target.innerHTML = svg;
+      } catch (e) {
+        target.innerHTML = `<pre style="color:#b91c1c;white-space:pre-wrap;">流程图渲染失败：${String(e)}</pre>`;
+      }
+    }
+
+    document.querySelectorAll(".module").forEach((module) => {
+      module.addEventListener("click", (e) => {
+        if (e.target.classList.contains("del")) {
+          const step = e.target.closest(".step");
+          if (module.querySelectorAll(".step").length <= 1) return;
+          step.remove();
+          updateIndices(module);
+        }
+        if (e.target.classList.contains("add-step")) {
+          const step = document.createElement("div");
+          step.className = "step";
+          step.innerHTML = `<span class="idx">0</span><input value="新步骤" /><button class="btn del">删</button>`;
+          e.target.before(step);
+          updateIndices(module);
+        }
+      });
+    });
+
+    document.getElementById("renderBtn").addEventListener("click", render);
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      const text = document.getElementById("code").value;
+      try {
+        await navigator.clipboard.writeText(text);
+        document.getElementById("copyBtn").textContent = "已复制";
+        setTimeout(() => (document.getElementById("copyBtn").textContent = "复制 Mermaid 代码"), 900);
+      } catch {
+        document.getElementById("copyBtn").textContent = "复制失败";
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
+

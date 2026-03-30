@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心动小镇：遇见生活的美好 - 泡面番策划</title>
+    <link rel="stylesheet" href="noodle-anime-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-icon">💖</span>
+                <span>心动小镇·泡面番策划</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#overview" class="nav-link">整体定位</a></li>
+                <li><a href="#themes" class="nav-link">四大主题</a></li>
+                <li><a href="#storyboards" class="nav-link">故事文案</a></li>
+                <li><a href="scene-library/index.html" class="nav-link">场景库</a></li>
+                <li><a href="../../Asset/character-library.html" class="nav-link" id="assetLibraryLink">资产库</a></li>
+                <li><a href="#features" class="nav-link">整体特点</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <header class="hero-section">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line title-line-brand">
+                        <span class="hero-logo" aria-hidden="true">
+                            <img class="hero-logo-img" src="图片参考/小镇logo 2024 立体（无黄底）.png" alt="心动小镇+" loading="eager" decoding="async" onerror="this.style.display='none'">
+                        </span>
+                    </span>
+                    <span class="title-line highlight">泡面番策划案</span>
+                    <span class="title-line title-line-tagline">遇见生活的美好</span>
+                </h1>
+                <div class="hero-description-box">
+                    <div class="description-decoration-left">❝</div>
+                    <div class="description-content">
+                        <p class="description-line">
+                            以<span class="highlight-text">小镇的角色与场景</span>为笔触，在<span class="highlight-text">两分钟一集</span>的泡面番里，
+                        </p>
+                        <p class="description-line">
+                            轻轻铺陈与现实生活紧密相连的<span class="highlight-text">衣食住行</span>。
+                        </p>
+                        <p class="description-line">
+                            让<span class="highlight-text">现实情绪</span>与<span class="highlight-text">小镇世界</span>交错相遇，
+                        </p>
+                        <p class="description-line">
+                            收束成与玩家共享的<span class="highlight-text">心动共鸣</span>。
+                        </p>
+                    </div>
+                    <div class="description-decoration-right">❞</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,60 Q360,20 720,60 T1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+            </svg>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- 整体定位 -->
+        <section class="section overview-section" id="overview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">整体定位</span>
+                    <h2 class="section-title">项目概览</h2>
+                    <p class="section-description">通过四个维度展现小镇生活的美好瞬间</p>
+                </div>
+
+                <!-- 定位卡片 -->
+                <div class="overview-cards">
+                    <div class="overview-card card-1">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">🎬</div>
+                        <h3 class="card-title">片名</h3>
+                        <p class="card-content">心动小镇：遇见生活的美好</p>
+                    </div>
+                    <div class="overview-card card-2">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">⏱️</div>
+                        <h3 class="card-title">格式</h3>
+                        <p class="card-content">泡面番，每集约2分钟</p>
+                    </div>
+                    <div class="overview-card card-3">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">📋</div>
+                        <h3 class="card-title">主题</h3>
+                        <p class="card-content">在衣、食、住、行的点滴中传递生活的美好</p>
+                    </div>
+                    <div class="overview-card card-4">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">🎯</div>
+                        <h3 class="card-title">目标</h3>
+                        <p class="card-content">通过小镇日常，结合真实情感与理想化场景，引发情感共鸣</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 四大主题 -->
+        <section class="section themes-section" id="themes">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">四大主题</span>
+                    <h2 class="section-title">主题内容</h2>
+                    <p class="section-description">每个主题都有独特的风格和故事</p>
+                </div>
+
+                <!-- 主题步骤指示器（滚动吸顶） -->
+                <div class="themes-steps-wrap" id="themesStepsWrap">
+                    <div class="themes-steps" id="themesSteps">
+                        <div class="step-item" data-theme="clothes">
+                            <div class="step-number">01</div>
+                            <div class="step-icon" aria-hidden="true">
+                                <svg class="step-svg" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8.5 6.5L12 4l3.5 2.5 3 1.2-2 3.3V20H7.5V11L5.5 7.7l3-1.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M10 6.3c.6 1.2 1.4 1.7 2 1.7s1.4-.5 2-1.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="step-label">
+                                <span class="step-label-main">衣</span>
+                                <span class="step-label-sub">(Dressmaker)</span>
+                            </div>
+                        </div>
+                        <div class="step-item" data-theme="food">
+                            <div class="step-number">02</div>
+                            <div class="step-icon" aria-hidden="true">
+                                <svg class="step-svg" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M6.5 12c.4 4.8 2.7 8 5.5 8s5.1-3.2 5.5-8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M9 4c-1.2 1.2-1.2 2.4 0 3.6M12 4c-1.2 1.2-1.2 2.4 0 3.6M15 4c-1.2 1.2-1.2 2.4 0 3.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="step-label">
+                                <span class="step-label-main">食</span>
+                                <span class="step-label-sub">(Chef)</span>
+                            </div>
+                        </div>
+                        <div class="step-item" data-theme="living">
+                            <div class="step-number">03</div>
+                            <div class="step-icon" aria-hidden="true">
+                                <svg class="step-svg" viewBox="0 0 24 24" fill="none">
+                                    <path d="M4 11.5 12 5l8 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.5 10.8V20h11V10.8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M10.2 20v-6.2h3.6V20" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="step-label">
+                                <span class="step-label-main">住</span>
+                                <span class="step-label-sub">(Artisan)</span>
+                            </div>
+                        </div>
+                        <div class="step-item" data-theme="travel">
+                            <div class="step-number">04</div>
+                            <div class="step-icon" aria-hidden="true">
+                                <svg class="step-svg" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6.5 16.5h11l1-4.2c.2-.9-.4-1.8-1.3-1.9L15 10H9l-2.2.4c-.9.1-1.5 1-1.3 1.9l1 4.2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    <path d="M8 16.5l.6 2.5M16 16.5l-.6 2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M7.5 13h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M8.5 20.2a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4ZM15.5 20.2a1.2 1.2 0 1 0 0-2.4 1.2 1.2 0 0 0 0 2.4Z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                            <div class="step-label">
+                                <span class="step-label-main">行</span>
+                                <span class="step-label-sub">(Traveler)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 主题卡片 -->
+                <div class="themes-grid">
+                    <!-- 衣 -->
+                    <div class="theme-card theme-clothes" id="clothes">
+                        <div class="theme-header">
+                            <div class="theme-number">01</div>
+                            <div class="theme-info">
+                                <h3 class="theme-title">衣 - (Dressmaker)</h3>
+                                <div class="theme-keywords">
+                                    <span class="keyword-label">关键字：</span>
+                                    <span class="keyword-tag">旧衣改造</span>
+                                    <span class="keyword-tag">匠人手作</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theme-icon-large">👕</div>
+                        <div class="theme-content">
+                            <div class="content-section">
+                                <h4 class="content-title">设计思路</h4>
+                                <p class="content-text"><strong>为什么要用匠人态度改造旧衣？</strong></p>
+                                <p class="content-text">做手工是当下都市年轻女性的重要解压方式之一。拼豆、缝纫、做手账、陶艺、戳毛毡……这些手工能让人在一段时间内放空自我，进入一种类似冥想的状态：无论是自己尝试，还是看别人去做，都充满了治愈感。</p>
+                                <p class="content-text"><strong>结合游戏：</strong>心动小镇游戏中的很多行为活动，都带有这种“放空自我”的特性；而换装又是小镇中的重要玩法之一，所以我们用一帧帧“旧衣改造”的画面带着观众放空大脑，短暂地抛弃烦恼。</p>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">主要内容</h4>
+                                <p class="content-text">女主叫奈奈，19岁，是个温柔甜美的女大，在小镇上经营着一家不起眼的裁缝铺；她养着一只名叫“momo酱”的大橘猫（六岁半的“高龄”），慵懒臭屁，肥能压塌炕。这家裁缝铺有个奇怪的规矩：不给顾客做新衣服，但是顾客可以拿着旧衣服上门，提出各种各样的改造需求。</p>
+                                <p class="content-text">影片每一集的内容，都是女主在阳光下的几案上，如同修复文物一样细心、悠然地摆弄针线、剪刀，静静地将一件件或是破旧或是过时的衣服改造成客户需要的样子。在她慢悠悠的动作里，时光仿佛都被拉长了。</p>
+                                <p class="content-text">在这个系列的剧集中，客户很少真正现身，他们的需求通过女主在缝纫改造过程中的画外音徐徐道来。有些需求听起来稀奇古怪，但背后都包含着衣服主人与这件衣服背后的某个小故事（比如一个小朋友想要把一件自己的旧衣服改造成流浪猫挡风的猫窝，或是一个少女想要把自己的连衣裙改造成记忆中妈妈穿过的样子）。这些背后的小故事，只会在每集影片最后客户拿到衣服的时候才会揭示。</p>
+                            </div>
+                            <div class="character-stats">
+                                <span class="stat-badge">审美度 95</span>
+                                <span class="stat-badge">匠心度 98</span>
+                                <span class="stat-badge">治愈感 92</span>
+                            </div>
+                            <div class="content-section character-section">
+                                <div class="character-content">
+                                    <h4 class="content-title">主角形象</h4>
+                                    <ul class="content-list">
+                                        <li><strong>姓名：</strong>奈奈（Natty）</li>
+                                        <li><strong>年龄：</strong>19岁</li>
+                                        <li><strong>星座：</strong>巨蟹座</li>
+                                        <li><strong>MBTI：</strong>ISFJ</li>
+                                        <li>温柔甜美的女大，话不多，但善解人意、心思细腻</li>
+                                        <li>审美超绝，手艺精湛</li>
+                                        <li><strong>宠物：</strong>momo酱（大橘，6岁半）</li>
+                                    </ul>
+                                </div>
+                                <div class="character-images">
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/奈奈01.png" alt="奈奈01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/奈奈02.png" alt="奈奈02" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-section pet-section">
+                                <div class="pet-content">
+                                    <h4 class="content-title">宠物形象</h4>
+                                    <ul class="content-list">
+                                        <li><strong>名字：</strong>momo酱</li>
+                                        <li><strong>设定：</strong>六岁半“高龄”大橘，肥能压塌炕；表面高冷臭屁，实则是店里的“招财猫”</li>
+                                        <li><strong>外形：</strong>圆滚滚的大橘，毛量厚实，走两步就开始找阳光最好的地方躺平</li>
+                                        <li><strong>性格：</strong>对生人翻白眼儿、对熟人摆架子；一旦决定“赏脸”，就会用肚皮和呼噜声收买人心</li>
+                                        <li><strong>与奈奈互动：</strong>营业完回头盯着奈奈：“我这可都是为了帮你招徕顾客，还不赶紧上供小冻干”</li>
+                                    </ul>
+                                </div>
+                                <div class="pet-images">
+                                    <div class="pet-image">
+                                        <img src="图片参考/角色/momo酱.png" alt="momo酱" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>🐱</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">参考作品</h4>
+                                <div class="reference-grid">
+                                    <a class="ref-card" href="https://www.bilibili.com/bangumi/play/ep96826?spm_id_from=333.788.recommend_more_video.0&from_trackid=web_related_0.router-related-2206419-dbw5n.1769598353454.910" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/海报：编舟记.webp" alt="编舟记" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《编舟记》</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 食 -->
+                    <div class="theme-card theme-food" id="food">
+                        <div class="theme-header">
+                            <div class="theme-number">02</div>
+                            <div class="theme-info">
+                                <h3 class="theme-title">食 - (Chef) 《露营食记》</h3>
+                                <div class="theme-keywords">
+                                    <span class="keyword-label">关键字：</span>
+                                    <span class="keyword-tag">露营</span>
+                                    <span class="keyword-tag">美食</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theme-icon-large">🍜</div>
+                        <div class="theme-content">
+                            <div class="content-section food-showcase-section">
+                                <h4 class="content-title">食篇作品展示</h4>
+                                <div class="food-showcase-layout">
+                                    <div class="food-showcase-sidebar is-partial">
+                                        <div class="showcase-sidebar-header" id="sidebarToggle">
+                                            <svg class="showcase-sidebar-icon" viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M4 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm5 0v5l2-1.5L13 9V4H9z"/></svg>
+                                            <span class="sidebar-header-text">剧集目录</span>
+                                            <svg class="showcase-sidebar-arrow" viewBox="0 0 12 12" width="10" height="10"><polyline points="3,4.5 6,7.5 9,4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        </div>
+                                        <ul class="showcase-episode-list" id="episodeList">
+                                            <li class="showcase-episode-item is-active" data-video="../../output/final/food/XDTown_SER01_ep01_004_a.mp4" data-desc="用一颗鱼丸，换一个跟班">
+                                                <span class="episode-dot"></span>
+                                                <span class="episode-number">EP.01</span>
+                                                <span class="episode-name">露营食记</span>
+                                            </li>
+                                            <li class="showcase-episode-item" data-video="../../output/final/food/XDTown_SER01_ep02_sub_v002_a.mp4" data-desc="别灰心，彩虹一直都在">
+                                                <span class="episode-dot"></span>
+                                                <span class="episode-number">EP.02</span>
+                                                <span class="episode-name">春雨食谱</span>
+                                            </li>
+                                            <li class="showcase-episode-item" data-video="../../output/final/food/XDTown_SER01_ep03_002_a.mp4" data-desc="春日里的第一口鲜甜">
+                                                <span class="episode-dot"></span>
+                                                <span class="episode-number">EP.03</span>
+                                                <span class="episode-name">春日便当</span>
+                                            </li>
+                                            <li class="showcase-episode-item is-disabled">
+                                                <span class="episode-dot"></span>
+                                                <span class="episode-number">EP.04</span>
+                                                <span class="episode-name">制作中...</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="food-showcase-player-wrap">
+                                        <div class="food-showcase-desc" id="foodShowcaseDesc">用一颗鱼丸，换一个跟班</div>
+                                        <div class="food-showcase-player" id="foodShowcasePlayer">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">设计思路</h4>
+                                <p class="content-text"><strong>为什么要把吃播放进露营？</strong></p>
+                                <p class="content-text">“美食”在影视剧、动画中往往与“心灵的治愈”相关，是最能抚慰人心的题材；“露营”则寄托着一种从现实生活的繁杂日常中短暂抽离的渴望。</p>
+                                <p class="content-text"><strong>结合游戏：</strong>而这两者在心动小镇的游戏中又都有体现，且烹饪还是重要的玩法之一。所以我们设计了这个系列，让观众带入一个“独自露营的孤独美食家”，在美食和露营中放空身心，收获温暖与治愈。</p>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">主要内容</h4>
+                                <p class="content-text">女主叫薄荷，25岁，是个普通的OL，生活中最大的爱好就是独自一人跑到小镇周边人少又漂亮的地方露营，用有限的条件为自己烹饪一餐美食。她性格冷静、话不多，每集故事都围绕她一个人支帐篷、生火、做饭的画面展开：在静谧里，把治愈感慢慢炖出来；同时用画外音的形式诉说她对生活、工作、美食的小思考。</p>
+                                <p class="content-text">然而，偏偏是这么一个渴望下班后在大自然中独处的人，每一集都会遇到一个意外闯入的角色（迷路的登山客、同样寻找露营点的人、小猫小狗，甚至只是一只被食物香味吸引来的小鸟）。这些闯入者性格各异，有的是话痨、有的跟主角一样只想一个人静静。无论他们表现出怎样的态度，主角对他们都视若无睹。 不过每当"闯入者"出现的时候，主角还是会默默地把食物多做一份，跟闯入者一起分享。</p>
+                            </div>
+
+                            <div class="character-stats">
+                                <span class="stat-badge">冷静度 90</span>
+                                <span class="stat-badge">治愈感 95</span>
+                                <span class="stat-badge">社交度 40</span>
+                            </div>
+                            <div class="content-section character-section">
+                                <div class="character-content">
+                                    <h4 class="content-title">主角设定</h4>
+                                    <ul class="content-list">
+                                        <li><strong>姓名：</strong>薄荷（Bohe）</li>
+                                        <li><strong>年龄：</strong>25岁</li>
+                                        <li><strong>星座：</strong>摩羯座</li>
+                                        <li><strong>MBTI：</strong>ISTJ</li>
+                                        <li><strong>宠物：</strong>剩饭（狗）</li>
+                                        <li>性格冷静、安静</li>
+                                        <li>普通OL，喜欢独自露营，喜欢在风景优美、人少的地方露营并烹饪</li>
+                                    </ul>
+                                </div>
+                                <div class="character-images">
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/薄荷01.png" alt="薄荷角色图01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/薄荷02.png" alt="薄荷角色图02" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-section pet-section">
+                                <div class="pet-content">
+                                    <h4 class="content-title">宠物形象</h4>
+                                    <ul class="content-list">
+                                        <li><strong>名字：</strong>剩饭</li>
+                                        <li><strong>来历：</strong>原本是流浪狗，薄荷露营时它来捡剩饭吃；一来二去就跟成了“小跟班”</li>
+                                        <li><strong>年龄：</strong>不祥，但看起来挺年轻</li>
+                                        <li><strong>性格：</strong>活泼 / 忠诚 / 勇敢；对外界风吹草动很警觉，但对薄荷极其放心</li>
+                                        <li><strong>关键词：</strong>站岗 / 守护 / 跟班 / 讨两口</li>
+                                    </ul>
+                                </div>
+                                <div class="pet-images">
+                                    <div class="pet-image">
+                                        <img src="图片参考/角色/剩饭.png" alt="剩饭" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>🐶</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">参考作品</h4>
+                                <div class="reference-grid">
+                                    <a class="ref-card" href="https://www.bilibili.com/video/BV1XJqGBmEtV/?spm_id_from=333.337.search-card.all.click&vd_source=463e8387f90e6c58b38a8f276a46466c" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/海报：露营少女.webp" alt="露营少女" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《露营少女》</div>
+                                    </a>
+                                    <a class="ref-card" href="https://www.bilibili.com/bangumi/play/ss2602?spm_id_from=333.337.0.0" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/海报：和歌子酒.webp" alt="和歌子酒" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《和歌子酒》</div>
+                                    </a>
+                                    <a class="ref-card" href="https://www.bilibili.com/video/BV18KqoBKEpe/?spm_id_from=333.337.search-card.all.click" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/日食记露营.png" alt="日食记" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《日食记》</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 住 -->
+                    <div class="theme-card theme-living" id="living">
+                        <div class="theme-header">
+                            <div class="theme-number">03</div>
+                            <div class="theme-info">
+                                <h3 class="theme-title">住 - (Artisan)</h3>
+                                <div class="theme-keywords">
+                                    <span class="keyword-label">关键字：</span>
+                                    <span class="keyword-tag">少女</span>
+                                    <span class="keyword-tag">五金</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theme-icon-large">🏠</div>
+                        <div class="theme-content">
+                            <div class="content-section">
+                                <h4 class="content-title">设计思路</h4>
+                                <p class="content-text"><strong>为什么要让少女拿起电钻？</strong></p>
+                                <p class="content-text">一、二线城市的独居年轻人，在远离家庭的租住生活中常常会面临各种与家装、维修相关的生活问题。小到水管漏了怎么修？大到怎么花小钱办大事地装修一套老破小……很多人——其中就包括很多年轻女孩——都选择主动拿起那些在传统认知中更与男性力量相关的工具，学着做木工、做电工……我觉得这是一件很酷的事情。</p>
+                                <p class="content-text"><strong>结合游戏：</strong>家装本来也是心动小镇游戏里的一个重要玩法，所以这一系列就通过塑造一个生活技能点MAX的酷女孩，带着大家一起在小镇里解决各种维修相关的生活小问题。</p>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">主要内容</h4>
+                                <p class="content-text">女主是一个骑着踏板摩托车、背着五金工具箱在小镇中到处游走的热心肠cool girl，帮助小镇上各种各样的人处理日常生活中的小问题。 影片的每一集都是她骑着摩托车来到某个正在被生活琐事困扰的路人家中，帮TA解决问题。画面静静地展现她工作时的动作、神情，滴落的汗水、专注的眼神、旋紧的螺丝……在这一过程中，通过画外音的形式阐述她的人生哲学：每一处破损生活点滴都值得修修补补。</p>
+                                <p class="content-text">然而，并不是每个人都跟她分享相同的人生哲学。在消费主义大潮的裹挟下，更多都市人习惯于"东西坏了就换新""自己不会解决的问题就花钱雇人来做"。女主角从不judge他人的选择与生活方式，只会默默地把坏掉的东西收好、修好，在跳蚤市场上给它找到新的主人。以这种方式默默地贯彻自己的人生哲学。</p>
+                            </div>
+                            <div class="character-stats">
+                                <span class="stat-badge">技能值 100</span>
+                                <span class="stat-badge">热情度 95</span>
+                                <span class="stat-badge">酷感 85</span>
+                            </div>
+                            <div class="content-section character-section">
+                                <div class="character-content">
+                                    <h4 class="content-title">主角设定</h4>
+                                    <ul class="content-list">
+                                        <li><strong>姓名：</strong>巧姐</li>
+                                        <li><strong>年龄：</strong>28岁</li>
+                                        <li><strong>星座：</strong>白羊座</li>
+                                        <li><strong>MBTI：</strong>ESTP</li>
+                                        <li>热心"酷女孩"，骑小摩托，随身工具箱</li>
+                                        <li>性格热情、开朗、全能</li>
+                                        <li>穿着工装，头戴头巾，偶尔脸上有油污</li>
+                                        <li>小摩托是她最好的"朋友"</li>
+                                    </ul>
+                                </div>
+                                <div class="character-images">
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/巧姐01.png" alt="巧姐角色图01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/巧姐02.png" alt="巧姐角色图02" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">参考作品</h4>
+                                <div class="reference-grid">
+                                    <a class="ref-card" href="https://www.bilibili.com/bangumi/play/ss39575?spm_id_from=333.337.0.0" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/海报：本田小狼与我.webp" alt="本田小狼与我" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《本田小狼与我》</div>
+                                    </a>
+                                    <a class="ref-card" href="https://www.bilibili.com/video/BV1na4y1s7ZA/?spm_id_from=333.337.search-card.all.click&vd_source=463e8387f90e6c58b38a8f276a46466c" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/五金少女.png" alt="五金少女" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《五金少女》</div>
+                                    </a>
+                                    <a class="ref-card" href="https://www.bilibili.com/video/BV15C4y1s7rJ?spm_id_from=333.788.recommend_more_video.-1&trackid=web_related_0.router-related-2206419-bzvv8.1769572711136.389&vd_source=463e8387f90e6c58b38a8f276a46466c" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/醋酸沙拉.png" alt="醋酸沙拉" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《醋酸沙拉》</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 行 -->
+                    <div class="theme-card theme-travel" id="travel">
+                        <div class="theme-header">
+                            <div class="theme-number">04</div>
+                            <div class="theme-info">
+                                <h3 class="theme-title">行 - (Traveler)</h3>
+                                <div class="theme-keywords">
+                                    <span class="keyword-label">关键字：</span>
+                                    <span class="keyword-tag">旅居躺平</span>
+                                    <span class="keyword-tag">侦探悬疑</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theme-icon-large">🚗</div>
+                        <div class="theme-content">
+                            <div class="content-section">
+                                <h4 class="content-title">设计思路</h4>
+                                <p class="content-text"><strong>为什么要把旅行包装成探险？</strong></p>
+                                <p class="content-text">如何找个十八线小城市躺平？这是当下高线城市年轻打工族在互联网上的热门话题之一。这种脱离“常规”生活的旅居包含着一种想要通过“生活在别处”的方式来缓解高压的渴望。心动小镇作为一个可以让大家在现实中短暂逃离的乌托邦，本身就是一个理想的“赛博旅居地”。所以我们想要模仿日本很多宣传地方风物的泡面番，把心动小镇包装成一个网红旅居地，通过主角的视角带着大家游览小镇。</p>
+                                <p class="content-text"><strong>结合游戏：</strong>之所以要把“旅居宣传”与“冒险探秘”相结合，一来是因为小镇作为一个“虚拟世界”，本身就带有现实世界中没有的“奇风异俗”，天然具有趣味性；二来是本策划的前几个系列都走温情路线，所以希望这个系列能有所跳脱，在暖心的大前提下带上些许搞笑无厘头成分，穿插在前三个系列中作为适度的调剂。</p>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">主要内容</h4>
+                                <p class="content-text">男主是一个精力充沛的网红博主，以去小众目的地旅行探险做为自己的视频内容。而现在，他来到了与现实世界迥异的心动小镇。 在这里，他发现了很多"神秘事件"，诸如"为什么有公交站，却从没人见过公交车？"或者"为什么小镇居民的背包、口袋像黑洞一样什么都能装？"影片的每一集就是他用一惊一乍地口吻对着镜头讲述一个他发现的"秘密"，然后像个侦探一样试图解开秘密背后的"真相"。</p>
+                                <p class="content-text">然而，他什么真相都查不出来。所以每集事件的结尾，都会增加他对于"这个地方有猫腻"的刻板印象，并进一步让他觉得心动小镇太神秘了，这里的居民一定有什么"不可告人的秘密"。但是随着接触日久，他又发现这里除了那些奇怪的风俗外，其他的一切都那么美好，而且每集都会有不同的角色投喂主角。最后的结果就是，他越来越离不开这个理想中的躺平旅居地了。</p>
+                            </div>
+                            <div class="character-stats">
+                                <span class="stat-badge">活力值 100</span>
+                                <span class="stat-badge">神秘感 80</span>
+                                <span class="stat-badge">幽默度 90</span>
+                            </div>
+                            <div class="content-section character-section">
+                                <div class="character-content">
+                                    <h4 class="content-title">主角设定</h4>
+                                    <ul class="content-list">
+                                        <li><strong>网名：</strong>“壮壮走天涯”</li>
+                                        <li><strong>别称：</strong>大壮</li>
+                                        <li><strong>年龄：</strong>18岁</li>
+                                        <li><strong>星座：</strong>双子座</li>
+                                        <li><strong>MBTI：</strong>ENTP</li>
+                                        <li>活力网红博主，专攻冷门地点探险</li>
+                                        <li>"奶狗"弟弟型，兴奋、古怪的"电波系"</li>
+                                        <li>阴谋论者、网红博主</li>
+                                    </ul>
+                                </div>
+                                <div class="character-images">
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/大壮01.png" alt="大壮01" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                    <div class="character-image">
+                                        <img src="图片参考/角色/大壮02.png" alt="大壮02" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                        <div class="image-placeholder" style="display:none;">
+                                            <span>👤</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content-section">
+                                <h4 class="content-title">参考作品</h4>
+                                <div class="reference-grid">
+                                    <a class="ref-card" href="https://www.bilibili.com/video/BV16FUWBnEVM/?spm_id_from=333.337.search-card.all.click&vd_source=463e8387f90e6c58b38a8f276a46466c" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/海报：你还是不懂群马.webp" alt="你还是不懂群马" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《你还是不懂群马》</div>
+                                    </a>
+                                    <a class="ref-card" href="https://www.bilibili.com/video/BV1zb411w7hN/?spm_id_from=333.337.search-card.all.click&vd_source=463e8387f90e6c58b38a8f276a46466c" target="_blank" rel="noopener noreferrer">
+                                        <div class="ref-image">
+                                            <img src="图片参考/海报：欢迎光临千岁酱.webp" alt="欢迎光临，千岁酱" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                            <div class="ref-image-placeholder" style="display:none;">
+                                                <span>📺</span>
+                                            </div>
+                                        </div>
+                                        <div class="ref-title">《欢迎光临，千岁酱》</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 故事文案 -->
+        <section class="section storyboards-section" id="storyboards">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">故事文案</span>
+                    <h2 class="section-title">各系列故事文案</h2>
+                    <p class="section-description">按主题汇总每集标题文案</p>
+                </div>
+
+                <div class="storyboards-grid">
+                    <div class="storyboard-list">
+                        <div class="storyboard-header">
+                            <span class="storyboard-icon" aria-hidden="true">
+                                <img class="storyboard-avatar" src="图片参考/角色/奈奈01.png" alt="奈奈">
+                            </span>
+                            <h3 class="storyboard-title">衣篇</h3>
+                        </div>
+                        <ul class="storyboard-items">
+                            <li class="storyboard-empty">敬请期待</li>
+                        </ul>
+                    </div>
+
+                    <div class="storyboard-list">
+                        <div class="storyboard-header">
+                            <span class="storyboard-icon" aria-hidden="true">
+                                <img class="storyboard-avatar" src="图片参考/角色/薄荷01.png" alt="薄荷">
+                            </span>
+                            <h3 class="storyboard-title">食篇</h3>
+                        </div>
+                        <ul class="storyboard-items">
+                            <li>
+                                <a class="storyboard-link" href="food-ep01-camping-diary-storyboard.html" target="_blank" rel="noopener noreferrer">第1集《露营食记》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep02-spring-rain-recipe-storyboard.html" target="_blank" rel="noopener noreferrer">第2集《春雨食谱》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep03-spring-bento-storyboard.html" target="_blank" rel="noopener noreferrer">第3集《春日便当》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep04-summer-cold-noodles-storyboard.html" target="_blank" rel="noopener noreferrer">第4集《夏夜凉面》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep05-watermelon-by-stream-storyboard.html" target="_blank" rel="noopener noreferrer">第5集《溪边西瓜》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep06-thunder-curry-storyboard.html" target="_blank" rel="noopener noreferrer">第6集《雷雨咖喱》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep07-autumn-stew-rice-storyboard.html" target="_blank" rel="noopener noreferrer">第7集《秋日炖饭》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep08-moonlit-rice-cake-storyboard.html" target="_blank" rel="noopener noreferrer">第8集《月下烤年糕》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep09-roasted-sweet-potato-storyboard.html" target="_blank" rel="noopener noreferrer">第9集《落叶烤红薯》</a>
+                            </li>
+                            <li>
+                                <a class="storyboard-link" href="food-ep10-winter-sukiyaki-storyboard.html" target="_blank" rel="noopener noreferrer">第10集《冬日寿喜烧》</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="storyboard-list">
+                        <div class="storyboard-header">
+                            <span class="storyboard-icon" aria-hidden="true">
+                                <img class="storyboard-avatar" src="图片参考/角色/巧姐01.png" alt="巧姐">
+                            </span>
+                            <h3 class="storyboard-title">住篇</h3>
+                        </div>
+                        <ul class="storyboard-items">
+                            <li class="storyboard-empty">敬请期待</li>
+                        </ul>
+                    </div>
+
+                    <div class="storyboard-list">
+                        <div class="storyboard-header">
+                            <span class="storyboard-icon" aria-hidden="true">
+                                <img class="storyboard-avatar" src="图片参考/角色/大壮01.png" alt="大壮">
+                            </span>
+                            <h3 class="storyboard-title">行篇</h3>
+                        </div>
+                        <ul class="storyboard-items">
+                            <li class="storyboard-empty">敬请期待</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 整体特点 -->
+        <section class="section features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">整体特点</span>
+                    <h2 class="section-title">核心优势</h2>
+                    <p class="section-description">五个维度展现泡面番的独特魅力</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⏱️</div>
+                        <h3 class="feature-title">短小精悍</h3>
+                        <p class="feature-description">每集2分钟，适合碎片化观看</p>
+                        <div class="feature-decoration"></div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3 class="feature-title">主题明确</h3>
+                        <p class="feature-description">四个主题对应"衣、食、住、行"，覆盖生活场景</p>
+                        <div class="feature-decoration"></div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3 class="feature-title">游戏联动</h3>
+                        <p class="feature-description">结合游戏玩法（烹饪、家装等）</p>
+                        <div class="feature-decoration"></div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3 class="feature-title">风格多样</h3>
+                        <p class="feature-description">治愈（食）、实用（住）、悬疑幽默（行）</p>
+                        <div class="feature-decoration"></div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h3 class="feature-title">情感共鸣</h3>
+                        <p class="feature-description">强调情感共鸣与理想化生活场景</p>
+                        <div class="feature-decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-icon">💖</span>
+                    <span>心动小镇</span>
+                </div>
+                <p class="footer-text">© 2026 心动小镇·泡面番策划 | 遇见生活的美好</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 图片预览弹层 -->
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+        <div class="lightbox-backdrop" data-lightbox-close></div>
+        <div class="lightbox-content" role="dialog" aria-modal="true">
+            <button class="lightbox-close" type="button" aria-label="关闭预览" data-lightbox-close>✕</button>
+            <img class="lightbox-image" id="lightboxImage" alt="图片预览">
+        </div>
+    </div>
+
+    <!-- 返回顶部 -->
+    <button class="back-to-top" id="backToTop" type="button" aria-label="返回顶部">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="noodle-anime-script.js"></script>
+    <script>
+    (function(){
+        var btn = document.getElementById('backToTop');
+        if(!btn) return;
+        var show = false;
+        window.addEventListener('scroll', function(){
+            var shouldShow = window.scrollY > 400;
+            if(shouldShow !== show){
+                show = shouldShow;
+                btn.classList.toggle('is-visible', show);
+            }
+        }, {passive:true});
+        btn.addEventListener('click', function(){
+            window.scrollTo({top:0, behavior:'smooth'});
+        });
+    })();
+    </script>
+</body>
+</html>

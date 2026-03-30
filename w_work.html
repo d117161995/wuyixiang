@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作展示 - WuYiXiang</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--text-main);
+        }
+
+        p.subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .main-layout {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .main-left {
+            flex: 2;
+            min-width: 0;
+            max-height: calc(100vh - 6rem);
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e1 transparent;
+        }
+
+        .main-left::-webkit-scrollbar { width: 6px; }
+        .main-left::-webkit-scrollbar-track { background: transparent; }
+        .main-left::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        .main-left::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .main-right {
+            flex: 1;
+            position: sticky;
+            top: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 1.5rem;
+            row-gap: 0.8rem;
+            margin-bottom: 4rem;
+        }
+
+        /* ─── 右侧快捷路径面板 ─── */
+        .path-panel {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            padding: 1.5rem;
+        }
+
+        .path-panel-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 1.2rem 0;
+            padding-bottom: 0.8rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .path-item {
+            margin-bottom: 1rem;
+        }
+
+        .path-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .path-label {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+            letter-spacing: 0.03em;
+        }
+
+        .path-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: stretch;
+        }
+
+        .path-value {
+            flex: 1;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.82rem;
+            background: #f8fafc;
+            padding: 0.5rem 0.65rem;
+            border-radius: 6px;
+            word-break: break-all;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+            line-height: 1.5;
+        }
+
+        .path-copy-btn {
+            padding: 0.5rem 0.7rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background: #fff;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 0.78rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+        }
+
+        .path-copy-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .path-copy-btn.copied {
+            background: #16a34a;
+            color: #fff;
+            border-color: #16a34a;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .drag-handle {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            z-index: 5;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            background: rgba(0,0,0,0.04);
+            color: #94a3b8;
+            cursor: grab;
+            transition: background 0.2s, color 0.2s;
+            user-select: none;
+        }
+
+        .drag-handle:hover {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary-color);
+        }
+
+        .drag-handle:active {
+            cursor: grabbing;
+        }
+
+        .drag-handle svg {
+            pointer-events: none;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card.dragging {
+            opacity: 0.4;
+            cursor: grabbing;
+        }
+
+        .card.drag-over {
+            border: 2px dashed var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .card.slot-empty {
+            background: transparent;
+            border: 2px dashed #e2e8f0;
+            box-shadow: none;
+            cursor: default;
+            min-height: 120px;
+        }
+
+        .card.slot-empty:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: #cbd5e1;
+        }
+
+        .card.slot-empty.drag-over {
+            border-color: var(--primary-color);
+            background: rgba(37, 99, 235, 0.04);
+        }
+
+        .sort-hint {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            opacity: 0.7;
+        }
+
+        /* ─── 行间分隔线 + 加减按钮 ─── */
+        .row-divider {
+            position: relative;
+            height: 4px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-column: 1 / -1;
+            transition: height 0.2s, margin 0.2s;
+            cursor: default;
+        }
+
+        .row-divider:hover {
+            height: 28px;
+            margin: 4px 0;
+        }
+
+        .row-divider::before {
+            content: '';
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            top: 50%;
+            height: 1px;
+            background: transparent;
+            transition: background 0.2s;
+        }
+
+        .row-divider:hover::before {
+            background: #cbd5e1;
+        }
+
+        .row-divider .row-btn {
+            position: relative;
+            z-index: 2;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 1.5px solid #e2e8f0;
+            background: var(--card-bg);
+            color: #94a3b8;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.6);
+            transition: all 0.2s;
+            padding: 0;
+            margin: 0 3px;
+        }
+
+        .row-divider:hover .row-btn {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .row-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            background: #eff6ff;
+            transform: scale(1.15);
+        }
+
+        .row-btn.row-btn-remove {
+            color: #ef4444;
+            border-color: #fecaca;
+        }
+
+        .row-btn.row-btn-remove:hover {
+            color: #fff;
+            background: #ef4444;
+            border-color: #ef4444;
+        }
+
+        @media (max-width: 1600px) {
+            .grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 1200px) {
+            .main-layout { flex-direction: column; }
+            .main-right { position: static; }
+            .grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 560px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            max-height: 500px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #cbd5e1 transparent;
+        }
+
+        .card-content::-webkit-scrollbar { width: 4px; }
+        .card-content::-webkit-scrollbar-track { background: transparent; }
+        .card-content::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+        .card-content::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem 0;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .new-card { border-left: 3px solid var(--primary-color); }
+
+        #new-cards-panel.empty-panel { display: none; }
+
+        .tag-asset { background-color: #dbeafe; color: #1e40af; }
+        .tag-story { background-color: #fce7f3; color: #9d174d; }
+        .tag-tool { background-color: #dcfce7; color: #166534; }
+        .tag-personal { background-color: #f3f4f6; color: #374151; }
+
+        .link-container {
+            margin-top: auto;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        .link-row {
+            margin-bottom: 1rem;
+        }
+
+        .link-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .link-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .link-value {
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.85rem;
+            background-color: #f8fafc;
+            padding: 0.5rem;
+            border-radius: 4px;
+            word-break: break-all;
+            color: #334155;
+            display: block;
+            text-decoration: none;
+            border: 1px solid #e2e8f0;
+            user-select: text;
+        }
+
+        a.link-value {
+            color: var(--primary-color);
+            background-color: #eff6ff;
+            border-color: #dbeafe;
+        }
+
+        a.link-value:hover {
+            background-color: #dbeafe;
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .copy-row {
+            display: flex;
+            gap: 0.5rem;
+            align-items: stretch;
+        }
+
+        .copy-row .link-value {
+            flex: 1;
+        }
+
+        .copy-btn {
+            padding: 0.5rem 0.8rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            background: #fff;
+            color: var(--primary-color);
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .copy-btn.copied {
+            background: #16a34a;
+            color: #fff;
+            border-color: #16a34a;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>工作展示中心</h1>
+        <p class="subtitle">WuYiXiang 的项目与资产索引</p>
+    </div>
+</header>
+
+<div class="container">
+  <div class="main-layout">
+    <div class="main-left">
+    <p class="sort-hint">拖拽卡片可调整顺序，松手自动保存</p>
+    <div class="grid" id="card-grid">
+        <!-- 影视作品集 -->
+        <div class="card" data-id="portfolio">
+            <div class="card-content">
+                <span class="tag tag-asset">作品集</span>
+                <h2 class="card-title">部门影视作品集</h2>
+                <p class="card-desc">游戏风格的影视作品集展示，支持按游戏/类别/难度筛选，数据来自飞书多维表格。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="portfolio/index.html" class="link-value" target="_blank">portfolio/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/portfolio/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/portfolio/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">更新数据</div>
+                        <div class="copy-row">
+                            <span class="link-value">node tools/fetch-portfolio.mjs</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 部门主页 -->
+        <div class="card" data-id="dept-home">
+            <div class="card-content">
+                <span class="tag tag-personal">部门主页</span>
+                <h2 class="card-title">影视创意组 首页</h2>
+                <p class="card-desc">高级质感的部门门户，包含项目橱窗、排期进度与AI制作流。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="FilmCreativityGroup/index.html" class="link-value" target="_blank">FilmCreativityGroup/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/FilmCreativityGroup/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/FilmCreativityGroup/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">工程路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\FilmCreativityGroup</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 资产库 -->
+        <div class="card" data-id="asset-lib">
+            <div class="card-content">
+                <span class="tag tag-asset">资产库</span>
+                <h2 class="card-title">角色库</h2>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="Asset/character-library.html" class="link-value" target="_blank">Asset/character-library.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/Asset/character-library.html" class="link-value" target="_blank">http://172.26.166.131:8080/Asset/character-library.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">工程路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\Asset</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 策划展示 -->
+        <div class="card" data-id="noodle-plan">
+            <div class="card-content">
+                <span class="tag tag-story">策划</span>
+                <h2 class="card-title">泡面番策划展示</h2>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="FilmCreativityGroup/story/noodle-anime-plan.html" class="link-value" target="_blank">FilmCreativityGroup/story/noodle-anime-plan.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/FilmCreativityGroup/story/noodle-anime-plan.html" class="link-value" target="_blank">http://172.26.166.131:8080/FilmCreativityGroup/story/noodle-anime-plan.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">工程路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\FilmCreativityGroup\story</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">交片路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\output\final\</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分镜 -->
+        <div class="card" data-id="storyboard">
+            <div class="card-content">
+                <span class="tag tag-story">分镜</span>
+                <h2 class="card-title">我的分镜</h2>
+                <p class="card-desc">竖版短视频创意分镜展示，包含镜头设计与视觉方案。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">第2集：春雨食谱 (竖版)</div>
+                        <a href="FilmCreativityGroup/story/food-ep02-vertical-storyboard.html" class="link-value" target="_blank">FilmCreativityGroup/story/food-ep02-vertical-storyboard.html</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 食篇第一集 -->
+        <div class="card" data-id="food-ep01">
+            <div class="card-content">
+                <span class="tag tag-story">分镜</span>
+                <h2 class="card-title">食篇第一集：露营食谱</h2>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="FilmCreativityGroup/story/food-ep01-camping-diary-storyboard.html" class="link-value" target="_blank">FilmCreativityGroup/story/food-ep01-camping-diary-storyboard.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/FilmCreativityGroup/story/food-ep01-camping-diary-storyboard.html" class="link-value" target="_blank">http://172.26.166.131:8080/FilmCreativityGroup/story/food-ep01-camping-diary-storyboard.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">工程路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\FilmCreativityGroup\story</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 食篇故事文案合集 -->
+        <div class="card" data-id="food-scripts">
+            <div class="card-content">
+                <span class="tag tag-story">故事文案</span>
+                <h2 class="card-title">食篇故事文案 (全10集)</h2>
+                <p class="card-desc">泡面番食篇第1~10集故事文案/分镜，每集一个页面。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">第1集：露营食记</div>
+                        <a href="FilmCreativityGroup/story/food-ep01-camping-diary-storyboard.html" class="link-value" target="_blank">food-ep01 露营食记</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第2集：春雨食谱 (故事文案)</div>
+                        <a href="FilmCreativityGroup/story/food-ep02-spring-rain-recipe-storyboard.html" class="link-value" target="_blank">food-ep02 春雨食谱</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第3集：春日便当</div>
+                        <a href="FilmCreativityGroup/story/food-ep03-spring-bento-storyboard.html" class="link-value" target="_blank">food-ep03 春日便当</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第4集：夏夜凉面</div>
+                        <a href="FilmCreativityGroup/story/food-ep04-summer-cold-noodles-storyboard.html" class="link-value" target="_blank">food-ep04 夏夜凉面</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第5集：溪边西瓜</div>
+                        <a href="FilmCreativityGroup/story/food-ep05-watermelon-by-stream-storyboard.html" class="link-value" target="_blank">food-ep05 溪边西瓜</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第6集：雷雨咖喱</div>
+                        <a href="FilmCreativityGroup/story/food-ep06-thunder-curry-storyboard.html" class="link-value" target="_blank">food-ep06 雷雨咖喱</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第7集：秋日炖饭</div>
+                        <a href="FilmCreativityGroup/story/food-ep07-autumn-stew-rice-storyboard.html" class="link-value" target="_blank">food-ep07 秋日炖饭</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第8集：月下烤年糕</div>
+                        <a href="FilmCreativityGroup/story/food-ep08-moonlit-rice-cake-storyboard.html" class="link-value" target="_blank">food-ep08 月下烤年糕</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第9集：落叶烤红薯</div>
+                        <a href="FilmCreativityGroup/story/food-ep09-roasted-sweet-potato-storyboard.html" class="link-value" target="_blank">food-ep09 落叶烤红薯</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">第10集：冬日寿喜烧</div>
+                        <a href="FilmCreativityGroup/story/food-ep10-winter-sukiyaki-storyboard.html" class="link-value" target="_blank">food-ep10 冬日寿喜烧</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (复制前缀)</div>
+                        <div class="copy-row">
+                            <span class="link-value">http://172.26.166.131:8080/FilmCreativityGroup/story/</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 场景库 -->
+        <div class="card" data-id="scene-lib">
+            <div class="card-content">
+                <span class="tag tag-tool">工具</span>
+                <h2 class="card-title">场景库 (Scene Library)</h2>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="FilmCreativityGroup/story/scene-library/index.html" class="link-value" target="_blank">FilmCreativityGroup/story/scene-library/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/FilmCreativityGroup/story/scene-library/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/FilmCreativityGroup/story/scene-library/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">工程路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\FilmCreativityGroup\story\scene-library</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 流程图 -->
+        <div class="card" data-id="workflow">
+            <div class="card-content">
+                <span class="tag tag-tool">展示</span>
+                <h2 class="card-title">单集制作流程图</h2>
+                <p class="card-desc">包含可编辑版与高级展示版，便于内部调整逻辑与对外汇报展示。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">可编辑版 (点击跳转)</div>
+                        <a href="FilmCreativityGroup/story/episode-workflow-plan.html" class="link-value" target="_blank">FilmCreativityGroup/story/episode-workflow-plan.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">高级展示版 (点击跳转)</div>
+                        <a href="FilmCreativityGroup/story/episode-workflow-advanced.html" class="link-value" target="_blank">FilmCreativityGroup/story/episode-workflow-advanced.html</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 小镇视频 -->
+        <div class="card" data-id="town-videos">
+            <div class="card-content">
+                <span class="tag tag-asset">视频</span>
+                <h2 class="card-title">小镇近期上线视频</h2>
+                <p class="card-desc">心动小镇官方与非官方视频合集，含 15 个官方 + 19 个非官方视频。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="town-recent-videos.html" class="link-value" target="_blank">town-recent-videos.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/town-recent-videos.html" class="link-value" target="_blank">http://172.26.166.131:8080/town-recent-videos.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">视频源路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\liujiabao\XXD\收集视频\小镇</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 个人主页 -->
+        <div class="card" data-id="personal">
+            <div class="card-content">
+                <span class="tag tag-personal">个人</span>
+                <h2 class="card-title">个人主页</h2>
+                <p class="card-desc">Vite + React + TypeScript 构建</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 · 开发模式 (点击跳转)</div>
+                        <a href="http://localhost:5173/%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5/app.html" class="link-value" target="_blank">http://localhost:5173/个人主页/app.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/个人主页/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/个人主页/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">启动开发</div>
+                        <div class="copy-row">
+                            <span class="link-value">npm run dev:personal</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">构建部署</div>
+                        <div class="copy-row">
+                            <span class="link-value">npm run build:personal</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">工程路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\个人主页\src</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 心动小镇 寻鲸季过场动画 -->
+        <div class="card" data-id="sea-cg">
+            <div class="card-content">
+                <span class="tag tag-story">策划</span>
+                <h2 class="card-title">心动小镇 · 寻鲸季过场动画</h2>
+                <p class="card-desc">寻鲸季过场CG动画方案。考古小队遭遇海底地震，坠入未知的鲸落峡谷。12画面脚本。</p>
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="FilmCreativityGroup/story/sea-cg/index.html" class="link-value" target="_blank">FilmCreativityGroup/story/sea-cg/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/FilmCreativityGroup/story/sea-cg/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/FilmCreativityGroup/story/sea-cg/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RO 泡面番方案一 -->
+        <div class="card" data-id="ro-v1">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">RO仙境传说：冒险者日志 (方案一)</h2>
+                <p class="card-desc">暗色史诗风，粒子背景+魔法阵，四大篇章（战食匠旅）切换，角色卡牌可翻转。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-anime-v1/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v1/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-anime-v1/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v1/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RO 泡面番方案二 -->
+        <div class="card" data-id="ro-v2">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">下班后的仙境 (方案二)</h2>
+                <p class="card-desc">明亮暖色风，明信片Hero+冰箱磁贴切换+软木板拍立得角色墙+CRT电视剧集目录。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-anime-v2/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v2/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-anime-v2/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v2/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RO 泡面番方案三 -->
+        <div class="card" data-id="ro-v3">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">冒险者休息室 (方案三)</h2>
+                <p class="card-desc">信封拆开动画+日记本翻页剧集+软木板拍立得工牌+冰箱贴。无篇章划分，自然日记式。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-anime-v3/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v3/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-anime-v3/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v3/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RO 泡面番方案四 -->
+        <div class="card" data-id="ro-v4">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">米德加尔特生活周刊 (方案四)</h2>
+                <p class="card-desc">杂志封面+五篇章差异化：信封拆信·报纸分栏·企业工单·四格漫画·考卷批改，每篇独立视觉风格。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-anime-v4/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v4/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-anime-v4/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-anime-v4/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 一个决定删号的老油条 -->
+        <div class="card" data-id="ro-roadtrip">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">一个决定删号的老油条</h2>
+                <p class="card-desc">满级老油条+冷面萝莉+中二愣头青，街溜子冒险者小队的公路片。参考芙莉莲，每集2分钟单元剧。</p>
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-roadtrip/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-roadtrip/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-roadtrip/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-roadtrip/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RO AI番方向探索 (汇总页) -->
+        <div class="card" data-id="ro-explore">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">RO AI番方向探索</h2>
+                <p class="card-desc">六个泡面番策划方向汇总，含同事看链接</p>
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-explore/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-explore/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-explore/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-explore/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下班后的仙境 (独立页) -->
+        <div class="card" data-id="ro-afterwork">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">下班后的仙境</h2>
+                <p class="card-desc">居酒屋日常泡面番：退休MVP开的深夜小店，骑士卸甲喝酒、波利偷吃、牧师用圣光术当手电筒、盗虫的下班辩白。暖色治愈系。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-afterwork/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-afterwork/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-afterwork/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-afterwork/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 卡普拉公司的秘密 (独立页) -->
+        <div class="card" data-id="ro-kafra">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">卡普拉公司的秘密</h2>
+                <p class="card-desc">职场喜剧泡面番：卡普拉公司的实习生传送失误、资深员工的仓库秘密、神秘主管的离谱邮件、面对投诉永不变的微笑。清新马卡龙风。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-kafra/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-kafra/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-kafra/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-kafra/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 波利岛生存指南 (独立页) -->
+        <div class="card" data-id="ro-poring">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">波利生存指南</h2>
+                <p class="card-desc">RO 最弱怪物波利的第一视角，见证冒险者的成长与离去</p>
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-poring/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-poring/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-poring/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-poring/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 普隆德拉喷泉许愿 (独立页) -->
+        <div class="card" data-id="ro-fountain">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">普隆德拉喷泉许愿</h2>
+                <p class="card-desc">喷泉边等人/摆摊/发呆的群像剧，每一枚 Zeny 都是一个等待</p>
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-fountain/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-fountain/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-fountain/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-fountain/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 精炼失败的铁匠 (独立页) -->
+        <div class="card" data-id="ro-blacksmith">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">精炼失败的铁匠</h2>
+                <p class="card-desc">连碎 348 把的非酋铁匠，废品却比 +10 还好用</p>
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-blacksmith/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-blacksmith/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-blacksmith/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-blacksmith/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI 视频流程分享会 -->
+        <div class="card" data-id="ai-share">
+            <div class="card-content">
+                <span class="tag tag-tool">分享</span>
+                <h2 class="card-title">AI 视频流程分享会</h2>
+                <p class="card-desc">AI视频流程分享会网页版，含行业概述、火炬之光/RO/麦芬/香肠派对项目分享及Q&A。</p>
+                
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="aishare/index.html" class="link-value" target="_blank">aishare/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/aishare/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/aishare/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">工程路径</div>
+                        <div class="copy-row">
+                            <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\aishare</span>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 米德加尔特二人组 (独立页) -->
+        <div class="card" data-id="ro-legacy">
+            <div class="card-content">
+                <span class="tag tag-story">RO 策划</span>
+                <h2 class="card-title">米德加尔特二人组</h2>
+                <p class="card-desc">RO1→RO2 手残老玩家的友谊传承，搞笑翻车泡面番</p>
+                <div class="link-container">
+                    <div class="link-row">
+                        <div class="link-label">自己看 (点击跳转)</div>
+                        <a href="http://172.26.166.131:8080/ROstory/ro-legacy/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-legacy/index.html</a>
+                    </div>
+                    <div class="link-row">
+                        <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                        <div class="copy-row">
+                            <a href="http://172.26.166.131:8080/ROstory/ro-legacy/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/ROstory/ro-legacy/index.html</a>
+                            <button class="copy-btn" onclick="copyText(this)">复制</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="main-right">
+      <div class="path-panel">
+        <h3 class="path-panel-title">📁 快捷路径</h3>
+
+        <div class="path-item">
+          <div class="path-label">网页图标路径</div>
+          <div class="path-row">
+            <span class="path-value">Y:\tmp\WuYiXiang\wuyixiang\FilmCreativityGroup\assets\logo</span>
+            <button class="path-copy-btn" onclick="copyPath(this)">复制</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="new-cards-panel" style="margin-top:1.2rem">
+        <h3 class="path-panel-title" style="background:var(--card-bg);border-radius:12px 12px 0 0;padding:1rem 1.5rem;margin:0;border:none;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">🆕 新增页面 <span style="font-size:0.7rem;color:var(--text-secondary);font-weight:400;margin-left:0.5rem">拖到左边即可归档</span></h3>
+        <div id="new-cards" style="display:flex;flex-direction:column;gap:1rem;margin-top:0.6rem">
+
+      <!-- 火炬角色库 -->
+      <div class="card new-card" data-id="new-torch-char-lib">
+          <div class="drag-handle" title="拖拽排序"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="4" cy="3" r="1.2" fill="currentColor"/><circle cx="10" cy="3" r="1.2" fill="currentColor"/><circle cx="4" cy="7" r="1.2" fill="currentColor"/><circle cx="10" cy="7" r="1.2" fill="currentColor"/><circle cx="4" cy="11" r="1.2" fill="currentColor"/><circle cx="10" cy="11" r="1.2" fill="currentColor"/></svg></div>
+          <div class="card-content">
+              <span class="tag tag-asset">资产库</span>
+              <h2 class="card-title">火炬影视角色库</h2>
+              <p class="card-desc">火炬项目角色资产总览，含2D/3D设计图、LookDev视频、Maya路径一键复制。</p>
+              
+              <div class="link-container">
+                  <div class="link-row">
+                      <div class="link-label">自己看 (点击跳转)</div>
+                      <a href="http://localhost:5173/TorchCharLib/index.html" class="link-value" target="_blank">http://localhost:5173/TorchCharLib/index.html</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                      <div class="copy-row">
+                          <a href="http://172.26.166.131:8080/TorchCharLib/index.html" class="link-value" target="_blank">http://172.26.166.131:8080/TorchCharLib/index.html</a>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">数据逻辑文档 (点击跳转)</div>
+                      <a href="http://172.26.166.131:8080/TorchCharLib/data-logic.html" class="link-value" target="_blank">http://172.26.166.131:8080/TorchCharLib/data-logic.html</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">刷新数据库</div>
+                      <div class="copy-row">
+                          <span class="link-value">node TorchCharLib/scan-char-assets.mjs</span>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">工程路径</div>
+                      <div class="copy-row">
+                          <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\TorchCharLib</span>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Maya Bridge -->
+      <div class="card new-card" data-id="new-maya-bridge">
+          <div class="drag-handle" title="拖拽排序"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="4" cy="3" r="1.2" fill="currentColor"/><circle cx="10" cy="3" r="1.2" fill="currentColor"/><circle cx="4" cy="7" r="1.2" fill="currentColor"/><circle cx="10" cy="7" r="1.2" fill="currentColor"/><circle cx="4" cy="11" r="1.2" fill="currentColor"/><circle cx="10" cy="11" r="1.2" fill="currentColor"/></svg></div>
+          <div class="card-content">
+              <span class="tag tag-tool">工具</span>
+              <h2 class="card-title">Maya Bridge</h2>
+              <p class="card-desc">通过网页远程控制 Maya，发送 Python 命令、查看场景信息、快捷操作。</p>
+              
+              <div class="link-container">
+                  <div class="link-row">
+                      <div class="link-label">自己看 (点击跳转)</div>
+                      <a href="FilmCreativityGroup/maya-bridge.html" class="link-value" target="_blank">FilmCreativityGroup/maya-bridge.html</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                      <div class="copy-row">
+                          <a href="http://172.26.166.131:8080/FilmCreativityGroup/maya-bridge.html" class="link-value" target="_blank">http://172.26.166.131:8080/FilmCreativityGroup/maya-bridge.html</a>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">启动服务</div>
+                      <div class="copy-row">
+                          <span class="link-value">cd maya-bridge && npm start</span>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">工程路径</div>
+                      <div class="copy-row">
+                          <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\maya-bridge</span>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- 项目排期表 -->
+      <div class="card new-card" data-id="new-project-schedule">
+          <div class="drag-handle" title="拖拽排序"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="4" cy="3" r="1.2" fill="currentColor"/><circle cx="10" cy="3" r="1.2" fill="currentColor"/><circle cx="4" cy="7" r="1.2" fill="currentColor"/><circle cx="10" cy="7" r="1.2" fill="currentColor"/><circle cx="4" cy="11" r="1.2" fill="currentColor"/><circle cx="10" cy="11" r="1.2" fill="currentColor"/></svg></div>
+          <div class="card-content">
+              <span class="tag tag-tool">展示</span>
+              <h2 class="card-title">2026 项目排期表</h2>
+              <p class="card-desc">美支-影创组 2026 Q1-Q2 甘特图排期总览，覆盖伊瑟/麦芬/小镇/火炬/香肠/RO/AI技术研发 7个项目组。</p>
+              
+              <div class="link-container">
+                  <div class="link-row">
+                      <div class="link-label">自己看 (点击跳转)</div>
+                      <a href="project-schedule-2026.html" class="link-value" target="_blank">project-schedule-2026.html</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">同事看 (点击跳转 / 复制)</div>
+                      <div class="copy-row">
+                          <a href="http://172.26.166.131:8080/project-schedule-2026.html" class="link-value" target="_blank">http://172.26.166.131:8080/project-schedule-2026.html</a>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">工程路径</div>
+                      <div class="copy-row">
+                          <span class="link-value">Y:\tmp\WuYiXiang\wuyixiang\project-schedule-2026.html</span>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- 食篇故事文案 -->
+      <div class="card new-card" data-id="new-food-scripts">
+          <div class="drag-handle" title="拖拽排序"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="4" cy="3" r="1.2" fill="currentColor"/><circle cx="10" cy="3" r="1.2" fill="currentColor"/><circle cx="4" cy="7" r="1.2" fill="currentColor"/><circle cx="10" cy="7" r="1.2" fill="currentColor"/><circle cx="4" cy="11" r="1.2" fill="currentColor"/><circle cx="10" cy="11" r="1.2" fill="currentColor"/></svg></div>
+          <div class="card-content">
+              <span class="tag tag-story">故事文案</span>
+              <h2 class="card-title">食篇故事文案 (全10集)</h2>
+              <p class="card-desc">泡面番食篇第1~10集故事文案/分镜，每集一个页面。</p>
+              
+              <div class="link-container">
+                  <div class="link-row">
+                      <div class="link-label">第1集：露营食记</div>
+                      <a href="FilmCreativityGroup/story/food-ep01-camping-diary-storyboard.html" class="link-value" target="_blank">food-ep01 露营食记</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第2集：春雨食谱</div>
+                      <a href="FilmCreativityGroup/story/food-ep02-spring-rain-recipe-storyboard.html" class="link-value" target="_blank">food-ep02 春雨食谱</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第3集：春日便当</div>
+                      <a href="FilmCreativityGroup/story/food-ep03-spring-bento-storyboard.html" class="link-value" target="_blank">food-ep03 春日便当</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第4集：夏夜凉面</div>
+                      <a href="FilmCreativityGroup/story/food-ep04-summer-cold-noodles-storyboard.html" class="link-value" target="_blank">food-ep04 夏夜凉面</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第5集：溪边西瓜</div>
+                      <a href="FilmCreativityGroup/story/food-ep05-watermelon-by-stream-storyboard.html" class="link-value" target="_blank">food-ep05 溪边西瓜</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第6集：雷雨咖喱</div>
+                      <a href="FilmCreativityGroup/story/food-ep06-thunder-curry-storyboard.html" class="link-value" target="_blank">food-ep06 雷雨咖喱</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第7集：秋日炖饭</div>
+                      <a href="FilmCreativityGroup/story/food-ep07-autumn-stew-rice-storyboard.html" class="link-value" target="_blank">food-ep07 秋日炖饭</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第8集：月下烤年糕</div>
+                      <a href="FilmCreativityGroup/story/food-ep08-moonlit-rice-cake-storyboard.html" class="link-value" target="_blank">food-ep08 月下烤年糕</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第9集：落叶烤红薯</div>
+                      <a href="FilmCreativityGroup/story/food-ep09-roasted-sweet-potato-storyboard.html" class="link-value" target="_blank">food-ep09 落叶烤红薯</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">第10集：冬日寿喜烧</div>
+                      <a href="FilmCreativityGroup/story/food-ep10-winter-sukiyaki-storyboard.html" class="link-value" target="_blank">food-ep10 冬日寿喜烧</a>
+                  </div>
+                  <div class="link-row">
+                      <div class="link-label">同事看 (复制前缀)</div>
+                      <div class="copy-row">
+                          <span class="link-value">http://172.26.166.131:8080/FilmCreativityGroup/story/</span>
+                          <button class="copy-btn" onclick="copyText(this)">复制</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 WuYiXiang. All rights reserved.</p>
+</footer>
+
+<script>
+function copyText(btn) {
+    var text = btn.previousElementSibling.textContent.trim();
+    navigator.clipboard.writeText(text).then(function() {
+        btn.textContent = '已复制';
+        btn.classList.add('copied');
+        setTimeout(function() {
+            btn.textContent = '复制';
+            btn.classList.remove('copied');
+        }, 1500);
+    });
+}
+
+function copyPath(btn) {
+    var text = btn.previousElementSibling.textContent.trim();
+    navigator.clipboard.writeText(text).then(function() {
+        btn.textContent = '已复制';
+        btn.classList.add('copied');
+        setTimeout(function() {
+            btn.textContent = '复制';
+            btn.classList.remove('copied');
+        }, 1500);
+    });
+}
+
+(function () {
+    var grid = document.getElementById('card-grid');
+    var newCardsPanel = document.getElementById('new-cards-panel');
+    var newCards = document.getElementById('new-cards');
+    var COLS = 4;
+    var STORAGE_KEY = 'w_work_card_order_v2';
+    var dragSrc = null;
+    var dragFromNew = false;
+
+    function getSlots() {
+        return Array.from(grid.children).filter(function(c) {
+            return c.classList.contains('card');
+        });
+    }
+
+    function makeEmpty() {
+        var el = document.createElement('div');
+        el.className = 'card slot-empty';
+        el.dataset.id = '_empty_' + Math.random().toString(36).slice(2, 8);
+        el.setAttribute('draggable', 'false');
+        return el;
+    }
+
+    function padGrid() {
+        var slots = getSlots();
+        var remainder = slots.length % COLS;
+        if (remainder !== 0) {
+            for (var i = 0; i < COLS - remainder; i++) grid.appendChild(makeEmpty());
+        }
+        for (var i = 0; i < COLS; i++) grid.appendChild(makeEmpty());
+    }
+
+    function trimGrid() {
+        while (true) {
+            var last = grid.lastElementChild;
+            if (!last || !last.classList.contains('slot-empty')) break;
+            var slots = getSlots();
+            var emptyTail = 0;
+            for (var i = slots.length - 1; i >= 0; i--) {
+                if (slots[i].classList.contains('slot-empty')) emptyTail++;
+                else break;
+            }
+            if (emptyTail > COLS) grid.removeChild(last);
+            else break;
+        }
+    }
+
+    function saveOrder() {
+        var order = [];
+        getSlots().forEach(function (c) {
+            if (c.classList.contains('slot-empty')) order.push('__empty__');
+            else order.push(c.dataset.id);
+        });
+        while (order.length > 0 && order[order.length - 1] === '__empty__') order.pop();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(order));
+    }
+
+    function restoreOrder() {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        try {
+            var order = JSON.parse(raw);
+            var map = {};
+            grid.querySelectorAll('.card:not(.slot-empty)').forEach(function (c) {
+                map[c.dataset.id] = c;
+            });
+            grid.querySelectorAll('.slot-empty').forEach(function (c) { c.remove(); });
+
+            var newMap = {};
+            if (newCards) {
+                newCards.querySelectorAll('.card').forEach(function (c) {
+                    newMap[c.dataset.id] = c;
+                });
+            }
+
+            var placed = new Set();
+            var frag = document.createDocumentFragment();
+            order.forEach(function (id) {
+                if (id === '__empty__') {
+                    frag.appendChild(makeEmpty());
+                } else if (map[id]) {
+                    frag.appendChild(map[id]);
+                    placed.add(id);
+                } else if (newMap[id]) {
+                    var card = newMap[id];
+                    card.classList.remove('new-card');
+                    card.style.marginTop = '';
+                    frag.appendChild(card);
+                    placed.add(id);
+                }
+            });
+            Object.keys(map).forEach(function (id) {
+                if (!placed.has(id)) frag.appendChild(map[id]);
+            });
+            grid.innerHTML = '';
+            grid.appendChild(frag);
+        } catch (e) {}
+    }
+
+    var HANDLE_SVG = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="4" cy="3" r="1.2" fill="currentColor"/><circle cx="10" cy="3" r="1.2" fill="currentColor"/><circle cx="4" cy="7" r="1.2" fill="currentColor"/><circle cx="10" cy="7" r="1.2" fill="currentColor"/><circle cx="4" cy="11" r="1.2" fill="currentColor"/><circle cx="10" cy="11" r="1.2" fill="currentColor"/></svg>';
+
+    function addHandles() {
+        grid.querySelectorAll('.card:not(.slot-empty)').forEach(function (card) {
+            if (card.querySelector('.drag-handle')) return;
+            var handle = document.createElement('div');
+            handle.className = 'drag-handle';
+            handle.title = '拖拽排序';
+            handle.innerHTML = HANDLE_SVG;
+            card.appendChild(handle);
+        });
+    }
+
+    function updateNewCardsPanel() {
+        if (!newCards || !newCardsPanel) return;
+        var remaining = newCards.querySelectorAll('.card');
+        if (remaining.length === 0) newCardsPanel.classList.add('empty-panel');
+        else newCardsPanel.classList.remove('empty-panel');
+    }
+
+    // ─── Row Dividers (+ / −) ───
+
+    function isRowEmpty(row) {
+        return row.every(function (c) { return c.classList.contains('slot-empty'); });
+    }
+
+    function rebuildDividers() {
+        grid.querySelectorAll('.row-divider').forEach(function (d) { d.remove(); });
+        if (grid.parentElement) grid.parentElement.querySelectorAll('.row-divider').forEach(function (d) { d.remove(); });
+
+        var cards = getSlots();
+        var rows = [];
+        for (var i = 0; i < cards.length; i += COLS) {
+            rows.push(cards.slice(i, i + COLS));
+        }
+
+        for (var r = 0; r < rows.length - 1; r++) {
+            var divider = document.createElement('div');
+            divider.className = 'row-divider';
+
+            var addBtn = document.createElement('button');
+            addBtn.className = 'row-btn row-btn-add';
+            addBtn.title = '在此处插入一排空卡片';
+            addBtn.textContent = '+';
+            addBtn.dataset.rowIdx = String(r + 1);
+            divider.appendChild(addBtn);
+
+            if (isRowEmpty(rows[r + 1])) {
+                var removeBtn = document.createElement('button');
+                removeBtn.className = 'row-btn row-btn-remove';
+                removeBtn.title = '删除这排空卡片';
+                removeBtn.textContent = '−';
+                removeBtn.dataset.removeIdx = String(r + 1);
+                divider.appendChild(removeBtn);
+            }
+
+            var lastCard = rows[r][rows[r].length - 1];
+            if (lastCard.nextSibling) {
+                grid.insertBefore(divider, lastCard.nextSibling);
+            } else {
+                grid.appendChild(divider);
+            }
+        }
+    }
+
+    function addEmptyRow(rowIdx) {
+        var slots = getSlots();
+        var insertBefore = rowIdx * COLS;
+        var ref = slots[insertBefore] || null;
+        for (var i = 0; i < COLS; i++) {
+            var empty = makeEmpty();
+            if (ref) grid.insertBefore(empty, ref);
+            else grid.appendChild(empty);
+        }
+        saveOrder();
+        rebuildDividers();
+    }
+
+    function removeEmptyRow(rowIdx) {
+        var slots = getSlots();
+        var start = rowIdx * COLS;
+        var toRemove = slots.slice(start, start + COLS);
+        if (!toRemove.every(function (c) { return c.classList.contains('slot-empty'); })) return;
+        toRemove.forEach(function (c) { c.remove(); });
+        saveOrder();
+        rebuildDividers();
+    }
+
+    grid.addEventListener('click', function (e) {
+        var addBtn = e.target.closest('.row-btn-add');
+        if (addBtn) { addEmptyRow(parseInt(addBtn.dataset.rowIdx, 10)); return; }
+        var removeBtn = e.target.closest('.row-btn-remove');
+        if (removeBtn) { removeEmptyRow(parseInt(removeBtn.dataset.removeIdx, 10)); return; }
+    });
+
+    // ─── Init ───
+
+    restoreOrder();
+    padGrid();
+    addHandles();
+    rebuildDividers();
+    updateNewCardsPanel();
+
+    var handleDown = false;
+
+    // ─── Left grid drag (mousedown/mouseup) ───
+
+    grid.addEventListener('mousedown', function (e) {
+        var handle = e.target.closest('.drag-handle');
+        if (handle) {
+            handleDown = true;
+            dragFromNew = false;
+            var card = handle.closest('.card');
+            if (card) card.setAttribute('draggable', 'true');
+        }
+    });
+
+    grid.addEventListener('mouseup', function () {
+        handleDown = false;
+        grid.querySelectorAll('.card:not(.slot-empty)').forEach(function (c) {
+            c.setAttribute('draggable', 'false');
+        });
+    });
+
+    // ─── Right panel drag (mousedown/mouseup) ───
+
+    if (newCards) {
+        newCards.addEventListener('mousedown', function (e) {
+            var handle = e.target.closest('.drag-handle');
+            if (handle) {
+                handleDown = true;
+                dragFromNew = true;
+                var card = handle.closest('.card');
+                if (card) card.setAttribute('draggable', 'true');
+            }
+        });
+
+        newCards.addEventListener('mouseup', function () {
+            handleDown = false;
+            newCards.querySelectorAll('.card').forEach(function (c) {
+                c.setAttribute('draggable', 'false');
+            });
+        });
+
+        newCards.addEventListener('dragstart', function (e) {
+            if (!handleDown) { e.preventDefault(); return; }
+            var card = e.target.closest('.card');
+            if (!card) return;
+            dragSrc = card;
+            dragFromNew = true;
+            card.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', card.dataset.id);
+        });
+
+        newCards.addEventListener('dragend', function () {
+            handleDown = false;
+            if (dragSrc) dragSrc.classList.remove('dragging');
+            newCards.querySelectorAll('.card').forEach(function (c) {
+                c.setAttribute('draggable', 'false');
+                c.classList.remove('drag-over');
+            });
+            grid.querySelectorAll('.card').forEach(function (c) {
+                c.classList.remove('drag-over');
+                if (!c.classList.contains('slot-empty')) c.setAttribute('draggable', 'false');
+            });
+            dragSrc = null;
+            dragFromNew = false;
+        });
+    }
+
+    // ─── Left grid drag events ───
+
+    grid.addEventListener('dragstart', function (e) {
+        if (!handleDown) { e.preventDefault(); return; }
+        var card = e.target.closest('.card:not(.slot-empty)');
+        if (!card) return;
+        dragSrc = card;
+        dragFromNew = false;
+        card.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', card.dataset.id);
+    });
+
+    grid.addEventListener('dragend', function () {
+        handleDown = false;
+        if (dragSrc) dragSrc.classList.remove('dragging');
+        grid.querySelectorAll('.card').forEach(function (c) {
+            c.classList.remove('drag-over');
+            if (!c.classList.contains('slot-empty')) c.setAttribute('draggable', 'false');
+        });
+        dragSrc = null;
+        dragFromNew = false;
+    });
+
+    grid.addEventListener('dragover', function (e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        var card = e.target.closest('.card');
+        if (!card || card === dragSrc) return;
+        grid.querySelectorAll('.card').forEach(function (c) { c.classList.remove('drag-over'); });
+        card.classList.add('drag-over');
+    });
+
+    grid.addEventListener('dragleave', function (e) {
+        var card = e.target.closest('.card');
+        if (card) card.classList.remove('drag-over');
+    });
+
+    grid.addEventListener('drop', function (e) {
+        e.preventDefault();
+        var target = e.target.closest('.card');
+        if (!target || !dragSrc || target === dragSrc) return;
+        target.classList.remove('drag-over');
+
+        if (dragFromNew) {
+            dragSrc.classList.remove('new-card');
+            dragSrc.style.marginTop = '';
+            if (target.classList.contains('slot-empty')) {
+                target.parentNode.insertBefore(dragSrc, target);
+                target.remove();
+            } else {
+                grid.insertBefore(dragSrc, target);
+            }
+            updateNewCardsPanel();
+        } else {
+            if (target.classList.contains('slot-empty')) {
+                var emptyClone = makeEmpty();
+                dragSrc.parentNode.insertBefore(emptyClone, dragSrc);
+                target.parentNode.insertBefore(dragSrc, target);
+                target.remove();
+            } else {
+                var srcNext = dragSrc.nextSibling;
+                target.parentNode.insertBefore(dragSrc, target);
+                if (srcNext) target.parentNode.insertBefore(target, srcNext);
+                else target.parentNode.appendChild(target);
+            }
+        }
+
+        trimGrid();
+        padGrid();
+        saveOrder();
+        rebuildDividers();
+    });
+})();
+</script>
+
+</body>
+</html>

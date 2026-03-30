@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>单集制作流程图 · 逻辑脑图版</title>
+  <link rel="stylesheet" href="workflow-style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="header-left">
+        <a class="back-link" href="../w_work.html">← 返回工作展示中心</a>
+        <h1>单集制作流程图 · 逻辑脑图版</h1>
+        <p class="sub">AI-DRIVEN PRODUCTION PIPELINE | 核心工具：CURSOR + NANO-BANANA + SEEDANCE</p>
+      </div>
+    </div>
+
+    <div class="canvas">
+      <svg id="svg-layer"></svg>
+
+      <!-- 第一列：文案流 -->
+      <div class="area area-copy" data-label="AI Copywriting">
+        <div class="node" id="n1" data-type="copy">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">📝</span><p class="node-title">AI故事脚本</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">工具</span><span>Cursor_Gemini 3 Pro</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">文字</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第二列：分镜与资产 -->
+      <div class="area area-asset" data-label="Visual Prep">
+        <div class="node" id="n2" data-type="copy">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">🎬</span><p class="node-title">AI分镜设计</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">工具</span><span>Cursor_Gemini 3 Pro</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">文字</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="node" id="n4" data-type="asset">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">📂</span><p class="node-title">资产准备 (通用)</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">来源</span><span>项目资产图库</span></div>
+              <div class="meta-row"><span class="label">内容</span><span>主角/宠物</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">图片</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="node" id="n5" data-type="asset">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">🖼️</span><p class="node-title">资产准备 (脚本)</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">来源</span><span>Unity截图</span></div>
+              <div class="meta-row"><span class="label">内容</span><span>本集场景/道具</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">图片</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第三列：风格与咒语 -->
+      <div class="area area-style" data-label="AI Synthesis">
+        <div class="node" id="n3" data-type="copy">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">🪄</span><p class="node-title">AI关键字咒语</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">工具</span><span>Cursor_Gemini 3 Pro</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">文字</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="node" id="n6" data-type="asset">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">🎨</span><p class="node-title">AI风格设计</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">工具</span><span>Nano-banana</span></div>
+              <div class="meta-row"><span class="label">输入</span><span>资产图片</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">风格设计图</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第四列：核心生成 -->
+      <div class="area area-core" data-label="Core Generation">
+        <div class="node" id="n7" data-type="core">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">✨</span><p class="node-title">AI视频制作</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">工具</span><span>Seedance 2.0</span></div>
+              <div class="meta-row"><span class="label">输入</span><span>咒语+风格图+资产</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">15s视频(含音效)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 第五列：后期 -->
+      <div class="area area-post" data-label="Post Production">
+        <div class="node" id="n8" data-type="post">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">✂️</span><p class="node-title">导演剪辑</p></div>
+            <div class="node-meta"><div class="meta-row"><span class="label">输出</span><span class="tag">视频</span></div></div>
+          </div>
+        </div>
+        <div class="node" id="n9" data-type="post">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">🎵</span><p class="node-title">AI配乐</p></div>
+            <div class="node-meta"><div class="meta-row"><span class="label">输出</span><span class="tag">视频</span></div></div>
+          </div>
+        </div>
+        <div class="node" id="n10" data-type="post">
+          <div class="node-content">
+            <div class="node-header"><span class="node-icon">📦</span><p class="node-title">后效处理</p></div>
+            <div class="node-meta">
+              <div class="meta-row"><span class="label">内容</span><span>AI包装/后效/去水印</span></div>
+              <div class="meta-row"><span class="label">输出</span><span class="tag">成片</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="dot" style="background:var(--gradient-copy)"></div>AI文案</div>
+      <div class="legend-item"><div class="dot" style="background:var(--gradient-asset)"></div>资产与风格</div>
+      <div class="legend-item"><div class="dot" style="background:var(--gradient-core)"></div>核心生成</div>
+      <div class="legend-item"><div class="dot" style="background:var(--gradient-post)"></div>后期处理</div>
+    </div>
+  </div>
+
+  <script>
+    // 定义连线关系 [startID, endID, colorVar]
+    const connections = [
+      ['n1', 'n2', '#a855f7'],
+      ['n2', 'n3', '#a855f7'],
+      ['n3', 'n7', '#a855f7'], // 咒语 -> 视频
+      ['n1', 'n5', '#a855f7'], // 脚本 -> 资产(脚本)
+      
+      ['n4', 'n6', '#3b82f6'], // 资产(通用) -> 风格
+      ['n5', 'n6', '#3b82f6'], // 资产(脚本) -> 风格
+      ['n4', 'n7', '#3b82f6'], // 资产(通用) -> 视频
+      ['n5', 'n7', '#3b82f6'], // 资产(脚本) -> 视频
+      ['n6', 'n7', '#3b82f6'], // 风格 -> 视频
+
+      ['n7', 'n8', '#f59e0b'],  // 视频 -> 剪辑
+      ['n8', 'n9', '#10b981'],
+      ['n9', 'n10', '#10b981']
+    ];
+
+    function drawLines() {
+      const svg = document.getElementById('svg-layer');
+      const canvas = document.querySelector('.canvas');
+      if (!canvas) return;
+      
+      // 强制设置 SVG 尺寸，防止不显示
+      svg.setAttribute('width', canvas.offsetWidth);
+      svg.setAttribute('height', canvas.offsetHeight);
+
+      const canvasRect = canvas.getBoundingClientRect();
+      
+      // 清空旧线
+      svg.innerHTML = '';
+
+      connections.forEach(([start, end, color]) => {
+        const el1 = document.getElementById(start);
+        const el2 = document.getElementById(end);
+        if(!el1 || !el2) return;
+
+        const r1 = el1.getBoundingClientRect();
+        const r2 = el2.getBoundingClientRect();
+
+        // 计算相对于 canvas 的坐标
+        // 默认连接点：右侧中心 -> 左侧中心
+        let startX = r1.right - canvasRect.left;
+        let startY = r1.top + r1.height / 2 - canvasRect.top;
+        let endX = r2.left - canvasRect.left;
+        let endY = r2.top + r2.height / 2 - canvasRect.top;
+
+        // 核心节点连接点特殊处理（圆形）
+        if (start === 'n7') { // 核心是起点
+           // 核心是圆角矩形，右侧中点即可
+           startX = r1.right - canvasRect.left;
+        }
+        if (end === 'n7') { // 核心是终点
+           // 左侧中点
+           endX = r2.left - canvasRect.left;
+        }
+
+        // 贝塞尔曲线控制点
+        const dist = Math.abs(endX - startX) * 0.6;
+        const cp1x = startX + dist;
+        const cp1y = startY;
+        const cp2x = endX - dist;
+        const cp2y = endY;
+
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", `M ${startX} ${startY} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${endX} ${endY}`);
+        
+        // 存储默认颜色
+        path.dataset.color = color;
+        
+        // 默认样式：彩色，半透明
+        path.style.stroke = color;
+        path.style.strokeWidth = '2px';
+        path.style.fill = 'none';
+        path.style.opacity = '0.6';
+        
+        svg.appendChild(path);
+      });
+    }
+
+    // 初始化与监听
+    window.addEventListener('load', drawLines);
+    window.addEventListener('resize', drawLines);
+    // 额外延时重绘，确保字体加载完成布局稳定
+    setTimeout(drawLines, 500);
+    setTimeout(drawLines, 1000);
+    
+    // 交互：Hover 节点高亮相关连线
+    document.querySelectorAll('.node').forEach(node => {
+      node.addEventListener('mouseenter', () => {
+        const id = node.id;
+        const svg = document.getElementById('svg-layer');
+        const paths = Array.from(svg.children);
+        
+        paths.forEach((p, i) => {
+          const conn = connections[i];
+          const color = conn[2];
+          
+          if (conn[0] === id || conn[1] === id) {
+            // 相关连线：高亮
+            p.classList.add('active');
+            p.style.stroke = color;
+            p.style.opacity = '1';
+            p.style.strokeWidth = '3px';
+          } else {
+            // 不相关连线：变淡
+            p.classList.remove('active');
+            p.style.stroke = '#cbd5e1'; // 灰色
+            p.style.opacity = '0.2';
+            p.style.strokeWidth = '1px';
+          }
+        });
+      });
+      
+      node.addEventListener('mouseleave', () => {
+        const svg = document.getElementById('svg-layer');
+        Array.from(svg.children).forEach(p => {
+          p.classList.remove('active');
+          // 恢复默认状态
+          p.style.stroke = p.dataset.color;
+          p.style.opacity = '0.6';
+          p.style.strokeWidth = '2px';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

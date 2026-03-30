@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI时代的变迁 - 影视动画视频支撑品类</title>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<style>
+:root{--bg-dark:#000;--text-main:#fff;--text-muted:#888;--border-color:rgba(255,255,255,.08);--accent-1:#00e5ff;--accent-2:#ff00ea}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{background:var(--bg-dark);color:var(--text-main);overflow-x:auto;line-height:1.5;min-height:100vh}
+.ambient-light{position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:0;overflow:hidden}
+.ambient-light::before,.ambient-light::after{content:'';position:absolute;border-radius:50%;filter:blur(120px);opacity:.15;animation:fl 20s infinite alternate ease-in-out}
+.ambient-light::before{width:600px;height:600px;background:var(--accent-1);top:-200px;left:-100px}
+.ambient-light::after{width:500px;height:500px;background:var(--accent-2);bottom:-100px;right:-100px;animation-delay:-10s}
+@keyframes fl{0%{transform:translate(0,0) scale(1)}100%{transform:translate(100px,50px) scale(1.2)}}
+.home-btn{position:fixed;top:20px;left:24px;z-index:100;font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;padding:8px 18px;border:1px solid var(--border-color);border-radius:8px;background:rgba(255,255,255,.04);backdrop-filter:blur(12px);transition:all .25s;letter-spacing:1px;display:flex;align-items:center;gap:6px}
+.home-btn:hover{color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+.hero{text-align:center;padding:80px 0 20px;position:relative;z-index:1;overflow:hidden}
+.hero-bg{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;z-index:0;opacity:.1;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,black 30%,transparent 100%);mask-image:radial-gradient(ellipse 70% 65% at 50% 50%,black 30%,transparent 100%)}
+.hero-bg img{width:50%;height:100%;object-fit:cover;display:block}
+.hero-label{font-size:13px;letter-spacing:4px;color:var(--text-muted);text-transform:uppercase;margin-bottom:14px;position:relative;z-index:2}
+.hero-title{font-size:clamp(36px,5vw,60px);font-weight:800;letter-spacing:8px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2) 50%,var(--accent-1));background-size:300% 300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmer 6s ease infinite;filter:drop-shadow(0 0 30px rgba(0,229,255,.15));position:relative;z-index:2}
+@keyframes shimmer{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero-sub{font-size:15px;color:var(--text-muted);margin-top:12px;letter-spacing:2px;position:relative;z-index:2}
+.hero-line{width:100%;max-width:100%;height:2px;margin:20px auto 0;background:none;position:relative;z-index:2;overflow:hidden}
+.hero-line::before{content:'';position:absolute;top:0;left:-800px;width:800px;height:2px;background:linear-gradient(90deg,transparent,var(--accent-1),var(--accent-2),var(--accent-1),transparent);animation:lineShuttle 2.5s cubic-bezier(0.7,0,0.3,1) infinite}
+.hero-line::after{display:none}
+@keyframes lineShuttle{0%{left:-800px;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+.tools-evolution{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:40px 40px 50px}
+.evo-section-title{font-size:18px;color:var(--text-muted);letter-spacing:3px;text-align:center;margin-bottom:28px}
+.evo-row{display:flex;flex-direction:column;align-items:center;gap:32px}
+.evo-label{font-size:15px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px;text-align:center}
+.evo-cols{display:flex;gap:0;align-items:center}
+.evo-col{display:flex;flex-direction:column;gap:6px;align-items:center}
+.evo-col.pair{display:grid;grid-template-columns:repeat(2,64px);gap:6px}
+.evo-col.block{display:grid;grid-template-columns:repeat(3,64px);gap:6px}
+.evo-col.block .evo-item:nth-child(10){grid-column:2/3}
+.evo-plus{color:rgba(255,255,255,.2);font-size:30px;font-weight:300;margin:0 18px;flex-shrink:0;user-select:none}
+.evo-item{display:flex;align-items:center;justify-content:center;width:64px;height:64px;transition:all .3s;cursor:default}
+.evo-item:hover{transform:scale(1.15)}
+.evo-item.old{opacity:1}
+.evo-item.old:hover{opacity:1}
+.evo-item.new-tool{filter:drop-shadow(0 0 8px rgba(0,229,255,.3));width:192px;height:192px}
+.evo-item.new-tool:hover{filter:drop-shadow(0 0 16px rgba(0,229,255,.5));transform:scale(1.1)}
+.evo-item.new-tool img{width:156px;height:156px}
+.evo-item img{width:52px;height:52px;object-fit:contain}
+.evo-arrow{display:flex;align-items:center;justify-content:center;color:rgba(0,229,255,.5);font-size:48px;font-weight:300;flex-shrink:0;animation:arrowPulse 2s ease-in-out infinite}
+@keyframes arrowPulse{0%,100%{opacity:.4;transform:translateY(0)}50%{opacity:1;transform:translateY(6px)}}
+.evo-phase{display:flex;flex-direction:column;align-items:center;gap:12px;padding:24px 36px;border-radius:16px}
+.evo-phase.highlight{padding:20px 32px}
+.evo-new-grid{display:flex;gap:18px;align-items:center}
+.footer{text-align:center;padding:30px 0 50px;position:relative;z-index:1;border-top:1px solid var(--border-color)}
+.footer-text{font-size:13px;color:rgba(255,255,255,.25);letter-spacing:2px}
+
+@media(max-width:768px){
+  .home-btn{top:12px;left:12px;padding:6px 12px;font-size:12px}
+  .hero{padding:50px 0 14px}
+  .hero-title{font-size:clamp(24px,6vw,36px);letter-spacing:4px}
+  .hero-sub{font-size:12px;letter-spacing:1px}
+  .tools-evolution{padding:24px 12px 30px}
+  .evo-section-title{font-size:14px;letter-spacing:2px;margin-bottom:18px}
+  .evo-label{font-size:12px;letter-spacing:2px}
+  .evo-cols{flex-wrap:wrap;justify-content:center;gap:8px}
+  .evo-plus{margin:0 8px;font-size:20px}
+  .evo-item{width:44px;height:44px}
+  .evo-item img{width:36px;height:36px}
+  .evo-col.pair{grid-template-columns:repeat(2,44px);gap:4px}
+  .evo-col.block{grid-template-columns:repeat(3,44px);gap:4px}
+  .evo-item.new-tool{width:100px;height:100px}
+  .evo-item.new-tool img{width:80px;height:80px}
+  .evo-new-grid{gap:8px;flex-wrap:wrap;justify-content:center}
+  .evo-phase{padding:14px 16px}
+  .evo-arrow{font-size:32px}
+  .footer{padding:20px 0 30px}
+  .footer-text{font-size:11px;letter-spacing:1px}
+}
+
+@media(max-width:420px){
+  .hero-title{font-size:22px;letter-spacing:2px}
+  .evo-item{width:36px;height:36px}
+  .evo-item img{width:28px;height:28px}
+  .evo-col.pair{grid-template-columns:repeat(2,36px)}
+  .evo-col.block{grid-template-columns:repeat(3,36px)}
+  .evo-item.new-tool{width:72px;height:72px}
+  .evo-item.new-tool img{width:56px;height:56px}
+  .evo-plus{margin:0 4px;font-size:16px}
+}
+</style>
+</head>
+<body>
+<div class="ambient-light"></div>
+<a class="home-btn" href="http://172.26.166.131:8080/FilmCreativityGroup/index.html"><i class="ph ph-arrow-left"></i> 返回主页</a>
+<header class="hero">
+    <div class="hero-bg"><img src="assets/logo/nano-banana.png" alt=""><img src="assets/logo/seeDance2.0.png" alt=""></div>
+    <h1 class="hero-title">AI时代的变迁</h1>
+    <p class="hero-sub">从传统三维流程到全自动AI流程的演进路径</p>
+    <div class="hero-line"></div>
+</header>
+<section class="tools-evolution">
+<div class="evo-row">
+    <div class="evo-phase"><div class="evo-label">传统工具链</div><div class="evo-cols">
+        <div class="evo-col pair"><div class="evo-item old"><img src="assets/logo/word.png" alt="Word"></div><div class="evo-item old"><img src="assets/logo/storyboard.png" alt="Storyboard"></div><div class="evo-item old"><img src="assets/logo/Ps.png" alt="Photoshop"></div><div class="evo-item old"><img src="assets/logo/Sai.png" alt="SAI"></div></div>
+        <div class="evo-plus">+</div>
+        <div class="evo-col block"><div class="evo-item old"><img src="assets/logo/maya.png" alt="Maya"></div><div class="evo-item old"><img src="assets/logo/unreal.png" alt="Unreal"></div><div class="evo-item old"><img src="assets/logo/houdini.png" alt="Houdini"></div><div class="evo-item old"><img src="assets/logo/ZB.png" alt="ZBrush"></div><div class="evo-item old"><img src="assets/logo/3dmax.png" alt="3ds Max"></div><div class="evo-item old"><img src="assets/logo/unity.png" alt="Unity"></div><div class="evo-item old"><img src="assets/logo/blender.png" alt="Blender"></div><div class="evo-item old"><img src="assets/logo/cinema4d.png" alt="C4D"></div><div class="evo-item old"><img src="assets/logo/SP.png" alt="SP"></div><div class="evo-item old"><img src="assets/logo/pycharm.png" alt="PyCharm"></div></div>
+        <div class="evo-plus">+</div>
+        <div class="evo-col pair"><div class="evo-item old"><img src="assets/logo/Nuke.png" alt="Nuke"></div><div class="evo-item old"><img src="assets/logo/Ae.png" alt="AE"></div><div class="evo-item old"><img src="assets/logo/Pr.png" alt="PR"></div><div class="evo-item old"><img src="assets/logo/达芬奇.png" alt="达芬奇"></div></div>
+    </div></div>
+    <div class="evo-arrow">↓</div>
+    <div class="evo-phase highlight"><div class="evo-label" style="color:rgba(0,229,255,.6)">AI 新工具链</div><div class="evo-new-grid">
+        <div class="evo-item new-tool"><img src="assets/logo/cursor.png" alt="Cursor"></div>
+        <div class="evo-plus" style="color:rgba(0,229,255,.35)">+</div>
+        <div class="evo-item new-tool"><img src="assets/logo/nano-banana.png" alt="Nano Banana"></div>
+        <div class="evo-plus" style="color:rgba(0,229,255,.35)">+</div>
+        <div class="evo-item new-tool"><img src="assets/logo/seeDance2.0.png" alt="SeeDance 2.0"></div>
+    </div></div>
+</div></section>
+<div style="position:relative;z-index:1;max-width:1200px;margin:0 auto 40px;text-align:center;-webkit-mask-image:radial-gradient(ellipse 80% 75% at 50% 50%,black 50%,rgba(0,0,0,.6) 65%,rgba(0,0,0,.25) 80%,transparent 100%);mask-image:radial-gradient(ellipse 80% 75% at 50% 50%,black 50%,rgba(0,0,0,.6) 65%,rgba(0,0,0,.25) 80%,transparent 100%)"><img src="工作流.png" alt="工作流" style="max-width:100%;display:block"></div>
+<div class="footer"><div class="footer-text">© 2026 心动美术支撑 · 影视创意组</div></div>
+</body>
+</html>

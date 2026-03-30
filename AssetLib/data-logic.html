@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D影视资产库 · 总数据逻辑文档</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f0f2f5;--card:#fff;--accent:#4f46e5;--accent-light:#eef2ff;--border:#e2e8f0;--text:#1f2a44;--muted:#64748b;--radius:12px;--shadow:0 4px 16px rgba(15,23,42,.06)}
+    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:0}
+
+    .page-header{
+      background:linear-gradient(135deg,#0f172a 0%,#1e293b 60%,#334155 100%);
+      color:#fff;padding:32px 40px;
+    }
+    .page-header .top{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+    .page-header h1{
+      font-size:1.6rem;font-weight:900;
+      background:linear-gradient(135deg,#60a5fa 0%,#a78bfa 40%,#fff 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .page-header p{font-size:.9rem;color:rgba(255,255,255,.6);margin-top:4px}
+    .back-link{display:inline-block;margin-top:10px;font-size:.8rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .15s}
+    .back-link:hover{color:#fff}
+
+    .nav-bar{
+      background:#fff;border-bottom:1px solid var(--border);padding:10px 40px;
+      display:flex;gap:8px;flex-wrap:wrap;position:sticky;top:0;z-index:100;
+      box-shadow:0 2px 8px rgba(0,0,0,.04);
+    }
+    .nav-bar a{
+      font-size:.82rem;font-weight:600;color:var(--accent);text-decoration:none;
+      padding:5px 14px;border-radius:6px;border:1px solid var(--border);
+      transition:all .15s;
+    }
+    .nav-bar a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    .container{max-width:1100px;margin:0 auto;padding:24px 32px 48px}
+
+    .section{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden;
+    }
+    .section-header{
+      padding:14px 20px;border-bottom:1px solid var(--border);
+      display:flex;align-items:center;gap:10px;
+    }
+    .section-header.general{background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%)}
+    .section-header.torch{background:linear-gradient(135deg,#fafafe 0%,#f5f3ff 100%)}
+    .section-header.esther{background:linear-gradient(135deg,#fffbeb 0%,#fef3c7 100%)}
+    .section-icon{font-size:1.1rem}
+    .section-title{font-size:1rem;font-weight:800;color:#1e1b4b}
+
+    h3{font-size:.92rem;font-weight:700;color:#312e81;margin:14px 0 8px;display:flex;align-items:center;gap:6px}
+    h3:first-child{margin-top:0}
+    h3 .step{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;
+      font-size:.7rem;font-weight:800;flex-shrink:0;
+    }
+
+    p,li{font-size:.85rem;color:#334155}
+    ul,ol{padding-left:1.4em;margin:4px 0 10px}
+    li{margin-bottom:4px}
+
+    .tag{
+      display:inline-block;font-size:.65rem;font-weight:700;padding:2px 8px;
+      border-radius:4px;margin-right:4px;vertical-align:middle;
+    }
+    .tag-source{background:#dbeafe;color:#1d4ed8}
+    .tag-fallback{background:#fef3c7;color:#92400e}
+    .tag-filter{background:#fce7f3;color:#9d174d}
+    .tag-field{background:#e0e7ff;color:#3730a3}
+    .tag-tbd{background:#fecaca;color:#991b1b}
+    .tag-torch{background:#e0e7ff;color:#3730a3}
+    .tag-esther{background:#fef3c7;color:#92400e}
+
+    .code{
+      font-family:"Cascadia Code","Fira Code",monospace;font-size:.78rem;
+      background:#f1f5f9;border:1px solid var(--border);border-radius:6px;
+      padding:2px 7px;color:#475569;word-break:break-all;
+    }
+
+    .path-block{
+      background:#f8fafc;border:1px solid var(--border);border-radius:8px;
+      padding:10px 14px;margin:6px 0 10px;font-family:"Cascadia Code","Fira Code",monospace;
+      font-size:.78rem;color:#334155;line-height:1.8;white-space:pre-wrap;word-break:break-all;
+    }
+
+    table{width:100%;border-collapse:collapse;margin:8px 0 12px;font-size:.82rem}
+    th{background:#f1f5f9;text-align:left;padding:8px 12px;font-weight:700;color:#1e1b4b;border:1px solid var(--border)}
+    td{padding:8px 12px;border:1px solid var(--border);vertical-align:top}
+    tr:nth-child(even) td{background:#fafafa}
+
+    .var-table th:first-child{width:200px}
+    .var-table .tbd{color:#dc2626;font-weight:600}
+
+    .flow-chart{
+      display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0 14px;
+    }
+    .flow-step{
+      background:var(--accent-light);border:1px solid #c7d2fe;border-radius:8px;
+      padding:6px 12px;font-size:.78rem;font-weight:700;color:var(--accent);
+    }
+    .flow-arrow{color:var(--muted);font-size:.8rem;font-weight:700}
+
+    .note-box{
+      background:#fffbeb;border:1px solid #fde68a;border-radius:8px;
+      padding:10px 14px;margin:8px 0;font-size:.82rem;color:#92400e;
+    }
+    .note-box strong{color:#78350f}
+
+    .cmd-box{
+      background:#1e1b4b;color:#e0e7ff;border-radius:8px;padding:12px 16px;
+      font-family:"Cascadia Code","Fira Code",monospace;font-size:.8rem;
+      margin:8px 0 12px;line-height:1.6;
+    }
+    .cmd-box .comment{color:#6366f1}
+    .cmd-box .highlight{color:#fbbf24}
+
+    .project-badge{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:4px 12px;border-radius:6px;font-size:.75rem;font-weight:700;
+      margin-right:6px;
+    }
+    .project-badge.torch{background:#e0e7ff;color:#3730a3;border:1px solid #c7d2fe}
+    .project-badge.esther{background:#fef3c7;color:#92400e;border:1px solid #fde68a}
+
+    .anchor-target{scroll-margin-top:60px}
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <div class="top">
+    <h1>3D影视资产库 · 总数据逻辑文档</h1>
+  </div>
+  <p>覆盖项目：火炬之光 (TLI) · 伊瑟 (ETH) ｜ JSON 数据库结构、数据来源、扫描规则与更新流程</p>
+  <a class="back-link" href="../w_work.html">← 返回工作展示中心</a>
+</div>
+
+<div class="nav-bar">
+  <a href="#overview">通用架构</a>
+  <a href="#variables">项目变量对照</a>
+  <a href="#torch">火炬之光 TLI</a>
+  <a href="#esther">伊瑟 ETH</a>
+  <a href="#commands">更新命令汇总</a>
+</div>
+
+<div class="container">
+
+  <!-- ====== 通用架构概览 ====== -->
+  <div class="section anchor-target" id="overview">
+    <div class="section-header general">
+      <span class="section-icon">🏗️</span>
+      <span class="section-title">通用架构概览</span>
+    </div>
+    <div class="section-body">
+
+      <h3>统一数据流程</h3>
+      <div class="flow-chart">
+        <span class="flow-step">CGTeamwork API</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">cgtw-asset-names.json</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">过滤 (notes + status)</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">本地资产扫描（若目录存在）</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">{project}-char-db.json</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-step">网页渲染</span>
+      </div>
+      <p>所有项目遵循同一套数据流水线：先从 CGTeamwork 拉取角色元数据，过滤后扫描本地资产目录，生成 JSON 数据库供前端展示。</p>
+
+      <h3>统一角色条目字段</h3>
+      <table>
+        <tr><th>字段</th><th>类型</th><th>来源</th><th>说明</th></tr>
+        <tr><td><span class="code">id</span></td><td>string</td><td>目录名</td><td>资产ID，如 c013_Erica3</td></tr>
+        <tr><td><span class="code">cn_name</span></td><td>string</td><td>CGTeamwork</td><td>CGTW 中文名</td></tr>
+        <tr><td><span class="code">first_appear</span></td><td>string</td><td>CGTeamwork</td><td>首次出现集数</td></tr>
+        <tr><td><span class="code">create_time</span></td><td>string</td><td>CGTeamwork</td><td>角色创建时间</td></tr>
+        <tr><td><span class="code">notes_episode</span></td><td>string</td><td>CGTeamwork</td><td>notes 备注中的集数段</td></tr>
+        <tr><td><span class="code">notes_cn</span></td><td>string</td><td>CGTeamwork</td><td>角色中文名</td></tr>
+        <tr><td><span class="code">notes_en</span></td><td>string</td><td>CGTeamwork</td><td>角色英文名</td></tr>
+        <tr><td><span class="code">notes_role</span></td><td>string</td><td>CGTeamwork</td><td>角色等级：主角 / 配角</td></tr>
+        <tr><td><span class="code">basePath</span></td><td>string</td><td>本地扫描</td><td>角色资产根目录完整路径</td></tr>
+        <tr><td><span class="code">prodesign_game</span></td><td>object</td><td>本地扫描</td><td>2D游戏设计 { label, images[] }</td></tr>
+        <tr><td><span class="code">prodesign_film</span></td><td>object</td><td>本地扫描</td><td>2D影视设计 { label, images[] }</td></tr>
+        <tr><td><span class="code">lookdev</span></td><td>object</td><td>本地扫描</td><td>3D影视设计 { label, videos[], images[] }</td></tr>
+        <tr><td><span class="code">mod</span></td><td>object</td><td>本地扫描</td><td>模型 { label, path, fbxFiles[] }</td></tr>
+        <tr><td><span class="code">tex</span></td><td>object</td><td>本地扫描</td><td>贴图 Maya { label, path }</td></tr>
+        <tr><td><span class="code">rig</span></td><td>object</td><td>本地扫描</td><td>绑定 { label, path }</td></tr>
+      </table>
+
+      <h3>统一扫描规则</h3>
+      <table>
+        <tr><th>模块</th><th>路径规则</th><th>说明</th></tr>
+        <tr><td>2D游戏设计</td><td><span class="code">{角色}/Prodesign/work/</span></td><td>排除 .tga、.gif</td></tr>
+        <tr><td>2D影视设计</td><td><span class="code">{角色}/Prodesign/approved/</span></td><td>排除 .tga、.gif</td></tr>
+        <tr><td>3D影视设计 (LookDev)</td><td><span class="code">{角色}/LookDev/approved/</span></td><td>视频多于一个时只保留最新一个</td></tr>
+        <tr><td>模型 (MOD) MA</td><td><span class="code">{角色}/MOD/work/{id}_mod.ma</span></td><td>Maya 工程文件</td></tr>
+        <tr><td>模型 (MOD) FBX</td><td><span class="code">MOD/work/ · RIG/work/ · RIG/work/fbx/ · RIG/publish/</span></td><td>搜索所有 .fbx，<strong>只保留修改日期最新的 1 个</strong>（按 mtime）</td></tr>
+        <tr><td>贴图 (TEX)</td><td><span class="code">{角色}/TEX/publish/maya/{id}_tex.ma</span></td><td>—</td></tr>
+        <tr><td>绑定 (RIG)</td><td><span class="code">{角色}/RIG/publish/{id}_rig.ma</span></td><td>—</td></tr>
+      </table>
+
+      <div class="note-box">
+        <strong>全局排除：</strong> rig2、render_tex、render_rig、eyemask_mod 路径；<span class="code">.tga</span>、<span class="code">.gif</span> 图片格式；history/metadata/backup 子目录。
+      </div>
+
+      <h3>统一角色筛选逻辑</h3>
+      <p>角色列表直接来源于 CGTeamwork，不依赖本地目录是否存在。需同时满足：</p>
+      <ol>
+        <li><span class="tag tag-filter">条件1</span> 角色在 CGTeamwork 对应数据库的 <span class="code">m_asset</span>（type=Cha）中存在</li>
+        <li><span class="tag tag-filter">条件2 · 核心</span> CGTW 自定义备注（<span class="code">m_asset.notes</span>）<strong>不为空</strong> — notes 为空的角色直接剔除，不论本地目录是否存在、是否有资产文件</li>
+        <li><span class="tag tag-filter">条件3</span> CGTW 资产状态（<span class="code">m_asset.status</span>）不为 <span class="code">Close</span></li>
+      </ol>
+      <div class="note-box">
+        <strong>关键规则：</strong> notes 为空 = 不收录。即使本地资产目录已存在且有完整资产，只要 CGTW 中 notes 字段为空，该角色就不会出现在数据库中。
+      </div>
+      <p>满足条件的角色全部进入数据库。若本地目录不存在，角色仍保留（资产模块显示"暂无资源"）。</p>
+
+      <div class="note-box">
+        <strong>notes 格式：</strong> <span class="code">集数|中文名|英文名|角色等级</span><br>
+        示例：<span class="code">ss10_英雄pv|宾|Bin|主角</span>
+      </div>
+
+      <h3>统一排序规则（主角/配角各自独立排序）</h3>
+      <ol>
+        <li><span class="tag tag-field">第一级</span> 按 <span class="code">first_appear</span>（首次出现集数）从大到小排序</li>
+        <li><span class="tag tag-field">第二级</span> 同一集数内，按 <span class="code">create_time</span>（角色创建时间）从新到旧排序</li>
+        <li><span class="tag tag-field">第三级</span> 同一集数内，相同命名前缀的角色聚合在一起</li>
+      </ol>
+      <div class="note-box">
+        <strong>前缀提取规则：</strong>从 ID 中提取字母部分，去掉末尾的单个大写字母后缀和数字后缀。<br>
+        例：<span class="code">c028_MaoB</span> → <span class="code">mao</span>，<span class="code">c013_Erica3</span> → <span class="code">erica</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== 项目变量对照表 ====== -->
+  <div class="section anchor-target" id="variables">
+    <div class="section-header general">
+      <span class="section-icon">📊</span>
+      <span class="section-title">项目变量对照表</span>
+    </div>
+    <div class="section-body">
+      <p>以下表格列出各项目的差异化配置变量。<span class="tag tag-tbd">待确认</span> 表示需要实际验证后填入。</p>
+      <table class="var-table">
+        <tr>
+          <th>变量</th>
+          <th><span class="project-badge torch">火炬之光 TLI</span></th>
+          <th><span class="project-badge esther">伊瑟 ETH</span></th>
+        </tr>
+        <tr>
+          <td>项目简称</td>
+          <td><span class="code">TLI</span></td>
+          <td><span class="code">ETH</span> <span class="tag tag-tbd">待确认</span></td>
+        </tr>
+        <tr>
+          <td>项目中文名</td>
+          <td>火炬之光</td>
+          <td>伊瑟</td>
+        </tr>
+        <tr>
+          <td>CGTW 数据库</td>
+          <td colspan="2"><span class="code">proj_film</span>（相同，伊瑟与火炬共用电影部数据库）</td>
+        </tr>
+        <tr>
+          <td>CGTW 模块</td>
+          <td colspan="2"><span class="code">m_asset</span>（相同）</td>
+        </tr>
+        <tr>
+          <td>CGTW 资产类型</td>
+          <td colspan="2"><span class="code">Cha</span>（相同）</td>
+        </tr>
+        <tr>
+          <td>CGTW API 地址</td>
+          <td colspan="2"><span class="code">https://cgt-artstudio.xindong.com/api.php</span>（相同）</td>
+        </tr>
+        <tr>
+          <td>本地资产根路径</td>
+          <td><span class="code">X:\projects2024\TLI\Asset\Cha</span></td>
+          <td><span class="code">X:\projects2024\ETH\Asset\Cha</span> <span class="tag tag-tbd">待确认</span></td>
+        </tr>
+        <tr>
+          <td>notes 格式</td>
+          <td><span class="code">集数|中文名|英文名|角色等级</span></td>
+          <td><span class="code">集数|中文名|英文名|角色等级</span> <span class="tag tag-tbd">待确认</span></td>
+        </tr>
+        <tr>
+          <td>工程目录</td>
+          <td><span class="code">TorchCharLib/</span></td>
+          <td><span class="code">EstherCharLib/</span> <span class="tag tag-tbd">待确认</span></td>
+        </tr>
+        <tr>
+          <td>JSON 数据库</td>
+          <td><span class="code">torch-char-db.json</span></td>
+          <td><span class="code">esther-char-db.json</span></td>
+        </tr>
+        <tr>
+          <td>内联 JS</td>
+          <td><span class="code">torch-char-db.data.js</span></td>
+          <td><span class="code">esther-char-db.data.js</span></td>
+        </tr>
+        <tr>
+          <td>CGTW 中间文件</td>
+          <td colspan="2"><span class="code">cgtw-asset-names.json</span>（各自工程目录下独立存放）</td>
+        </tr>
+        <tr>
+          <td>缩略图目录</td>
+          <td colspan="2"><span class="code">thumbnails/</span>（各自工程目录下）</td>
+        </tr>
+        <tr>
+          <td>拉取脚本</td>
+          <td><span class="code">TorchCharLib/fetch-cgtw-names.mjs</span></td>
+          <td><span class="code">EstherCharLib/fetch-cgtw-names.mjs</span></td>
+        </tr>
+        <tr>
+          <td>扫描脚本</td>
+          <td><span class="code">TorchCharLib/scan-char-assets.mjs</span></td>
+          <td><span class="code">EstherCharLib/scan-char-assets.mjs</span></td>
+        </tr>
+        <tr>
+          <td>项目 Logo</td>
+          <td><span class="code">TorchCharLib/torch-logo.png</span></td>
+          <td><span class="code">EstherCharLib/esther-logo.png</span> <span class="tag tag-tbd">待确认</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ====== 火炬之光 TLI ====== -->
+  <div class="section anchor-target" id="torch">
+    <div class="section-header torch">
+      <span class="section-icon">🔥</span>
+      <span class="section-title">火炬影视资产库 · 数据逻辑</span>
+      <span class="project-badge torch" style="margin-left:auto">TLI</span>
+    </div>
+    <div class="section-body">
+
+      <h3>JSON 数据库结构 (torch-char-db.json)</h3>
+      <table>
+        <tr><th>字段</th><th>类型</th><th>说明</th></tr>
+        <tr><td><span class="code">version</span></td><td>string</td><td>数据库版本号</td></tr>
+        <tr><td><span class="code">project</span></td><td>string</td><td>"火炬 TLI"</td></tr>
+        <tr><td><span class="code">source</span></td><td>string</td><td><span class="code">X:/projects2024/TLI/Asset/Cha</span></td></tr>
+        <tr><td><span class="code">generatedAt</span></td><td>string</td><td>数据库生成时间 (ISO)</td></tr>
+        <tr><td><span class="code">totalCharacters</span></td><td>number</td><td>角色总数</td></tr>
+        <tr><td><span class="code">characters</span></td><td>array</td><td>角色数据数组（结构见通用字段表）</td></tr>
+      </table>
+
+      <h3>各模块数据来源</h3>
+      <table>
+        <tr><th>模块</th><th>路径</th><th>备注</th></tr>
+        <tr><td>2D游戏设计</td><td><span class="code">{角色}/Prodesign/work/</span></td><td>排除 .tga、.gif</td></tr>
+        <tr><td>2D影视设计</td><td><span class="code">{角色}/Prodesign/approved/</span></td><td>排除 .tga、.gif</td></tr>
+        <tr><td>3D影视设计</td><td><span class="code">{角色}/LookDev/approved/</span></td><td>视频多于一个时只保留最新</td></tr>
+        <tr><td>模型 MA</td><td><span class="code">{角色}/MOD/work/{id}_mod.ma</span></td><td>—</td></tr>
+        <tr><td>模型 FBX</td><td><span class="code">MOD/work/ · RIG/work/ · RIG/work/fbx/ · RIG/publish/</span></td><td>只保留修改日期最新的 1 个 FBX</td></tr>
+        <tr><td>贴图 TEX</td><td><span class="code">{角色}/TEX/publish/maya/{id}_tex.ma</span></td><td>—</td></tr>
+        <tr><td>绑定 RIG</td><td><span class="code">{角色}/RIG/publish/{id}_rig.ma</span></td><td>—</td></tr>
+      </table>
+
+      <h3>CGTeamwork 接口</h3>
+      <table>
+        <tr><th>参数</th><th>值</th></tr>
+        <tr><td>API 地址</td><td><span class="code">https://cgt-artstudio.xindong.com/api.php</span></td></tr>
+        <tr><td>数据库</td><td><span class="code">proj_film</span></td></tr>
+        <tr><td>模块</td><td><span class="code">m_asset</span></td></tr>
+        <tr><td>筛选</td><td><span class="code">m_asset.type = "Cha"</span></td></tr>
+      </table>
+
+      <h3>查询字段</h3>
+      <ul>
+        <li><span class="tag tag-field">entity</span> 资产ID</li>
+        <li><span class="tag tag-field">cn_name</span> 中文名</li>
+        <li><span class="tag tag-field">image</span> 缩略图 URL</li>
+        <li><span class="tag tag-field">notes</span> 自定义备注（4段式）</li>
+        <li><span class="tag tag-field">status</span> 资产状态（Work / Close）</li>
+        <li><span class="tag tag-field">first_appear</span> 首次出现集数</li>
+        <li><span class="tag tag-field">create_time</span> 角色创建时间</li>
+      </ul>
+
+      <h3>数据更新</h3>
+      <div class="cmd-box">
+        <span class="comment"># Step 1：拉取 CGTW 数据</span><br>
+        <span class="highlight">node TorchCharLib/fetch-cgtw-names.mjs</span><br><br>
+        <span class="comment"># Step 2：扫描本地资产目录</span><br>
+        <span class="highlight">node TorchCharLib/scan-char-assets.mjs</span>
+      </div>
+      <p>输出文件：</p>
+      <ul>
+        <li><span class="code">TorchCharLib/cgtw-asset-names.json</span> — CGTW 资产元数据</li>
+        <li><span class="code">TorchCharLib/thumbnails/</span> — 缩略图</li>
+        <li><span class="code">TorchCharLib/torch-char-db.json</span> — 完整角色数据库</li>
+        <li><span class="code">TorchCharLib/torch-char-db.data.js</span> — 内联 JS 数据</li>
+      </ul>
+
+      <p style="margin-top:10px"><a href="../TorchCharLib/index.html" style="color:var(--accent);font-size:.85rem;font-weight:600">→ 打开火炬影视资产库</a>　<a href="../TorchCharLib/data-logic.html" style="color:var(--accent);font-size:.85rem;font-weight:600">→ 火炬独立数据逻辑文档</a></p>
+    </div>
+  </div>
+
+  <!-- ====== 伊瑟 ETH ====== -->
+  <div class="section anchor-target" id="esther">
+    <div class="section-header esther">
+      <span class="section-icon">⚔️</span>
+      <span class="section-title">伊瑟影视资产库 · 数据逻辑</span>
+      <span class="project-badge esther" style="margin-left:auto">ETH</span>
+    </div>
+    <div class="section-body">
+
+      <div class="note-box">
+        <strong>状态：</strong> 伊瑟资产库尚在规划中，以下变量中标记 <span class="tag tag-tbd">待确认</span> 的项需要实际验证后更新。整体架构与火炬相同，仅差异变量不同。
+      </div>
+
+      <h3>JSON 数据库结构 (esther-char-db.json)</h3>
+      <table>
+        <tr><th>字段</th><th>类型</th><th>说明</th></tr>
+        <tr><td><span class="code">version</span></td><td>string</td><td>数据库版本号</td></tr>
+        <tr><td><span class="code">project</span></td><td>string</td><td>"伊瑟 ETH" <span class="tag tag-tbd">待确认</span></td></tr>
+        <tr><td><span class="code">source</span></td><td>string</td><td><span class="code">X:/projects2024/ETH/Asset/Cha</span> <span class="tag tag-tbd">待确认</span></td></tr>
+        <tr><td><span class="code">generatedAt</span></td><td>string</td><td>数据库生成时间 (ISO)</td></tr>
+        <tr><td><span class="code">totalCharacters</span></td><td>number</td><td>角色总数</td></tr>
+        <tr><td><span class="code">characters</span></td><td>array</td><td>角色数据数组（结构见通用字段表）</td></tr>
+      </table>
+
+      <h3>各模块数据来源</h3>
+      <p>与火炬完全相同的目录结构（Prodesign/LookDev/MOD/TEX/RIG），仅资产根路径不同：</p>
+      <table>
+        <tr><th>模块</th><th>路径</th><th>备注</th></tr>
+        <tr><td>2D游戏设计</td><td><span class="code">{角色}/Prodesign/work/</span></td><td>排除 .tga、.gif</td></tr>
+        <tr><td>2D影视设计</td><td><span class="code">{角色}/Prodesign/approved/</span></td><td>排除 .tga、.gif</td></tr>
+        <tr><td>3D影视设计</td><td><span class="code">{角色}/LookDev/approved/</span></td><td>视频多于一个时只保留最新</td></tr>
+        <tr><td>模型 MA</td><td><span class="code">{角色}/MOD/work/{id}_mod.ma</span></td><td>—</td></tr>
+        <tr><td>模型 FBX</td><td><span class="code">MOD/work/ · RIG/work/ · RIG/work/fbx/ · RIG/publish/</span></td><td>只保留修改日期最新的 1 个 FBX</td></tr>
+        <tr><td>贴图 TEX</td><td><span class="code">{角色}/TEX/publish/maya/{id}_tex.ma</span></td><td>—</td></tr>
+        <tr><td>绑定 RIG</td><td><span class="code">{角色}/RIG/publish/{id}_rig.ma</span></td><td>—</td></tr>
+      </table>
+
+      <h3>CGTeamwork 接口</h3>
+      <table>
+        <tr><th>参数</th><th>值</th></tr>
+        <tr><td>API 地址</td><td><span class="code">https://cgt-artstudio.xindong.com/api.php</span>（与火炬相同）</td></tr>
+        <tr><td>数据库</td><td><span class="code">proj_eth</span> <span class="tag tag-tbd">待确认</span></td></tr>
+        <tr><td>模块</td><td><span class="code">m_asset</span></td></tr>
+        <tr><td>筛选</td><td><span class="code">m_asset.type = "Cha"</span></td></tr>
+      </table>
+
+      <h3>查询字段</h3>
+      <p>与火炬相同：</p>
+      <ul>
+        <li><span class="tag tag-field">entity</span> 资产ID</li>
+        <li><span class="tag tag-field">cn_name</span> 中文名</li>
+        <li><span class="tag tag-field">image</span> 缩略图 URL</li>
+        <li><span class="tag tag-field">notes</span> 自定义备注（4段式） <span class="tag tag-tbd">待确认格式是否一致</span></li>
+        <li><span class="tag tag-field">status</span> 资产状态</li>
+        <li><span class="tag tag-field">first_appear</span> 首次出现集数</li>
+        <li><span class="tag tag-field">create_time</span> 角色创建时间</li>
+      </ul>
+
+      <h3>数据更新（预期）</h3>
+      <div class="cmd-box">
+        <span class="comment"># Step 1：拉取 CGTW 数据</span><br>
+        <span class="highlight">node EstherCharLib/fetch-cgtw-names.mjs</span><br><br>
+        <span class="comment"># Step 2：扫描本地资产目录</span><br>
+        <span class="highlight">node EstherCharLib/scan-char-assets.mjs</span>
+      </div>
+      <p>预期输出文件：</p>
+      <ul>
+        <li><span class="code">EstherCharLib/cgtw-asset-names.json</span> — CGTW 资产元数据</li>
+        <li><span class="code">EstherCharLib/thumbnails/</span> — 缩略图</li>
+        <li><span class="code">EstherCharLib/esther-char-db.json</span> — 完整角色数据库</li>
+        <li><span class="code">EstherCharLib/esther-char-db.data.js</span> — 内联 JS 数据</li>
+      </ul>
+
+      <p style="margin-top:10px"><a href="../EstherCharLib/index.html" style="color:var(--accent);font-size:.85rem;font-weight:600">→ 打开伊瑟影视资产库</a></p>
+    </div>
+  </div>
+
+  <!-- ====== 更新命令汇总 ====== -->
+  <div class="section anchor-target" id="commands">
+    <div class="section-header general">
+      <span class="section-icon">⚡</span>
+      <span class="section-title">数据更新命令汇总</span>
+    </div>
+    <div class="section-body">
+      <p>所有命令在项目根目录 <span class="code">Y:\tmp\WuYiXiang\wuyixiang\</span> 下执行：</p>
+
+      <h3><span class="project-badge torch">火炬 TLI</span>一键更新</h3>
+      <div class="cmd-box">
+        <span class="highlight">node TorchCharLib/fetch-cgtw-names.mjs</span><br>
+        <span class="highlight">node TorchCharLib/scan-char-assets.mjs</span>
+      </div>
+
+      <h3><span class="project-badge esther">伊瑟 ETH</span>一键更新（预期）</h3>
+      <div class="cmd-box">
+        <span class="highlight">node EstherCharLib/fetch-cgtw-names.mjs</span><br>
+        <span class="highlight">node EstherCharLib/scan-char-assets.mjs</span>
+      </div>
+
+      <h3>全项目更新</h3>
+      <div class="cmd-box">
+        <span class="comment"># 火炬</span><br>
+        <span class="highlight">node TorchCharLib/fetch-cgtw-names.mjs && node TorchCharLib/scan-char-assets.mjs</span><br><br>
+        <span class="comment"># 伊瑟</span><br>
+        <span class="highlight">node EstherCharLib/fetch-cgtw-names.mjs && node EstherCharLib/scan-char-assets.mjs</span>
+      </div>
+
+      <div class="note-box">
+        <strong>注意：</strong> 执行脚本需要能访问 X: 盘（资产服务器）和 CGTeamwork 内网。更新后刷新浏览器即可看到最新数据。
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

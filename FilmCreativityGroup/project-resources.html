@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影视资产库 - 影视创意组</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        :root {
+            --bg-light: #0a1628;
+            --bg-card: rgba(15, 30, 56, 0.7);
+            --bg-card-hover: rgba(20, 40, 72, 0.9);
+            --text-main: #e8edf5;
+            --text-muted: #7a8ba8;
+            --border-color: rgba(255, 255, 255, 0.06);
+            --accent-1: #00e5ff;
+            --accent-2: #c026d3;
+            --accent-3: #d97706;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        ::selection {
+            background: var(--accent-1);
+            color: var(--bg-light);
+        }
+
+        .ambient-light {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .ambient-light::before, .ambient-light::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.12;
+            animation: float 20s infinite alternate ease-in-out;
+        }
+        .ambient-light::before {
+            width: 600px; height: 600px;
+            background: var(--accent-1);
+            top: -200px; left: -100px;
+        }
+        .ambient-light::after {
+            width: 500px; height: 500px;
+            background: var(--accent-2);
+            bottom: -100px; right: -100px;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 40px) scale(1.1); }
+        }
+
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 4vw;
+        }
+
+        .page-header {
+            padding: 6rem 0 3.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 800px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-1), var(--accent-2), var(--accent-1), transparent);
+            animation: line-shuttle 2.5s cubic-bezier(0.7, 0, 0.3, 1) infinite;
+        }
+
+        @keyframes line-shuttle {
+            0% { left: -800px; opacity: 0; }
+            8% { opacity: 1; }
+            92% { opacity: 1; }
+            100% { left: 100%; opacity: 0; }
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--text-main);
+        }
+
+        .page-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .page-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: auto;
+            white-space: nowrap;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .nav-logo {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .nav-brand-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            background: linear-gradient(120deg, #fff 30%, var(--text-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bento-section {
+            padding: 3vh 0 5vh;
+        }
+
+        .bento-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s, box-shadow 0.4s;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .bento-card:hover {
+            background: var(--bg-card-hover);
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .project-grid { grid-template-columns: 1fr; }
+        }
+
+        .project-card-uniform {
+            height: 300px;
+            z-index: 1;
+        }
+
+        .proj-inner {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .proj-logo {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .proj-logo img {
+            object-fit: contain;
+            display: block;
+        }
+
+        .proj-logo img.invert-logo {
+            filter: brightness(0) invert(1);
+        }
+
+        .bento-card:hover .proj-logo img {
+            filter: drop-shadow(0 4px 16px rgba(255,255,255,0.2));
+        }
+
+        .bento-card:hover .proj-logo img.invert-logo {
+            filter: brightness(0) invert(1) drop-shadow(0 4px 16px rgba(255,255,255,0.2));
+        }
+
+        .project-video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.85);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.25;
+            transition: opacity 0.4s, transform 0.8s;
+            z-index: 0;
+            filter: grayscale(60%);
+            pointer-events: none;
+        }
+
+        .bento-card:hover .project-video-bg {
+            opacity: 0.5;
+            transform: translate(-50%, -50%) scale(0.9);
+            filter: grayscale(0%);
+        }
+
+        .project-video-wrap {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            overflow: hidden;
+            z-index: 0;
+            border-radius: 24px;
+        }
+
+        .project-video-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                linear-gradient(to top, var(--bg-light) 0%, transparent 55%),
+                linear-gradient(to bottom, var(--bg-light) 0%, transparent 55%),
+                linear-gradient(to right, var(--bg-light) 0%, transparent 55%),
+                linear-gradient(to left, var(--bg-light) 0%, transparent 55%);
+            z-index: 1;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .page-footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper { padding: 0 3vw; }
+            .page-header { padding: 3.5rem 0 2rem; flex-wrap: wrap; gap: 0.8rem; }
+            .page-title { font-size: clamp(1.4rem, 5vw, 2rem); }
+            .back-btn { font-size: 0.78rem; padding: 0.4rem 0.8rem; }
+            .nav-brand { margin-left: 0; width: 100%; justify-content: flex-start; }
+            .nav-brand-text { font-size: 0.8rem; }
+            .project-card-uniform { height: 200px; }
+            .bento-card:hover { transform: scale(1.02); }
+            .bento-section { padding: 2vh 0 4vh; }
+            .page-footer { padding: 2rem 0; }
+        }
+
+        @media (max-width: 480px) {
+            .page-header { padding: 2.5rem 0 1.5rem; }
+            .page-title { font-size: 1.3rem; }
+            .project-card-uniform { height: 160px; }
+            .proj-inner { padding: 1rem; }
+            .page-footer { padding: 1.5rem 0; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-light"></div>
+
+    <div class="wrapper">
+        <div class="page-header">
+            <a href="http://172.26.166.131:8080/FilmCreativityGroup/index.html" class="back-btn"><i class="ph ph-arrow-left"></i> 返回首页</a>
+            <h1 class="page-title">影视资产库</h1>
+            <a class="nav-brand" href="http://172.26.166.131:8080/FilmCreativityGroup/index.html">
+                <div class="nav-logo"><img src="assets/logo/发行商Logo.png" alt="Logo" style="width:100%;height:100%;object-fit:contain;"></div>
+                <span class="nav-brand-text">心动美术支撑 · 影视创意组</span>
+            </a>
+        </div>
+
+        <section class="bento-section">
+            <div class="project-grid">
+                <!-- 火炬之光 -->
+                <a href="http://172.26.166.131:8080/TorchCharLib/index.html" target="_blank" class="bento-card project-card-uniform fade-in"
+                     onmouseenter="var v=this.querySelector('video');v.currentTime=0;v.play()"
+                     onmouseleave="var v=this.querySelector('video');v.pause();v.currentTime=v.duration||0">
+                    <div class="project-video-wrap">
+                        <video class="project-video-bg" src="assets/video/火炬之光logo.mp4" muted playsinline preload="metadata"></video>
+                    </div>
+                    <div class="proj-inner">
+                        <div class="proj-logo"><img src="assets/logo/火炬之光logo_trimmed.png" alt="火炬之光" style="height:11rem;object-fit:contain;"></div>
+                    </div>
+                </a>
+
+                <!-- 心动小镇 -->
+                <a href="http://172.26.166.131:8080/Asset/character-library.html" target="_blank" class="bento-card project-card-uniform fade-in"
+                     onmouseenter="var v=this.querySelector('video');v.currentTime=0;v.play()"
+                     onmouseleave="var v=this.querySelector('video');v.pause();v.currentTime=v.duration||0">
+                    <div class="project-video-wrap">
+                        <video class="project-video-bg" src="assets/video/心动小镇logo.mp4" muted playsinline preload="metadata"></video>
+                    </div>
+                    <div class="proj-inner">
+                        <div class="proj-logo"><img src="assets/logo/小镇logo（透明底）.png" alt="心动小镇" style="height:20.52rem;"></div>
+                    </div>
+                </a>
+
+                <!-- 伊瑟 -->
+                <a href="http://172.26.166.131:8080/EstherCharLib/index.html" target="_blank" class="bento-card project-card-uniform fade-in"
+                     onmouseenter="var v=this.querySelector('video');v.currentTime=0;v.play()"
+                     onmouseleave="var v=this.querySelector('video');v.pause();v.currentTime=v.duration||0">
+                    <div class="project-video-wrap">
+                        <video class="project-video-bg" src="assets/video/伊瑟logo01.mp4" muted playsinline preload="metadata"></video>
+                    </div>
+                    <div class="proj-inner">
+                        <div class="proj-logo"><img src="assets/logo/伊瑟logo（透明底）.png" alt="伊瑟" class="invert-logo" style="height:20rem;"></div>
+                    </div>
+                </a>
+
+                <!-- 香肠派对 -->
+                <div class="bento-card project-card-uniform fade-in"
+                     onmouseenter="var v=this.querySelector('video');v.currentTime=0;v.play()"
+                     onmouseleave="var v=this.querySelector('video');v.pause();v.currentTime=v.duration||0">
+                    <div class="project-video-wrap">
+                        <video class="project-video-bg" src="assets/video/香肠派对logo.mp4" muted playsinline preload="metadata"></video>
+                    </div>
+                    <div class="proj-inner">
+                        <div class="proj-logo"><img src="assets/logo/香肠派对logo（透明底）.png" alt="香肠派对" style="height:21rem;"></div>
+                    </div>
+                </div>
+
+                <!-- 出发吧麦芬 -->
+                <div class="bento-card project-card-uniform fade-in"
+                     onmouseenter="var v=this.querySelector('video');v.currentTime=0;v.play()"
+                     onmouseleave="var v=this.querySelector('video');v.pause();v.currentTime=v.duration||0">
+                    <div class="project-video-wrap">
+                        <video class="project-video-bg" src="assets/video/麦芬logo01.mp4" muted playsinline preload="metadata"></video>
+                    </div>
+                    <div class="proj-inner">
+                        <div class="proj-logo"><img src="assets/logo/麦芬logo_trimmed.png" alt="出发吧麦芬" style="height:10rem;object-fit:contain;"></div>
+                    </div>
+                </div>
+
+                <!-- RO -->
+                <div class="bento-card project-card-uniform fade-in"
+                     onmouseenter="var v=this.querySelector('video');v.currentTime=0;v.play()"
+                     onmouseleave="var v=this.querySelector('video');v.pause();v.currentTime=v.duration||0">
+                    <div class="project-video-wrap">
+                        <video class="project-video-bg" src="assets/video/ROlogo.mp4" muted playsinline preload="metadata"></video>
+                    </div>
+                    <div class="proj-inner">
+                        <div class="proj-logo"><img src="assets/logo/RO_Logo2_CN.png" alt="RO" style="height:16.24rem;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-footer">心动美术支撑 · 影视创意组 · 影视资产库</div>
+    </div>
+
+    <script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.background = `
+                    radial-gradient(
+                        800px circle at ${x}px ${y}px, 
+                        rgba(255,255,255,0.04),
+                        transparent 40%
+                    ), var(--bg-card)
+                `;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.background = 'var(--bg-card)';
+            });
+        });
+    </script>
+</body>
+</html>
