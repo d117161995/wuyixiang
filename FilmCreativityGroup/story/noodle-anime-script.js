@@ -202,9 +202,12 @@ document.addEventListener('mousemove', (e) => {
 
 // 重置卡片变换
 document.addEventListener('mouseleave', (e) => {
-    if (e.target.classList.contains('overview-card') || 
-        e.target.classList.contains('feature-card')) {
-        e.target.style.transform = '';
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+
+    if (target.classList.contains('overview-card') || 
+        target.classList.contains('feature-card')) {
+        target.style.transform = '';
     }
 });
 
